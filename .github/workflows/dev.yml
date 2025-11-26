@@ -2,7 +2,7 @@ name: Deploy to dev site
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ main ]
 
 jobs:
   deploy:
@@ -15,7 +15,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /home/catapult/webapps/catapult/wp-content
+            cd /home/canterbury-inn-user/webapps/canterbury-inn/wp-content
             git stash
             git stash drop
             git pull
