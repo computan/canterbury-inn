@@ -1,0 +1,48 @@
+@import "base-includes";
+
+.block-testimonial {
+	position: relative;
+
+	&__quote-icon {
+		width: rem(48);
+		height: rem(48);
+		margin-bottom: responsive-values(32, 48);
+	}
+
+	&__logo {
+		height: auto;
+		margin: 0 auto responsive-values(32, 48) auto;
+	}
+
+	&__content {
+		margin: 0 0 responsive-values(32, 48) 0;
+		padding: 0;
+		border: 0;
+
+		p:not([class*="-font-size"]) {
+			@include quote-1();
+		}
+	}
+
+	&__slide-footer-name {
+		@include title-2(false);
+	}
+
+	&__slide-footer-label {
+		@include subtitle-1(false);
+
+		display: block;
+		font-style: normal;
+	}
+
+	&__button {
+		margin-top: responsive-values(48, 72);
+		font-style: normal;
+	}
+
+	&__swiper-buttons {
+		display: flex;
+		flex-direction: row;
+		margin-top: responsive-values(28, 32);
+	}
+}

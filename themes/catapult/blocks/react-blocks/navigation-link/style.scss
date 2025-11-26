@@ -1,0 +1,68 @@
+@import "base-includes";
+
+.block-navigation-link {
+	display: block;
+
+	&--center {
+		order: 500;
+
+		@include media-breakpoint-up(lg) {
+			margin-left: auto;
+
+			~ .block-navigation-link--center {
+				margin-left: 0;
+			}
+		}
+
+		&:last-child {
+			@include media-breakpoint-up(lg) {
+				margin-right: auto;
+			}
+		}
+	}
+
+	&--right {
+		order: 900;
+
+		@include media-breakpoint-up(lg) {
+			margin-right: 0;
+			margin-left: auto;
+
+			~ .block-navigation-link--right {
+				margin-left: 0;
+			}
+
+			+ .wp-block-button,
+			~ .wp-block-button {
+				margin-left: rem(20);
+			}
+		}
+	}
+
+	&__button {
+		@include nav-1(false);
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding: rem(20);
+		color: paint(neutral-1);
+		border: none;
+		background-color: transparent;
+		appearance: none;
+		transition: color $transition-standard;
+
+		&--with-submenu {
+			&::after {
+				@include icon("chev-right");
+			}
+		}
+
+		&:hover,
+		&:focus {
+			color: paint(button-hover);
+		}
+	}
+}

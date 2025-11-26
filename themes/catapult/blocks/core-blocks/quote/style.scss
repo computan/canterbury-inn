@@ -1,0 +1,45 @@
+@import "base-includes";
+
+.wp-block-quote {
+	@include quote-2(false);
+
+	margin: responsive-values(32, 48) auto;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	padding-left: responsive-values(20, 32);
+	border-left: rem(4) solid paint(text);
+
+	&:first-child {
+		margin-top: $block-spacing;
+	}
+
+	&:last-child {
+		margin-bottom: $block-spacing;
+	}
+
+	cite {
+		@include subtitle-2(false);
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		font-weight: 400 !important;
+		font-style: normal;
+	}
+
+	&__citation-divider {
+		width: rem(1);
+		height: rem(16);
+		margin-right: rem(8);
+		margin-left: rem(8);
+		color: transparent;
+		background-color: paint(text);
+	}
+
+	p {
+		@include quote-2(false);
+
+		margin-bottom: responsive-values(16, 24);
+	}
+}

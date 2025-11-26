@@ -1,0 +1,14 @@
+/*
+If fonts need to be hosted locally, the @font-face rules can be added to this file. For Google fonts, use the settings.json file for automatic local hosting.
+
+Font files should be added to the themes/catapult/fonts directory as woff2 files.
+
+For example:
+
+@font-face {
+	font-weight: 400;
+	font-family: custom-font-name;
+	font-style: normal;
+	src: url(../fonts/custom-font-name.woff2) format("woff2");
+}
+*/

@@ -1,0 +1,44 @@
+.container {
+	padding-right: responsive-values(20, 64);
+	padding-left: responsive-values(20, 64);
+}
+
+.content-wrapper > .container {
+	margin-top: rem(40);
+	margin-bottom: rem(40);
+
+	@include media-breakpoint-up(md) {
+		margin-top: rem(80);
+		margin-bottom: rem(80);
+	}
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		&:first-child {
+			margin-top: 0;
+		}
+
+		// Any heading that is last in the container would be relative to content following it.
+		&:last-child {
+			margin-bottom: rem(-20);
+
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(-40);
+			}
+		}
+	}
+
+	// If block hook is first it is decieving as it is invisible.
+	.block-hook:first-child {
+		+ h2,
+		+ h3,
+		+ h4,
+		+ h5,
+		+ h6 {
+			margin-top: 0;
+		}
+	}
+}

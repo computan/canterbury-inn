@@ -1,0 +1,42 @@
+{
+	"Comments": "This file is used to provide additional data to the 'gulp figma' task when generating styles. These values can be changed.",
+	"figmaFileID": "",
+	"fontStyles": {
+		"display": {
+			"margin-top-multiplier": "2"
+		},
+		"t1": {
+			"margin-top-multiplier": "2"
+		},
+		"t2": {
+			"margin-top-multiplier": "2"
+		},
+		"t3": {
+			"margin-top-multiplier": "2"
+		},
+		"t3-underline": {
+			"margin-top-multiplier": "2"
+		},
+		"t4": {
+			"margin-top-multiplier": "2"
+		},
+		"t5": {
+			"margin-top-multiplier": "2"
+		},
+		"t6": {
+			"margin-top-multiplier": "2"
+		},
+		"lead": {
+			"margin-top-multiplier": "1"
+		},
+		"overline": {
+			"margin-top-multiplier": "3"
+		},
+		"quote-1": {
+			"margin-top-multiplier": "2"
+		},
+		"quote-2": {
+			"margin-top-multiplier": "2"
+		}
+	}
+}

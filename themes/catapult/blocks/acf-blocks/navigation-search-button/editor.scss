@@ -1,0 +1,23 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-navigation-search-button {
+		min-height: 0 !important;
+	}
+
+	.wp-block[data-title="Navigation-Search-Button"] {
+		order: 900;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 0 !important;
+
+		&::before {
+			display: none !important;
+		}
+
+		+ .wp-block-button {
+			margin-left: 0 !important;
+		}
+	}
+}

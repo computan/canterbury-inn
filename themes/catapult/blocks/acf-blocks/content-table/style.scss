@@ -1,0 +1,26 @@
+@import "../../../css/base-includes";
+
+.block-content-table {
+	.container {
+		max-width: rem(992);
+
+		.wp-block-heading {
+			margin-top: $block-spacing-first-text-child-offset;
+			color: paint(neutral-1);
+		}
+
+		.is-style-flip {
+			th {
+				@include media-breakpoint-down(md) {
+					padding: rem(20 16 20 16);
+				}
+			}
+
+			td {
+				@include media-breakpoint-down(md) {
+					border-left: rem(1) solid paint(neutral-8);
+				}
+			}
+		}
+	}
+}

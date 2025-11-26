@@ -1,0 +1,73 @@
+@import "base-includes";
+
+.block-hero-standard-slide-wrapper {
+	position: relative;
+	width: 100%;
+	height: fit-content;
+
+	.swiper-button-wrapper {
+		display: flex;
+		gap: rem(24);
+		margin-top: rv(24, 32);
+
+		.swiper-buttons {
+			display: flex;
+			gap: rem(8);
+
+			.swiper-button--outline {
+				color: paint(white);
+				background: paint(button-default);
+				opacity: 1;
+				transition: opacity 0.3s ease;
+
+				&::after {
+					display: none;
+				}
+
+				&:hover,
+				&:focus {
+					background: paint(button-hover);
+				}
+
+				&.swiper-button-disabled {
+					color: paint(neutral-7);
+					background: paint(neutral-9);
+					cursor: not-allowed;
+					pointer-events: none;
+				}
+			}
+		}
+
+		.swiper-pagination {
+			position: relative;
+			inset: 0;
+			display: flex;
+			gap: rem(8);
+			justify-content: flex-start;
+			align-items: center;
+			width: 100%;
+
+			.swiper-pagination-bullet {
+				width: max-content;
+				margin: 0;
+				margin-right: rem(12);
+
+				&::before {
+					width: rem(8);
+					height: rem(8);
+					background: paint(neutral-7);
+				}
+
+				&::after {
+					display: none;
+				}
+
+				&.swiper-pagination-bullet-active {
+					&::before {
+						background: paint(button-hover);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+@import "base-includes";
+
+.block-media-standard {
+	padding: $block-spacing 0;
+
+	&.is-style-spacing-small,
+	.acf-block--has-sidebar & {
+		padding: responsive-values(48, 72) 0;
+	}
+
+	&__row {
+		margin-bottom: responsive-values(-16, -32);
+	}
+
+	.wp-block-image,
+	.wp-block-embed {
+		width: 100%;
+		margin: 0 auto responsive-values(16, 32) auto;
+
+		@include media-breakpoint-down(xs) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+
+		> .wp-block-image,
+		> .wp-block-embed {
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		img,
+		picture {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+
+			&:only-child {
+				height: 100%;
+			}
+		}
+
+		&.alignleft {
+			margin-left: 0;
+		}
+
+		&.alignright {
+			margin-right: 0;
+		}
+	}
+}

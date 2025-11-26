@@ -1,0 +1,27 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-hero-profile-results-logo {
+		.block-content {
+			@include media-breakpoint-up(md) {
+				grid-column-end: span 9;
+			}
+		}
+
+		.block-logos {
+			@include media-breakpoint-up(md) {
+				grid-column: 10 / span 3;
+				max-width: 100%;
+			}
+
+			.block-logo {
+				display: block;
+				padding-left: rem(32);
+
+				.block-logo {
+					display: contents;
+				}
+			}
+		}
+	}
+}

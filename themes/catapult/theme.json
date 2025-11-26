@@ -1,0 +1,146 @@
+{
+	"version": 2,
+	"settings": {
+		"border": {
+			"radius": false,
+			"color": false,
+			"style": false,
+			"width": false
+		},
+		"color": {
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
+			"duotone": [],
+			"gradients": [],
+			"link": false,
+			"text": false,
+			"background": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"palette": []
+		},
+		"shadow": {
+			"defaultPresets": false,
+			"presets": []
+		},
+		"typography": {
+			"customFontSize": false,
+			"lineHeight": false,
+			"dropCap": false,
+			"fontStyle": false,
+			"fontWeight": false,
+			"letterSpacing": false,
+			"textDecoration": false,
+			"textTransform": false,
+			"fontFamilies": [],
+			"fontSizes": []
+		},
+		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": false
+				}
+			},
+			"core/list": {
+				"className": true
+			},
+			"core/heading": {
+				"typography": {
+					"fontSizes": [
+						{
+							"slug": "display",
+							"size": "var(--display-font-size)",
+							"name": "Display"
+						},
+						{
+							"slug": "t1",
+							"size": "var(--t1-font-size)",
+							"name": "T1"
+						},
+						{
+							"slug": "t2",
+							"size": "var(--t2-font-size)",
+							"name": "T2"
+						},
+						{
+							"slug": "t3",
+							"size": "var(--t3-font-size)",
+							"name": "T3"
+						},
+						{
+							"slug": "t4",
+							"size": "var(--t4-font-size)",
+							"name": "T4"
+						},
+						{
+							"slug": "t5",
+							"size": "var(--t5-font-size)",
+							"name": "T5"
+						},
+						{
+							"slug": "t6",
+							"size": "var(--t6-font-size)",
+							"name": "T6"
+						},
+						{
+							"slug": "lead",
+							"size": "var(--lead-font-size)",
+							"name": "Lead"
+						},
+						{
+							"slug": "overline",
+							"size": "var(--overline-font-size)",
+							"name": "Overline"
+						}
+					]
+				}
+			},
+			"core/paragraph": {
+				"typography": {
+					"fontSizes": [
+						{
+							"slug": "body",
+							"size": "var(--body-font-size)",
+							"name": "Body"
+						},
+						{
+							"slug": "body-2",
+							"size": "var(--body-2-font-size)",
+							"name": "Body-2"
+						},
+						{
+							"slug": "lead",
+							"size": "var(--lead-font-size)",
+							"name": "Lead"
+						},
+						{
+							"slug": "overline",
+							"size": "var(--overline-font-size)",
+							"name": "Overline"
+						},
+						{
+							"slug": "quote-1",
+							"size": "var(--quote-1-font-size)",
+							"name": "Quote 1"
+						},
+						{
+							"slug": "quote-2",
+							"size": "var(--quote-2-font-size)",
+							"name": "Quote 2"
+						}
+					]
+				}
+			},
+			"core/image": {
+				"lightbox": {
+					"enabled": false,
+					"allowEditing": false
+				}
+			}
+		}
+	},
+	"styles": null,
+	"variables": null,
+	"presets": null
+}

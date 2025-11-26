@@ -1,0 +1,104 @@
+@import "base-includes";
+
+.block-card-image-link {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		justify-content: center;
+		align-items: stretch;
+	}
+
+	&__image-wrapper {
+		padding-bottom: 56.25%;
+
+		@include media-breakpoint-down(sm) {
+			padding-bottom: 56.11940299%;
+		}
+
+		.block-cards--3 & {
+			padding-bottom: 55.76923077%;
+
+			@include media-breakpoint-down(sm) {
+				padding-bottom: 56.11940299%;
+			}
+		}
+
+		.block-cards--4 & {
+			padding-bottom: 56.57894737%;
+
+			@include media-breakpoint-down(sm) {
+				padding-bottom: 56.11940299%;
+			}
+		}
+	}
+
+	.wp-block-button {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		justify-content: center;
+		align-items: stretch;
+		width: 100%;
+		min-height: rem(58);
+		margin-top: auto;
+		padding: rem(6 0);
+
+		&.is-style-tertiary {
+			.wp-block-button__link {
+				@include title-2(false);
+
+				color: paint(text);
+			}
+		}
+
+		.wp-block-button__link {
+			position: static;
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			text-align: left;
+
+			@include alt-button-selectors {
+				&::before {
+					border-color: paint(white);
+				}
+
+				&:hover,
+				&:focus {
+					&::before {
+						border-color: paint(neutral-8);
+					}
+				}
+			}
+
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0 !important;
+				right: 0;
+				content: "";
+				display: block !important;
+				width: 100%;
+				height: 100% !important;
+				border-bottom: rem(2) solid paint(button-default);
+				background-color: transparent !important;
+				transition: border $transition-standard;
+			}
+
+			&:hover,
+			&:focus {
+				color: var(--blockHoverColor, paint(button-hover));
+
+				&::before {
+					border-color: paint(button-hover);
+				}
+			}
+		}
+	}
+}

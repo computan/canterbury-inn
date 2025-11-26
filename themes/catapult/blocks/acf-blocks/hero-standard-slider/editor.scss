@@ -1,0 +1,13 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-hero-standard-slider {
+		.swiper-wrapper {
+			flex-wrap: wrap;
+		}
+
+		.swiper-slide {
+			width: 100%;
+		}
+	}
+}

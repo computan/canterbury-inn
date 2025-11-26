@@ -1,0 +1,170 @@
+@import "base-includes";
+
+.block-hero-display-icons {
+	width: 100%;
+	padding-top: 0;
+	padding-right: rem(20);
+	padding-bottom: 0;
+	padding-left: rem(20);
+	background-color: paint(neutral-10);
+
+	@include media-breakpoint-up(lg) {
+		max-width: 100%;
+		font-size: rem(20);
+	}
+
+	&__container {
+		position: relative;
+		max-width: 100%;
+		padding-top: rv(72, 114);
+		padding-bottom: rv(72, 130);
+		border-radius: rem(12);
+		overflow: hidden;
+
+		&::after {
+			position: absolute;
+			top: 40%;
+			left: -40%;
+			content: "";
+			display: block;
+			flex-shrink: 0;
+			width: rv(833, 1839);
+			height: rv(490, 1072);
+			border-radius: rem(1839);
+			background: radial-gradient(50% 50% at 50% 50%, rgba(106, 133, 230, 0.4) 0, rgba(106, 133, 230, 0) 100%);
+
+			@include media-breakpoint-up(lg) {
+				top: rem(227);
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+
+		&__content {
+			position: relative;
+			z-index: 9;
+			max-width: rem(864);
+			margin: 0 auto;
+			text-align: center;
+
+			.block-hero-display-icons-heading {
+				margin-bottom: rem(16);
+				color: paint(white);
+				font-weight: 500;
+				font-size: rem(40);
+				font-style: normal;
+				line-height: rem(40);
+				text-align: center;
+				font-variant-numeric: lining-nums proportional-nums;
+
+				@include media-breakpoint-up(lg) {
+					font-size: rem(96);
+					line-height: rem(96);
+				}
+			}
+
+			.block-hero-display-icons-details {
+				max-width: rem(304);
+				margin: 0 auto;
+				color: paint(white);
+				font-size: rem(16);
+				text-align: center;
+				font-feature-settings: "liga" off, "clig" off;
+
+				@include media-breakpoint-up(lg) {
+					max-width: rem(640);
+					font-size: rem(20);
+				}
+			}
+
+			.wp-block-button {
+				margin-top: rem(36);
+				text-align: center;
+			}
+		}
+	}
+
+	&__text-container {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		padding-top: rv(32, 36);
+		padding-right: rem(0);
+		padding-bottom: rv(1, 48);
+		padding-left: rem(0);
+
+		@include media-breakpoint-up(lg) {
+			flex-wrap: nowrap !important;
+			gap: rv(10, 32) !important;
+			padding-right: rv(20, 164) !important;
+			padding-left: rv(20, 164) !important;
+		}
+
+		@include media-breakpoint-up(md) {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2%;
+			row-gap: rem(32);
+			justify-content: space-between;
+			align-items: center;
+			padding-bottom: rv(1, 48);
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding-right: rv(20, 164);
+			padding-left: rv(20, 164);
+		}
+
+		.hero-display-icon-details {
+			display: flex;
+			gap: rem(12);
+			align-items: center;
+			margin-bottom: rem(32);
+
+			@include media-breakpoint-up(md) {
+				gap: 2%;
+				width: 100%;
+				max-width: 49%;
+			}
+
+			@include media-breakpoint-up(lg) {
+				gap: rem(12);
+				width: 100%;
+				max-width: rem(304);
+				margin-bottom: rem(0);
+			}
+
+			.hero-display-icon {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: rem(68);
+				max-width: rem(68);
+				border-radius: rem(12);
+				background-color: paint(white);
+
+				i {
+					width: rem(36);
+					height: rem(36);
+					color: paint(secondary);
+				}
+			}
+
+			.hero-display-icon-text {
+				&__heading {
+					@include title-2(false);
+
+					margin-bottom: rem(4);
+					color: paint(secondary);
+				}
+
+				&__details {
+					@include subtitle-2;
+
+					color: paint(secondary);
+				}
+			}
+		}
+	}
+}

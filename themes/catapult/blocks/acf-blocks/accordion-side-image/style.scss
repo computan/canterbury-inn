@@ -1,0 +1,178 @@
+@import "base-includes";
+
+.block-accordion-side-image {
+	overflow: hidden;
+
+	@include media-breakpoint-down(sm) {
+		padding-top: $block-spacing-with-text;
+	}
+
+	p {
+		@include subtitle-1();
+	}
+
+	&__row {
+		position: relative;
+
+		@include media-breakpoint-up(md) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+	}
+
+	&__spacer {
+		width: 100%;
+		max-width: rem(640);
+
+		@include media-breakpoint-down(sm) {
+			margin-top: rem(48);
+		}
+	}
+
+	&__spacer-inner {
+		padding-bottom: 100%;
+	}
+
+	&__content {
+		width: 100%;
+
+		@include media-breakpoint-up(md) {
+			flex: 0 0 calc(50% - #{$grid-gap} / 2);
+			max-width: calc(50% - #{$grid-gap} / 2);
+		}
+
+		> *:not(.block-accordion-item__figure) {
+			@include media-breakpoint-up(md) {
+				width: rem(528);
+				max-width: 100%;
+			}
+		}
+	}
+
+	.block-accordion {
+		margin-top: responsive-values(32, 48);
+		padding: 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.block-accordion-item {
+		position: relative;
+		padding: 0;
+		border-bottom: none;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		> .block-content {
+			margin-top: rem(-12);
+			margin-bottom: 0;
+			padding-left: rem(16) !important;
+
+			@include media-breakpoint-up(md) {
+				padding-right: rem(16) !important;
+			}
+
+			&::after {
+				content: "";
+				display: block;
+				height: rem(20);
+			}
+		}
+
+		> .wp-block-button {
+			> .wp-block-button__link {
+				@include title-1(false);
+
+				position: static;
+				padding: rem(20 16);
+				color: paint(neutral-5);
+				border: none;
+				transition: color 0.4s ease-in-out;
+
+				&::before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: auto;
+					content: "";
+					width: 100%;
+					height: 100%;
+					border-left: rem(1) solid paint(neutral-8);
+					background-color: transparent;
+					transform: none !important;
+					pointer-events: none;
+					transition: border-color 0.4s ease-in-out;
+				}
+
+				&::after {
+					display: none;
+				}
+
+				&:hover,
+				&:focus {
+					color: paint(button-hover);
+
+					&::before {
+						border-color: paint(button-hover);
+					}
+				}
+			}
+		}
+
+		&.active,
+		&.is-style-open {
+			> .wp-block-button {
+				> .wp-block-button__link {
+					color: paint(neutral-1);
+					pointer-events: none;
+
+					&::before {
+						border-color: paint(button-default);
+					}
+
+					&:hover,
+					&:focus {
+						color: paint(neutral-1);
+
+						&::before {
+							border-color: paint(button-default);
+						}
+					}
+				}
+			}
+
+			+ .block-accordion-item__figure {
+				opacity: 1;
+			}
+		}
+	}
+
+	.block-accordion-item__figure {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		display: block;
+		width: 100%;
+		opacity: 0;
+		transition: opacity 0.4s ease-in-out;
+
+		@include media-breakpoint-up(md) {
+			top: 0;
+			left: auto;
+			bottom: auto;
+			right: 0;
+			width: calc(50% - #{$grid-gap} / 2);
+		}
+	}
+
+	.block-accordion-item__image-wrapper {
+		width: 100%;
+		padding-bottom: 100%;
+	}
+}

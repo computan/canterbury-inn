@@ -1,0 +1,34 @@
+@import "base-includes";
+
+.content-wrapper {
+	&.loading {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			z-index: 8;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(paint(neutral-1), 0.8);
+		}
+
+		&::after {
+			position: fixed;
+			top: calc(50% - #{responsive-values(16, 32)});
+			left: calc(50% - #{responsive-values(16, 32)});
+			content: "";
+			z-index: 9;
+			width: responsive-values(32, 64);
+			height: responsive-values(32, 64);
+			border: rem(8) solid paint(white);
+			border-color: paint(white) transparent paint(white) transparent;
+			border-radius: 50%;
+			pointer-events: none;
+			transition: opacity $transition-standard;
+			animation: loader 1.5s infinite ease-in-out;
+		}
+	}
+}

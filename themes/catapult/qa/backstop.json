@@ -1,0 +1,67 @@
+{
+	"id": "backstop_default",
+	"viewports": [
+		{
+			"label": "Mobile",
+			"width": 375,
+			"height": 480,
+			"deviceScaleFactor": 2.0,
+			"pageScaleFactor": 1.0
+		},
+		{
+			"label": "Desktop",
+			"width": 1680,
+			"height": 768,
+			"deviceScaleFactor": 2.0,
+			"pageScaleFactor": 1.0
+		}
+	],
+	"onBeforeScript": "puppet/onBefore.js",
+	"onReadyScript": "puppet/onReady.js",
+	"scenarioDefaults": {
+		"referenceUrl": "",
+		"readyEvent": "",
+		"readySelector": ".block-library__content-wrapper",
+		"delay": 10,
+		"hideSelectors": [],
+		"removeSelectors": [],
+		"hoverSelector": "",
+		"clickSelector": "",
+		"postInteractionWait": 0,
+		"selectors": [
+			".block-library__content-wrapper"
+		],
+		"selectorExpansion": true,
+		"expect": 0,
+		"misMatchThreshold": 2,
+		"requireSameDimensions": false
+	},
+	"scenarios": [],
+	"paths": {
+		"bitmaps_reference": "qa/images/figma",
+		"bitmaps_test": "qa/images/wordpress",
+		"engine_scripts": "qa/scripts",
+		"html_report": "qa/reports/html",
+		"ci_report": "qa/reports/ci",
+		"json_report": "qa/reports/json"
+	},
+	"report": [
+		"browser",
+		"json"
+	],
+	"engine": "playwright",
+	"engineOptions": {
+		"browser": "chromium",
+		"args": [
+			"--no-sandbox"
+		]
+	},
+	"resembleOutputOptions": {
+		"ignoreAntialiasing": true
+	},
+	"asyncCaptureLimit": 1,
+	"asyncCompareLimit": 1,
+	"debug": false,
+	"debugWindow": false,
+	"fileNameTemplate": "{scenarioLabel}-{viewportLabel}"
+}

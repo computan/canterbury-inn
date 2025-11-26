@@ -1,0 +1,35 @@
+@import "base-includes";
+
+.block-hero-archive-featured {
+	padding-top: responsive-values(48, 72);
+	padding-bottom: responsive-values(64, 96);
+
+	&--small {
+		.block-hero-archive-featured__grid {
+			@include media-breakpoint-up(md) {
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+			}
+		}
+	}
+
+	&__content {
+		margin-bottom: responsive-values(32, 48);
+	}
+
+	&__latest-heading {
+		@include overline(false);
+
+		margin-top: responsive-values(64, 96);
+		margin-bottom: rem(32);
+	}
+
+	&__grid {
+		display: grid;
+		row-gap: rem(32);
+
+		@include media-breakpoint-up(md) {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: $grid-gap;
+		}
+	}
+}

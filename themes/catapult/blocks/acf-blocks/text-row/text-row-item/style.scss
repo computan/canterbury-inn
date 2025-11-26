@@ -1,0 +1,52 @@
+@import "base-includes";
+
+.block-text-row-item {
+	&:not(:last-child) {
+		margin-bottom: responsive-values(24, 36);
+	}
+
+	&__content {
+		position: relative;
+		padding-bottom: responsive-values(32, 48);
+
+		@include media-breakpoint-up(md) {
+			@include grid();
+		}
+
+		&::after {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			content: "";
+			width: 100%;
+			height: rem(1);
+			background-color: paint(neutral-8);
+		}
+
+		.block-content {
+			&:first-child {
+				@include media-breakpoint-down(sm) {
+					margin-bottom: rem(8);
+				}
+
+				@include media-breakpoint-up(md) {
+					grid-column: 1 / 6;
+				}
+
+				@include media-breakpoint-up(xl) {
+					grid-column: 1 / 5;
+				}
+			}
+
+			&:last-child {
+				@include media-breakpoint-up(md) {
+					grid-column: 6 / 13;
+				}
+
+				p {
+					@include body-2();
+				}
+			}
+		}
+	}
+}

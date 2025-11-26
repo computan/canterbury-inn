@@ -1,0 +1,13 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.wp-block[data-title="Navigation-Featured-Link-Card"] {
+		&::before {
+			content: "Card" !important;
+		}
+	}
+
+	.navigation-featured-link-card {
+		max-width: 100%;
+	}
+}

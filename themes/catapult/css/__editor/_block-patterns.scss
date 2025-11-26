@@ -1,0 +1,31 @@
+@at-root .block-editor-block-patterns-list__item {
+	position: relative;
+	padding: rem(1) !important;
+
+	&::before {
+		content: "Block Pattern";
+		display: block;
+		padding: rem(8);
+		color: #1e1e1e;
+		font-weight: 600;
+		font-size: rem(12);
+		text-align: center;
+		border-bottom: rem(1) solid #e0e0e0;
+		background-color: #f0f0f0;
+	}
+
+	&::after {
+		position: absolute;
+		top: rem(1);
+		left: rem(1);
+		bottom: rem(1);
+		right: rem(1);
+		content: "";
+		border: rem(1) solid #e0e0e0;
+		pointer-events: none;
+	}
+
+	.block-editor-block-patterns-list__item-title {
+		padding: rem(8);
+	}
+}

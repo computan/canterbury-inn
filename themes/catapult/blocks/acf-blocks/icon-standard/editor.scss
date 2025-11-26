@@ -1,0 +1,28 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-icon-content {
+		.wp-block-button {
+			.has-text-align-center {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+
+			.has-text-align-right {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				text-align: right;
+			}
+
+			.has-text-align-left {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				text-align: left;
+			}
+		}
+	}
+}

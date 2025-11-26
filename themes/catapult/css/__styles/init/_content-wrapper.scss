@@ -1,0 +1,101 @@
+/* stylelint-disable no-descending-specificity */
+@use "sass:math";
+
+.content-wrapper {
+	@include contained-sections() {
+		@include responsive-grid(12, 12, 12, 10, 8, 8);
+
+		margin-right: auto !important;
+		margin-left: auto !important;
+
+		&:first-child {
+			padding-top: $block-spacing;
+		}
+
+		&:last-child {
+			padding-bottom: $block-spacing;
+		}
+
+		> .wp-block-heading {
+			&:first-child {
+				padding-top: $block-spacing-with-text !important;
+			}
+		}
+
+		&.is-style-narrow {
+			@include responsive-grid(12, 9, 8, 7, 6, 6);
+		}
+
+		&.is-style-full {
+			@include responsive-grid();
+		}
+
+		&.is-style-wide {
+			@include responsive-grid(12, 12, 12, 10, 10, 10);
+		}
+	}
+
+	.acf-block & {
+		> :first-child {
+			padding-top: 0 !important;
+
+			&.acf-block--starts-with-text {
+				position: relative;
+				margin-top: $block-spacing-first-text-child-offset;
+			}
+		}
+
+		> :last-child {
+			padding-bottom: 0 !important;
+		}
+
+		&.content-wrapper--no-offset {
+			> .wp-block-heading {
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+
+			> p {
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+
+.default-content {
+	@include responsive-grid(12, 12, 12, 10, 8, 8);
+
+	margin-right: auto;
+	margin-left: auto;
+
+	.alignleft {
+		float: left;
+	}
+
+	.alignright {
+		float: right;
+	}
+
+	img.alignleft {
+		margin: rem(6 24 24 0);
+	}
+
+	img.alignright {
+		margin: rem(6 0 24 24);
+	}
+}
+
+@keyframes loader {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* stylelint-enable no-descending-specificity */

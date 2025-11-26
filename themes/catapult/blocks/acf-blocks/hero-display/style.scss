@@ -1,0 +1,29 @@
+@import "base-includes";
+
+.block-hero-display {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: rem(242 0 178);
+	overflow: hidden;
+
+	@include media-breakpoint-up(md) {
+		min-height: responsive-values(384, 840);
+		padding: $block-spacing 0;
+	}
+
+	&__container {
+		@include media-breakpoint-up(md) {
+			padding-top: rem(64);
+		}
+	}
+
+	&__content {
+		@include media-breakpoint-up(md) {
+			max-width: 50%;
+		}
+	}
+}

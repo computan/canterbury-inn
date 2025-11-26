@@ -1,0 +1,231 @@
+@import "base-includes";
+@import "swiper/swiper";
+@import "swiper/modules/pagination";
+
+.swiper-button-prev,
+.swiper-button-next {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: rem(48);
+	height: rem(48);
+	padding: 0;
+	color: paint(white);
+	font-size: 0;
+	line-height: 0;
+	text-align: center;
+	border: none;
+	border: rem(2) solid paint(neutral-1);
+	border-radius: 50%;
+	background: paint(neutral-1);
+	box-shadow: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	transition: color $transition-standard, background-color $transition-standard, border-color $transition-standard;
+
+	@include alt-button-selectors("&.swiper-button--color-alt") {
+		color: paint(neutral-1);
+		border-color: paint(white);
+		background-color: paint(white);
+
+		&.hover,
+		&:hover,
+		&:focus {
+			border-color: paint(neutral-10);
+			background-color: paint(neutral-10);
+		}
+
+		&:disabled {
+			color: paint(neutral-5);
+			border-color: paint(neutral-3);
+			background-color: paint(neutral-3);
+		}
+	}
+
+	&::after {
+		content: "";
+		color: inherit;
+		line-height: rem(48);
+	}
+
+	&.hover,
+	&:hover,
+	&:focus {
+		border-color: paint(neutral-3);
+		background-color: paint(neutral-3);
+	}
+
+	&:disabled {
+		color: paint(neutral-7);
+		border-color: paint(neutral-9);
+		background-color: paint(neutral-9);
+		pointer-events: none;
+	}
+
+	&.swiper-button--outline {
+		color: paint(neutral-1);
+		border-color: paint(neutral-8);
+		background-color: transparent;
+
+		@include alt-button-selectors("&.swiper-button--color-alt") {
+			color: paint(white);
+			border-color: paint(white);
+
+			&.hover,
+			&:hover,
+			&:focus {
+				color: paint(white);
+				border-color: paint(neutral-6);
+			}
+
+			&:disabled {
+				color: paint(neutral-5);
+				border-color: paint(neutral-3);
+			}
+		}
+
+		&.hover,
+		&:hover,
+		&:focus {
+			color: paint(neutral-1);
+			border-color: paint(neutral-1);
+			background-color: transparent;
+		}
+
+		&:disabled {
+			color: paint(neutral-7);
+			border-color: paint(neutral-9);
+			background-color: transparent;
+		}
+	}
+
+	&.swiper-button--transparent {
+		color: paint(white);
+		border-color: transparent;
+		background-color: rgba(paint(neutral-1), 0.5);
+
+		&.hover,
+		&:hover,
+		&:focus {
+			color: paint(white);
+			border-color: transparent;
+			background-color: paint(neutral-1);
+		}
+
+		&:disabled {
+			color: paint(neutral-5);
+			border-color: transparent;
+			background-color: rgba(paint(neutral-1), 0.5);
+		}
+	}
+
+	&.swiper-button--loading {
+		&::after {
+			color: transparent;
+		}
+
+		&::before {
+			@include loader;
+
+			position: absolute;
+			top: rem(6);
+			left: rem(6);
+			content: "";
+			z-index: 2;
+			width: rem(32);
+			height: rem(32);
+			border-width: rem(6);
+		}
+	}
+}
+
+.swiper-button-prev {
+	&::after {
+		@include icon("nav-left", #{rem(24)});
+	}
+}
+
+.swiper-button-next {
+	&::after {
+		@include icon("nav-right", #{rem(24)});
+	}
+}
+
+.swiper-button-lock {
+	display: none;
+}
+
+.swiper-pagination {
+	--swiper-pagination-bullet-size: #{rem(25)};
+	--swiper-pagination-bullet-width: #{rem(25)};
+	--swiper-pagination-bullet-height: #{rem(25)};
+	--swiper-pagination-bullet-border-radius: 50%;
+	--swiper-pagination-bullet-inactive-color: #{paint(neutral-6)};
+	--swiper-pagination-bullet-inactive-opacity: 1;
+	--swiper-pagination-bullet-opacity: 1;
+	--swiper-pagination-bullet-horizontal-gap: #{rem(6)};
+	--swiper-pagination-bullet-vertical-gap: #{rem(12)};
+	--swiper-pagination-color: #{paint(neutral-12)};
+}
+
+.swiper-pagination-bullet {
+	position: relative;
+	z-index: 1;
+	background-color: transparent;
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: "";
+		border-radius: 50%;
+	}
+
+	&::before {
+		top: rem(8);
+		left: rem(8);
+		z-index: 2;
+		width: rem(9);
+		height: rem(9);
+		background-color: paint(white);
+		transition: background-color $transition-standard;
+	}
+
+	&::after {
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: rem(25);
+		height: rem(25);
+		border: rem(1) solid paint(white);
+		transform: scale(0);
+		transition: transform $transition-standard;
+	}
+
+	&:hover,
+	&:focus {
+		&::before {
+			background-color: paint(button-default);
+		}
+	}
+
+	&-active {
+		background-color: transparent;
+
+		&::after {
+			transform: scale(1);
+		}
+	}
+}
+
+.swiper-pagination-bullets-dynamic {
+	.swiper-pagination-bullet-active-prev,
+	.swiper-pagination-bullet-active-next {
+		transform: scale(0.75);
+	}
+
+	.swiper-pagination-bullet-active-prev-prev,
+	.swiper-pagination-bullet-active-next-next {
+		transform: scale(0.5);
+	}
+}

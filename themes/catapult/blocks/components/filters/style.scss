@@ -1,0 +1,58 @@
+@import "base-includes";
+
+.filter-result-count {
+	@include subtitle-2(false);
+
+	padding: rem(2) 0;
+	white-space: nowrap;
+}
+
+.clear-filters {
+	@include subtitle-2(false);
+
+	margin: rem(0 0 0 8);
+	padding: rem(2) 0;
+	color: paint(neutral-1);
+	white-space: nowrap;
+	text-decoration: underline;
+	border: none;
+	background: none;
+
+	&[disabled] {
+		display: none;
+	}
+}
+
+div[class*="block-filter"].selected-filters {
+	display: contents;
+
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
+
+	.selected-filter {
+		@include subtitle-2(false);
+
+		padding: rem(2 12);
+		white-space: nowrap;
+		border: rem(1) solid paint(neutral-10);
+		border-radius: rem(40);
+		background: none;
+		transition: border-color $transition-standard;
+
+		&::after {
+			@include icon("remove", #{rem(16)});
+
+			position: relative;
+			top: rem(-1);
+			display: inline-block;
+			margin-left: rem(3);
+			vertical-align: middle;
+		}
+
+		&:hover,
+		&:focus {
+			border-color: paint(neutral-1);
+		}
+	}
+}

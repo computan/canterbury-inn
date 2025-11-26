@@ -1,0 +1,357 @@
+// Note: all code in the __base-includes folder should not generate any actual CSS since these files are used in every block and would generated redundant CSS. These are files purely for declaring variables, mixins, and functions.
+
+@mixin input-style {
+	@include subtitle-1(false);
+
+	display: block;
+	width: 100%;
+	padding: rem(11 12);
+	color: paint(neutral-1);
+	border: rem(1) solid paint(neutral-8);
+	border-radius: rem(4);
+	background-color: paint(white);
+	outline: none;
+	transition: color $transition-standard, border $transition-standard, background-color $transition-standard;
+
+	&:focus,
+	&.focus {
+		border: rem(1) solid paint(button-default);
+	}
+
+	&.error {
+		border-color: paint(error);
+	}
+
+	&.autofill {
+		background-color: paint(autofill);
+	}
+
+	&::-webkit-input-placeholder {
+		color: paint(neutral-6);
+	}
+
+	&::-moz-placeholder {
+		color: paint(neutral-6);
+	}
+
+	&::-ms-placeholder {
+		color: paint(neutral-6);
+	}
+
+	&::placeholder {
+		color: paint(neutral-6);
+	}
+}
+
+@mixin input-label {
+	@include subtitle-2(false);
+
+	display: block;
+	margin-bottom: rem(4);
+
+	.required {
+		color: paint(error);
+	}
+}
+
+@mixin select {
+	-webkit-appearance: none;
+
+	&:not([multiple]) {
+		padding-right: rem(42) !important;
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10L12 15L17 10H7Z' fill='%2302040C'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: center right rem(5);
+	}
+
+	&.select-filter {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.59 8.58984L12 13.1698L7.41 8.58984L6 9.99984L12 15.9998L18 9.99984L16.59 8.58984Z' fill='%2302040C'/%3E%3C/svg%3E");
+		background-size: rem(20 20);
+	}
+}
+
+@mixin checkbox-radio-label {
+	@include subtitle-1(false);
+
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	margin: 0;
+	padding: rem(4 6);
+	cursor: pointer;
+
+	&::before,
+	&::after {
+		padding: 0;
+	}
+
+	&::before {
+		@include icon("check-box-default", #{rem(20)});
+
+		position: absolute;
+		top: 50%;
+		left: rem(6);
+		z-index: 4;
+		color: paint(neutral-6);
+		transform: translateY(-50%);
+		transition: color $transition-standard;
+
+		@include alt-text-selectors {
+			color: paint(neutral-7);
+		}
+	}
+
+	&::after {
+		content: "";
+		z-index: 3;
+		order: -1;
+		width: rem(32);
+		height: rem(32);
+		margin: rem(-6 2 -6 -6);
+		border-radius: 50%;
+		background-color: transparent;
+		transition: background-color $transition-standard;
+	}
+}
+
+@mixin checkbox-radio {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+
+	&:hover,
+	&:focus,
+	&.hover {
+		+ label {
+			&::after {
+				background-color: paint(neutral-11);
+
+				@include alt-text-selectors() {
+					background-color: paint(neutral-3);
+				}
+			}
+		}
+	}
+
+	&:checked {
+		+ label {
+			&::before {
+				color: paint(neutral-1);
+
+				@include alt-text-selectors() {
+					color: paint(white);
+				}
+			}
+		}
+	}
+}
+
+@mixin checkbox-radio-wrapper {
+	margin: 0 !important;
+	padding: 0;
+	list-style-type: none;
+
+	li {
+		margin-bottom: 0 !important;
+	}
+
+	br {
+		display: none;
+	}
+}
+
+@mixin checkbox-label {
+	@include checkbox-radio-label;
+
+	input:checked + & {
+		&::before {
+			@include icon("check-box-active", #{rem(20)}, false);
+		}
+	}
+}
+
+@mixin radio-label {
+	@include checkbox-radio-label;
+
+	&::before {
+		@include icon("radio-button-default", #{rem(20)}, false);
+	}
+
+	input:checked + & {
+		&::before {
+			@include icon("radio-button-active", #{rem(20)}, false);
+		}
+	}
+}
+
+@mixin checkbox {
+	@include checkbox-radio;
+
+	+ label {
+		@include checkbox-label;
+	}
+
+	&:checked + label {
+		&::before {
+			@include icon("check-box-active", #{rem(20)}, false);
+		}
+	}
+}
+
+@mixin radio {
+	@include checkbox-radio;
+
+	+ label {
+		@include radio-label;
+	}
+
+	&:checked + label {
+		&::before {
+			@include icon("radio-button-active", #{rem(20)}, false);
+		}
+	}
+}
+
+@mixin radio-pills-wrapper {
+	display: grid;
+	grid-auto-flow: column dense;
+	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	row-gap: $input-row-gap;
+	column-gap: rem(8);
+}
+
+@mixin radio-pills {
+	label {
+		@include link-1(false);
+
+		display: inline-flex !important;
+		justify-content: center;
+		align-items: center;
+		margin: 0 !important;
+		padding: rem(11 15) !important;
+		text-align: center;
+		border: rem(1) solid paint(neutral-8);
+		border-radius: rem(1600);
+		background-color: paint(white);
+		overflow: hidden;
+		transition: color $transition-standard, background-color $transition-standard, border $transition-standard;
+
+		@include alt-text-selectors() {
+			background-color: transparent;
+		}
+
+		&::before,
+		&::after {
+			display: none !important;
+		}
+
+		&:hover,
+		&:focus {
+			border-color: paint(neutral-1);
+
+			@include alt-text-selectors() {
+				border-color: paint(white);
+			}
+		}
+	}
+
+	legend {
+		margin-bottom: rem(8);
+	}
+
+	input:checked + label {
+		color: paint(white);
+		border-color: paint(neutral-1);
+		background-color: paint(neutral-1);
+
+		@include alt-text-selectors() {
+			color: paint(neutral-1);
+			border-color: paint(white);
+			background-color: paint(white);
+		}
+	}
+}
+
+@mixin radio-tabs-wrapper {
+	display: flex;
+	flex-direction: row;
+	gap: rem(1);
+	justify-content: stretch;
+	align-items: stretch;
+	margin: rem(48 0);
+	border: rem(1) solid paint(neutral-8);
+	background-color: paint(neutral-8);
+}
+
+@mixin radio-tabs {
+	margin: rem(48 0);
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	label {
+		@include link-1(false);
+
+		display: inline-flex !important;
+		justify-content: center;
+		align-items: center;
+		margin: 0 !important;
+		padding: rem(11 15) !important;
+		color: paint(neutral-6);
+		text-align: center;
+		border-radius: 0;
+		background-color: paint(white);
+		overflow: hidden;
+		transition: color $transition-standard, background-color $transition-standard;
+
+		@include alt-button-selectors() {
+			color: paint(white);
+			background-color: paint(neutral-1);
+		}
+
+		&::before,
+		&::after {
+			display: none !important;
+		}
+
+		&:hover {
+			color: paint(neutral-1);
+
+			@include alt-button-selectors() {
+				color: paint(neutral-1);
+				background-color: paint(white);
+			}
+		}
+	}
+
+	legend {
+		margin-bottom: rem(8);
+	}
+
+	input:focus + label {
+		color: paint(neutral-1);
+
+		@include alt-button-selectors() {
+			color: paint(neutral-1);
+			background-color: paint(white);
+		}
+	}
+
+	input:checked + label {
+		color: paint(white);
+		background-color: paint(neutral-1);
+
+		@include alt-button-selectors() {
+			color: paint(neutral-1);
+			background-color: paint(white);
+		}
+	}
+}

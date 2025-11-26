@@ -1,0 +1,15 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-hero-standard-slide {
+		&__content {
+			width: 100%;
+			padding-right: 0;
+
+			.wp-block-heading {
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+{
+    "key": "group_66016e15008d8",
+    "title": "Block: Columns",
+    "fields": [
+        {
+            "key": "field_66016e1546ddf",
+            "label": "Column Width",
+            "name": "column_width",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "The number of columns each individual column should use by default. Based on a 12 column grid.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "min": 2,
+            "max": 6,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/columns"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1711370616
+}

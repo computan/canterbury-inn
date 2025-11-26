@@ -1,0 +1,36 @@
+@import "base-includes";
+
+.block-hero-post-standard-case-study {
+	text-align: center;
+
+	&__row {
+		justify-content: center;
+	}
+
+	&__title {
+		margin-top: 0;
+	}
+
+	&__image-wrapper {
+		margin-top: responsive-values(48, 72);
+	}
+
+	&__meta-bottom {
+		margin-top: responsive-values(24, 32);
+		font-size: 0;
+		line-height: 0;
+
+		span {
+			@include subtitle-2(false);
+
+			&:not(:last-child) {
+				&::after {
+					content: "•";
+					display: inline-block;
+					margin: auto rem(6);
+					color: paint(text);
+				}
+			}
+		}
+	}
+}

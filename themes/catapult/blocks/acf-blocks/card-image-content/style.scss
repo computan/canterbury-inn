@@ -1,0 +1,11 @@
+@import "base-includes";
+
+.block-card-image-content {
+	.block-cards {
+		max-width: 100%;
+	}
+
+	.block-cards__grid {
+		row-gap: rem(48);
+	}
+}

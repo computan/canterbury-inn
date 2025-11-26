@@ -1,0 +1,561 @@
+{
+    "Hero-Archive-Featured-Mobile": [
+        "Hero-Archive-Featured-1-Mobile",
+        "Hero-Archive-Featured-2-Mobile"
+    ],
+    "Hero-Profile-Resource-Gated-Desktop": [
+        "Hero-Profile-Resource-Gated-1-Desktop",
+        "Hero-Profile-Resource-Gated-2-Desktop"
+    ],
+    "Hero-Profile-Resource-Gated-Mobile": [
+        "Hero-Profile-Resource-Gated-1-Mobile",
+        "Hero-Profile-Resource-Gated-2-Mobile"
+    ],
+    "Hero-Profile-Results-Logo-Desktop": [
+        "Hero-Profile-Results-Logo-1-Desktop"
+    ],
+    "Hero-Profile-Results-Logo-Mobile": [
+        "Hero-Profile-Results-Logo-1-Mobile"
+    ],
+    "Hero-Profile-Staff-Desktop": [
+        "Hero-Profile-Staff-1-Desktop"
+    ],
+    "Hero-Profile-Staff-Mobile": [
+        "Hero-Profile-Staff-1-Mobile"
+    ],
+    "Post-Accommodation-Desktop": [
+        "Post-Accommodation-1-Desktop"
+    ],
+    "Post-Accommodation-Mobile": [
+        "Post-Accommodation-1-Mobile"
+    ],
+    "Post-Content-Desktop": [
+        "Post-Content-Side-1-Desktop",
+        "Post-Content-Centered-2-Desktop"
+    ],
+    "Post-Content-Mobile": [
+        "Post-Content-1-Mobile",
+        "Post-Content-2-Mobile"
+    ],
+    "Hero-Taxonomy-Basic-Desktop": [],
+    "Hero-Taxonomy-Basic-Mobile": [],
+    "Related-Posts-Desktop": [
+        "Related-Posts-Sm-1-Desktop",
+        "Related-Posts-Md-2-Desktop",
+        "Related-Posts-Lg-3-Desktop",
+        "Related-Posts-Xl-4-Desktop"
+    ],
+    "Related-Posts-Mobile": [
+        "Related-Posts-1-Mobile",
+        "Related-Posts-2-Mobile",
+        "Related-Posts-3-Mobile",
+        "Related-Posts-4-Mobile"
+    ],
+    "Hero-Profile-Image-Desktop": [
+        "Hero-Profile-Image-1-Desktop"
+    ],
+    "Hero-Profile-Image-Mobile": [
+        "Hero-Profile-Image-1-Mobile"
+    ],
+    "Hero-Archive-Image-Desktop": [
+        "Hero-Archive-Image-1-Desktop"
+    ],
+    "Hero-Archive-Image-Mobile": [
+        "Hero-Archive-Image-1-Mobile"
+    ],
+    "Hero-Archive-Text-Desktop": [
+        "Hero-Archive-Text-1-Desktop"
+    ],
+    "Hero-Archive-Text-Mobile": [
+        "Hero-Archive-Text-1-Mobile"
+    ],
+    "Post-Tags-Share-Desktop": [
+        "Post-Tags-Share-1-Desktop",
+        "Post-Tags-Share-2-Desktop",
+        "Post-Tags-Share-3-Desktop",
+        "Post-Tags-Share-4-Desktop"
+    ],
+    "Post-Tags-Share-Mobile": [
+        "Post-Tags-Share-1-Mobile",
+        "Post-Tags-Share-2-Mobile",
+        "Post-Tags-Share-3-Mobile",
+        "Post-Tags-Share-4-Mobile"
+    ],
+    "Logo-Carousel-Desktop": [
+        "Logo-Carousel-1-Desktop"
+    ],
+    "Logo-Carousel-Mobile": [
+        "Logo-Carousel-1-Mobile"
+    ],
+    "Card-Image-Content-Desktop": [
+        "Card-Image-Content-1-Desktop"
+    ],
+    "Card-Image-Content-Mobile": [
+        "Card-Image-Content-1-Mobile"
+    ],
+    "Hero-Campaign-Text-Desktop": [
+        "Hero-Campaign-Text-1-Desktop",
+        "Hero-Campaign-Text-2-Desktop"
+    ],
+    "Hero-Campaign-Text-Mobile": [
+        "Hero-Campaign-Text-1-Mobile",
+        "Hero-Campaign-Text-2-Mobile"
+    ],
+    "Hero-Campaign-Standard-Desktop": [
+        "Hero-Campaign-Standard-1-Desktop",
+        "Hero-Campaign-Standard-2-Desktop"
+    ],
+    "Hero-Campaign-Standard-Mobile": [
+        "Hero-Campaign-Standard-1-Mobile",
+        "Hero-Campaign-Standard-2-Mobile"
+    ],
+    "Hero-Donate-Desktop": [
+        "Hero-Donate-1-Desktop",
+        "Hero-Donate-2-Desktop"
+    ],
+    "Hero-Donate-Mobile": [
+        "Hero-Donate-1-Mobile",
+        "Hero-Donate-2-Mobile"
+    ],
+    "Hero-Membership-Desktop": [
+        "Hero-Membership-1-Desktop",
+        "Hero-Membership-2-Desktop",
+        "Hero-Membership-3-Desktop"
+    ],
+    "Hero-Membership-Mobile": [
+        "Hero-Membership-1-Mobile",
+        "Hero-Membership-2-Mobile"
+    ],
+    "Card-Memberships-Desktop": [
+        "Card-Memberships-1-Desktop"
+    ],
+    "Card-Memberships-Mobile": [
+        "Card-Memberships-1-Mobile"
+    ],
+    "Icon-Image-2up-Desktop": [
+        "Icon-Image-2up-1-Desktop"
+    ],
+    "Icon-Image-2up-Mobile": [
+        "Icon-Image-2up-1-Mobile"
+    ],
+    "Media-Slider-Fullscreen-Desktop": [
+        "Media-Slider-Fullscreen-1-Desktop"
+    ],
+    "Media-Slider-Fullscreen-Mobile": [
+        "Media-Slider-Fullscreen-1-Mobile"
+    ],
+    "Text-Checklist-Desktop": [
+        "Text-Checklist-1-Desktop"
+    ],
+    "Text-Checklist-Mobile": [
+        "Text-Checklist-1-Mobile"
+    ],
+    "Media-Slider-Grid-Desktop": [
+        "Media-Slider-Grid-1-Desktop",
+        "Media-Slider-Grid-2-Desktop"
+    ],
+    "Media-Slider-Grid-Mobile": [
+        "Media-Slider-Grid-1-Mobile",
+        "Media-Slider-Grid-2-Mobile"
+    ],
+    "Media-Gallery-Desktop": [
+        "Media-Gallery-1-Desktop"
+    ],
+    "Media-Gallery-Mobile": [
+        "Media-Gallery-1-Mobile"
+    ],
+    "Hero-Frame-Desktop": [
+        "Hero-Frame-1-Desktop"
+    ],
+    "Hero-Frame-Mobile": [
+        "Hero-Frame-1-Mobile"
+    ],
+    "Core-Paragraph-Desktop": [
+        "Core-Paragraph-Lead-1-Desktop",
+        "Core-Paragraph-Body-2-Desktop"
+    ],
+    "Core-Paragraph-Mobile": [
+        "Core-Paragraph-Lead-1-Mobile",
+        "Core-Paragraph-Body-2-Mobile"
+    ],
+    "CTA-Signup-Desktop": [
+        "CTA-Signup-1-Desktop"
+    ],
+    "CTA-Signup-Mobile": [
+        "CTA-Signup-1-Mobile"
+    ],
+    "Hero-Contact-Desktop": [
+        "Hero-Contact-1-Desktop",
+        "Hero-Contact-2-Desktop"
+    ],
+    "Hero-Contact-Mobile": [
+        "Hero-Contact-1-Mobile",
+        "Hero-Contact-2-Mobile"
+    ],
+    "Content-Table-Desktop": [
+        "Content-Table-Flip-1-Desktop",
+        "Content-Table-Scroll-2-Desktop",
+        "Content-Table-Stack-3-Desktop"
+    ],
+    "Content-Table-Mobile": [
+        "Content-Table-Flip-1-Mobile",
+        "Content-Table-Scroll-2-Mobile",
+        "Content-Table-Stack-3-Mobile"
+    ],
+    "Hero-404-Desktop": [
+        "Hero-404-1-Desktop"
+    ],
+    "Hero-404-Mobile": [
+        "Hero-404-1-Mobile"
+    ],
+    "Testimonial-Box-Desktop": [
+        "Testimonial-Box-Quote-1-Desktop",
+        "Testimonial-Box-Logo-2-Desktop"
+    ],
+    "Testimonial-Box-Mobile": [
+        "Testimonial-Box-Quote-1-Mobile",
+        "Testimonial-Box-Logo-2-Mobile"
+    ],
+    "Testimonial-Cards-Desktop": [
+        "Testimonial-Cards-1-Desktop",
+        "Testimonial-Cards-2-Desktop"
+    ],
+    "Testimonial-Cards-Mobile": [
+        "Testimonial-Cards-1-Mobile",
+        "Testimonial-Cards-2-Mobile"
+    ],
+    "Testimonial-Image-Desktop": [
+        "Testimonial-Image-1-Desktop",
+        "Testimonial-Image-2-Desktop",
+        "Testimonial-Image-3-Desktop",
+        "Testimonial-Image-4-Desktop",
+        "Testimonial-Image-5-Desktop",
+        "Testimonial-Image-6-Desktop"
+    ],
+    "Testimonial-Image-Mobile": [
+        "Testimonial-Image-1-Mobile",
+        "Testimonial-Image-2-Mobile",
+        "Testimonial-Image-3-Mobile",
+        "Testimonial-Image-4-Mobile",
+        "Testimonial-Image-5-Mobile",
+        "Testimonial-Image-6-Mobile"
+    ],
+    "Icon-Image-Stacked-Desktop": [
+        "Icon-Image-Stacked-1-Desktop"
+    ],
+    "Icon-Image-Stacked-Mobile": [
+        "Icon-Image-Stacked-1-Mobile"
+    ],
+    "Icon-Side-Heading-Desktop": [
+        "Icon-Side-Heading-1-Desktop"
+    ],
+    "Icon-Side-Heading-Mobile": [
+        "Icon-Side-Heading-1-Mobile"
+    ],
+    "Icon-Standard-Desktop": [
+        "Icon-Standard-1-Desktop",
+        "Icon-Standard-2-Desktop",
+        "Icon-Standard-3-Desktop"
+    ],
+    "Icon-Standard-Mobile": [
+        "Icon-Standard-1-Mobile",
+        "Icon-Standard-2-Mobile",
+        "Icon-Standard-3-Mobile"
+    ],
+    "CTA-Donate-Desktop": [
+        "CTA-Donate-1-Desktop",
+        "CTA-Donate-2-Desktop"
+    ],
+    "CTA-Donate-Mobile": [
+        "CTA-Donate-1-Mobile",
+        "CTA-Donate-2-Mobile"
+    ],
+    "CTA-Strip-Desktop": [
+        "CTA-Strip-1-Desktop",
+        "CTA-Strip-Full-2-Desktop"
+    ],
+    "CTA-Strip-Mobile": [
+        "CTA-Strip-1-Mobile",
+        "CTA-Strip-Full-2-Mobile"
+    ],
+    "CTA-Grid-Desktop": [
+        "CTA-Grid-Small-1-Desktop",
+        "CTA-Grid-Large-2-Desktop"
+    ],
+    "CTA-Grid-Mobile": [
+        "CTA-Grid-Small-1-Mobile",
+        "CTA-Grid-Large-2-Mobile"
+    ],
+    "Card-Text-Links-Desktop": [
+        "Card-Text-Links-1-Desktop",
+        "Card-Text-Links-2-Desktop",
+        "Card-Text-Links-3-Desktop"
+    ],
+    "Card-Text-Links-Mobile": [
+        "Card-Text-Links-1-Mobile",
+        "Card-Text-Links-2-Mobile",
+        "Card-Text-Links-3-Mobile"
+    ],
+    "Card-Image-Links-Desktop": [
+        "Card-Image-Links-1-Desktop",
+        "Card-Image-Links-2-Desktop",
+        "Card-Image-Links-3-Desktop"
+    ],
+    "Card-Image-Links-Mobile": [
+        "Card-Image-Links-1-Mobile",
+        "Card-Image-Links-2-Mobile",
+        "Card-Image-Links-3-Mobile"
+    ],
+    "Card-Stacked-Desktop": [
+        "Card-Stacked-1-Desktop",
+        "Card-Stacked-2-Desktop",
+        "Card-Stacked-3-Desktop"
+    ],
+    "Card-Stacked-Mobile": [
+        "Card-Stacked-1-Mobile",
+        "Card-Stacked-2-Mobile",
+        "Card-Stacked-3-Mobile"
+    ],
+    "Card-Standard-Desktop": [
+        "Card-Standard-1-Desktop"
+    ],
+    "Card-Standard-Mobile": [
+        "Card-Standard-1-Mobile"
+    ],
+    "Stat-Image-Desktop": [
+        "Stat-Image-1-Desktop"
+    ],
+    "Stat-Image-Mobile": [
+        "Stat-Image-1-Mobile"
+    ],
+    "Stat-Supporting-Desktop": [
+        "Stat-Supporting-1-Desktop"
+    ],
+    "Stat-Supporting-Mobile": [
+        "Stat-Supporting-1-Mobile"
+    ],
+    "Stat-Simple-Desktop": [
+        "Stat-Simple-1-Desktop"
+    ],
+    "Stat-Simple-Mobile": [
+        "Stat-Simple-1-Mobile"
+    ],
+    "Tab-Side-Image-Desktop": [
+        "Tab-Side-Image-1-Desktop"
+    ],
+    "Tab-Side-Image-Mobile": [
+        "Tab-Side-Image-1-Mobile"
+    ],
+    "Tab-Standard-Desktop": [
+        "Tab-Standard-1-Desktop"
+    ],
+    "Tab-Standard-Mobile": [
+        "Tab-Standard-1-Mobile"
+    ],
+    "Text-Side-Heading-Desktop": [
+        "Text-Side-Heading-1-Desktop"
+    ],
+    "Text-Side-Heading-Mobile": [
+        "Text-Side-Heading-1-Mobile"
+    ],
+    "Text-Columns-Desktop": [
+        "Text-Columns-1-Desktop",
+        "Text-Columns-2-Desktop",
+        "Text-Columns-3-Desktop"
+    ],
+    "Text-Columns-Mobile": [
+        "Text-Columns-1-Mobile",
+        "Text-Columns-2-Mobile",
+        "Text-Columns-3-Mobile"
+    ],
+    "Stat-Strip-Desktop": [
+        "Stat-Strip-1-Desktop"
+    ],
+    "Stat-Strip-Mobile": [
+        "Stat-Strip-1-Mobile"
+    ],
+    "Text-Rows-Desktop": [
+        "Text-Rows-1-Desktop"
+    ],
+    "Text-Rows-Mobile": [
+        "Text-Rows-1-Mobile"
+    ],
+    "Text-Lead-Desktop": [
+        "Text-Lead-1-Desktop"
+    ],
+    "Text-Lead-Mobile": [
+        "Text-Lead-1-Mobile"
+    ],
+    "Text-Centered-Desktop": [
+        "Text-Centered-1-Desktop"
+    ],
+    "Text-Centered-Mobile": [
+        "Text-Centered-1-Mobile"
+    ],
+    "Accordion-Centered-Desktop": [
+        "Accordion-Centered-1-Desktop",
+        "Accordion-Centered-2-Desktop"
+    ],
+    "Accordion-Centered-Mobile": [
+        "Accordion-Centered-1-Mobile",
+        "Accordion-Centered-2-Mobile"
+    ],
+    "Logo-Standard-Desktop": [
+        "Logo-Standard-1-Desktop"
+    ],
+    "Logo-Standard-Mobile": [
+        "Logo-Standard-1-Mobile"
+    ],
+    "Logo-Strip-Desktop": [
+        "Logo-Strip-1-Desktop"
+    ],
+    "Logo-Strip-Mobile": [
+        "Logo-Strip-1-Mobile"
+    ],
+    "CTA-Form-Desktop": [
+        "CTA-Form-1-Desktop"
+    ],
+    "CTA-Form-Mobile": [
+        "CTA-Form-1-Mobile"
+    ],
+    "Hero-Standard-Desktop": [
+        "Hero-Standard-1-Desktop"
+    ],
+    "Hero-Standard-Mobile": [
+        "Hero-Standard-1-Mobile"
+    ],
+    "Hero-Centered-Desktop": [
+        "Hero-Centered-1-Desktop"
+    ],
+    "Hero-Centered-Mobile": [
+        "Hero-Centered-1-Mobile"
+    ],
+    "Hero-Display-Desktop": [
+        "Hero-Display-1-Desktop"
+    ],
+    "Hero-Display-Mobile": [
+        "Hero-Display-1-Mobile"
+    ],
+    "CTA-Standard-Desktop": [
+        "CTA-Standard-1-Desktop"
+    ],
+    "CTA-Standard-Mobile": [
+        "CTA-Standard-1-Mobile"
+    ],
+    "Content-Side-Image-Desktop": [
+        "Content-Side-Image-Right-1-Desktop",
+        "Content-Side-Image-Right-2-Desktop",
+        "Content-Side-Image-Right-3-Desktop",
+        "Content-Side-Image-Left-4-Desktop",
+        "Content-Side-Image-Left-5-Desktop",
+        "Content-Side-Image-Left-6-Desktop",
+        "Content-Side-Image-Pattern-7-Desktop"
+    ],
+    "Content-Side-Image-Mobile": [
+        "Content-Side-Image-Right-1-Mobile",
+        "Content-Side-Image-Right-2-Mobile",
+        "Content-Side-Image-Right-3-Mobile",
+        "Content-Side-Image-Left-4-Mobile",
+        "Content-Side-Image-Right-5-Mobile",
+        "Content-Side-Image-Right-6-Mobile",
+        "Content-Side-Image-Pattern-7-Mobile"
+    ],
+    "Testimonial-Standard-Desktop": [
+        "Testimonial-Standard-Quotation-1-Desktop",
+        "Testimonial-Standard-Logo-2-Desktop"
+    ],
+    "Testimonial-Standard-Mobile": [
+        "Testimonial-Standard-Quotation-1-Mobile",
+        "Testimonial-Standard-Logo-2-Mobile"
+    ],
+    "Media-Standard-Desktop": [
+        "Media-Standard-Photo-21-1-Desktop",
+        "Media-Standard-Photo-21-2-Desktop",
+        "Media-Standard-Photo-169-3-Desktop",
+        "Media-Standard-Photo-32-4-Desktop",
+        "Media-Standard-Photo-32-2col-5-Desktop",
+        "Media-Standard-Photo-43-2col-6-Desktop",
+        "Media-Standard-Photo-11-2col-7-Desktop",
+        "Media-Standard-Video-169-8-Desktop"
+    ],
+    "Media-Standard-Mobile": [
+        "Media-Standard-Photo-21-1-Mobile",
+        "Media-Standard-Photo-21-2-Mobile",
+        "Media-Standard-Photo-169-3-Mobile",
+        "Media-Standard-Photo-32-4-Mobile",
+        "Media-Standard-Photo-32-2col-5-Mobile",
+        "Media-Standard-Photo-43-2col-6-Mobile",
+        "Media-Standard-Photo-11-2col-7-Mobile",
+        "Media-Standard-Video-169-8-Mobile"
+    ],
+    "Accordion-Side-Image-Desktop": [
+        "Accordion-Side-Image-1-Desktop"
+    ],
+    "Accordion-Side-Image-Mobile": [
+        "Accordion-Side-Image-1-Mobile"
+    ],
+    "Accordion-Side-Heading-Desktop": [
+        "Accordion-Side-Heading-1-Desktop",
+        "Accordion-Side-Heading-2-Desktop"
+    ],
+    "Accordion-Side-Heading-Mobile": [
+        "Accordion-Side-Heading-1-Mobile",
+        "Accordion-Side-Heading-2-Mobile"
+    ],
+    "Core-Button-Desktop": [
+        "Core-Button-Light-Primary-Large-1-Desktop",
+        "Core-Button-Light-Secondary-Large-2-Desktop",
+        "Core-Button-Light-Tertiary-Large-3-Desktop",
+        "Core-Button-Dark-Primary-Large-4-Desktop",
+        "Core-Button-Dark-Secondary-Large-5-Desktop",
+        "Core-Button-Dark-Tertiary-Large-6-Desktop"
+    ],
+    "Core-Button-Mobile": [
+        "Core-Button-Light-Primary-Large-1-Mobile",
+        "Core-Button-Light-Secondary-Large-2-Mobile",
+        "Core-Button-Light-Tertiary-Large-3-Mobile",
+        "Core-Button-Dark-Primary-Large-4-Mobile",
+        "Core-Button-Dark-Secondary-Large-5-Mobile",
+        "Core-Button-Dark-Tertiary-Large-6-Mobile"
+    ],
+    "Core-Separator-Desktop": [
+        "Core-Separator-1-Desktop"
+    ],
+    "Core-Separator-Mobile": [
+        "Core-Separator-1-Mobile"
+    ],
+    "Core-Quote-Desktop": [
+        "Core-Quote-1-Desktop"
+    ],
+    "Core-Quote-Mobile": [
+        "Core-Quote-1-Mobile"
+    ],
+    "Core-List-Desktop": [
+        "Core-List-Bulleted-1-Desktop",
+        "Core-List-Numbered-2-Desktop",
+        "Core-List-Checked-3-Desktop"
+    ],
+    "Core-List-Mobile": [
+        "Core-List-Bulleted-1-Mobile",
+        "Core-List-Numbered-2-Mobile",
+        "Core-List-Checked-3-Mobile"
+    ],
+    "Core-Heading-Desktop": [
+        "Core-Heading-Display-1-Desktop",
+        "Core-Heading-T1-2-Desktop",
+        "Core-Heading-T2-3-Desktop",
+        "Core-Heading-T3-4-Desktop",
+        "Core-Heading-T4-5-Desktop",
+        "Core-Heading-T5-6-Desktop",
+        "Core-Heading-T6-7-Desktop"
+    ],
+    "Core-Heading-Mobile": [
+        "Core-Heading-Display-1-Mobile",
+        "Core-Heading-T1-2-Mobile",
+        "Core-Heading-T2-3-Mobile",
+        "Core-Heading-T3-4-Mobile",
+        "Core-Heading-T4-5-Mobile",
+        "Core-Heading-T5-6-Mobile",
+        "Core-Heading-T6-7-Mobile"
+    ]
+}

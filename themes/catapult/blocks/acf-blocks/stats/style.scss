@@ -1,0 +1,15 @@
+@import "base-includes";
+
+.block-stats {
+	justify-content: center;
+	margin-top: responsive-values(48, 72);
+	margin-bottom: responsive-values(-32, -64);
+
+	@include media-breakpoint-up(sm) {
+		overflow: hidden;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,17 @@
+@import "base-includes";
+
+.block-hero-centered {
+	text-align: center;
+
+	&__image {
+		@include responsive-grid();
+
+		margin: responsive-values(48, 72) auto 0 auto;
+	}
+
+	.wp-block-image {
+		@include responsive-grid(12, 12, 12, 10, 10, 10);
+
+		margin: responsive-values(48, 72) auto 0 auto;
+	}
+}

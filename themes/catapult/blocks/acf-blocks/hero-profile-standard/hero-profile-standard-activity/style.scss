@@ -1,0 +1,74 @@
+@import "base-includes";
+
+.block-hero-profile-standard-activity {
+	&__container {
+		@include media-breakpoint-up(md) {
+			@include grid;
+
+			align-items: center;
+		}
+	}
+
+	&__image-wrapper {
+		width: 100%;
+
+		@include media-breakpoint-up(md) {
+			grid-column: 6 / span 7;
+		}
+	}
+
+	&__row {
+		align-items: center;
+	}
+
+	&__title {
+		margin-top: rem(4);
+		margin-bottom: responsive-values(16, 24);
+	}
+
+	&__term {
+		@include link-2(false);
+	}
+
+	&__meta-bottom {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-top: responsive-values(16, 24);
+
+		span {
+			@include subtitle-2(false);
+
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-right: rem(16);
+			color: paint(neutral-5);
+		}
+
+		.icon {
+			width: rem(16);
+			height: rem(16);
+			margin-right: rem(4);
+			color: paint(text);
+		}
+	}
+
+	&__excerpt {
+		margin-top: rem(16);
+	}
+
+	&__content {
+		margin-bottom: rem(48);
+
+		@include media-breakpoint-up(md) {
+			grid-column: 1 / span 5;
+			margin-bottom: 0;
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-column-end: span 5;
+		}
+	}
+}

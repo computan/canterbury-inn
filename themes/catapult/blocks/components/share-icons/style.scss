@@ -1,0 +1,12 @@
+@import "base-includes";
+
+.share-icons {
+	display: flex;
+	justify-content: flex-start;
+
+	&__link {
+		span {
+			display: none;
+		}
+	}
+}

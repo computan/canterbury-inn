@@ -1,0 +1,30 @@
+@import "base-includes";
+
+.block-form-item {
+	margin-top: rem(16);
+	margin-bottom: rem(16);
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	p {
+		&:first-child {
+			@include subtitle-2(false);
+
+			margin-bottom: rem(4);
+		}
+
+		&:last-child {
+			@include title-1;
+		}
+	}
+
+	+ .gform_wrapper {
+		margin-top: rem(16);
+	}
+}

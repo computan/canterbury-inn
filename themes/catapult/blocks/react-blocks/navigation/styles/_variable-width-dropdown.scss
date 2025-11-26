@@ -1,0 +1,132 @@
+.block-navigation.is-style-variable-width-dropdown {
+	&.active {
+		@include media-breakpoint-up(lg) {
+			position: sticky;
+		}
+	}
+
+	.block-navigation__hamburger {
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+	}
+
+	.block-navigation-submenu {
+		@include media-breakpoint-down(md) {
+			position: relative;
+			top: auto;
+			left: auto;
+			bottom: auto;
+			display: none;
+			transition: none;
+		}
+
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			top: 100%;
+			left: var(--gutterWidth);
+			bottom: auto;
+			width: max-content;
+			min-width: rem(260);
+			max-width: calc(var(--vw, 1vw) * 100 - var(--gutterWidth) * 2);
+			max-height: calc(100 * var(--vh, 1vh) - rem(64));
+		}
+
+		&__header {
+			display: none;
+		}
+	}
+
+	&.block-navigation--initialized {
+		.block-navigation-link {
+			@include media-breakpoint-up(lg) {
+				position: relative;
+			}
+		}
+
+		.block-navigation-submenu {
+			@include media-breakpoint-up(lg) {
+				left: 50%;
+				transform: translateX(calc(-50% + var(--submenuOffset, 0rem)));
+			}
+		}
+	}
+
+	.block-navigation-link.active .block-navigation-submenu__header {
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+	}
+
+	.block-navigation-link.active .block-navigation-submenu {
+		@include media-breakpoint-down(md) {
+			display: block;
+		}
+	}
+
+	.block-navigation-link__button {
+		&--with-submenu {
+			transition: background-color $transition-standard;
+
+			&::after {
+				@include icon("chev-expand");
+
+				transition: transform $transition-standard;
+			}
+		}
+	}
+
+	.block-navigation-link.active {
+		.block-navigation-link__button {
+			&--with-submenu {
+				background-color: paint(neutral-11);
+
+				@include media-breakpoint-up(lg) {
+					background-color: transparent;
+				}
+
+				&::after {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+
+	.block-navigation__menu {
+		@include media-breakpoint-up(lg) {
+			position: static;
+			top: auto;
+			left: auto;
+			bottom: auto;
+			display: flex;
+			flex-direction: row;
+			width: auto;
+			padding-bottom: 0;
+			visibility: visible;
+			opacity: 1;
+			overflow-y: unset;
+		}
+
+		> .wp-block-button {
+			@include media-breakpoint-up(lg) {
+				position: relative;
+				left: auto;
+				bottom: auto;
+				width: auto;
+				margin-top: auto;
+				margin-bottom: auto;
+				padding: 0;
+
+				&:last-child {
+					margin-bottom: auto;
+				}
+			}
+		}
+
+		.wp-block-button__link {
+			@include media-breakpoint-up(lg) {
+				width: auto;
+			}
+		}
+	}
+}

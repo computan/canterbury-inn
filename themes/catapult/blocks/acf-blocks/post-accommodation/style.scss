@@ -1,0 +1,91 @@
+@import "base-includes";
+
+.block-post-accommodation {
+	padding-top: responsive-values(48, 72);
+
+	&.acf-block--has-sidebar {
+		.block-post-accommodation__container {
+			@include media-breakpoint-up(md) {
+				@include grid;
+			}
+		}
+
+		.block-post-accommodation__content {
+			@include media-breakpoint-up(md) {
+				grid-column: 1 / span 8;
+			}
+		}
+
+		.block-post-accommodation__sidebar {
+			@include media-breakpoint-up(md) {
+				grid-column: 9 / span 4;
+			}
+
+			@include media-breakpoint-up(lg) {
+				grid-column: 10 / span 3;
+			}
+		}
+	}
+
+	&__content {
+		p {
+			&:only-child {
+				body.post-type-archive-library_block & {
+					@include t1(false);
+
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					min-height: responsive-values(1296, 832);
+					padding: rem(20) responsive-values(20, 220);
+					padding-bottom: rem(52);
+					font-weight: 400;
+					font-size: rem(36);
+					font-family: "Merriweather Sans", sans-serif;
+					font-style: normal;
+					line-height: rem(48);
+					text-align: center;
+					background-color: paint(neutral-9);
+
+					@include media-breakpoint-down(sm) {
+						padding-top: rem(50);
+					}
+				}
+			}
+		}
+	}
+
+	&__sidebar {
+		margin-bottom: rem(88);
+
+		@include media-breakpoint-up(md) {
+			order: 2;
+			margin-bottom: 0;
+		}
+
+		.wp-block-heading {
+			@include title-1;
+		}
+	}
+
+	.input-number,
+	.input-number__input {
+		width: 100%;
+	}
+
+	.gfield {
+		margin-bottom: rem(16);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.gform_footer {
+		margin-top: rem(24);
+
+		.c-btn {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"blocksToIgnore": [
+		"Media-Gallery-Lightbox",
+		"Hero-Post-Standard",
+		"Hero-Profile-Standard",
+		"Hero-Taxonomy-Basic",
+		"Post-Placeholder"
+	],
+	"ignoreBlockVariations": [
+		"Media-Slider-Grid-3"
+	],
+	"blockScenarioOverrides": {
+		"Core-Quote": {
+			"misMatchThreshold": 3
+		},
+		"Core-Separator": {
+			"misMatchThreshold": 4
+		},
+		"Hero-Campaign-Text": {
+			"misMatchThreshold": 3
+		},
+		"Related-Posts": {
+			"viewports": [
+				{
+					"label": "Desktop",
+					"width": 1680,
+					"height": 768,
+					"deviceScaleFactor": 2.0,
+					"pageScaleFactor": 1.0
+				}
+			]
+		}
+	}
+}

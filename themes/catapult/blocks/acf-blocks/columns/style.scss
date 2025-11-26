@@ -1,0 +1,39 @@
+@import "base-includes";
+
+.block-columns {
+	display: grid;
+	row-gap: responsive-values(32, 48);
+	margin: responsive-values(48, 72) 0;
+
+	@include media-breakpoint-up(md) {
+		@include grid;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	& + & {
+		margin-top: responsive-values(-16, -24);
+	}
+
+	.content-wrapper > & {
+		@include responsive-grid(12, 12, 12, 12, 12, 12);
+
+		margin: $block-spacing-with-text auto;
+	}
+
+	.acf-block.bg-white + &,
+	.acf-block.bg-transparent + & {
+		margin-top: $block-spacing-first-text-child-offset;
+	}
+
+	+ .acf-block.bg-white,
+	+ .acf-block.bg-transparent {
+		padding-top: 0;
+	}
+}

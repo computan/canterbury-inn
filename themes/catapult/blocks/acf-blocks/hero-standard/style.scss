@@ -1,0 +1,37 @@
+@import "base-includes";
+
+.block-hero-standard {
+	&__container {
+		@include media-breakpoint-up(md) {
+			@include grid;
+
+			align-items: center;
+		}
+	}
+
+	&__image,
+	.component-video {
+		width: 100%;
+
+		@include media-breakpoint-up(md) {
+			grid-column: 7 / span 6;
+		}
+	}
+
+	&__row {
+		align-items: center;
+	}
+
+	&__content {
+		margin-bottom: rem(48);
+
+		@include media-breakpoint-up(md) {
+			grid-column: 1 / span 6;
+			margin-bottom: 0;
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-column-end: span 5;
+		}
+	}
+}

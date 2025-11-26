@@ -1,0 +1,67 @@
+@import "base-includes";
+
+.block-cta-signup {
+	.gform_wrapper {
+		@include media-breakpoint-up(md) {
+			margin-top: rem(72) !important;
+			margin-bottom: responsive-values(-40, -48);
+		}
+	}
+
+	form {
+		@include media-breakpoint-up(md) {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+		}
+	}
+
+	.gform_footer {
+		@include media-breakpoint-up(md) {
+			min-width: 16.17647059%;
+			margin-top: 0;
+		}
+
+		.c-btn {
+			@include media-breakpoint-up(md) {
+				width: 100%;
+				margin-top: 0;
+			}
+		}
+	}
+
+	.gform_body {
+		@include media-breakpoint-up(md) {
+			flex-grow: 1;
+			margin-right: $input-column-gap;
+		}
+	}
+
+	.gform_validation_errors {
+		@include media-breakpoint-up(md) {
+			width: 100%;
+			margin-bottom: rem(48);
+		}
+	}
+
+	.gform_submission_error {
+		@include media-breakpoint-up(md) {
+			justify-content: center;
+		}
+	}
+
+	.gfield {
+		position: relative;
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: responsive-values(40, 48);
+		}
+
+		label {
+			@include media-breakpoint-up(md) {
+				position: absolute;
+				bottom: 100%;
+			}
+		}
+	}
+}

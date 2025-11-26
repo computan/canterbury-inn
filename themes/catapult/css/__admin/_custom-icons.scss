@@ -1,0 +1,18 @@
+.catapult-existing-icon-options {
+	ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: rem(8);
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		.icon {
+			display: block;
+			width: rem(24);
+			height: rem(24);
+			background-color: paint(neutral-1);
+		}
+	}
+}

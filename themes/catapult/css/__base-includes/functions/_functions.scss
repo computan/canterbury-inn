@@ -1,0 +1,191 @@
+/* stylelint-disable order/order */
+
+@use "sass:math";
+@use "sass:list";
+@use "sass:map";
+
+$rem-base: 16;
+$rem-units-active: true;
+
+/*
+* Converts an pixel value into a rem value.
+*
+* @param string  $values    the pixel value(s) as a number. Can convert multiple values if values separated by a space.
+* @param integer $base      the base pixel value.
+*
+* @return string   a space-separated string of rem values.
+*/
+@function rem($values, $base: 16) {
+	$max: list.length($values);
+	$rem-values: ();
+
+	@if $max == 1 {
+		@return convert-to-rem(list.nth($values, 1), $base);
+	}
+
+	@for $i from 1 through $max {
+		$rem-values: list.append($rem-values, convert-to-rem(list.nth($values, $i), $base));
+	}
+
+	@return $rem-values;
+}
+
+@function strip-units( $number ) {
+	@return math.div($number,  $number * 0 + 1 );
+}
+
+@function convert-to-rem($value, $base: $rem-base) {
+	@if ($rem-units-active == false) {
+		$value: strip-unit($value) * rem(1);
+
+		@if ($value == rem(1)) {
+			$value: 0;
+		}
+
+		@return $value;
+	}
+
+	$value: math.div(strip-units($value), strip-units($base)) * 1rem;
+
+	@if ($value == 0) {
+		$value: 0;
+	}
+	// Turn 0rem into 0
+
+	@return $value;
+}
+
+/*
+* This is an abbreviated wrapper for the responsive-values function.
+*/
+@function rv($min, $max, $smallest-breakpoint: "md", $largest-breakpoint: "xxl", $screen: "width") {
+	@return responsive-values($min, $max, $smallest-breakpoint, $largest-breakpoint, $screen);
+}
+
+/*
+* Creates a CSS clamp value that sizes between breakpoints.
+*
+* @param integer $min                    the minimum pixel value.
+* @param integer $max                    the maximum pixel value.
+* @param string  $smallest-breakpoint    the name of the smallest breakpoint from the $grid-breakpoints variable.
+* @param string  $largest-breakpoint     the name of the largest breakpoint from the $grid-breakpoints variable.
+* @param string  $screen                 whether to use a horizontal (width) breakpoint or a vertical (height) breakpoint.
+*
+* @return string   a CSS clamp property value.
+*/
+@function responsive-values($min, $max, $smallest-breakpoint: "md", $largest-breakpoint: "xxl", $screen: "width") {
+	$min-unit: math.unit($min);
+	$max-unit: math.unit($max);
+	$viewport-unit: 100vw;
+
+	@if ($min-unit != "") {
+		$min: strip-units($min) * $rem-base;
+	}
+
+	@if ($max-unit != "") {
+		$max: strip-units($max) * $rem-base;
+	}
+
+	@if ($min == $max) {
+		@return rem($min);
+	}
+
+	@if ($screen == "height") {
+		$viewport-unit: 100vh;
+	}
+
+	$min-width: $smallest-breakpoint;
+	$max-width: $largest-breakpoint;
+
+	@if (type_of($smallest-breakpoint) == "string") {
+		$min-width: strip-units(map.get($grid-breakpoints, $smallest-breakpoint)) * 16;
+	}
+
+	@if (type_of($largest-breakpoint) == "string") {
+		$max-width: strip-units(map.get($grid-breakpoints, $largest-breakpoint)) * 16;
+	}
+
+	@if ($min-width == $max-width) {
+		$min-width: $min-width - 1;
+	}
+
+	$slope: math.div($max - $min, $max-width - $min-width);
+	$y-axis-intersection: -$min-width * $slope + $min;
+
+	$preferred-size: #{rem($y-axis-intersection)} #{"+"} #{$slope * $viewport-unit};
+
+	@if ($y-axis-intersection == 0) {
+		$preferred-size: #{$slope #{"*"} $viewport-unit};
+	}
+
+	@if ($min > $max) {
+		$min-old: $min;
+		$max-old: $max;
+		$min: $max-old;
+		$max: $min-old;
+	}
+
+	$min: rem($min);
+	$max: rem($max);
+
+	@if ($min == 0) {
+		$min: 0;
+	}
+
+	@if ($max == 0) {
+		$max: 0;
+	}
+
+	@return clamp(#{$min}, #{$preferred-size}, #{$max});
+}
+
+/*
+* Outputs a font family value from the $fonts variable.
+*
+* @param string  $key   the font key.
+*
+* @return string   a font family value.
+*/
+@function font($key) {
+	@if map.has-key($fonts, $key) {
+		@return #{map.get(map.get($fonts, $key), "css")};
+	} @else {
+		@error "ERROR: #{ $key } does not exist in fonts.";
+	}
+}
+
+/*
+* Outputs a color value from the $paints or $additional-paints variables.
+*
+* @param string   $key   the color name.
+*
+* @return string   a color value.
+*/
+@function paint($key) {
+	@if ("text" == $key) {
+		@return var(--blockColor, $default-text-color);
+	} @else if map.has-key($paints, $key) {
+		@return map.get($paints, $key);
+	} @else if map.has-key($additional-paints, $key) {
+		@return map.get($additional-paints, $key);
+	} @else {
+		@error "ERROR: #{ $key } does not exist in paints.";
+	}
+}
+
+/*
+* Outputs an effect value from the $effects variable.
+*
+* @param string  $key   the effect name.
+*
+* @return string   an effect value.
+*/
+@function effect($key) {
+	@if map.has-key($effects, $key) {
+		@return map.get($effects, $key);
+	} @else {
+		@error "ERROR: #{ $key } does not exist in effects.";
+	}
+}
+
+/* stylelint-enable order/order */

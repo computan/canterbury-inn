@@ -1,0 +1,274 @@
+//This file is only for mixins. Don't include any styles in this file or else they will repeated in every block.
+
+@use "sass:map";
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+
+@import "../../../icons/icons";
+
+@mixin cf {
+	&::before,
+	&::after {
+		content: "";
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}
+
+@function vw-size($s, $w: 1440) {
+	@return math.div($s, $w) * 100 + vw;
+}
+
+/*
+* Used to target heading selectors.
+*
+* @param integer  $start               the first heading element to target. 1 through 6.
+* @param integer  $end                 the last heading element to target. 1 through 6.
+* @param string   $beforeCombinator    the CSS combinator to include before the heading classes.
+* @param string   $afterCombinator     the CSS combinator to include after the heading classes.
+* @param boolean  $includeFontClasses  whether or not to include the .has-t-1... classes or just output the standard heading elements.
+*
+* @return string  The included CSS wrapped with selectors for the specified headings.
+*/
+@mixin headings( $start: 1, $end: 6, $beforeCombinator: "", $afterCombinator: "", $includeFontClasses: false ) {
+	$headings: "";
+
+	@if ($afterCombinator != "") {
+		@if not (string.index($afterCombinator, "&")) {
+			$afterCombinator: #{$afterCombinator "&"};
+		}
+	}
+
+	@for $i from $start through $end {
+		@if $i != $start {
+			@if ($includeFontClasses == false) {
+				$headings: "#{ $headings },#{$beforeCombinator} h#{ $i } #{$afterCombinator}";
+			} @else {
+				$headings: "#{ $headings },#{$beforeCombinator} h#{ $i } #{$afterCombinator},#{$beforeCombinator} .has-t-#{ $i }-font-size #{$afterCombinator}";
+			}
+		} @else {
+			@if ($includeFontClasses == false) {
+				$headings: "#{$beforeCombinator} h#{ $i } #{$afterCombinator}";
+			} @else {
+				$headings: "#{$beforeCombinator} h#{ $i } #{$afterCombinator},#{$beforeCombinator} .has-t-#{ $i }-font-size #{$afterCombinator}";
+			}
+		}
+	}
+
+	#{ $headings } {
+		@content;
+	}
+}
+
+/*
+* Used to add properties to a for an element to make an icon based on the catapult/icons svg files.
+*
+* @param string   $icon        the name of the icon.
+* @param string   $font-size   the font size with unit.
+*
+* @return string  The CSS properties for the icon.
+*/
+@mixin icon( $icon: "", $icon-size: #{rem(24)}, $full-output: true ) {
+	$multicolor: false;
+
+	@if ($icon != "") {
+		@if map.has-key($icons, $icon) {
+			$icon-data: map.get($icons, $icon);
+			$multicolor: map.get($icon-data, "multicolor");
+		}
+
+		@if (true == $multicolor) {
+			background-repeat: no-repeat;
+			background-size: contain;
+
+			@if str-index($icon, "--") == 1 {
+				background-image: var(#{$icon});
+			} @else {
+				background-image: var(--icon-#{$icon});
+			}
+		} @else {
+			-webkit-mask-size: contain;
+			mask-size: contain;
+			-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+			-webkit-mask-position: center;
+			mask-position: center;
+
+			@if str-index($icon, "--") == 1 {
+				-webkit-mask-image: var(#{$icon});
+				mask-image: var(#{$icon});
+			} @else {
+				-webkit-mask-image: var(--icon-#{$icon});
+				mask-image: var(--icon-#{$icon});
+			}
+		}
+	}
+
+	@if ($full-output == true) {
+		content: " ";
+		width: $icon_size;
+		height: $icon_size;
+
+		@if (true != $multicolor) {
+			background-color: currentcolor;
+		}
+	}
+}
+
+@mixin rm-before() {
+	&::before {
+		content: none !important;
+	}
+}
+
+@mixin rm-after() {
+	&::before {
+		content: none !important;
+	}
+}
+
+/*
+* Generates CSS to fit an element into the 12-column grid. Only works when used on an element where the parent element is the width of the entire page. Can have --additionalGridOffset CSS Custom property set on blocks if they need their width/max width adjusted from the default grid size.
+*
+* @return string  CSS properties to set the width of the element to the specified column sizes.
+*/
+@mixin responsive-grid($xs: 12, $sm: 12, $md: 12, $lg: 12, $xl: 12, $xxl: 12) {
+	width: calc(var(--columnWidth) * #{$xs} - #{responsive-values(16, 32)} + var(--additionalGridOffset, 0rem));
+	max-width: calc(var(--columnMaxWidth) * #{$xs} - #{responsive-values(16, 32)} + var(--additionalGridOffset, 0rem));
+
+	@include media-breakpoint-up(sm) {
+		width: calc(var(--columnWidth) * #{$sm} - #{responsive-values(16, 32)} + var(--additionalGridOffset, 0rem));
+		max-width: calc(var(--columnMaxWidth) * #{$sm} - #{responsive-values(16, 32)} + var(--additionalGridOffset, 0rem));
+	}
+
+	@include media-breakpoint-up(md) {
+		width: calc(var(--columnWidth) * #{$md} - #{responsive-values(16, 32)} + var(--additionalGridOffset, 0rem));
+		max-width: calc(var(--columnMaxWidth) * #{$md} - #{responsive-values(16, 32)} + var(--additionalGridOffset, 0rem));
+	}
+
+	@if ($lg != $md) {
+		@include media-breakpoint-up(lg) {
+			width: calc(var(--columnWidth) * #{$lg} - #{responsive-values(16, 32)} + var(--additionalGridOffset, 0rem));
+			max-width: calc(var(--columnMaxWidth) * #{$lg} - #{responsive-values(16, 32)} + var(--additionalGridOffset, 0rem));
+		}
+	}
+
+	@if ($xl != $lg) {
+		@include media-breakpoint-up(xl) {
+			width: calc(var(--columnWidth) * #{$xl} - #{responsive-values(16, 32)} + var(--additionalGridOffset, 0rem));
+			max-width: calc(var(--columnMaxWidth) * #{$xl} - #{responsive-values(16, 32)} + var(--additionalGridOffset, 0rem));
+		}
+	}
+
+	@if ($xxl != $xl) {
+		@include media-breakpoint-up(xxl) {
+			width: calc(var(--columnWidth) * #{$xxl} - #{responsive-values(16, 32)} + var(--additionalGridOffset, 0rem));
+			max-width: calc(var(--columnMaxWidth) * #{$xxl} - #{responsive-values(16, 32)} + var(--additionalGridOffset, 0rem));
+		}
+	}
+}
+
+@mixin contained-sections($before-combinator: ">", $after-combinator: "") {
+	#{$before-combinator} *:not(section):not(footer):not(nav):not(.tribe-events):not(.wp-block-embed):not(.woocommerce):not(.block-editor-inner-blocks):not(.wp-block[data-type*="acf"]):not(.wp-block-image):not(.wp-block-separator):not(.wp-block-columns):not(label):not(.acf-inline-block) #{$after-combinator} {
+		@content;
+	}
+}
+
+/*
+* Used to target elements with a background color that has a text color different from the standard color.
+*
+* @param string   $additionalSelectors     additional comma-separated selectors to add.
+*
+* @return string  The included CSS wrapped with selectors for the specified background.
+*/
+@mixin alt-text-selectors($additionalSelectors: "") {
+	$selectors: "";
+
+	@each $color in $backgrounds-with-alt-text-color {
+		$selectors: $selectors + ", .bg-" + $color + " &";
+	}
+
+	@if ($additionalSelectors != "") {
+		$selectors: $selectors + ", " + $additionalSelectors;
+	}
+
+	@if ($selectors != "") {
+		$selectors: string.slice($selectors, 2, string.length($selectors));
+
+		#{$selectors} {
+			@content;
+		}
+	}
+}
+
+/*
+* Used to target button elements with a background color set to use the alt button colors.
+*
+* @param string   $additionalSelectors     additional comma-separated selectors to add.
+*
+* @return string  The included CSS wrapped with selectors for the specified background.
+*/
+@mixin alt-button-selectors($additionalSelectors: "") {
+	$selectors: "";
+
+	@each $color in $backgrounds-with-alt-button-color {
+		$selectors: $selectors + ", .bg-" + $color + " &";
+	}
+
+	@if ($additionalSelectors != "") {
+		$selectors: $selectors + ", " + $additionalSelectors;
+	}
+
+	@if ($selectors != "") {
+		$selectors: string.slice($selectors, 2, string.length($selectors));
+
+		#{$selectors} {
+			@content;
+		}
+	}
+}
+
+/*
+* Used to add the CSS Grid properties for the 12-column grid.
+*
+* @return string  The CSS Grid properties for the 12-column grid.
+*/
+@mixin grid() {
+	display: grid;
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+	column-gap: $grid-gap;
+}
+
+/*
+* Used to visually hide an element but still allow screen readers to access the element and its contents for accessibility.
+*
+* @return string  The styles needed to visually hide an element.
+*/
+@mixin sr-only() {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: rem(1);
+	height: rem(1);
+	white-space: nowrap;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	pointer-events: none;
+}
+
+@mixin loader() {
+	display: block;
+	width: rem(48);
+	height: rem(48);
+	border: rem(8) solid paint(button-default);
+	border-color: paint(button-default) transparent paint(button-default) transparent;
+	border-radius: 50%;
+	background-color: transparent;
+	transform-origin: center center;
+	animation: loader 1.5s infinite ease-in-out;
+}

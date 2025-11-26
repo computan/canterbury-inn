@@ -1,0 +1,19 @@
+@import "base-includes";
+
+.block-accordion {
+	&--opening {
+		.wp-block-button.is-style-accordion .wp-block-button__link {
+			cursor: wait;
+		}
+	}
+
+	.wp-block-heading + & {
+		margin-top: rem(48);
+		padding-top: 0;
+	}
+
+	p + & {
+		margin-top: rem(48);
+		padding-top: 0;
+	}
+}

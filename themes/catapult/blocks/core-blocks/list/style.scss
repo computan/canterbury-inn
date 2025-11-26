@@ -1,0 +1,134 @@
+@import "base-includes";
+
+.wp-block-list {
+	margin: rem(16 0 24 0);
+	padding-left: responsive-values(24, 27);
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	p + & {
+		margin-top: rem(24);
+	}
+
+	.content-wrapper > & {
+		margin-top: 0;
+	}
+
+	.wp-block-list-item {
+		margin-bottom: rem(16);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.wp-block-list {
+			margin-top: rem(16);
+			margin-bottom: 0;
+
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&.is-style-check-icon {
+		> .wp-block-list-item {
+			position: relative;
+
+			&::before {
+				@include icon("check-circle");
+
+				top: responsive-values(3, 4);
+				left: responsive-values(-24, -27);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: responsive-values(18, 20);
+				height: responsive-values(18, 20);
+				line-height: inherit;
+			}
+		}
+	}
+}
+
+ul.wp-block-list {
+	.wp-block-list-item {
+		position: relative;
+		list-style-type: none;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: responsive-values(-15, -18);
+			content: "•";
+			display: inline-block;
+			color: currentcolor;
+		}
+	}
+}
+
+ol.wp-block-list {
+	list-style-type: none;
+	counter-reset: item;
+
+	&[start] {
+		counter-reset: none;
+	}
+
+	.wp-block-list-item {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			right: calc(100% + rem(6));
+			content: counters(item, ".") ".";
+			white-space: nowrap;
+			counter-increment: item;
+		}
+	}
+
+	ol,
+	ul {
+		counter-reset: subitem;
+
+		.wp-block-list-item {
+			&::before {
+				content: counter(subitem, lower-alpha) ".";
+				counter-increment: subitem;
+			}
+		}
+
+		ol,
+		ul {
+			counter-reset: subsubitem;
+
+			.wp-block-list-item {
+				&::before {
+					content: counter(subsubitem, lower-roman) ".";
+					counter-increment: subsubitem;
+				}
+			}
+
+			ol,
+			ul {
+				.wp-block-list-item {
+					&::before {
+						position: absolute;
+						top: 0;
+						left: responsive-values(-15, -18);
+						content: "•";
+						display: inline-block;
+						color: currentcolor;
+					}
+				}
+			}
+		}
+	}
+}

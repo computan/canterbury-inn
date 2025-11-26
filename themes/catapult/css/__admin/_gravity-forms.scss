@@ -1,0 +1,21 @@
+.available-css-classes {
+	display: none;
+
+	ul {
+		padding-left: rem(16);
+		list-style: disc;
+	}
+
+	li {
+		display: none;
+		list-style: disc;
+	}
+
+	.gfield_type_radio & {
+		display: block;
+
+		.available-css-classes--radio {
+			display: list-item;
+		}
+	}
+}

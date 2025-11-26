@@ -1,0 +1,295 @@
+@import "base-includes";
+
+.wp-block-button {
+	margin-top: responsive-values(28, 36);
+	margin-bottom: responsive-values(28, 36);
+	line-height: 0;
+
+	&--icon-left {
+		.wp-block-button__link {
+			&::before {
+				@include icon;
+
+				@include icon("--buttonIcon", #{rem(20)});
+
+				margin-right: rem(4);
+			}
+		}
+
+		&.wp-block-button--small {
+			.wp-block-button__link {
+				&::before {
+					width: rem(16);
+					height: rem(16);
+				}
+			}
+		}
+	}
+
+	&--icon-right {
+		.wp-block-button__link {
+			&::after {
+				@include icon("--buttonIcon", #{rem(20)});
+
+				margin-left: rem(4);
+			}
+		}
+
+		&.wp-block-button--small {
+			.wp-block-button__link {
+				&::after {
+					width: rem(16);
+					height: rem(16);
+				}
+			}
+		}
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.wp-block-buttons & {
+		margin: rem(6 8);
+	}
+
+	.wp-block-buttons--social & {
+		margin: rem(0 6);
+	}
+
+	&.aligncenter {
+		text-align: center;
+	}
+
+	&.alignleft {
+		text-align: left;
+	}
+
+	&.alignright {
+		text-align: right;
+	}
+
+	&:not([class*="is-style-"]),
+	&.is-style-primary {
+		.wp-block-button__link {
+			@include button-primary;
+		}
+	}
+
+	&.is-style-secondary {
+		.wp-block-button__link {
+			@include button-secondary;
+		}
+	}
+
+	&.is-style-tertiary {
+		margin-top: responsive-values(20, 32);
+		margin-bottom: responsive-values(20, 48);
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.wp-block-buttons & {
+			margin-top: rem(6);
+			margin-bottom: rem(6);
+		}
+
+		&.wp-block-button--small {
+			.wp-block-button__link {
+				@include button-small-tertiary();
+				@include link-2(false);
+
+				padding-bottom: rem(1);
+
+				&::before {
+					height: rem(1);
+				}
+			}
+		}
+
+		.wp-block-button__link {
+			@include button-tertiary;
+		}
+
+		&.wp-block-button--icon-left {
+			.wp-block-button__link {
+				&::before {
+					@include icon("--buttonIcon", #{rem(20)}, false);
+
+					position: relative;
+					left: auto;
+					bottom: auto;
+					width: rem(20);
+					height: rem(20);
+				}
+			}
+
+			&.wp-block-button--small {
+				.wp-block-button__link {
+					&::before {
+						width: rem(16);
+						height: rem(16);
+					}
+				}
+			}
+		}
+
+		&.wp-block-button--icon-right {
+			.wp-block-button__link {
+				padding-bottom: 0;
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		&.wp-block-button--back {
+			margin: responsive-values(-8, -56) auto responsive-values(48, 72) var(--gutterWidth);
+			text-align: left;
+
+			.wp-block-button__link {
+				padding-bottom: 0;
+			}
+
+			.block-editor-block-list__block & {
+				margin-left: rem(60);
+			}
+
+			.wp-block-button__link:not(:hover):not(:focus) {
+				color: paint(text);
+			}
+
+			+ .content-wrapper {
+				> p:first-child,
+				> .wp-block-heading:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	&:not([class*="is-style-"]),
+	&.is-style-primary,
+	&.is-style-secondary {
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+		}
+
+		.wp-block-button__link {
+			@include media-breakpoint-down(xs) {
+				width: 100%;
+			}
+		}
+
+		&.wp-block-button--icon-left {
+			.wp-block-button__link {
+				padding-left: rem(24);
+			}
+		}
+
+		&.wp-block-button--icon-right {
+			.wp-block-button__link {
+				padding-right: rem(24);
+			}
+		}
+
+		&.wp-block-button--small {
+			.wp-block-button__link {
+				@include button-small;
+			}
+
+			&.wp-block-button--icon-left {
+				.wp-block-button__link {
+					padding-left: rem(13);
+				}
+			}
+
+			&.wp-block-button--icon-right {
+				.wp-block-button__link {
+					padding-right: rem(13);
+				}
+			}
+		}
+
+		&.wp-block-button--hidden-label {
+			.wp-block-button__link {
+				width: rem(48);
+				height: rem(48);
+				padding: 0;
+				font-size: 0;
+				border-radius: 50%;
+
+				&::after {
+					width: rem(20);
+					height: rem(20);
+					margin: auto;
+				}
+			}
+		}
+	}
+
+	&.is-style-social {
+		.wp-block-button__link {
+			@include button-social;
+		}
+
+		&.wp-block-button--icon-left {
+			.wp-block-button__link {
+				&::before {
+					@include icon("--buttonIcon", #{rem(20)}, false);
+
+					position: relative;
+					left: auto;
+					bottom: auto;
+					width: auto;
+					height: auto;
+					background-color: transparent;
+				}
+			}
+		}
+
+		&.wp-block-button--icon-right {
+			.wp-block-button__link {
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&.is-style-navigation-link {
+		margin: 0 0 rem(20) 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.wp-block-button__link {
+			@include button-navigation-link();
+		}
+	}
+
+	&__link {
+		&.aligncenter {
+			text-align: center;
+		}
+
+		&.alignleft {
+			text-align: left;
+		}
+
+		&.alignright {
+			text-align: right;
+		}
+	}
+}

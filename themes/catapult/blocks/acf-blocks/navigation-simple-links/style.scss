@@ -1,0 +1,32 @@
+@import "base-includes";
+
+.block-navigation-simple-links {
+	padding: responsive-values(20, 48) 0;
+
+	.block-navigation.is-style-hamburger & {
+		@include media-breakpoint-up(lg) {
+			padding: 0;
+		}
+	}
+
+	.wp-block-button {
+		.wp-block-button__link {
+			justify-content: flex-start;
+			width: 100%;
+			padding: 0 var(--gutterWidth);
+			text-align: left;
+
+			@include media-breakpoint-up(lg) {
+				padding: 0 $grid-gap;
+			}
+
+			.block-navigation.is-style-hamburger & {
+				@include nav-5(false);
+
+				@include media-breakpoint-up(lg) {
+					padding: 0;
+				}
+			}
+		}
+	}
+}

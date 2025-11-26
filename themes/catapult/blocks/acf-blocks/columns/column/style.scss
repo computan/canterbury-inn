@@ -1,0 +1,15 @@
+@import "base-includes";
+
+.block-column {
+	@include media-breakpoint-up(md) {
+		grid-column-end: span var(--column_width);
+	}
+
+	.wp-block-heading {
+		@include t4;
+	}
+
+	p {
+		@include body-2();
+	}
+}

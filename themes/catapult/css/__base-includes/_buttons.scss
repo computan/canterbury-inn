@@ -1,0 +1,438 @@
+// Note: all code in the __base-includes folder should not generate any actual CSS since these files are used in every block and would generated redundant CSS. These are files purely for declaring variables, mixins, and functions.
+
+@mixin button() {
+	@include link-1(false);
+
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: rem(10 30);
+	text-align: center;
+	border-radius: rem(4);
+	cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	transition: color $transition-standard, background-color $transition-standard, border $transition-standard;
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
+
+@mixin button-small() {
+	@include link-2(false);
+
+	padding: rem(7 17);
+	border-width: rem(1);
+}
+
+@mixin button-small-tertiary() {
+	@include link-2(false);
+
+	&::before {
+		bottom: rem(-1);
+		height: rem(1);
+	}
+}
+
+@mixin button-primary($light_styles_only: false) {
+	color: paint(white);
+	border: rem(2) solid paint(button-default);
+	background-color: paint(button-default);
+
+	@if (true != $light_styles_only) {
+		@include button();
+
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+		}
+
+		@include alt-button-selectors {
+			color: paint(button-default);
+			border-color: paint(white);
+			background-color: paint(white);
+
+			&.hover,
+			a:hover &,
+			a:focus &,
+			&:hover,
+			&:focus {
+				color: paint(button-hover);
+				border-color: paint(white);
+				background-color: paint(white);
+			}
+
+			&:disabled {
+				color: paint(neutral-5);
+				border-color: paint(neutral-3);
+				background-color: paint(neutral-3);
+			}
+		}
+	}
+
+	&.hover,
+	a:hover &,
+	a:focus &,
+	&:hover,
+	&:focus {
+		color: paint(white);
+		border-color: paint(button-hover);
+		background-color: paint(button-hover);
+	}
+
+	&:disabled {
+		color: paint(neutral-7);
+		border-color: paint(neutral-9);
+		background-color: paint(neutral-9);
+	}
+}
+
+@mixin button-secondary($light_styles_only: false) {
+	color: paint(button-default);
+	border: rem(2) solid paint(button-default);
+	background-color: transparent;
+
+	@if (true != $light_styles_only) {
+		@include button();
+
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+		}
+
+		@include alt-button-selectors {
+			color: paint(white);
+			border-color: paint(white);
+
+			&.hover,
+			a:hover &,
+			a:focus &,
+			&:hover,
+			&:focus {
+				color: paint(button-hover);
+				border-color: paint(white);
+				background-color: paint(white);
+			}
+
+			&:disabled {
+				color: paint(neutral-5);
+				border-color: paint(neutral-3);
+			}
+		}
+	}
+
+	&.hover,
+	a:hover &,
+	a:focus &,
+	&:hover,
+	&:focus {
+		color: paint(white);
+		border-color: paint(button-hover);
+		background-color: paint(button-hover);
+	}
+
+	&:disabled {
+		color: paint(neutral-7);
+		border-color: paint(neutral-9);
+	}
+}
+
+@mixin button-tertiary($light_styles_only: false) {
+	color: paint(button-default);
+
+	@if (true != $light_styles_only) {
+		@include button();
+
+		position: relative;
+		padding: 0;
+		border: none;
+		border-radius: 0;
+		background-color: transparent;
+
+		@include alt-button-selectors {
+			color: paint(white);
+
+			&.hover,
+			a:hover &,
+			a:focus &,
+			&:hover,
+			&:focus {
+				color: paint(neutral-8);
+			}
+
+			&:disabled {
+				color: paint(neutral-5);
+			}
+		}
+
+		&::before {
+			position: absolute;
+			left: 0;
+			bottom: rem(-2);
+			content: "";
+			width: 100%;
+			height: rem(2);
+			background-color: currentcolor;
+		}
+	}
+
+	&.hover,
+	a:hover &,
+	a:focus &,
+	&:hover,
+	&:focus {
+		color: paint(button-hover);
+	}
+
+	&:disabled {
+		color: paint(neutral-7);
+	}
+}
+
+@mixin button-navigation-link() {
+	@include nav-1();
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0;
+	color: paint(neutral-1);
+	text-align: left;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	transition: color $transition-standard;
+
+	@include alt-button-selectors {
+		color: paint(white);
+
+		&.hover,
+		a:hover &,
+		a:focus &,
+		&:hover,
+		&:focus {
+			color: paint(neutral-8);
+		}
+
+		&:disabled {
+			color: paint(neutral-5);
+		}
+	}
+
+	&.hover,
+	a:hover &,
+	a:focus &,
+	&:hover,
+	&:focus {
+		color: paint(button-hover);
+	}
+
+	&:disabled {
+		color: paint(neutral-7);
+	}
+}
+
+@mixin button-play() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: rem(56);
+	height: rem(56);
+	padding: 0;
+	color: paint(white);
+	border: rem(2) solid paint(neutral-1);
+	border-radius: 50%;
+	background-color: paint(neutral-1);
+	cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	transition: background-color $transition-standard, color $transition-standard, border-color $transition-standard;
+
+	@include alt-button-selectors("&.c-btn--color-alt") {
+		color: paint(neutral-1);
+		border-color: paint(white);
+		background-color: paint(white);
+
+		&.hover,
+		a:hover &,
+		a:focus &,
+		&:hover,
+		&:focus,
+		.component-video__button:hover &,
+		.component-lightbox__button:hover & {
+			color: paint(neutral-1);
+			border-color: paint(neutral-10);
+			background-color: paint(neutral-10);
+		}
+
+		&.c-btn--secondary {
+			color: paint(white);
+			border-color: paint(white);
+			background-color: transparent;
+
+			&.hover,
+			a:hover &,
+			a:focus &,
+			&:hover,
+			&:focus,
+			.component-video__button:hover &,
+			.component-lightbox__button:hover & {
+				color: paint(neutral-1);
+				border-color: paint(white);
+				background-color: paint(white);
+			}
+		}
+	}
+
+	&::before {
+		@include icon("play", #{rem(24)});
+
+		pointer-events: none;
+	}
+
+	&.hover,
+	a:hover &,
+	a:focus &,
+	&:hover,
+	&:focus {
+		color: paint(white);
+		border-color: paint(neutral-3);
+		background-color: paint(neutral-3);
+	}
+
+	&.c-btn--secondary {
+		color: paint(neutral-1);
+		border-color: paint(neutral-1);
+		background-color: transparent;
+
+		&.hover,
+		a:hover &,
+		a:focus &,
+		&:hover,
+		&:focus {
+			color: paint(white);
+			border-color: paint(neutral-1);
+			background-color: paint(neutral-1);
+		}
+	}
+}
+
+@mixin button-close() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: rem(40);
+	height: rem(40);
+	padding: 0;
+	color: paint(neutral-1);
+	border: rem(1) solid paint(neutral-10);
+	border-radius: 50%;
+	background-color: paint(neutral-10);
+	cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	transition: background-color $transition-standard, color $transition-standard, border-color $transition-standard;
+
+	@include alt-button-selectors("&.c-btn--color-alt") {
+		color: paint(white);
+		border-color: paint(neutral-3);
+		background-color: paint(neutral-3);
+
+		&.hover,
+		a:hover &,
+		a:focus &,
+		&:hover,
+		&:focus {
+			color: paint(white);
+			border-color: paint(neutral-4);
+			background-color: paint(neutral-4);
+		}
+	}
+
+	&::before {
+		@include icon("close", #{rem(20)});
+
+		pointer-events: none;
+	}
+
+	&.hover,
+	a:hover &,
+	a:focus &,
+	&:hover,
+	&:focus {
+		color: paint(neutral-1);
+		border-color: paint(neutral-9);
+		background-color: paint(neutral-9);
+	}
+}
+
+@mixin button-social() {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: rem(48);
+	height: rem(48);
+	color: paint(text);
+	font-size: 0;
+	line-height: 0;
+	text-align: center;
+	border: rem(1) solid paint(neutral-8);
+	border-radius: rem(1600);
+	background-color: transparent;
+	cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	transition: border-color $transition-standard;
+
+	@include alt-button-selectors {
+		border-color: paint(neutral-6);
+
+		&.hover,
+		a:hover &,
+		a:focus &,
+		&:hover,
+		&:focus {
+			border-color: paint(white);
+		}
+	}
+
+	&::after {
+		width: rem(24);
+		height: rem(24);
+		margin: 0;
+		transform: none;
+	}
+
+	&.hover,
+	a:hover &,
+	a:focus &,
+	&:hover,
+	&:focus {
+		border-color: paint(text);
+	}
+}
+
+@mixin light-button-styles {
+	&:not([class*="is-style-"]),
+	&.is-style-primary {
+		.wp-block-button__link {
+			@include button-primary(true);
+		}
+	}
+
+	&.is-style-secondary {
+		.wp-block-button__link {
+			@include button-secondary(true);
+		}
+	}
+
+	&.is-style-tertiary {
+		.wp-block-button__link {
+			@include button-tertiary(true);
+		}
+	}
+}

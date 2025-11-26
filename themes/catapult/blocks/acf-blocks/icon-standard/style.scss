@@ -1,0 +1,44 @@
+@import "base-includes";
+
+.block-icon-standard {
+	&__container {
+		> .has-text-align-center,
+		> .has-text-align-right {
+			@include media-breakpoint-down(sm) {
+				text-align: left;
+			}
+		}
+	}
+
+	.block-icon-contents--1 {
+		.block-icon-content {
+			@include media-breakpoint-up(md) {
+				grid-column: 2 / span 10;
+			}
+
+			@include media-breakpoint-up(lg) {
+				grid-column: 3 / span 8;
+			}
+
+			@include media-breakpoint-up(xl) {
+				grid-column: 4 / span 6;
+			}
+		}
+	}
+
+	.block-icon-contents--2 {
+		.block-icon-content {
+			&:nth-child(2n + 1) {
+				@include media-breakpoint-up(lg) {
+					grid-column: 2 / span 5;
+				}
+			}
+
+			&:nth-child(2n) {
+				@include media-breakpoint-up(lg) {
+					grid-column: 7 / span 5;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+@import "base-includes";
+
+.block-share-buttons {
+	margin: responsive-values(24, 36) 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.share-icons {
+		margin-top: rem(12);
+	}
+}

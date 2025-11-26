@@ -1,0 +1,43 @@
+@import "base-includes";
+
+.block-media-gallery {
+	&__grid {
+		@include grid();
+
+		row-gap: $grid-gap;
+	}
+
+	.wp-block-image,
+	.wp-block-embed {
+		grid-column-end: span 12;
+		width: 100%;
+
+		@include media-breakpoint-up(xs) {
+			grid-column-end: span 6;
+		}
+
+		@include media-breakpoint-up(md) {
+			grid-column-end: span 4;
+		}
+	}
+
+	.wp-block-image {
+		position: relative;
+		height: 0;
+		padding-bottom: 55%;
+
+		@include media-breakpoint-up(sm) {
+			padding-bottom: 55.76923077%;
+		}
+
+		img,
+		picture {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

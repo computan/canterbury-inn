@@ -1,0 +1,90 @@
+{
+    "key": "group_412y4b09v4nni",
+    "title": "Block: Logos",
+    "fields": [
+        {
+            "key": "field_638e215820b1d",
+            "label": "Logos Per Row (mobile)",
+            "name": "logos_per_row_mobile",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": 1,
+            "max": 3,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_638e217e20b1e",
+            "label": "Logos Per Row (tablet)",
+            "name": "logos_per_row_tablet",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "min": 1,
+            "max": 4,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_638e219620b1f",
+            "label": "Logos Per Row (desktop)",
+            "name": "logos_per_row_desktop",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 6,
+            "min": 1,
+            "max": 8,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/logos"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1708637326
+}

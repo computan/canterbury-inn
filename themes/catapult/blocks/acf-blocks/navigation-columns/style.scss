@@ -1,0 +1,114 @@
+@import "base-includes";
+
+.block-navigation-columns {
+	padding: responsive-values(20, 48) 0;
+
+	&--has-first-link-column {
+		.block-navigation-columns__content {
+			@include media-breakpoint-up(lg) {
+				grid-template-columns: calc(responsive-values(200, 304, "lg", "xxl") + responsive-values(48, 72) + var(--gutterWidth)) repeat(var(--linkColumnCount), minmax(0, 1fr));
+			}
+
+			.block-navigation.is-style-variable-width-dropdown & {
+				@include media-breakpoint-up(lg) {
+					grid-template-columns: calc(responsive-values(200, 304, "lg", "xxl") + $grid-gap * 2) repeat(var(--linkColumnCount), minmax(0, 1fr));
+				}
+			}
+		}
+
+		&.block-navigation-columns--multiple-featured-link-cards:not(.block-navigation-columns--narrow-link-columns) {
+			.block-navigation-columns__content {
+				@include media-breakpoint-up(lg) {
+					grid-template-columns: calc(responsive-values(400, 608, "xxl", 1600) + responsive-values(48, 72) + var(--gutterWidth)) repeat(var(--linkColumnCount), minmax(0, 1fr));
+				}
+
+				.block-navigation.is-style-variable-width-dropdown & {
+					@include media-breakpoint-up(lg) {
+						grid-template-columns: calc(responsive-values(400, 608, "xxl", 1600) + $grid-gap * 3) repeat(var(--linkColumnCount), minmax(0, 1fr));
+					}
+				}
+			}
+		}
+	}
+
+	&--has-last-link-column {
+		.block-navigation-columns__content {
+			@include media-breakpoint-up(lg) {
+				grid-template-columns: repeat(var(--linkColumnCount), minmax(0, 1fr)) calc(responsive-values(200, 304, "lg", "xxl") + responsive-values(48, 72) + var(--gutterWidth));
+			}
+
+			.block-navigation.is-style-variable-width-dropdown & {
+				@include media-breakpoint-up(lg) {
+					grid-template-columns: repeat(var(--linkColumnCount), minmax(0, 1fr)) calc(responsive-values(200, 304, "lg", "xxl") + $grid-gap * 2);
+				}
+			}
+		}
+
+		&.block-navigation-columns--multiple-featured-link-cards:not(.block-navigation-columns--narrow-link-columns) {
+			.block-navigation-columns__content {
+				@include media-breakpoint-up(xxl) {
+					grid-template-columns: repeat(var(--linkColumnCount), minmax(0, 1fr)) calc(responsive-values(400, 608, "xxl", 1600) + responsive-values(48, 72) + var(--gutterWidth));
+				}
+
+				.block-navigation.is-style-variable-width-dropdown & {
+					@include media-breakpoint-up(xxl) {
+						grid-template-columns: repeat(var(--linkColumnCount), minmax(0, 1fr)) calc(responsive-values(400, 608, "xxl", 1600) + $grid-gap * 3);
+					}
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding: responsive-values(20, 48) var(--gutterWidth);
+
+		&.block-navigation-columns--has-first-link-column {
+			padding-left: 0;
+		}
+
+		&.block-navigation-columns--has-last-link-column {
+			padding-right: 0;
+		}
+	}
+
+	.wp-block-heading {
+		@include overline(false);
+
+		margin-bottom: rem(16);
+		padding-bottom: rem(12);
+		color: paint(neutral-6);
+		border-bottom: rem(1) solid paint(neutral-10);
+	}
+
+	&__content {
+		@include media-breakpoint-up(lg) {
+			display: grid;
+			grid-auto-flow: column;
+			grid-template-columns: repeat(var(--totalColumnCount), minmax(0, 1fr));
+			gap: $grid-gap;
+		}
+	}
+
+	.block-navigation.is-style-variable-width-dropdown & {
+		@include media-breakpoint-up(lg) {
+			padding-right: $grid-gap;
+			padding-left: $grid-gap;
+		}
+
+		&.block-navigation-columns--has-first-link-column {
+			@include media-breakpoint-up(lg) {
+				padding-left: 0;
+			}
+		}
+
+		&.block-navigation-columns--has-last-link-column {
+			@include media-breakpoint-up(lg) {
+				padding-right: 0;
+			}
+		}
+	}
+
+	.block-navigation.is-style-hamburger & {
+		display: none !important;
+	}
+}

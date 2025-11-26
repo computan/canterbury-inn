@@ -1,0 +1,53 @@
+@import "base-includes";
+
+.block-navigation-featured-link-column {
+	margin: 0 0 rem(48) 0;
+	padding: responsive-values(32, 48) var(--gutterWidth);
+	background-color: paint(neutral-11);
+
+	@include media-breakpoint-up(lg) {
+		margin: responsive-values(-20, -48) 0;
+		padding: responsive-values(20, 48) $grid-gap;
+	}
+
+	&:last-child {
+		margin-bottom: responsive-values(-20, -48);
+
+		@include media-breakpoint-up(lg) {
+			padding-right: var(--gutterWidth);
+			padding-left: responsive-values(48, 72);
+		}
+	}
+
+	&:first-child {
+		margin-top: responsive-values(-20, -48);
+
+		@include media-breakpoint-up(lg) {
+			padding-right: responsive-values(48, 72);
+			padding-left: var(--gutterWidth);
+		}
+	}
+
+	&__content {
+		.block-navigation-columns--multiple-featured-link-cards:not(.block-navigation-columns--narrow-link-columns) & {
+			@include media-breakpoint-up(xxl) {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				column-gap: $grid-gap;
+			}
+		}
+	}
+
+	.wp-block-heading {
+		@include media-breakpoint-up(xxl) {
+			grid-column: 1 / span 2;
+		}
+	}
+
+	.block-navigation.is-style-variable-width-dropdown & {
+		@include media-breakpoint-up(lg) {
+			padding-right: $grid-gap;
+			padding-left: $grid-gap;
+		}
+	}
+}

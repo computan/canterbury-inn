@@ -1,0 +1,12 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-icon {
+		min-height: 0 !important;
+		padding: 0 !important;
+
+		&::before {
+			display: none !important;
+		}
+	}
+}

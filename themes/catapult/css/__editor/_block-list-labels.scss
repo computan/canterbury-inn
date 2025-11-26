@@ -1,0 +1,35 @@
+@at-root .editor-block-list-item-gravityforms-form {
+	position: relative;
+	padding: rem(1) !important;
+
+	&::before {
+		content: "(Gravity Forms)";
+		order: 9;
+		display: block;
+		color: #1e1e1e;
+		font-size: rem(12);
+		text-align: center;
+	}
+
+	.block-editor-block-types-list__item-title {
+		padding-bottom: 0;
+	}
+}
+
+@at-root .editor-block-list-item-acf-form {
+	position: relative;
+	padding: rem(1) !important;
+
+	&::before {
+		content: "(Catapult)";
+		order: 9;
+		display: block;
+		color: #1e1e1e;
+		font-size: rem(12);
+		text-align: center;
+	}
+
+	.block-editor-block-types-list__item-title {
+		padding-bottom: 0;
+	}
+}

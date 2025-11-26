@@ -1,0 +1,29 @@
+@import "base-includes";
+
+.block-hero-post-standard-news {
+	text-align: center;
+
+	&__row {
+		justify-content: center;
+	}
+
+	&__title {
+		margin-top: 0;
+	}
+
+	&__image-wrapper {
+		margin-top: responsive-values(48, 72);
+	}
+
+	&__primary-term {
+		@include subtitle-2(false);
+
+		margin-bottom: rem(12);
+	}
+
+	&__date {
+		@include subtitle-2(false);
+
+		margin-top: responsive-values(24, 32);
+	}
+}

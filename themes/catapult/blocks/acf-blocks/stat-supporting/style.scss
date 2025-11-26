@@ -1,0 +1,28 @@
+@import "base-includes";
+
+.block-stat-supporting {
+	&__grid {
+		@include media-breakpoint-up(md) {
+			@include grid;
+
+			align-items: flex-start;
+		}
+	}
+
+	.block-content {
+		@include media-breakpoint-up(md) {
+			grid-column: 1 / span 6;
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-column: 1 / span 5;
+		}
+	}
+
+	.block-stats {
+		@include media-breakpoint-up(md) {
+			grid-column: 7 / span 6;
+			margin-top: 0 !important;
+		}
+	}
+}

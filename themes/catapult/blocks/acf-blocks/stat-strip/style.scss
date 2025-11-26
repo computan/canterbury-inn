@@ -1,0 +1,42 @@
+@import "base-includes";
+
+.block-stat-strip {
+	padding: responsive-values(64, 88) 0 responsive-values(72, 96);
+
+	.block-stats {
+		@include media-breakpoint-up(sm) {
+			margin: 0;
+		}
+	}
+
+	.block-stat {
+		flex: 1 1 100%;
+		max-width: 100%;
+
+		@include media-breakpoint-up(sm) {
+			flex: 1 1 25%;
+			max-width: 25%;
+			padding: 0 responsive-values(20, 32);
+		}
+
+		&::after {
+			@include media-breakpoint-up(sm) {
+				position: absolute;
+				top: 0;
+				right: rem(-1);
+				content: "";
+				width: rem(1);
+				height: 100%;
+				background-color: currentcolor;
+				transform: translate(rem(-0.5));
+			}
+		}
+
+		&:last-child,
+		&:nth-child(4n) {
+			&::after {
+				display: none;
+			}
+		}
+	}
+}

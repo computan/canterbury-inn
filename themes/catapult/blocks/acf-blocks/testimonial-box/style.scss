@@ -1,0 +1,82 @@
+@import "base-includes";
+
+.block-testimonial-box {
+	position: relative;
+
+	&--has-logo {
+		.block-testimonial-box__content {
+			padding-top: $block-spacing;
+		}
+	}
+
+	&__content {
+		padding: $block-spacing-with-text rem(20) $block-spacing;
+
+		@include media-breakpoint-up(lg) {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+
+	.block-testimonials {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@include media-breakpoint-up(lg) {
+			@include grid;
+		}
+	}
+
+	.block-testimonial {
+		height: auto;
+		text-align: center;
+	}
+
+	.block-testimonial__quote-icon {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.swiper {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@include media-breakpoint-up(lg) {
+			grid-area: 1 / 3 / 2 / span 8;
+		}
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		@include media-breakpoint-up(lg) {
+			justify-self: center;
+			align-self: center;
+		}
+	}
+
+	.swiper-button-prev {
+		order: 98;
+		margin-top: rem(48);
+		margin-right: rem(4);
+
+		@include media-breakpoint-up(lg) {
+			grid-area: 1 / 1 / 2 / span 2;
+			margin: 0;
+		}
+	}
+
+	.swiper-button-next {
+		order: 99;
+		margin-top: rem(48);
+		margin-left: rem(4);
+
+		@include media-breakpoint-up(lg) {
+			grid-area: 1 / 11 / 2 / span 2;
+			margin: 0;
+		}
+	}
+}

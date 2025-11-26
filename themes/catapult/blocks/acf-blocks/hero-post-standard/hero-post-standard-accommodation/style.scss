@@ -1,0 +1,35 @@
+@import "base-includes";
+
+.block-hero-post-standard-accommodation {
+	&__row {
+	}
+
+	&__title {
+		margin-top: 0;
+	}
+
+	&__image-wrapper {
+		margin-top: responsive-values(48, 72);
+	}
+
+	&__meta-bottom {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-top: responsive-values(24, 32);
+
+		span {
+			@include subtitle-2(false);
+
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-right: rem(16);
+		}
+
+		.icon {
+			margin-right: rem(4);
+		}
+	}
+}

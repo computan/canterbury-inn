@@ -1,0 +1,126 @@
+@include headings() {
+	color: inherit;
+}
+
+.wp-block-heading {
+	.acf-block:not(.bg-white):not(.bg-transparent) + & {
+		margin-top: $block-spacing-with-text;
+	}
+
+	+ .acf-block:not(.bg-white):not(.bg-transparent) {
+		margin-top: $block-spacing;
+	}
+
+	.acf-block.bg-white + &,
+	.acf-block.bg-transparent + & {
+		margin-top: $block-spacing-first-text-child-offset;
+	}
+}
+
+.has-display-font-size {
+	@include display;
+
+	color: inherit;
+}
+
+h1,
+.has-t-1-font-size {
+	@include t1;
+}
+
+h2,
+.has-t-2-font-size {
+	@include t2;
+}
+
+h3,
+.has-t-3-font-size {
+	@include t3;
+}
+
+h4,
+.has-t-4-font-size {
+	@include t4;
+}
+
+h5,
+.has-t-5-font-size {
+	@include t5;
+}
+
+h6,
+.has-t-6-font-size {
+	@include t6;
+
+	@include headings(1, 6, "+", "", true) {
+		margin-top: 0 !important;
+	}
+}
+
+p {
+	@include body-1;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	+ .acf-block.bg-transparent {
+		margin-top: calc(var(--body-1-margin-bottom) * -1);
+	}
+
+	.acf-block:not(.bg-white):not(.bg-transparent) + & {
+		margin-top: $block-spacing-with-text;
+	}
+
+	+ .acf-block:not(.bg-white):not(.bg-transparent) {
+		margin-top: $block-spacing;
+	}
+}
+
+strong {
+	font-weight: 600;
+}
+
+.has-body-1-font-size {
+	@include body-1;
+}
+
+.has-body-2-font-size {
+	@include body-2;
+}
+
+.has-lead-font-size {
+	@include lead;
+}
+
+.has-quote-1-font-size {
+	@include quote-1;
+}
+
+.has-quote-2-font-size {
+	@include quote-2;
+}
+
+.has-stat-font-size {
+	@include stat;
+}
+
+.has-subtitle-1-font-size {
+	@include subtitle-1;
+}
+
+.has-subtitle-2-font-size {
+	@include subtitle-2;
+}
+
+.has-overline-font-size {
+	@include overline;
+
+	@include headings(1, 6, "+", "", true) {
+		margin-top: 0 !important;
+	}
+}
+
+.has-title-1-font-size {
+	@include title-1;
+}

@@ -1,0 +1,313 @@
+@use "sass:math";
+
+@import "base-includes";
+
+.wpcf7 {
+	display: block !important;
+	width: 100%;
+
+	label {
+		@include input-label;
+	}
+
+	.content-wrapper > & {
+		padding: $block-spacing 0;
+	}
+
+	.acf-block.bg-white + &,
+	.acf-block.bg-transparent + & {
+		padding-top: 0;
+	}
+
+	+ .acf-block.bg-white,
+	+ .acf-block.bg-transparent {
+		padding-top: 0;
+	}
+
+	[type="submit"] {
+		&.disabled {
+			opacity: 0.7;
+			pointer-events: none;
+		}
+	}
+}
+
+.wpcf7-form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	margin-right: $input-column-gap * -0.5;
+	margin-left: $input-column-gap * -0.5;
+	padding: 0;
+}
+
+.wpcf7-form-control-wrap {
+	flex: 100%;
+	margin: 0 0 rem(24) 0;
+	padding: 0 math.div($input-column-gap, 2);
+
+	&--width-half,
+	&--width-third,
+	&--width-quarter {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	&--width-half {
+		@include media-breakpoint-up(sm) {
+			flex: 0 0 50%;
+			max-width: 50%;
+
+			&:nth-last-child(2) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&--width-third {
+		@include media-breakpoint-up(md) {
+			flex: 0 0 33.3333333%;
+			max-width: 33.3333333%;
+
+			&:nth-last-child(2),
+			&:nth-last-child(3) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&--width-quarter {
+		@include media-breakpoint-up(sm) {
+			flex: 0 0 50%;
+			max-width: 50%;
+
+			&:nth-last-child(2) {
+				margin-bottom: 0;
+			}
+		}
+
+		@include media-breakpoint-up(md) {
+			flex: 0 0 25%;
+			max-width: 25%;
+
+			&:nth-last-child(3),
+			&:nth-last-child(4) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	textarea {
+		width: 100% !important;
+
+		&.large {
+			height: rem(240);
+			min-height: rem(240);
+		}
+
+		&.medium {
+			height: rem(160);
+			min-height: rem(160);
+		}
+
+		&.small {
+			height: rem(96);
+			min-height: rem(96);
+		}
+	}
+}
+
+.wpcf7-form-control {
+	width: 100% !important;
+	margin-bottom: rem(8);
+
+	&.wpcf7-validates-as-required {
+		.wpcf7-list-item-label::after {
+			content: "*";
+			margin-left: 0.05em;
+			color: paint(error);
+		}
+	}
+}
+
+.wpcf7-not-valid-tip {
+	@include subtitle-3(false);
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: rem(4);
+	color: paint(error);
+}
+
+.wpcf7-response-output {
+	@include subtitle-3(false);
+
+	margin: rem(16) 0 !important;
+	padding: rem(12) !important;
+	border: rem(1) solid transparent !important;
+
+	&.wpcf7-mail-sent-ok {
+		color: paint(success);
+		border-color: paint(success) !important;
+		background-color: rgba(paint(success), 0.1);
+	}
+
+	&.wpcf7-validation-errors,
+	&.wpcf7-mail-sent-ng {
+		color: paint(error);
+		border-color: paint(error) !important;
+		background-color: rgba(paint(error), 0.1);
+	}
+}
+
+.wpcf7-submit {
+	margin-top: $input-footer-gap;
+}
+
+.wpcf7-checkbox,
+.wpcf7-radio {
+	@include checkbox-radio-wrapper;
+
+	.wpcf7-list-item {
+		display: block;
+		margin: rem(8) 0;
+	}
+}
+
+.wpcf7-acceptance {
+	.wpcf7-list-item-label {
+		@include subtitle-2(false);
+
+		align-items: flex-start;
+
+		&::before {
+			top: rem(6);
+			transform: none;
+		}
+
+		&::after {
+			margin-top: rem(-4);
+		}
+	}
+}
+
+.wpcf7-spinner {
+	display: none !important;
+}
+
+/* Date picker styles (if using date fields) */
+.wpcf7-date {
+	position: relative;
+
+	&::before {
+		@include icon("calendar", #{rem(20)});
+
+		position: absolute;
+		top: 50%;
+		left: rem(12);
+		transform: translateY(-50%);
+	}
+
+	&::after {
+		@include icon("chev-expand", #{rem(20)});
+
+		position: absolute;
+		top: 50%;
+		right: rem(8);
+		transform: translateY(-50%);
+	}
+
+	input {
+		padding-right: rem(32) !important;
+		padding-left: rem(44) !important;
+	}
+}
+
+/* For complex fields like name fields */
+.wpcf7-form-control-wrap-name {
+	@include media-breakpoint-up(sm) {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: $input-column-gap * -0.5;
+		margin-bottom: rem(-40);
+		margin-left: $input-column-gap * -0.5;
+	}
+
+	> span {
+		@include media-breakpoint-up(sm) {
+			flex: 50%;
+			margin-bottom: rem(40);
+			padding: 0 math.div($input-column-gap, 2);
+		}
+
+		&.wpcf7-full {
+			@include media-breakpoint-up(sm) {
+				flex: 100%;
+			}
+		}
+	}
+}
+
+/* Radio pills style */
+.radio-pills {
+	@include radio-pills;
+
+	.wpcf7-list-item {
+		display: block;
+		width: 100%;
+	}
+
+	.wpcf7-radio {
+		@include radio-pills-wrapper;
+	}
+}
+
+/* Radio tabs style */
+.radio-tabs {
+	@include radio-tabs;
+
+	.wpcf7-list-item {
+		display: contents;
+	}
+
+	.wpcf7-radio {
+		@include radio-tabs-wrapper;
+	}
+}
+
+/* Error states */
+.wpcf7-not-valid {
+	border-color: paint(error) !important;
+
+	&::after {
+		position: absolute;
+		top: 50%;
+		right: rem(13);
+		content: "";
+		width: rem(16);
+		height: rem(16);
+		background: url(../../icons/essential/error.svg);
+		background-repeat: no-repeat;
+		background-position: 98% center;
+		background-size: contain;
+		background-size: rem(16);
+		transform: translateY(-50%);
+	}
+}
+
+/* Success confirmation */
+.wpcf7-mail-sent-ok {
+	.content-wrapper > & {
+		padding-top: responsive-values(32, 80);
+
+		&:last-child,
+		&:nth-last-child(2) {
+			margin-bottom: responsive-values(56, 160);
+		}
+	}
+}

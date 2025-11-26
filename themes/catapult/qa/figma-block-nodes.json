@@ -1,0 +1,567 @@
+{
+    "CTA-Grid": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Curated Blocks"
+    },
+    "CTA-Strip": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Curated Blocks"
+    },
+    "CTA-Signup": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "CTA-Form": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "CTA-Donate": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Curated Blocks"
+    },
+    "Card-Image-Content": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Card-Standard": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Card-Stacked": {
+        "desktopVariations": 3,
+        "mobileVariations": 3,
+        "category": "Curated Blocks"
+    },
+    "Card-Memberships": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Icon-Standard": {
+        "desktopVariations": 3,
+        "mobileVariations": 3,
+        "category": "Curated Blocks"
+    },
+    "Icon-Side-Heading": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Icon-Image-Stacked": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Icon-Image-2up": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Testimonial-Box": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Curated Blocks"
+    },
+    "Testimonial-Image": {
+        "desktopVariations": 6,
+        "mobileVariations": 6,
+        "category": "Curated Blocks"
+    },
+    "Testimonial-Cards": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Curated Blocks"
+    },
+    "Logo-Strip": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Logo-Carousel": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Logo-Standard": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Stat-Strip": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Stat-Simple": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Stat-Supporting": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Stat-Image": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Media-Slider-Fullscreen": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Media-Interactive-Map": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Tab-Side-Image": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Accordion-Side-Heading": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Curated Blocks"
+    },
+    "Accordion-Side-Image": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Text-Side-Heading": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Text-Rows": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Text-Checklist": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Hero-Display": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Hero-Frame": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Hero-Campaign-Standard": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Curated Blocks"
+    },
+    "Hero-Campaign-Text": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Curated Blocks"
+    },
+    "Hero-CC-Homepage": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Curated Blocks"
+    },
+    "Hero-Membership": {
+        "desktopVariations": 3,
+        "mobileVariations": 2,
+        "category": "Curated Blocks"
+    },
+    "Hero-Donate": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Curated Blocks"
+    },
+    "CTA-Standard": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Essential Blocks"
+    },
+    "Card-Image-Links": {
+        "desktopVariations": 3,
+        "mobileVariations": 3,
+        "category": "Essential Blocks"
+    },
+    "Card-Text-Links": {
+        "desktopVariations": 3,
+        "mobileVariations": 3,
+        "category": "Essential Blocks"
+    },
+    "Testimonial-Standard": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Essential Blocks"
+    },
+    "Content-Side-Image": {
+        "desktopVariations": 7,
+        "mobileVariations": 7,
+        "category": "Essential Blocks"
+    },
+    "Content-Table": {
+        "desktopVariations": 3,
+        "mobileVariations": 3,
+        "category": "Essential Blocks"
+    },
+    "Media-Standard": {
+        "desktopVariations": 8,
+        "mobileVariations": 8,
+        "category": "Essential Blocks"
+    },
+    "Media-Gallery": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Essential Blocks"
+    },
+    "Media-Slider-Grid": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Essential Blocks"
+    },
+    "Tab-Standard": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Essential Blocks"
+    },
+    "Accordion-Centered": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Essential Blocks"
+    },
+    "Text-Lead": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Essential Blocks"
+    },
+    "Text-Centered": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Essential Blocks"
+    },
+    "Text-Columns": {
+        "desktopVariations": 3,
+        "mobileVariations": 3,
+        "category": "Essential Blocks"
+    },
+    "Hero-Standard": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Essential Blocks"
+    },
+    "Hero-Centered": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Essential Blocks"
+    },
+    "Hero-Contact": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Essential Blocks"
+    },
+    "Hero-404": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Essential Blocks"
+    },
+    "Core-Heading": {
+        "desktopVariations": 7,
+        "mobileVariations": 7,
+        "category": "Essential Blocks"
+    },
+    "Core-Paragraph": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Essential Blocks"
+    },
+    "Core-List": {
+        "desktopVariations": 3,
+        "mobileVariations": 3,
+        "category": "Essential Blocks"
+    },
+    "Core-Quote": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Essential Blocks"
+    },
+    "Core-Separator": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Essential Blocks"
+    },
+    "Core-Button": {
+        "desktopVariations": 6,
+        "mobileVariations": 6,
+        "category": "Essential Blocks"
+    },
+    "Filter-Top-Tabs-Sm": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Filter-Top-Tabs-Md": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Filter-Top-Tabs-XL": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Filter-Top-Tabs": {
+        "desktopVariations": 0,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Filter-Top-Tabs-No-Results": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Filter-Side-Tabs": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Filter-Side-Tabs-Search": {
+        "desktopVariations": 0,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Filter-Side-Tabs-No-Results": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Filter-Side-Tabs-Search-No-Results": {
+        "desktopVariations": 0,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Filter-Top-Dropdown-Sm": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Filter-Top-Dropdown-Md": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Filter-Top-Dropdown": {
+        "desktopVariations": 0,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Filter-Top-Dropdown-No-Results": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Related-Posts": {
+        "desktopVariations": 4,
+        "mobileVariations": 4,
+        "category": "Archive Blocks"
+    },
+    "Hero-Archive-Text": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Hero-Archive-Image": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Hero-Archive-Featured": {
+        "desktopVariations": 0,
+        "mobileVariations": 2,
+        "category": "Archive Blocks"
+    },
+    "Hero-Archive-Latest": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Hero-Taxonomy-Basic": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Hero-Post-Standard": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Hero-Profile-Image": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Hero-Profile-Standard": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Hero-Profile-Results-Logo": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Hero-Profile-Resource-Gated": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Archive Blocks"
+    },
+    "Hero-Profile-Staff": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Booking-Filter": {
+        "desktopVariations": 0,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Booking-Filter-Lg": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Booking-Filter-XL": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Post-Content": {
+        "desktopVariations": 2,
+        "mobileVariations": 2,
+        "category": "Archive Blocks"
+    },
+    "Post-Placeholder": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Post-Accommodation": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Filter-None": {
+        "desktopVariations": 0,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Filter-None-Sm": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Filter-None-Md": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Filter-None-Lg": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Filter-None-Xl": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Card-List-Sm": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Card-List-Md": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Card-List-Lg": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Card-List-Xl": {
+        "desktopVariations": 1,
+        "mobileVariations": 0,
+        "category": "Archive Blocks"
+    },
+    "Card-List": {
+        "desktopVariations": 0,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Filter-Nav": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Filter-Side-Dropdown": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "Filter-Side-Dropdown-No-Results": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Archive Blocks"
+    },
+    "TR-Announcement": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Traction Rec"
+    },
+    "TR-Hero-Archive": {
+        "desktopVariations": 3,
+        "mobileVariations": 3,
+        "category": "Traction Rec"
+    },
+    "TR-Hours-Accordion": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Traction Rec"
+    },
+    "TR-Programs-Filter": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Traction Rec"
+    },
+    "TR-Programs-Filter-No-Results": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Traction Rec"
+    },
+    "TR-Events-Filter": {
+        "desktopVariations": 1,
+        "mobileVariations": 1,
+        "category": "Traction Rec"
+    },
+    "TR-Events-Filter-No-Results": {
+        "desktopVariations": 0,
+        "mobileVariations": 1,
+        "category": "Traction Rec"
+    }
+}

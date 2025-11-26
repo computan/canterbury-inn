@@ -1,0 +1,89 @@
+@import "base-includes";
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	margin: responsive-values(48, 72) 0 0 0;
+	padding: 0;
+	list-style: none;
+
+	&.is-admin {
+		pointer-events: none;
+	}
+
+	&.disabled {
+		display: none;
+	}
+
+	a.page-numbers,
+	span.page-numbers:not(.dots) {
+		@include link-1(false);
+		--button-size: #{rem(30)};
+
+		position: relative;
+		display: block;
+		width: var(--button-size);
+		height: var(--button-size);
+		margin: rem(0 3);
+		color: paint(neutral-1);
+		line-height: var(--button-size);
+		text-align: center;
+		text-decoration: none;
+		border-radius: var(--button-size);
+
+		@include media-breakpoint-up(sm) {
+			--button-size: #{rem(40)};
+		}
+
+		&.current {
+			color: paint(white);
+			background-color: paint(button-default);
+		}
+
+		&.prev {
+			&::before {
+				@include icon("chev-left");
+			}
+		}
+
+		&.next {
+			&::before {
+				@include icon("chev-right");
+			}
+		}
+
+		&.prev::before,
+		&.next::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	a.page-numbers {
+		&:hover,
+		&:focus {
+			color: paint(neutral-1);
+			text-decoration: none;
+			background-color: paint(neutral-10);
+		}
+	}
+
+	span.page-numbers.dots {
+		--button-size: #{rem(30)};
+
+		height: var(--button-size);
+		line-height: var(--button-size);
+
+		@include media-breakpoint-up(sm) {
+			--button-size: #{rem(40)};
+		}
+	}
+}
+
+.block-filter-pagination {
+	&__load-more {
+		margin-top: responsive-values(48, 72);
+	}
+}

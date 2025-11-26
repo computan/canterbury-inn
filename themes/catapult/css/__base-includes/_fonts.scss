@@ -1,0 +1,11 @@
+// Note: all code in the __base-includes folder should not generate any actual CSS since these files are used in every block and would generated redundant CSS. These are files purely for declaring variables, mixins, and functions.
+
+/*
+This file can be used for optional additions to the Figma-generated font style mixins in the figma/_figma-font-styles.scss file.
+
+For example, if you want to add styles to the @overline mixin, just create a mixin here called @overline-custom and that CSS will be added to the primary mixin:
+
+@mixin overline-custom() {
+	font-weight: 700;
+}
+*/

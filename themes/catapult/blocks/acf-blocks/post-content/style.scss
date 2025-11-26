@@ -1,0 +1,49 @@
+@import "base-includes";
+
+.block-post-content {
+	&.acf-block--has-sidebar {
+		.block-post-content__container {
+			@include media-breakpoint-up(md) {
+				@include grid;
+			}
+		}
+
+		.block-post-content__content {
+			@include media-breakpoint-up(md) {
+				grid-column: 1 / span 8;
+			}
+		}
+
+		.block-post-content__sidebar {
+			@include media-breakpoint-up(md) {
+				grid-column: 9 / span 4;
+			}
+
+			@include media-breakpoint-up(lg) {
+				grid-column: 10 / span 3;
+			}
+		}
+	}
+
+	&__sidebar {
+		.wp-block-heading {
+			@include title-1;
+		}
+
+		.gfield {
+			margin-bottom: rem(20);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.gform_footer {
+			margin-top: rem(32);
+
+			.c-btn {
+				width: 100%;
+			}
+		}
+	}
+}

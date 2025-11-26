@@ -1,0 +1,27 @@
+@import "base-includes";
+
+.filter-no-results {
+	grid-column-end: span 12;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: responsive-values(60, 88);
+	padding-right: rem(20);
+	padding-bottom: responsive-values(72, 96);
+	padding-left: rem(20);
+	text-align: center;
+	background: paint(neutral-11);
+
+	&__header {
+		@include t2(false);
+
+		max-width: rem(640);
+		margin-bottom: responsive-values(24, 36);
+	}
+
+	&__buttons {
+		display: inline-flex;
+		flex-wrap: nowrap;
+		column-gap: rem(16);
+	}
+}

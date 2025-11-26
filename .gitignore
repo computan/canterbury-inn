@@ -1,0 +1,90 @@
+# Dependencies
+node_modules
+vendor
+
+# WP
+/plugins/*
+!/plugins/.gitkeep
+/upgrade
+/uploads
+/cache/
+/w3tc-config/
+/wflogs/
+/mu-plugins/wp-migrate-db-pro-compatibility.php
+/mu-plugins/local-by-flywheel-live-link-helper.php
+
+# Auth files
+/themes/*/auth.json
+
+# Compiled assets
+/themes/*/dist/
+/themes/twenty**
+*.map
+*.log
+.cache
+
+# Lock Files
+/themes/catapult/composer.lock
+/themes/catapult/package-lock.json
+
+# QA files
+/themes/*/qa/images/*
+!/themes/*/qa/images/figma
+/themes/*/qa/reports/*
+/themes/*/lighthouse/*
+.unlighthouse
+
+# Filepacks
+web/filepack*
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+
+# yarn
+yarn.lock
+
+# No OS-specific garbage
+*~
+.DS_Store
+Thumbs.db
+thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+**/nppBackup
+.history/
+.vs/
+
+## User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/terminal.xml
+
+## Sensitive or high-churn files:
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+## Gradle:
+.idea/gradle.xml
+.idea/libraries
+
+## Local By Flywheel:
+sql/
+web/nginx.conf
+/app/
+/conf/
+
+## ACF post types and taxonomies
+/themes/catapult/acf-json/post_type*
+/themes/catapult/acf-json/taxonomy*

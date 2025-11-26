@@ -1,0 +1,27 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-media-slider-fullscreen {
+		.components-resizable-box__container {
+			position: relative !important;
+			top: 0;
+			left: 0;
+			width: 100% !important;
+			height: auto !important;
+		}
+
+		.components-resizable-box__handle {
+			display: none !important;
+		}
+
+		.swiper-wrapper {
+			display: contents;
+		}
+
+		.wp-block-image {
+			width: 100%;
+			height: auto;
+			margin-bottom: rem(32);
+		}
+	}
+}

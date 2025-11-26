@@ -1,0 +1,209 @@
+/**
+ * Base styles that aim to normalize fonts, and display of elements
+ * across browsers, and make writing further styles easier.
+ */
+
+/* Set font and clear body padding */
+html,
+button,
+input,
+select,
+textarea {
+	font-family: font(base);
+}
+
+/* Set smooth scroll behavior for links IF the user has no motion preference */
+@media screen and (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+html {
+	@media (min-width: 105.0625rem) {
+		font-size: calc(0.37rem + 0.6vw);
+	}
+}
+
+/* Set scroll margin top on all elements with an ID to account for sticky header and admin bar */
+[id] {
+	scroll-margin: var(--header-height);
+}
+
+body {
+	@include body-1(false);
+
+	min-width: rem(320);
+	margin: 0;
+	color: paint(text);
+	font-family: font(base);
+	background-color: paint(white);
+	-webkit-font-smoothing: antialiased;
+	font-feature-settings: "clig" off, "liga" off;
+}
+
+.main-header {
+	position: sticky;
+	top: 0;
+	z-index: 19;
+	height: rem(64);
+
+	body.post-type-archive-library_block & {
+		position: relative;
+		top: 0 !important;
+	}
+
+	body.admin-bar & {
+		/* stylelint-disable unit-disallowed-list */
+
+		top: 32px;
+
+		@media screen and (max-width: 782px) {
+			top: 46px;
+		}
+		/* stylelint-enable unit-disallowed-list */
+	}
+}
+
+#wpadminbar {
+	position: fixed;
+}
+
+.main-footer {
+	position: relative;
+}
+
+/* Setting sizes is much more predictable with border-box */
+* {
+	&,
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+figure {
+	margin: 0;
+}
+
+/* Make all images responsive */
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+// Horizontal rule.
+hr {
+	margin: rem(48) 0;
+	border-top: rem(1) solid paint(neutral-6);
+
+	@include media-breakpoint-up(md) {
+		margin: rem(80) 0;
+	}
+}
+
+/* Normalize links across browsers */
+a {
+	text-decoration: none;
+	transition: color $transition-standard;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:not([class]) {
+		color: paint(button-default);
+		text-decoration: underline;
+		word-wrap: break-word;
+
+		@include alt-text-selectors() {
+			color: paint(white);
+
+			&:hover,
+			&:focus {
+				color: paint(neutral-9);
+			}
+		}
+
+		&:hover,
+		&:focus {
+			color: paint(button-hover);
+			text-decoration: underline;
+		}
+
+		.bg-white & {
+			color: paint(button-default);
+
+			&:hover,
+			&:focus {
+				color: paint(button-hover);
+				text-decoration: underline;
+			}
+		}
+
+		img {
+			border: 0;
+		}
+	}
+}
+
+a:focus,
+a:hover {
+	color: paint(button-hover);
+	text-decoration: none;
+}
+
+.tablet-checker {
+	display: none;
+
+	@include media-breakpoint-down(md) {
+		display: block;
+	}
+}
+
+.container-fluid {
+	@include media-breakpoint-down(sm) {
+		padding: 0 rem(20);
+	}
+}
+
+.row {
+	@include media-breakpoint-down(md) {
+		margin: 0 rem(-10);
+	}
+
+	@include media-breakpoint-down(xs) {
+		margin: 0 rem(-7.5);
+	}
+}
+
+*[class*=" col-"],
+*[class^="col-"] {
+	@include media-breakpoint-down(md) {
+		padding: 0 rem(10);
+	}
+
+	@include media-breakpoint-down(xs) {
+		padding: 0 rem(7.5);
+	}
+}
+
+#page {
+	position: relative;
+}
+
+/* Set custom outline styles */
+a,
+button,
+input,
+select,
+textarea {
+	&:focus {
+		outline: none;
+
+		html.user-tab-nav & {
+			outline: auto;
+		}
+	}
+}

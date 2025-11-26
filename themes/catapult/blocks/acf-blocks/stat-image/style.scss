@@ -1,0 +1,31 @@
+@import "base-includes";
+
+.block-stat-image {
+	display: block;
+
+	&__row {
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__image-wrapper {
+		padding-bottom: 100%;
+
+		@include media-breakpoint-down(sm) {
+			margin-bottom: rem(48);
+		}
+	}
+
+	.block-stats {
+		margin-top: responsive-values(32, 48);
+		margin-bottom: responsive-values(-32, -48);
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.block-stat {
+		text-align: center;
+	}
+}

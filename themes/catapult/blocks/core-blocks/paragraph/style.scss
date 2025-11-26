@@ -1,0 +1,12 @@
+@import "base-includes";
+
+.wp-block-paragraph {
+	&--highlight-text {
+		padding: rem(3) 0;
+		background: rgba(paint(button-default), 0.1);
+
+		@include alt-text-selectors() {
+			background: rgba(paint(button-default), 0.5);
+		}
+	}
+}

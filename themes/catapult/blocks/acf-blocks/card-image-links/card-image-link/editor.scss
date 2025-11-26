@@ -1,0 +1,13 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-card-image-link {
+		min-height: 0 !important;
+	}
+
+	.wp-block[data-title="Card-Image-Link"] {
+		&::before {
+			content: "Card" !important;
+		}
+	}
+}

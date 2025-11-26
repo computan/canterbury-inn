@@ -1,0 +1,16 @@
+@import "base-includes";
+
+.block-hero-archive-image {
+	position: relative;
+	z-index: 1;
+	padding: 0;
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: responsive-values(284, 528);
+		padding-top: rem(144);
+		padding-bottom: responsive-values(96, 116);
+	}
+}

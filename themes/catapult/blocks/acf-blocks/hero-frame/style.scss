@@ -1,0 +1,48 @@
+@import "base-includes";
+
+.block-hero-frame {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: $block-spacing 0;
+	overflow: hidden;
+
+	@include media-breakpoint-down(sm) {
+		padding: 0;
+	}
+
+	&__container {
+		@include media-breakpoint-up(md) {
+			@include grid;
+
+			padding-top: rem(64);
+		}
+	}
+
+	&__card {
+		padding: rem(120 0 64);
+
+		@include media-breakpoint-up(md) {
+			grid-column-end: span 7;
+			padding: responsive-values(44, 88) responsive-values(20, 48) responsive-values(48, 96);
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-column-end: span 6;
+		}
+	}
+
+	.acf-block__background-image-wrapper {
+		@include media-breakpoint-down(sm) {
+			position: relative;
+			top: auto;
+			left: auto;
+			order: 9;
+			height: 0;
+			padding-bottom: 75%;
+		}
+	}
+}

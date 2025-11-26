@@ -1,0 +1,50 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-navigation-columns {
+		padding-right: rem(32) !important;
+		padding-left: rem(32) !important;
+
+		@include media-breakpoint-up(lg) {
+			&.block-navigation-columns--has-first-link-column {
+				padding-left: 0 !important;
+			}
+
+			&.block-navigation-columns--has-last-link-column {
+				padding-right: 0 !important;
+			}
+		}
+
+		&__content {
+			@include media-breakpoint-up(lg) {
+				grid-template-columns: unset !important;
+			}
+		}
+	}
+
+	.block-navigation.is-style-hamburger {
+		.block-navigation-columns.wp-block {
+			position: relative;
+			display: block !important;
+			overflow: hidden;
+
+			&::after {
+				@include body-2(false);
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: "This block cannot be used within the hambuger style menu.";
+				z-index: 9;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+				padding: rem(20);
+				color: paint(white);
+				background-color: rgba(paint(error), 0.7);
+			}
+		}
+	}
+}

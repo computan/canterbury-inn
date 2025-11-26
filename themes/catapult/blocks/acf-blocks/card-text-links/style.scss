@@ -1,0 +1,13 @@
+@import "base-includes";
+
+.block-card-text-links {
+	.block-cards__grid {
+		row-gap: responsive-values(24, 36);
+	}
+
+	.wp-block-heading {
+		max-width: rem(864);
+		margin-right: auto;
+		margin-left: auto;
+	}
+}

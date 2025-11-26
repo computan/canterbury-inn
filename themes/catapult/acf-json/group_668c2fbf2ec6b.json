@@ -1,0 +1,42 @@
+{
+    "key": "group_668c2fbf2ec6b",
+    "title": "Attachment",
+    "fields": [
+        {
+            "key": "field_668c2fbfc6e40",
+            "label": "Media Gallery Video",
+            "name": "media_gallery_video",
+            "aria-label": "",
+            "type": "oembed",
+            "instructions": "Used for images assigned to Media Gallery Categories.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "attachment",
+                "operator": "==",
+                "value": "image"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1720463916
+}

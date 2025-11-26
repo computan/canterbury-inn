@@ -1,0 +1,84 @@
+@import "base-includes";
+
+.block-cta-form {
+	padding-top: $block-spacing-with-text;
+
+	&.bg-dark,
+	&.bg-green {
+		.block-form {
+			form {
+				p {
+					input[type="submit"] {
+						color: paint(black);
+						border-color: paint(white);
+						background-color: paint(white);
+
+						&:hover {
+							color: paint(button-hover);
+							border-color: paint(white);
+							background-color: paint(white);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__container {
+		@include media-breakpoint-up(lg) {
+			display: flex;
+		}
+	}
+
+	.block-content {
+		margin-bottom: rem(32);
+
+		@include media-breakpoint-up(lg) {
+			width: 45%;
+			margin-bottom: 0;
+			padding: 0 rem(15);
+		}
+	}
+
+	.block-form {
+		margin-top: rem(32);
+
+		@include media-breakpoint-up(lg ) {
+			width: 55%;
+			margin-top: 0;
+		}
+
+		form {
+			@include media-breakpoint-up(lg ) {
+				display: flex;
+				flex-wrap: wrap;
+				gap: rem(20);
+				margin-top: 0;
+			}
+
+			p {
+				margin-bottom: rem(20);
+
+				@include media-breakpoint-up(lg) {
+					width: 45%;
+					margin-bottom: 0;
+				}
+
+				label {
+					@include subtitle-1(false);
+				}
+
+				input[type="submit"] {
+					@include button-primary;
+				}
+			}
+
+			&.invalid {
+				.wpcf7-response-output {
+					text-align: center;
+					border-color: paint(error);
+				}
+			}
+		}
+	}
+}

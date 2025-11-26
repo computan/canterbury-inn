@@ -1,0 +1,26 @@
+@import "base-includes";
+
+.block-alert-top {
+	top: 0;
+	left: 0;
+	z-index: 15;
+	width: 100%;
+	padding: 0;
+	padding: rem(7 0 9);
+	text-align: center;
+
+	p {
+		@include subtitle-3;
+	}
+
+	body.admin-bar & {
+		/* stylelint-disable unit-disallowed-list */
+
+		top: 32px;
+
+		@media screen and (max-width: 782px) {
+			top: 46px;
+		}
+		/* stylelint-enable unit-disallowed-list */
+	}
+}

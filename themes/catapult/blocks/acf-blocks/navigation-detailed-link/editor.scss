@@ -1,0 +1,9 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.wp-block[data-title="Navigation-Detailed-Link"] {
+		&::before {
+			content: "Link" !important;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+@import "base-includes";
+
+.block-footer-top {
+	@include subtitle-2(false);
+
+	padding-bottom: responsive-values(2, 32);
+
+	&__content {
+		@include grid();
+	}
+}

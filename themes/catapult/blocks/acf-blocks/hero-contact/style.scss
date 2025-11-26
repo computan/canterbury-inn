@@ -1,0 +1,56 @@
+@import "base-includes";
+
+.block-hero-contact {
+	padding-top: responsive-values(144, 192);
+
+	&__container {
+		@include media-breakpoint-up(md) {
+			@include grid();
+
+			row-gap: responsive-values(20, 32);
+		}
+	}
+
+	.block-content {
+		width: 100%;
+
+		@include media-breakpoint-up(md) {
+			grid-area: 1 / 1 / 2 / 7;
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-area: 1 / 1 / 2 / 6;
+		}
+
+		.wp-block-buttons {
+			&:last-child {
+				@include media-breakpoint-down(sm) {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.block-form {
+		width: 100%;
+		margin-top: rem(72);
+		margin-bottom: auto;
+
+		@include media-breakpoint-up(md) {
+			grid-area: 1 / 7 / 2 / 13;
+			margin-top: 0;
+		}
+	}
+
+	.gform_confirmation_message {
+		@include subtitle-1(false);
+
+		padding: rem(36) responsive-values(20, 32) rem(48);
+		color: paint(neutral-1);
+		background-color: paint(neutral-11);
+
+		h2 + br {
+			display: none;
+		}
+	}
+}

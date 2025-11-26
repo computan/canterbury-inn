@@ -1,0 +1,127 @@
+// Note: all code in the __base-includes folder should not generate any actual CSS since these files are used in every block and would generated redundant CSS. These are files purely for declaring variables, mixins, and functions.
+
+/****************
+ * Fonts
+ *
+ * The font settings are defined via the gulp figma which task creates variables in the css/__base-includes/figma/_figma-font-styles.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+
+/*
+* This array is used to specify the fonts used on the project with the following parameters:
+	base - the name for use in the font() mixin.
+		css - the output CSS value.
+		figma-name: - the 'font-family' name used in the _figma-font-variable.scss file.
+	)
+*/
+$fonts: (
+	base: (
+		css: "'Open Sans', sans-serif",
+		figma-name: "Open Sans",
+	)
+);
+
+/****************
+ * Colors
+ *
+ * The primary colors are defined via the gulp figma task which creates variables in the css/__base-includes/figma/_figma-color-variables.scss file based on the Figma file. Additional variables are defined here.
+ ****************/
+
+/* If additional colors need to be added to the _figma-color-variables.scss, they can be added to this variable: */
+$additional-paints: (
+	example: #fff,
+);
+
+/* This variable controls the background colors generated in the ACF background_color field and the background color classes - bg-white, bg-neutral-10, etc: */
+$background-colors: (
+	"transparent": transparent,
+	"white": paint(white),
+	"neutral-10": paint(neutral-10),
+	"neutral-11": paint(neutral-11),
+	"neutral-3": paint(neutral-3),
+	"dark": paint(neutral-2),
+);
+
+/* This variable controls the default text color on a light background. Used with paint(text) to generate a CSS variable that changes to use background font colors. */
+$default-text-color: paint(neutral-1);
+
+/* If a background color uses a different font color than the default color, use these variables to specify the alternate colors */
+$background-font-colors: (
+	"white": paint(neutral-1),
+	"dark": paint(white),
+	"neutral-3": paint(white),
+);
+$background-font-hover-colors: (
+	"white": paint(button-hover),
+	"dark": paint(neutral-8),
+	"neutral-3": paint(neutral-8),
+);
+
+/* Backgrounds specified in this variable will use the alternative text colors: */
+$backgrounds-with-alt-text-color: (
+	"dark",
+	"neutral-3",
+);
+
+/* Backgrounds specified in this variable will use the alternative button colors: */
+$backgrounds-with-alt-button-color: (
+	"dark",
+	"neutral-3"
+);
+
+/****************
+ * Effects
+ ****************/
+$effects: (
+	cards: rem(0 0 8) rgba(0, 0, 0, 0.08),
+	logo: rem(0 2 4) rgba(27, 46, 25, 0.5),
+	sort: rem(0 0 8 0) rgba(paint(neutral-1), 0.12)
+);
+
+/****************
+ * Grid Settings
+ ****************/
+$grid-breakpoints: (
+	xs: 0,
+	sm: rem(576),
+	md: rem(768),
+	lg: rem(992),
+	xl: rem(1200),
+	xxl: rem(1440)
+);
+
+$custom-breakpoints: (
+	mobilemenu: rem(1200)
+);
+
+$container-max-widths: (
+	xs: rem(576),
+	sm: rem(768),
+	md: rem(992),
+	lg: rem(1200),
+	xl: rem(1440)
+);
+
+$grid-columns: 12;
+$grid-gap: responsive-values(16, 32);
+$negative-grid-gap: responsive-values(-16, -32);
+
+/****************
+ * Block Spacing
+ *
+ * These variables are based on the "Spacing" rules found in the "Foundations" section in Figma. These control the default spacing between blocks of different colors.
+ ****************/
+$block-spacing: responsive-values(96, 144);
+$block-spacing-with-text: responsive-values(88, 128);
+$block-spacing-first-text-child-offset: responsive-values(-8, -16);
+$block-spacing-with-sidebar: responsive-values(48, 72);
+
+// Transitions
+$transition-standard: 0.2s linear;
+
+// Outline
+$outline: rem(2) solid #7aacfe;
+
+// Forms
+$input-column-gap: rem(20);
+$input-row-gap: rem(24);
+$input-footer-gap: rem(48);

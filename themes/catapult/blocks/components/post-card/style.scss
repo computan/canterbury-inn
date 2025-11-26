@@ -1,0 +1,77 @@
+@import "base-includes";
+
+.post-card {
+	display: flex;
+	flex-direction: column;
+	color: paint(text);
+
+	&:hover,
+	&:focus {
+		color: var(--blockHoverColor, paint(button-hover));
+	}
+
+	.block-filter-top & {
+		grid-column: span 12;
+
+		@include media-breakpoint-up(md) {
+			grid-column: span 4;
+		}
+	}
+
+	.block-filter-side & {
+		grid-column: span 12;
+
+		@include media-breakpoint-up(md) {
+			grid-column: span 6;
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-column: span 4;
+		}
+	}
+
+	&__image-wrapper {
+		margin-bottom: rem(16);
+		padding-bottom: 55.76923%;
+
+		&:not(:has(img)) {
+			background-color: paint(neutral-9);
+		}
+	}
+
+	&__meta {
+		@include subtitle-3(false);
+
+		margin-bottom: rem(8);
+		font-size: 0;
+		line-height: 0;
+
+		span {
+			@include subtitle-3(false);
+
+			&:not(:last-child) {
+				&::after {
+					content: "•";
+					display: inline-block;
+					width: rem(4);
+					margin: auto rem(8);
+					color: transparent;
+					background-color: paint(neutral-8);
+					clip-path: circle(#{rem(2)} at 50% 50%);
+				}
+			}
+		}
+	}
+
+	&__title {
+		@include title-1(true);
+
+		margin-top: 0;
+	}
+
+	&__author {
+		@include subtitle-3(false);
+
+		margin-top: auto;
+	}
+}

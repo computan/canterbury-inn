@@ -1,0 +1,14 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-text-lead {
+		.content-wrapper {
+			.block-editor-rich-text {
+				&__editable {
+					position: relative;
+					z-index: 999;
+				}
+			}
+		}
+	}
+}

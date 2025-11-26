@@ -1,0 +1,88 @@
+@use "sass:map";
+
+@each $color, $value in $background-colors {
+	.bg-#{$color} {
+		background-color: #{$value};
+
+		@if (transparent != $value) {
+			--blockBackgroundColor: #{$value};
+		}
+
+		@if map.get($background-font-colors, $color) {
+			--blockColor: #{map.get($background-font-colors, $color)};
+
+			color: map.get($background-font-colors, $color);
+		}
+
+		@if map.get($background-font-hover-colors, $color) {
+			--blockHoverColor: #{map.get($background-font-hover-colors, $color)};
+		}
+	}
+}
+
+.mx-auto {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.mw-100 {
+	max-width: 100%;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.justify-content-between {
+	justify-content: space-between;
+}
+
+.justify-content-center {
+	justify-content: center;
+}
+
+.justify-content-start {
+	justify-content: flex-start;
+}
+
+.justify-content-end {
+	justify-content: flex-end;
+}
+
+.visually-hidden,
+.sr-only {
+	@include sr-only();
+}
+
+.skip-link {
+	@include subtitle-1(false);
+
+	position: absolute;
+	top: rem(-1600);
+	left: rem(-1600);
+	z-index: 100000;
+	display: block;
+	width: auto;
+	height: auto;
+	max-width: calc(100% - #{rem(12)});
+	padding: rem(8 12);
+	color: paint(text);
+	line-height: normal;
+	text-decoration: none;
+	background-color: paint(white);
+
+	&:focus {
+		top: rem(6);
+		left: rem(6);
+		color: paint(text);
+		background-color: paint(white);
+	}
+}

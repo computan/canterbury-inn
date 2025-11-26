@@ -1,0 +1,15 @@
+@import "base-includes";
+
+.wp-block-video {
+	margin: responsive-values(48, 88) auto;
+
+	.block-column > & {
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

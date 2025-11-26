@@ -1,0 +1,16 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-share-buttons {
+		.wp-block-button.is-style-social {
+			.wp-block-button__link {
+				font-size: 0 !important;
+				line-height: 0 !important;
+
+				&::before {
+					display: none !important;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,259 @@
+@use "sass:math";
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+textarea,
+select {
+	@include input-style;
+}
+
+textarea {
+	min-height: rem(96);
+}
+
+select {
+	@include select;
+}
+
+label {
+	@include input-label;
+}
+
+input[type="search"] {
+	padding-right: rem(40);
+	padding-left: rem(40);
+	background: #fff url(../icons/essential/search.svg) no-repeat rem(11) center;
+	background-size: rem(20 20);
+	appearance: none;
+
+	&::-webkit-search-decoration,
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-results-button,
+	&::-webkit-search-results-decoration {
+		-webkit-appearance: none;
+	}
+}
+
+.input-search {
+	position: relative;
+
+	input[type="search"] {
+		background: transparent;
+	}
+
+	&__button {
+		position: absolute;
+		top: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: rem(44);
+		height: 100%;
+		padding: 0;
+		color: paint(neutral-6);
+		border: none;
+		background-color: transparent;
+		transform: translateY(-50%);
+		appearance: none;
+		transition: color $transition-standard;
+
+		&--submit {
+			left: 0;
+
+			&::before {
+				@include icon("search", #{rem(20)});
+			}
+		}
+
+		&--clear {
+			right: 0;
+			display: none;
+
+			&::after {
+				@include icon("cancel", #{rem(20)});
+			}
+		}
+
+		&:hover,
+		&:focus {
+			color: paint(button-hover);
+		}
+	}
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	@include checkbox-radio;
+}
+
+input[type="checkbox"] {
+	@include checkbox;
+}
+
+input[type="radio"] {
+	@include radio;
+}
+
+.input-number {
+	position: relative;
+	display: inline-block;
+	width: auto;
+
+	input[type="number"] {
+		width: auto;
+		padding-right: rem(37);
+		padding-left: rem(37);
+		text-align: center;
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			appearance: none;
+		}
+	}
+
+	&__button {
+		position: absolute;
+		top: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: rem(32);
+		height: 100%;
+		padding: 0;
+		color: paint(neutral-1);
+		border: none;
+		background-color: transparent;
+		transform: translateY(-50%);
+		appearance: none;
+		transition: color $transition-standard;
+
+		&--decrease {
+			left: 0;
+			justify-content: flex-end;
+
+			&::before {
+				@include icon("minimize", #{rem(20)});
+			}
+		}
+
+		&--increase {
+			right: 0;
+			justify-content: flex-start;
+
+			&::after {
+				@include icon("maximize", #{rem(20)});
+			}
+		}
+
+		&:hover,
+		&:focus {
+			color: paint(button-hover);
+		}
+	}
+}
+
+input[type="file"] {
+	@include subtitle-1(false);
+
+	display: inline-flex;
+	width: auto;
+	height: rem(36);
+	padding: rem(6 0);
+
+	&::-webkit-file-upload-button,
+	&::file-selector-button {
+		width: 0;
+		height: 0;
+		margin: 0;
+		padding: 0;
+		color: transparent;
+		font-size: 0;
+		border: 0;
+		background-color: transparent;
+		-webkit-appearance: none;
+		appearance: none;
+	}
+}
+
+.input-file {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+
+	&__button {
+		@include button;
+		@include button-small;
+
+		color: paint(neutral-1);
+		border: rem(1) solid paint(neutral-1);
+		background-color: transparent;
+		appearance: none;
+
+		@include alt-button-selectors {
+			color: paint(white);
+			border-color: paint(white);
+
+			&:hover,
+			&:focus {
+				color: paint(neutral-1);
+				background-color: paint(white);
+			}
+		}
+
+		&:hover,
+		&:focus {
+			color: paint(white);
+			background-color: paint(neutral-1);
+		}
+	}
+
+	&__cancel-button {
+		position: relative;
+		z-index: 2;
+		order: 2;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		margin-right: rem(-16);
+		margin-left: rem(8);
+		padding: rem(8);
+		color: paint(error);
+		border: none;
+		background-color: transparent;
+		appearance: none;
+		transition: opacity $transition-standard;
+
+		&::before {
+			@include icon("cancel", #{rem(20)});
+		}
+
+		&:hover,
+		&:focus {
+			opacity: 0.7;
+		}
+	}
+
+	&__input {
+		&--has-value {
+			+ .input-file__cancel-button {
+				display: flex;
+			}
+		}
+	}
+
+	input[type="file"] {
+		order: 3;
+		padding-left: rem(15);
+	}
+}

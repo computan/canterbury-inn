@@ -1,0 +1,27 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.is-root-container {
+		> .wp-block-embed {
+			display: flex;
+			flex: 0 0 100%;
+			justify-content: center;
+			float: none !important;
+			max-width: 100%;
+			margin: responsive-values(48, 72) auto !important;
+			padding: 0 rem(56);
+
+			&.alignleft {
+				justify-content: flex-start;
+			}
+
+			&.alignright {
+				justify-content: flex-end;
+			}
+
+			.wp-block-embed {
+				margin: 0;
+			}
+		}
+	}
+}

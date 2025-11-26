@@ -1,0 +1,156 @@
+@import "base-includes";
+
+.block-tab-side-image-tab {
+	position: relative;
+	z-index: 1;
+	margin-bottom: rem(20);
+	padding: rem(20);
+	border-radius: rem(8);
+	background-color: paint(neutral-11);
+	transition: background-color $transition-standard;
+
+	&--has-image {
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 0;
+			border-radius: rem(8 8 0 0);
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		background-color: paint(white);
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	.wp-block-heading + & {
+		margin-top: responsive-values(32, 48);
+	}
+
+	&.active {
+		@include media-breakpoint-up(md) {
+			background-color: paint(neutral-11);
+		}
+
+		+ .block-tab-side-image-tab__figure {
+			z-index: 2; // ensures we get the right video for the active tab
+			opacity: 1;
+		}
+
+		> .wp-block-button {
+			.wp-block-button__link {
+				&::before {
+					@include media-breakpoint-up(md) {
+						border-color: paint(neutral-1);
+					}
+				}
+			}
+		}
+	}
+
+	> .wp-block-button {
+		margin-bottom: rem(8);
+
+		&.active {
+			+ .block-content {
+				display: block;
+			}
+
+			> .wp-block-button__link {
+				color: paint(text);
+			}
+		}
+
+		> .wp-block-button__link {
+			@include title-1(false);
+
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			color: paint(neutral-1);
+			text-align: left;
+			border: none;
+			border-radius: 0;
+			background-color: transparent;
+			-webkit-appearance: none;
+			appearance: none;
+			pointer-events: none;
+
+			@include media-breakpoint-up(md) {
+				pointer-events: auto;
+			}
+
+			&::before,
+			&::after {
+				@include media-breakpoint-up(md) {
+					position: absolute;
+					top: 0;
+					left: 0;
+					content: "";
+					z-index: 1;
+					width: 100%;
+					height: 100%;
+					border-radius: rem(8);
+				}
+			}
+
+			&::before {
+				@include media-breakpoint-up(md) {
+					z-index: -1;
+					border: rem(1) solid paint(neutral-8);
+					transition: border-color $transition-standard, background-color $transition-standard;
+				}
+			}
+
+			&:hover,
+			&:focus {
+				&::before {
+					@include media-breakpoint-up(md) {
+						background-color: paint(neutral-11);
+					}
+				}
+			}
+		}
+	}
+
+	> .block-content {
+		p {
+			@include subtitle-1();
+		}
+
+		.wp-block-heading {
+			@include title-1();
+		}
+	}
+
+	&__figure {
+		@include media-breakpoint-down(sm) {
+			margin-bottom: rem(20);
+			padding: rem(0 20 20 20);
+			border-radius: rem(0 0 8 8);
+			background-color: paint(neutral-11);
+		}
+
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			z-index: -1;
+			display: block;
+			width: calc(50% - #{rem(16)});
+			opacity: 0;
+			transform: translateY(-50%);
+			transition: opacity 0.4s ease-in-out;
+
+			body.show-qa-overlays & {
+				transition: none;
+			}
+		}
+	}
+
+	&__image-wrapper {
+		width: 100%;
+		padding-bottom: 100%;
+	}
+}

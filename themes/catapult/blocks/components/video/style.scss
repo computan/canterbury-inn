@@ -1,0 +1,123 @@
+@import "base-includes";
+
+.component-video {
+	position: relative;
+
+	&__button {
+		cursor: pointer;
+	}
+
+	&__play-button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		cursor: pointer;
+		transform: translate(-50%, -50%);
+	}
+
+	.wp-block-image__wrapper {
+		position: relative;
+	}
+}
+
+.component-video-lightbox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.4s ease-in-out;
+
+	&.active {
+		display: flex;
+		pointer-events: auto;
+	}
+
+	&.visible {
+		opacity: 1;
+	}
+
+	&__container {
+		@include responsive-grid(12, 12, 12, 12, 12, 12);
+
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+			max-width: 90%;
+		}
+	}
+
+	&__close-button-overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		cursor: zoom-out;
+		-webkit-appearance: none;
+
+		&:focus {
+			.component-video-lightbox__close-button {
+				color: paint(neutral-1);
+				border-color: paint(neutral-9);
+				background-color: paint(neutral-9);
+			}
+		}
+	}
+
+	&__close-button {
+		@include button-close;
+
+		position: absolute;
+		top: rem(20);
+		right: rem(20);
+		cursor: pointer;
+	}
+
+	&__video {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		> div {
+			position: relative;
+			padding-bottom: 56.25%;
+		}
+
+		video {
+			width: auto !important;
+			max-width: calc(100vw - #{rem(40)});
+			max-height: calc(100vh - rem(220));
+
+			@include media-breakpoint-up(xl) {
+				max-height: calc(100vh - rem(148));
+			}
+		}
+
+		iframe {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			bottom: auto;
+			right: auto;
+			width: 100%;
+			max-height: calc(100vh - rem(220));
+			transform: translate(-50%, -50%);
+			pointer-events: auto;
+
+			@include media-breakpoint-up(xl) {
+				max-height: calc(100vh - rem(148));
+			}
+		}
+	}
+}

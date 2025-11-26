@@ -1,0 +1,28 @@
+@import "base-includes";
+
+.block-icon-content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	.wp-block-heading {
+		@include title-1();
+	}
+
+	p {
+		@include subtitle-1();
+	}
+
+	.wp-block-button {
+		margin-top: auto;
+		margin-bottom: rem(16);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		+ .wp-block-button {
+			margin-top: 0;
+		}
+	}
+}

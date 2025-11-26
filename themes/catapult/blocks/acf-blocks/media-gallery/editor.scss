@@ -1,0 +1,18 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-media-gallery {
+		.components-resizable-box__container {
+			position: absolute !important;
+			top: 0;
+			left: 0;
+			width: 100% !important;
+			height: 100% !important;
+		}
+
+		.components-resizable-box__handle {
+			display: none !important;
+		}
+
+	}
+}

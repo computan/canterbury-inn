@@ -1,0 +1,66 @@
+@import "base-includes";
+
+.block-media-slider-fullscreen {
+	position: relative;
+	padding: responsive-values(48, 72) 0;
+	overflow: hidden;
+
+	.swiper {
+		width: 100%;
+		overflow: visible;
+	}
+
+	.swiper-wrapper {
+		align-items: stretch;
+		overflow: visible;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		position: absolute;
+		top: 50%;
+		z-index: 5;
+		width: responsive-values(36, 48);
+		height: responsive-values(36, 48);
+		transform: translateY(-50%);
+
+		&::after {
+			font-size: responsive-values(16, 24);
+		}
+	}
+
+	.swiper-button-prev {
+		left: 0;
+
+		@include media-breakpoint-up(md) {
+			left: calc(var(--negativeGutterWidth, #{rem(-20)}) + #{rem(20)});
+		}
+	}
+
+	.swiper-button-next {
+		right: 0;
+
+		@include media-breakpoint-up(md) {
+			right: calc(var(--negativeGutterWidth, #{rem(-20)}) + #{rem(20)});
+		}
+	}
+
+	.wp-element-caption {
+		@include subtitle-2(false);
+
+		margin-top: rem(12);
+		text-align: center;
+	}
+
+	.wp-block-image {
+		position: relative;
+		width: auto;
+		height: responsive-values(375, 740);
+
+		img,
+		picture {
+			width: auto;
+			height: responsive-values(375, 740);
+		}
+	}
+}

@@ -1,0 +1,25 @@
+@import "base-includes";
+
+.block-logo-carousel {
+	padding: rem(48) 0;
+
+	.swiper {
+		position: relative;
+	}
+
+	.swiper-wrapper {
+		align-items: center;
+		transition-timing-function: linear;
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+		mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) responsive-values(64, 96), rgba(0, 0, 0, 0) calc(100% - responsive-values(64, 96)), rgba(0, 0, 0, 1) 100%);
+		pointer-events: none;
+	}
+}

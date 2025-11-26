@@ -1,0 +1,56 @@
+@import "base-includes";
+
+.block-hero-profile-results-logo {
+	&__container {
+		margin-top: responsive-values(48, 80);
+
+		@include media-breakpoint-up(md) {
+			@include grid();
+
+			align-items: flex-start;
+		}
+	}
+
+	.block-content {
+		width: 100%;
+
+		@include media-breakpoint-up(md) {
+			grid-column: 1 / span 8;
+		}
+	}
+
+	.block-logos {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		padding: rem(16);
+		border: rem(1) solid paint(neutral-8);
+
+		@include media-breakpoint-up(md) {
+			grid-column: 10 / span 3;
+			max-width: rem(192);
+			margin-left: auto;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			grid-column: 11 / span 2;
+		}
+
+		&:not(:first-child) {
+			margin-top: rem(48);
+
+			@include media-breakpoint-up(md) {
+				margin-top: 0;
+			}
+		}
+
+		.block-logo {
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin: 0 auto;
+			padding: 0;
+		}
+	}
+}

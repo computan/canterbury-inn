@@ -1,0 +1,60 @@
+.used-blocks {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: rem(30);
+
+	@include media-breakpoint-up(md) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	h3 {
+		font-size: rem(25);
+	}
+
+	h4 {
+		font-size: rem(20);
+	}
+
+	&__heading {
+		display: block;
+		margin-top: rem(5);
+		margin-bottom: 0;
+	}
+
+	&__block-count {
+		padding-left: rem(30);
+
+		@include media-breakpoint-down(sm) {
+			padding-left: 0;
+		}
+	}
+
+	&__list {
+		margin-top: 0 !important;
+
+		.used-blocks__list {
+			margin-bottom: rem(4);
+			margin-left: rem(16);
+			padding-left: rem(16);
+			list-style-type: disc !important;
+		}
+	}
+
+	&__list-item {
+		margin-bottom: 0 !important;
+	}
+
+	&__block-pattern-label {
+		display: inline-block;
+		margin-left: rem(6);
+		padding: rem(4);
+		color: #1e1e1e;
+		font-weight: 600;
+		font-size: rem(10);
+		line-height: 1;
+		white-space: normal;
+		text-align: center;
+		border: rem(1) solid #e0e0e0;
+		background-color: #f0f0f0;
+	}
+}

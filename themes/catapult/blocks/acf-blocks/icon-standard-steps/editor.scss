@@ -1,0 +1,16 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-icon-standard-steps {
+		.is-style-primary {
+			margin: 0 auto;
+		}
+	}
+
+	.is-style-grid-top {
+		.wp-block-heading.has-t-2-font-size,
+		.wp-block-column .has-body-1-font-size {
+			width: rem(608) !important;
+		}
+	}
+}

@@ -1,0 +1,55 @@
+@import "base-includes";
+
+.block-membership-button {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	row-gap: rem(24);
+	justify-content: stretch;
+	align-items: center;
+	margin: responsive-values(32, 48) 0;
+	column-gap: rem(20);
+
+	@include media-breakpoint-up(xl) {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	p {
+		@include t6(false);
+
+		margin: auto auto auto 0;
+		color: paint(neutral-6);
+
+		&:first-child {
+			margin-top: auto;
+		}
+
+		strong {
+			margin-left: rem(8);
+			color: paint(neutral-1);
+			font-weight: 700;
+		}
+	}
+
+	.wp-block-button {
+		margin: 0;
+
+		@include media-breakpoint-up(xl) {
+			flex: 1 1 100%;
+			max-width: max-content;
+			margin: auto 0 auto auto;
+		}
+	}
+
+	.wp-block-button__link {
+		width: 100%;
+	}
+}

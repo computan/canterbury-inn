@@ -1,0 +1,21 @@
+@import "base-includes";
+
+.block-form-disclaimer {
+	margin: rem(32 0);
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	p {
+		@include subtitle-2();
+	}
+
+	.gform_confirmation_wrapper ~ & {
+		display: none;
+	}
+}

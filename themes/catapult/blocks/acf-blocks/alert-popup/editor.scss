@@ -1,0 +1,29 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-alert-popup {
+		position: relative;
+		top: auto;
+		left: auto;
+		bottom: auto;
+		right: auto;
+		z-index: 1;
+		padding-top: $block-spacing;
+		padding-bottom: $block-spacing;
+		visibility: visible;
+		opacity: 1;
+
+		&__content-wrapper {
+			position: relative;
+			top: auto;
+			left: auto;
+			bottom: auto;
+			right: auto;
+			transform: none;
+		}
+
+		&__close-button {
+			pointer-events: none;
+		}
+	}
+}

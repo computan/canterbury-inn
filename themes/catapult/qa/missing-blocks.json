@@ -1,0 +1,58 @@
+{
+    "Block labels in Figma without any matching Figma blocks. All block components in Figma should contain the block label as a prefix. Contact the Computan designer to update the block components to match the block labels.": [],
+    "WordPress block library posts not found in Figma. Check to make sure they exist and the WordPress library block post titles match the Figma block component names. The developer will likely need to update the library block post titles to match Figma.": [
+        "Hero-Archive-Featured-Desktop",
+        "Post-Tags-Share-Desktop",
+        "Post-Tags-Share-Mobile"
+    ],
+    "Figma blocks not found within WordPress. Check to make sure the block code exists within WordPress and a Library Block post has been created.": {
+        "Essential Blocks": [],
+        "Curated Blocks": [
+            "Media-Interactive-Map",
+            "Hero-CC-Homepage"
+        ],
+        "Archive Blocks": [
+            "Filter-Top-Tabs-Sm",
+            "Filter-Top-Tabs-Md",
+            "Filter-Top-Tabs-XL",
+            "Filter-Top-Tabs",
+            "Filter-Top-Tabs-No-Results",
+            "Filter-Side-Tabs",
+            "Filter-Side-Tabs-Search",
+            "Filter-Side-Tabs-No-Results",
+            "Filter-Side-Tabs-Search-No-Results",
+            "Filter-Top-Dropdown-Sm",
+            "Filter-Top-Dropdown-Md",
+            "Filter-Top-Dropdown",
+            "Filter-Top-Dropdown-No-Results",
+            "Hero-Archive-Latest",
+            "Booking-Filter",
+            "Booking-Filter-Lg",
+            "Booking-Filter-XL",
+            "Filter-None",
+            "Filter-None-Sm",
+            "Filter-None-Md",
+            "Filter-None-Lg",
+            "Filter-None-Xl",
+            "Card-List-Sm",
+            "Card-List-Md",
+            "Card-List-Lg",
+            "Card-List-Xl",
+            "Card-List",
+            "Filter-Nav",
+            "Filter-Side-Dropdown",
+            "Filter-Side-Dropdown-No-Results"
+        ],
+        "New Curated Blocks": [],
+        "Traction Rec": [
+            "TR-Announcement",
+            "TR-Hero-Archive",
+            "TR-Hours-Accordion",
+            "TR-Programs-Filter",
+            "TR-Programs-Filter-No-Results",
+            "TR-Events-Filter",
+            "TR-Events-Filter-No-Results"
+        ],
+        "Other": []
+    }
+}

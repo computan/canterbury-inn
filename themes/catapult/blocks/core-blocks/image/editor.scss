@@ -1,0 +1,114 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.components-resizable-box__container {
+		&:not([style*="user-select: none"]) {
+			height: auto !important;
+			max-width: 100% !important;
+		}
+	}
+
+	.component-video {
+		.components-resizable-box__container {
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				content: "";
+				z-index: 2;
+				width: rem(56);
+				height: rem(56);
+				border-radius: 50%;
+				background-color: paint(white);
+				transform: translate(-50%, -50%);
+			}
+
+			&::after {
+				@include icon;
+
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				content: var(--videoIcon);
+				z-index: 3;
+				color: paint(neutral-1);
+				background-color: transparent;
+				transform: translate(-50%, -50%);
+			}
+
+			.components-resizable-box__handle {
+				display: none !important;
+			}
+		}
+	}
+
+	.is-root-container {
+		> .wp-block-image {
+			display: flex;
+			flex: 0 0 100%;
+			justify-content: center;
+			max-width: 100%;
+			margin: responsive-values(48, 72) auto;
+			padding: 0 rem(56);
+
+			&.alignleft {
+				justify-content: flex-start;
+			}
+
+			&.alignright {
+				justify-content: flex-end;
+			}
+
+			.components-resizable-box__container {
+				padding: 0 rem(16);
+			}
+
+			&.col-12 {
+				.components-resizable-box__container {
+					flex: 0 0 100% !important;
+					max-width: 100% !important;
+				}
+			}
+
+			&.col-8 {
+				.components-resizable-box__container {
+					flex: 0 0 66.66666666% !important;
+					max-width: 66.66666666% !important;
+				}
+			}
+
+			&.col-6 {
+				.components-resizable-box__container {
+					flex: 0 0 50% !important;
+					max-width: 50% !important;
+				}
+			}
+
+			&.col-4 {
+				.components-resizable-box__container {
+					flex: 0 0 33.33333333% !important;
+					max-width: 33.33333333% !important;
+				}
+			}
+		}
+	}
+
+	.wp-block-image {
+		flex-wrap: wrap;
+
+		&.block-editor-block-list__block {
+			+ .acf-block.bg-white,
+			+ .acf-block.bg-transparent {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.wp-block-image__video-preview {
+	iframe {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		height: auto;
+	}
+}

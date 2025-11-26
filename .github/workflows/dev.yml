@@ -1,0 +1,24 @@
+name: Deploy to dev site
+
+on:
+  push:
+    branches: [ dev ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy changes to dev site
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{secrets.SSH_HOST}}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /home/catapult/webapps/catapult/wp-content
+            git stash
+            git stash drop
+            git pull
+            cd themes/catapult
+            npm install
+            npm run build

@@ -1,0 +1,21 @@
+@import "base-includes";
+
+.block-hero-404 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	min-height: rem(486);
+	text-align: center;
+
+	body.show-qa-overlays & {
+		height: auto;
+		min-height: responsive-values(748, 960);
+	}
+
+	.content-wrapper {
+		flex: 0 0 100%;
+		width: 100%;
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "catapult/navigation-link",
+	"version": "2.4.0",
+	"title": "Navigation-Link",
+	"category": "navigation",
+	"icon": "",
+	"description": "A navigation link that can also contain a navigation submenu block.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"parent": [
+		"catapult/navigation"
+	],
+	"textdomain": "catapult",
+	"attributes": {
+		"hasSubmenu": {
+			"type": "boolean",
+			"default": false
+		},
+		"title": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string"
+		},
+		"opensInNewTab": {
+			"type": "boolean",
+			"default": false
+		},
+		"isActive": {
+			"type": "boolean",
+			"default": false
+		},
+		"justification": {
+			"type": "string",
+			"default": "right"
+		}
+	},
+	"providesContext": {
+		"catapult/navigation-link/title": "title",
+		"catapult/navigation-link/isActive": "isActive"
+	},
+	"viewScript": "file:./view.js",
+	"editorScript": "file:./index.js",
+	"style": "file:./style.css",
+	"editorStyle": "file:./editor.css"
+}

@@ -1,0 +1,141 @@
+@import "base-includes";
+
+.block-testimonial-cards {
+	position: relative;
+
+	&--has-heading-content {
+		.swiper-button-prev,
+		.swiper-button-next {
+			@include media-breakpoint-down(md) {
+				margin-top: rem(8);
+				margin-bottom: rem(48);
+			}
+		}
+
+		.block-testimonial-cards__container {
+			margin-top: $block-spacing-first-text-child-offset;
+		}
+	}
+
+	&--no-heading-content {
+		.swiper-button-prev,
+		.swiper-button-next {
+			@include media-breakpoint-down(md) {
+				order: 4;
+				margin-top: rem(48);
+				margin-bottom: 0;
+			}
+		}
+
+		.block-testimonials {
+			@include media-breakpoint-down(md) {
+				justify-content: center;
+			}
+		}
+	}
+
+	&__container {
+		@include media-breakpoint-up(lg) {
+			display: grid;
+			grid-template-columns: 1fr repeat(2, rem(48));
+			align-items: center;
+			column-gap: rem(8);
+		}
+
+		> * {
+			@include media-breakpoint-up(lg) {
+				grid-column: 1 / 2;
+			}
+
+			&:nth-last-child(2) {
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		> .wp-block-heading {
+			@include media-breakpoint-up(lg) {
+				&:first-child {
+					margin-top: 0 !important;
+				}
+			}
+		}
+	}
+
+	.block-testimonials {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		@include media-breakpoint-up(lg) {
+			display: contents;
+		}
+	}
+
+	.block-testimonial {
+		align-self: stretch;
+		height: auto;
+	}
+
+	.block-testimonial__content-col {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		padding: responsive-values(24, 32) rem(32) responsive-values(28, 40);
+		color: paint(neutral-1);
+		background-color: paint(neutral-11);
+	}
+
+	.block-testimonial__content {
+		@include quote-2(false);
+
+		margin-top: 0;
+		margin-bottom: responsive-values(16, 24);
+
+		p,
+		p:not([class*="-font-size"]) {
+			@include quote-2();
+		}
+	}
+
+	.block-testimonial__slide-footer-content {
+		margin-top: auto;
+		margin-bottom: 0;
+	}
+
+	.swiper {
+		order: 3;
+
+		@include media-breakpoint-up(lg) {
+			grid-column: 1 / span 3;
+			margin-top: responsive-values(48, 72);
+		}
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		@include media-breakpoint-up(lg) {
+			align-self: center;
+		}
+	}
+
+	.swiper-button-prev {
+		margin-right: rem(4);
+
+		@include media-breakpoint-up(lg) {
+			grid-area: 1 / 2 / 2 / span 1;
+			margin: 0;
+		}
+	}
+
+	.swiper-button-next {
+		margin-left: rem(4);
+
+		@include media-breakpoint-up(lg) {
+			grid-area: 1 / 3 / 2 / span 1;
+			margin: 0;
+		}
+	}
+}

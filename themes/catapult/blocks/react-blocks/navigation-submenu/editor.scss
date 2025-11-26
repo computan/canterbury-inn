@@ -1,0 +1,36 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-navigation-submenu {
+		display: none !important;
+		min-height: rem(120);
+		border: rem(1) solid paint(neutral-10);
+		transition: none !important;
+
+		@include media-breakpoint-down(md) {
+			position: absolute !important;
+			top: 0 !important;
+			height: 100% !important;
+		}
+	}
+
+	.block-navigation-link.active .block-navigation-submenu {
+		display: block !important;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.block-navigation.is-style-hamburger {
+		.block-navigation-submenu {
+			position: absolute !important;
+			top: 100% !important;
+			height: 80vh !important;
+
+			@include media-breakpoint-up(lg) {
+				position: relative !important;
+				top: auto !important;
+				height: auto !important;
+			}
+		}
+	}
+}

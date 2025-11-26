@@ -1,0 +1,83 @@
+{
+	"folders": [
+		{
+			"path": "./themes/catapult",
+			"name": "wp-content/themes/catapult (Catapult Theme)"
+		},
+		{
+			"path": ".",
+			"name": "wp-content (Git Root Directory)"
+		},
+		{
+			"path": "../",
+			"name": "app/public (WordPress Directory)"
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"dbaeumer.vscode-eslint",
+			"valeryanm.vscode-phpsab",
+			"stylelint.vscode-stylelint"
+		],
+	},
+	"settings": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit",
+			"source.fixAll.stylelint": "explicit"
+		},
+		"[php]": {
+			"editor.formatOnSave": true
+		},
+		"[json]": {
+			"editor.formatOnSave": true
+		},
+		"[javascript]": {
+			"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+		},
+		"[javascriptreact]": {
+			"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+		},
+		"[typescript]": {
+			"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+		},
+		"stylelint.validate": [
+			"css",
+			"scss"
+		],
+		"eslint.validate": [
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact"
+		],
+		"search.exclude": {
+			"**/dist": true,
+			"**/node_modules": true,
+			"**/vendor": true,
+			"**/.git": true,
+			"**/*.sql": true,
+			"**/db": true,
+			"**/packages": true,
+			"**/wp-includes/**": true,
+			"**/wp-admin/**": true,
+			"wp-*.php": true,
+			"**/exports/**": true,
+			"**/.cache/**": true,
+			"**/qa/images/**": true,
+			"**/qa/reports/**": true,
+			"**/lighthouse/**": true
+		},
+		"phpsab.standard": "./phpcs.xml",
+		"phpsab.allowedAutoRulesets": [
+			"./phpcs.xml"
+		],
+		"phpsab.snifferEnable": true,
+		"phpsab.snifferMode": "onSave",
+		"phpsab.executablePathCS": "./vendor/bin/phpcs",
+		"phpsab.executablePathCBF": "./vendor/bin/phpcbf",
+		"phpsab.autoRulesetSearch": true,
+		"phpsab.fixerEnable": true,
+		"files.eol": "\n",
+		"liveServer.settings.multiRootWorkspaceName": "wp-content (Git Root Directory)"
+	}
+}

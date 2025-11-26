@@ -1,0 +1,17 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-navigation.is-style-hamburger {
+		.block-navigation-simple-links {
+			@include media-breakpoint-up(lg) {
+				padding: 0 rem(32);
+			}
+		}
+	}
+
+	.wp-block[data-title="Navigation-Simple-Links"] {
+		&::before {
+			content: "Simple-Links" !important;
+		}
+	}
+}

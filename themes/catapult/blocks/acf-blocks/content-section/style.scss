@@ -1,0 +1,19 @@
+@import "base-includes";
+
+.block-content-section {
+	margin: 0;
+
+	&__content {
+		> .wp-block-heading {
+			&:first-child {
+				margin-top: $block-spacing-first-text-child-offset;
+			}
+		}
+
+		> p {
+			&:first-child {
+				margin-top: $block-spacing-first-text-child-offset;
+			}
+		}
+	}
+}

@@ -1,0 +1,408 @@
+{ /* See /docs/theme-overview/theme-settings.md for information about editing this file. */
+	"acf_options": { /* Subpages are automatically created for any custom post types registered with the post_types setting, and do not have to be added here. */
+		"init": true,
+		"page_title": "Theme Options",
+		"menu_title": "Theme Options",
+		"menu_slug": "theme-options",
+		"subpages": {
+			"general": {
+				"page_title": "Theme Options: General",
+				"menu_title": "General",
+				"post_id": "general"
+			},
+			"icons": {
+				"page_title": "Theme Options: Icons",
+				"menu_title": "Icons",
+				"post_id": "icons"
+			},
+			"scripts": {
+				"page_title": "Theme Options: User Scripts",
+				"menu_title": "Scripts",
+				"post_id": "scripts"
+			},
+			"used-blocks": {
+				"page_title": "Theme Options: Used Blocks",
+				"menu_title": "Used Blocks",
+				"post_id": "used-blocks"
+			}
+		}
+	},
+	"post_types": { /* Add register_post_type/register_taxonomy args to override the default theme values. Example code can be found below. */
+	},
+	"theme_block_locations": { /* If new locations are added and the catapult_render_theme_blocks() function is used, make sure to update the load_global_blocks() function in the catapult/includes/core/components/class-theme-core-acf-blocks.php file so that the blocks get loaded into the global $blocks variable (otherwise the CSS/JS won't load). Locations do not need to be added for post types previously registered in this file - those will be generated automatically. */
+		"404_page": "404 Page",
+		"alert_top": "Alert - Top",
+		"alert_bottom": "Alert - Bottom",
+		"alert_popup": "Alert - Popup",
+		"footer": "Footer",
+		"post_top": "Post - Top",
+		"post_bottom": "Post - Bottom",
+		"post_sidebar": "Post - Sidebar",
+		"category": "Post Category",
+		"post_tag": "Post Tag",
+		"primary_navigation": "Primary Navigation"
+	},
+	"fonts": {
+		"open-sans": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+	},
+	"enqueue_styles": { /* Use global styles sparingly. See /docs/best-practices/global-vs-block-assets.md */
+		"theme-styles": {
+			"src": "dist/styles.css",
+			"deps": [],
+			"version": "filemtime",
+			"media": "all"
+		}
+	},
+	"register_styles": {},
+	"enqueue_scripts": {}, /* Use global scripts sparingly. See /docs/best-practices/global-vs-block-assets.md */
+	"register_scripts": {
+		"add-to-any": "//static.addtoany.com/menu/page.js"
+	},
+	"enqueue_admin_scripts": {},
+	"enqueue_admin_styles": {
+		"admin-styles": "dist/admin.css"
+	},
+	"register_nav_menus": {},
+	"enable_shortcodes_fix": false,
+	"enable_thumbnails": true,
+	"thumbnails": [
+		[
+			"full-width",
+			1680,
+			9999,
+			false
+		],
+		[
+			"col-12",
+			1312,
+			9999,
+			false
+		],
+		[
+			"col-8",
+			864,
+			9999,
+			false
+		],
+		[
+			"col-7",
+			752,
+			9999,
+			false
+		],
+		[
+			"col-6",
+			640,
+			9999,
+			false
+		],
+		[
+			"col-5",
+			528,
+			9999,
+			false
+		],
+		[
+			"col-4",
+			416,
+			9999,
+			false
+		],
+		[
+			"col-6-square",
+			640,
+			640,
+			true
+		],
+		[
+			"col-5-square",
+			528,
+			528,
+			true
+		],
+		[
+			"col-3-square",
+			304,
+			304,
+			true
+		],
+		[
+			"thumbnail",
+			144,
+			144,
+			true
+		],
+		[
+			"medium",
+			410,
+			232,
+			true
+		],
+		[
+			"large",
+			1680,
+			1024,
+			false
+		],
+		[
+			"media-slider-grid",
+			1312,
+			740,
+			true
+		],
+		[
+			"media-slider-fullscreen",
+			9999,
+			740,
+			false
+		],
+		[
+			"main-logo",
+			200,
+			32,
+			false
+		],
+		[
+			"full-width-block",
+			900,
+			999,
+			false
+		],
+		[
+			"standard-width-block",
+			570,
+			999,
+			false
+		],
+		[
+			"logo-block",
+			192,
+			96,
+			false
+		],
+		[
+			"blog-post-6",
+			640,
+			424,
+			true
+		],
+		[
+			"card-image-link-6",
+			640,
+			360,
+			true
+		],
+		[
+			"card-image-link-4",
+			416,
+			232,
+			true
+		],
+		[
+			"card-image-link-3",
+			304,
+			172,
+			true
+		],
+		[
+			"attachment-card",
+			416,
+			276,
+			true
+		]
+	],
+	"use_testimonal_post_type": true
+}
+/* ================================================================ */
+/* ========================= EXAMPLE CODE ========================= */
+/* ================================================================ */
+/*
+{
+
+	"theme_name" : "catapult",
+
+	"post_types": {
+		"news": {
+			"singular": "News",
+			"plural": "News",
+			"theme_block_locations": {
+				"news-highlights": "News Highlights"
+			},
+			"args": {
+				"menu_icon": "dashicons-format-aside",
+				"rewrite": {
+					"slug": "news"
+				}
+			},
+			"taxonomies": {
+				"news_category": {
+					"singular": "News Category",
+					"plural": "News Categories",
+					"args": {
+						"rewrite": {
+							"slug": "news/category"
+						}
+					}
+				},
+				"news_tag": {
+					"singular": "News Tag",
+					"plural": "News Tags",
+					"args": {
+						"rewrite": {
+							"slug": "news/tag"
+						}
+					}
+				}
+			}
+		},
+		"resource": {
+			"singular": "Resource",
+			"plural": "Resources",
+			"args": {
+				"menu_icon": "dashicons-archive",
+				"rewrite": {
+					"slug": "resources"
+				}
+			},
+			"taxonomies": {
+				"resource_type": {
+					"singular": "Resource Type",
+					"plural": "Resource Types",
+					"args": {
+						"rewrite": {
+							"slug": "resources/type"
+						}
+					}
+				},
+				"resource_topic": {
+					"singular": "Resource Topic",
+					"plural": "Resource Topics",
+					"args": {
+						"rewrite": {
+							"slug": "resources/topic"
+						}
+					}
+				},
+				"resource_tag": {
+					"singular": "Resource Tag",
+					"plural": "Resource Tags",
+					"args": {
+						"rewrite": {
+							"slug": "resources/tag"
+						}
+					}
+				}
+			}
+		},
+		"event": {
+			"singular": "Event",
+			"plural": "Events",
+			"args": {
+				"menu_icon": "dashicons-calendar-alt",
+				"rewrite": {
+					"slug": "events"
+				}
+			},
+			"taxonomies": {
+				"event_type": {
+					"singular": "Event Type",
+					"plural": "Event Types",
+					"args": {
+						"rewrite": {
+							"slug": "events/type"
+						}
+					}
+				},
+				"event_topic": {
+					"singular": "Event Topic",
+					"plural": "Event Topics",
+					"args": {
+						"rewrite": {
+							"slug": "events/topic"
+						}
+					}
+				},
+				"event_tag": {
+					"singular": "Event Tag",
+					"plural": "Event Tags",
+					"args": {
+						"rewrite": {
+							"slug": "events/tag"
+						}
+					}
+				}
+			}
+		}
+	}
+
+	"acf_options": {
+		"init": true,
+		"page_title": "Theme Options",
+		"menu_title": "Theme Options",
+		"menu_slug": "theme-options",
+		"subpages": {
+			"subpage_1": {
+				"page_title": "Theme General Settings",
+				"menu_title": "General"
+			},
+			"subpage_2": {
+				"page_title": "Theme Header Settings",
+				"menu_title": "Header"
+			},
+			"subpage_3": {
+				"page_title": "Theme Footer Settings",
+				"menu_title": "Footer"
+			},
+			"subpage_4": {
+				"page_title": "Additional Theme Options",
+				"menu_title": "Additional Theme Options",
+                "parent_slug": "custom-parent-slug",
+                "post_id": "custom-post-id"
+			}
+		}
+	},
+
+	"register_nav_menus" : {
+		"primary" : "Main Navigation"
+	},
+
+	"enqueue_styles": {
+		"style": {
+			"src" : "styles.css",
+			"deps": [ ],
+			"version": "1.0",
+			"media": "all"
+		},
+
+		"simple": "css/dist/simple.css"
+	},
+
+	"enqueue_scripts": {
+		"script": {
+			"src" : "dist/script.js",
+			"deps": [ ],
+			"version": "1.0",
+			"in_footer": true
+		},
+
+		"simple": "dist/simple.js"
+	},
+
+	"enable_thumbnails" : true,
+
+	"thumbnails": [
+		[
+			"thumbnail-name-1",
+			800,
+			600,
+			["left", "top"]
+		],
+		[
+			"thumbnail-name-2",
+			400,
+			300,
+			true
+		]
+	]
+}
+*/

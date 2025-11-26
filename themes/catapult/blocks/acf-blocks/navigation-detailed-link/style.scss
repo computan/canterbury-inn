@@ -1,0 +1,31 @@
+@import "base-includes";
+
+.block-navigation-detailed-link {
+	position: relative;
+	display: block;
+	margin-bottom: rem(16);
+	padding: rem(8 0);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.wp-block-button {
+		margin-bottom: rem(8);
+	}
+
+	p {
+		@include subtitle-3(false);
+
+		margin-bottom: 0;
+		padding: 0 var(--gutterWidth);
+
+		@include media-breakpoint-up(lg) {
+			padding: 0;
+		}
+
+		.block-navigation.is-style-hamburger & {
+			@include subtitle-2(false);
+		}
+	}
+}

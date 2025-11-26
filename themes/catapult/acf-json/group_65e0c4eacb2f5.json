@@ -1,0 +1,136 @@
+{
+    "key": "group_65e0c4eacb2f5",
+    "title": "Block: Filters",
+    "fields": [
+        {
+            "key": "field_65e6434212eb7",
+            "label": "Posts Per Page",
+            "name": "posts_per_page",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 12,
+            "min": 3,
+            "max": 20,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65e0c4eacdc0b",
+            "label": "Mobile Style",
+            "name": "mobile_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "stacked": "Stacked",
+                "modal": "Modal"
+            },
+            "default_value": "stacked",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_65e0c4eacdc0e",
+            "label": "Load Type",
+            "name": "load_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "pagination": "Pagination",
+                "load_more": "Load More Button"
+            },
+            "default_value": "pagination",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_675af40e7b3f2",
+            "label": "Card Heading Level",
+            "name": "card_heading_level",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose the heading level for the cards based on the other headings on the page. Headings should always be in order and not skip levels.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4"
+            },
+            "default_value": "h3",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/filter-side"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/filter-top"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1734014492
+}

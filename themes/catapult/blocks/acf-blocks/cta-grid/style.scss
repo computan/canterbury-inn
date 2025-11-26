@@ -1,0 +1,75 @@
+@import "base-includes";
+
+.block-cta-grid {
+	&.is-style-narrow {
+		padding: responsive-values(48, 72) 0;
+
+		.block-cta-grid__box {
+			padding-top: rem(88);
+			padding-bottom: rem(96);
+
+			@include media-breakpoint-up(md) {
+				grid-column: 2 / span 10;
+				grid-template-columns: repeat(8, minmax(0, 1fr));
+			}
+
+			@include media-breakpoint-up(lg) {
+				grid-column: 3 / span 8;
+			}
+		}
+
+		.block-cta-grid__content {
+			@include media-breakpoint-up(md) {
+				grid-column: 2 / span 6;
+			}
+		}
+	}
+
+	&__container {
+		@include grid;
+
+		.acf-block--has-sidebar & {
+			padding: 0;
+		}
+	}
+
+	&__box {
+		@include grid;
+
+		grid-column: 1 / span 12;
+		padding: responsive-values(88, 128) 0 responsive-values(96, 144);
+
+		.acf-block--has-sidebar & {
+			padding-top: rem(88);
+			padding-bottom: rem(96);
+
+			@include media-breakpoint-up(md) {
+				grid-template-columns: repeat(8, minmax(0, 1fr));
+			}
+		}
+	}
+
+	&__content {
+		grid-column: 1 / span 12;
+		padding: rem(0 20);
+
+		@include media-breakpoint-up(md) {
+			grid-column: 2 / span 10;
+			padding: 0;
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-column: 3 / span 8;
+		}
+
+		@include media-breakpoint-up(xl) {
+			grid-column: 4 / span 6;
+		}
+
+		.acf-block--has-sidebar & {
+			@include media-breakpoint-up(md) {
+				grid-column: 2 / span 6;
+			}
+		}
+	}
+}

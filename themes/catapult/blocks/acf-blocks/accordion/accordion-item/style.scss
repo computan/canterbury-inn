@@ -1,0 +1,85 @@
+@import "base-includes";
+
+.block-accordion-item {
+	&:last-child {
+		border-bottom: rem(1) solid paint(neutral-8);
+	}
+
+	&:not(.is-style-open) {
+		> .block-content:not([aria-hidden]):not(.DOM-slider-hidden) {
+			display: none;
+		}
+	}
+
+	&:not(.active) {
+		> .block-content--hidden {
+			display: none !important;
+		}
+	}
+
+	> .wp-block-button {
+		display: block;
+		width: 100%;
+		margin: 0;
+
+		.wp-block-button__link {
+			@include t4(false);
+
+			position: relative;
+			display: block;
+			width: 100%;
+			margin: 0;
+			padding: responsive-values(23, 35) responsive-values(44, 56) responsive-values(24, 36) responsive-values(10, 24);
+			color: paint(text);
+			text-align: left;
+			border: none;
+			border-top: rem(1) solid paint(neutral-8);
+			border-radius: 0;
+			background-color: transparent;
+			-webkit-appearance: none;
+			appearance: none;
+			transition: border-color $transition-standard;
+
+			&::before,
+			&::after {
+				position: absolute;
+				top: calc(50% - #{rem(12)});
+				right: responsive-values(10, 24);
+				transition: transform 0.4s ease-in-out;
+			}
+
+			&::before {
+				@include icon("maximize", #{rem(24)});
+			}
+
+			&::after {
+				@include icon("minimize", #{rem(24)});
+			}
+
+			&[aria-expanded="true"] {
+				&::before {
+					transform: rotate(180deg) scaleY(0);
+				}
+
+				&::after {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+
+	> .block-content {
+		margin-top: responsive-values(-8, -20);
+		margin-bottom: responsive-values(24, 36);
+		padding: 0 responsive-values(10, 24);
+
+		.block-editor-block-list__block & {
+			display: block !important;
+			margin-top: rem(8) !important;
+		}
+	}
+
+	&__figure {
+		display: none;
+	}
+}

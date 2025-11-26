@@ -1,0 +1,41 @@
+@import "base-includes";
+
+.block-text-side-heading {
+	display: block;
+
+	&__container {
+		@include media-breakpoint-up(sm) {
+			@include grid;
+		}
+	}
+
+	.block-content {
+		margin-top: rem(16);
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:nth-child(2) {
+			@include media-breakpoint-up(sm) {
+				margin-top: 0;
+			}
+		}
+
+		&:nth-child(2n + 1) {
+			@include media-breakpoint-up(sm) {
+				grid-column: 1 / span 5;
+			}
+		}
+
+		&:nth-child(2n) {
+			@include media-breakpoint-up(sm) {
+				grid-column: 6 / span 7;
+			}
+
+			@include media-breakpoint-up(lg) {
+				grid-column: 7 / span 6;
+			}
+		}
+	}
+}

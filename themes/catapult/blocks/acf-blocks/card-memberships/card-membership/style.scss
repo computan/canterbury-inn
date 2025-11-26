@@ -1,0 +1,54 @@
+@import "base-includes";
+
+.block-card-membership {
+	@include body-2(false);
+
+	display: flex;
+	flex-direction: column;
+	padding: responsive-values(32, 40) responsive-values(20, 32) responsive-values(28, 32);
+	color: paint(neutral-1);
+	background-color: paint(white);
+
+	p {
+		@include body-2();
+	}
+
+	.wp-block-heading {
+		margin-top: responsive-values(24, 32);
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.wp-block-list {
+		padding-left: rem(24);
+
+		.wp-block-list-item {
+			margin-bottom: rem(8);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&.is-style-check-icon {
+			.wp-block-list-item {
+				&::before {
+					top: rem(3);
+					left: rem(-24);
+					width: rem(18);
+					height: rem(18);
+				}
+			}
+		}
+	}
+
+	.wp-block-button {
+		@include light-button-styles;
+	}
+
+	.block-content {
+		margin-bottom: auto;
+	}
+}

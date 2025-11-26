@@ -1,0 +1,47 @@
+@import "base-includes";
+
+.block-form {
+	.content-wrapper > & {
+		@include responsive-grid(12, 12, 12, 10, 10, 10);
+
+		margin: responsive-values(32, 48) auto;
+	}
+
+	.wpcf7-form,
+	.wp-block-html {
+		margin-top: rem(24);
+
+		&:first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		+ * {
+			margin-top: rem(24);
+		}
+	}
+
+	script:first-child {
+		+ .wpcf7-form {
+			margin-top: 0;
+		}
+	}
+
+	&__content {
+		&--success {
+			> *:not(.wpcf7-response-output):not(.wp-block-html) {
+				display: none;
+			}
+		}
+	}
+
+	p {
+		@include subtitle-1();
+	}
+
+	form {
+		p {
+			@include subtitle-2();
+		}
+	}
+}

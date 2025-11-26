@@ -1,0 +1,46 @@
+@import "base-includes";
+
+.block-logos {
+	justify-content: center;
+	align-items: center;
+	margin-bottom: responsive-values(16, 24);
+
+	@include media-breakpoint-down(xs) {
+		max-width: rem(304);
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	&:last-child {
+		margin-bottom: responsive-values(-32, -48);
+	}
+
+	&:not(:first-child) {
+		margin-top: responsive-values(48, 72);
+	}
+
+	& + & {
+		margin-top: responsive-values(-16, -24);
+	}
+
+	+ .wp-block-buttons {
+		margin-top: rem(-6);
+	}
+
+	.block-logo {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		max-width: calc(var(--logoWidthMobile, 50%) - #{$grid-gap} / 2);
+		margin-bottom: responsive-values(32, 48);
+		padding: 0 calc($grid-gap / 2);
+
+		@include media-breakpoint-up(sm) {
+			flex: 0 0 var(--logoWidthTablet, 33.33333333%);
+		}
+
+		@include media-breakpoint-up(md) {
+			flex: 0 0 var(--logoWidthDesktop, 16.66666667%);
+		}
+	}
+}

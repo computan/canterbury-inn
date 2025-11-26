@@ -1,0 +1,19 @@
+@import "base-includes";
+
+.block-stat {
+	position: relative;
+	flex: 0 0 50%;
+	max-width: 50%;
+	margin-bottom: responsive-values(32, 48);
+	text-align: center;
+
+	p {
+		&:first-child {
+			@include stat();
+		}
+
+		&:last-child:not(:first-child) {
+			@include subtitle-2(false);
+		}
+	}
+}

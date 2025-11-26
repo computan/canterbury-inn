@@ -1,0 +1,29 @@
+@import "base-includes";
+
+.block-content {
+	margin: 0;
+
+	> .is-style-narrow {
+		@include responsive-grid(12, 9, 8, 7, 6, 6);
+
+		max-width: 100% !important;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	> .is-style-full {
+		@include responsive-grid();
+
+		max-width: 100% !important;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	> .is-style-wide {
+		@include responsive-grid(12, 12, 12, 10, 10, 10);
+
+		max-width: 100% !important;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}

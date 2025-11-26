@@ -1,0 +1,50 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-navigation-link {
+		position: static !important;
+		transform: none !important;
+
+		> .block-editor-inner-blocks {
+			position: static !important;
+			display: contents;
+
+			> .block-editor-block-list__layout {
+				position: static !important;
+				display: contents;
+			}
+		}
+	}
+
+	.block-navigation.is-style-variable-width-dropdown {
+		.block-navigation-link {
+			@include media-breakpoint-up(lg) {
+				position: relative !important;
+			}
+		}
+	}
+
+	.block-navigation.is-style-hamburger {
+		.block-navigation-link {
+			position: relative !important;
+
+			@include media-breakpoint-up(lg) {
+				@include grid;
+
+				grid-column: 1 / span  12;
+				display: grid !important;
+				align-self: flex-start;
+				width: 100%;
+			}
+
+		}
+
+		.block-navigation-link__button {
+			padding: 0 rem(32) !important;
+
+			@include media-breakpoint-up(lg) {
+				padding: 0 !important;
+			}
+		}
+	}
+}

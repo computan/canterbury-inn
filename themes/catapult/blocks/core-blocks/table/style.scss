@@ -1,0 +1,205 @@
+@import "base-includes";
+
+.wp-block-table {
+	@include subtitle-1(false);
+
+	border-collapse: inherit;
+	border-spacing: 0;
+	background-color: transparent;
+
+	.content-wrapper > & {
+		@include responsive-grid(12, 12, 12, 12, 12, 12);
+
+		margin: $block-spacing auto;
+	}
+
+	.block-content-section & {
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.wp-block-heading + &,
+	p + & {
+		margin-top: responsive-values(48, 72);
+	}
+
+	.acf-block.bg-white + &,
+	.acf-block.bg-transparent + & {
+		margin-top: 0;
+	}
+
+	+ .acf-block.bg-white,
+	+ .acf-block.bg-transparent {
+		padding-top: 0;
+	}
+
+	&.is-style-flip {
+		table {
+			@include media-breakpoint-down(sm) {
+				display: grid;
+				width: calc(100% + var(--gutterWidth));
+				overflow-x: auto;
+			}
+		}
+
+		thead,
+		tbody,
+		tfoot,
+		tr {
+			@include media-breakpoint-down(sm) {
+				display: contents;
+			}
+		}
+
+		th,
+		td {
+			@include media-breakpoint-down(sm) {
+				grid-row: var(--mobileRow, auto) / span 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				min-width: rem(160);
+			}
+		}
+
+		tbody tr:nth-child(odd) {
+			td {
+				background-color: paint(neutral-11);
+			}
+		}
+	}
+
+	&.is-style-scroll {
+		table {
+			@include media-breakpoint-down(sm) {
+				display: grid;
+				width: calc(100% + var(--gutterWidth));
+				overflow-x: auto;
+			}
+		}
+
+		th,
+		td {
+			@include media-breakpoint-down(sm) {
+				min-width: rem(160);
+			}
+		}
+
+		th {
+			padding: rem(0 16 19 16);
+		}
+	}
+
+	&.is-style-stack {
+		thead {
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+
+			th {
+				&:first-child {
+					@include media-breakpoint-up(md) {
+						min-width: rem(216);
+					}
+				}
+			}
+		}
+
+		tr {
+			@include media-breakpoint-down(sm) {
+				display: block;
+				padding: rem(24 20 23 20);
+				border-bottom: rem(1) solid paint(neutral-8);
+			}
+		}
+
+		td {
+			@include media-breakpoint-down(sm) {
+				display: block;
+				padding: 0;
+				border: none;
+			}
+
+			&:not(:last-child) {
+				@include media-breakpoint-down(sm) {
+					margin-bottom: rem(20);
+				}
+			}
+		}
+	}
+
+	&__mobile-label {
+		@include overline(false);
+
+		margin-bottom: rem(4);
+
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+	}
+
+	table {
+		width: 100%;
+	}
+
+	tbody tr:nth-child(odd) {
+		background-color: paint(neutral-11);
+	}
+
+	thead,
+	tbody,
+	tfoot {
+		border: none;
+	}
+
+	thead,
+	tfoot {
+		@include overline(false);
+	}
+
+	th {
+		padding: rem(0 16 19 16);
+		vertical-align: top;
+		border: none;
+		border-bottom: rem(1) solid paint(neutral-8);
+
+		@include media-breakpoint-down(sm) {
+			padding: rem(16 16 15 16);
+		}
+	}
+
+	td {
+		padding: rem(16 16 15 16);
+		vertical-align: top;
+		border: none;
+		border-bottom: rem(1) solid paint(neutral-8);
+	}
+
+	.has-fixed-layout {
+		width: 100%;
+		table-layout: fixed;
+
+		td,
+		th {
+			word-break: break-word;
+		}
+	}
+
+	&.alignleft,
+	&.aligncenter,
+	&.alignright {
+		display: table;
+		width: auto;
+
+		td,
+		th {
+			word-break: break-word;
+		}
+	}
+}

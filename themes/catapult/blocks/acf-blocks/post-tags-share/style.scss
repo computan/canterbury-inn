@@ -1,0 +1,135 @@
+@import "base-includes";
+
+.block-post-tags-share {
+	padding-top: responsive-values(48, 72);
+
+	&__container {
+		@include media-breakpoint-up(md) {
+			@include grid;
+		}
+	}
+
+	&__share-column {
+		margin-bottom: rem(48);
+
+		@include media-breakpoint-up(md) {
+			grid-area: 1 / 8 / 2 / span 5;
+			order: 2;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			margin-bottom: 0;
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-column: 8 / span 4;
+		}
+
+		@include media-breakpoint-up(xl) {
+			grid-column: 8 / span 3;
+		}
+	}
+
+	&__tags-column {
+		@include media-breakpoint-up(md) {
+			grid-area: 1 / 1 / 2 / span 7;
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-column: 2 / span 6;
+		}
+
+		@include media-breakpoint-up(xl) {
+			grid-column: 3 / span 5;
+		}
+
+		.block-post-tags-share__tags-title {
+			margin-bottom: rem(8);
+
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(12);
+			}
+		}
+	}
+
+	&__tags-title {
+		@include overline(false);
+
+		margin-bottom: rem(12);
+	}
+
+	&__tags {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-bottom: rem(-8);
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: auto;
+		}
+	}
+
+	&__tag {
+		@include subtitle-1(false);
+
+		display: inline-block;
+		margin: rem(0 16 8 0);
+		color: paint(neutral-6);
+
+		&:hover,
+		&:focus {
+			color: paint(text);
+		}
+	}
+
+	.share-icons {
+		@include media-breakpoint-up(md) {
+		}
+	}
+
+	.acf-block--has-sidebar & {
+		margin-top: rem(48) !important;
+		margin-bottom: rem(48) !important;
+		padding: 0;
+
+		&:first-child {
+			margin-top: 0 !important;
+		}
+
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+
+		.block-post-tags-share__container {
+			display: flex;
+			flex-direction: column;
+			padding: 0;
+		}
+
+		.block-post-tags-share__row {
+			margin: 0;
+		}
+
+		.block-post-tags-share__share-column {
+			order: 1;
+			justify-content: flex-start;
+			margin-bottom: rem(48);
+		}
+
+		.block-post-tags-share__tags-column {
+			order: 2;
+
+			.block-post-tags-share__tags-title {
+				margin-bottom: rem(8);
+			}
+		}
+
+		.block-post-tags-share__tags {
+			margin-bottom: rem(-8);
+		}
+
+		.share-icons {
+			justify-content: flex-start;
+		}
+	}
+}

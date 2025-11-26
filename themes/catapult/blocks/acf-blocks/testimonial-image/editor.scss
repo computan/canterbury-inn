@@ -1,0 +1,13 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-testimonial-image {
+		.swiper-wrapper {
+			display: contents;
+		}
+
+		.block-testimonials {
+			display: block !important;
+		}
+	}
+}

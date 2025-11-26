@@ -1,0 +1,41 @@
+@import "base-includes";
+
+.block-contact-item {
+	@include subtitle-1(false);
+
+	margin-top: rem(24);
+	margin-bottom: rem(24);
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.wp-block-heading {
+		@include overline;
+	}
+
+	p {
+		@include subtitle-1(true);
+	}
+
+	.wp-block-list {
+		margin-top: rem(8);
+		padding-left: rem(24);
+	}
+
+	.wp-block-list-item {
+		margin-bottom: rem(8);
+	}
+
+	ul.wp-block-list {
+		.wp-block-list-item {
+			&::before {
+				left: rem(-16);
+			}
+		}
+	}
+}

@@ -1,0 +1,98 @@
+@import "base-includes";
+
+.wp-block-image {
+	margin: 0 auto;
+
+	.block-content > &,
+	.content-wrapper--sidebar > & {
+		margin: responsive-values(48, 72) 0;
+		padding: 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&.aligncenter {
+			margin-right: auto;
+			margin-left: auto;
+			text-align: center;
+		}
+
+		&.alignleft {
+			margin-right: auto;
+			margin-left: 0;
+			text-align: left;
+		}
+
+		&.alignright {
+			margin-right: 0;
+			margin-left: auto;
+			text-align: right;
+		}
+	}
+
+	.content-wrapper > & {
+		margin-top: responsive-values(48, 72);
+		padding: 0;
+
+		&:last-child {
+			margin-bottom: responsive-values(48, 72);
+		}
+
+		+ .wp-block-heading,
+		+ p {
+			margin-top: responsive-values(48, 72);
+		}
+
+		&.col-12 {
+			@include responsive-grid(12, 12, 12, 12, 12, 12);
+		}
+
+		&.col-8 {
+			@include responsive-grid(12, 12, 12, 10, 8, 8);
+		}
+
+		&.col-6 {
+			@include responsive-grid(12, 12, 10, 8, 6, 6);
+		}
+
+		&.col-4 {
+			@include responsive-grid(12, 10, 8, 6, 4, 4);
+		}
+
+		&.alignleft {
+			margin-right: auto;
+			margin-left: var(--gutterWidth);
+		}
+
+		&.alignright {
+			margin-right: var(--gutterWidth);
+			margin-left: auto;
+		}
+	}
+
+	.block-media-standard + & {
+		margin-top: 0;
+	}
+
+	.acf-block.bg-white + &,
+	.acf-block.bg-transparent + & {
+		margin-top: 0;
+	}
+
+	+ .acf-block.bg-white,
+	+ .acf-block.bg-transparent {
+		margin-top: responsive-values(-96, -144);
+	}
+
+	.wp-element-caption {
+		@include subtitle-2(false);
+
+		margin-top: rem(12);
+		text-align: center;
+	}
+}

@@ -1,0 +1,21 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-logo-carousel {
+		.swiper-wrapper {
+			flex-wrap: wrap;
+		}
+
+		.swiper-slide {
+			width: auto;
+		}
+
+		&__overlay {
+			display: none;
+		}
+
+		.block-logo {
+			max-width: rem(192);
+		}
+	}
+}

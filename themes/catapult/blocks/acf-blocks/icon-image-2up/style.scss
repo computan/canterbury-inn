@@ -1,0 +1,53 @@
+@import "base-includes";
+
+.block-icon-image-2up {
+	&__container {
+		@include media-breakpoint-up(md) {
+			@include grid();
+
+			align-items: center;
+		}
+	}
+
+	&__image-col {
+		@include media-breakpoint-up(md) {
+			grid-column: 1 / 6;
+			width: 100%;
+		}
+	}
+
+	&__image-wrapper {
+		padding-bottom: 133.333333333%;
+	}
+
+	&__content-col {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+
+		@include media-breakpoint-up(md) {
+			grid-column: 6 / 13;
+			width: calc(100% + #{$grid-gap});
+			margin-left: calc(#{$grid-gap} * -1);
+			padding: 0 responsive-values(20, 80);
+		}
+
+		@include media-breakpoint-down(sm) {
+			margin-top: rem(48);
+		}
+	}
+
+	.block-icon-contents {
+		&:not(:first-child) {
+			margin-top: rem(48);
+		}
+
+		&:not(:last-child) {
+			margin-bottom: rem(48);
+		}
+	}
+
+	.block-icon-contents__grid {
+		column-gap: $grid-gap;
+	}
+}

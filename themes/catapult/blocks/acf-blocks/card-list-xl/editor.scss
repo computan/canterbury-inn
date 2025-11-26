@@ -1,0 +1,11 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-content-section {
+		.acf-block {
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+	}
+}

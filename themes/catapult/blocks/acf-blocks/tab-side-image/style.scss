@@ -1,0 +1,46 @@
+@import "base-includes";
+
+.block-tab-side-image {
+	overflow: hidden;
+
+	@include media-breakpoint-down(sm) {
+		padding-top: $block-spacing-with-text;
+	}
+
+	&__row {
+		position: relative;
+		z-index: 1;
+
+		@include media-breakpoint-up(md) {
+			@include grid;
+
+			align-items: center;
+		}
+	}
+
+	&__spacer {
+		grid-column: 7 / span 6;
+		z-index: -2;
+		width: 100%;
+
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
+	}
+
+	&__spacer-inner {
+		padding-bottom: 100%;
+	}
+
+	&__content {
+		width: 100%;
+
+		@include media-breakpoint-up(md) {
+			grid-column: 1 / span 6;
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-column: 1 / span 5;
+		}
+	}
+}

@@ -1,0 +1,71 @@
+{
+    "key": "group_5afeb257e0cf3",
+    "title": "Theme Options: General",
+    "fields": [
+        {
+            "key": "field_66032a61c4244",
+            "label": "Contact Page",
+            "name": "contact_page",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 1,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_64356033a66a9",
+            "label": "Allow Non-AJAX Gravity Forms",
+            "name": "allow_non_ajax_gravity_forms",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Turning on this option will require each Gravity Form to have its AJAX setting turned on manually. When this option is off, AJAX is used on all forms regardless of the setting.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-general"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1729790107
+}

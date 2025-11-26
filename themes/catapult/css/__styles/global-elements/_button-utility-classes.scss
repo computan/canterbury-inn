@@ -1,0 +1,72 @@
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	cursor: pointer;
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
+
+.c-btn {
+	&:hover,
+	&:focus {
+		.icon {
+			&:first-child {
+				transform: translateX(rem(-3));
+			}
+
+			&:last-child {
+				transform: translateX(rem(3));
+			}
+		}
+	}
+
+	.icon {
+		font-size: 1.25em;
+		transition: transform $transition-standard;
+
+		&:first-child {
+			margin-right: rem(4);
+		}
+
+		&:last-child {
+			margin-left: rem(4);
+		}
+	}
+}
+
+.c-btn--primary {
+	@include button-primary;
+}
+
+.c-btn--secondary {
+	@include button-secondary;
+}
+
+.c-btn--tertiary {
+	@include button-tertiary;
+
+	&.c-btn--icon {
+		&::before {
+			display: none;
+		}
+	}
+
+	&.c-btn--small {
+		@include button-small-tertiary;
+	}
+}
+
+.c-btn--small {
+	@include button-small;
+}
+
+.c-btn--play {
+	@include button-play;
+}
+
+.c-btn--close {
+	@include button-close;
+}

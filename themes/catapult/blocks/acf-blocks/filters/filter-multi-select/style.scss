@@ -1,0 +1,105 @@
+@import "base-includes";
+
+.filter-multi-select {
+	position: relative;
+
+	.block-filter-top & {
+		@include media-breakpoint-up(md) {
+			border: rem(1) solid paint(neutral-9);
+			border-radius: rem(4);
+		}
+
+		@include media-breakpoint-up(lg) {
+			min-width: rem(304);
+		}
+	}
+
+	.block-filter-side & {
+		border-radius: 0;
+	}
+
+	.filter-container & {
+		border-top: rem(1) solid paint(neutral-9);
+	}
+
+	&__current {
+		@include link-1(false);
+
+		position: relative;
+		width: 100%;
+		height: rem(48);
+		padding: rem(12 48 12 12);
+		color: paint(neutral-1);
+		text-align: left;
+		border: none;
+		background: none;
+
+		&::after {
+			@include icon("chev-expand", #{rem(20)});
+
+			position: absolute;
+			top: 50%;
+			right: rem(8);
+			transform: translateY(-50%);
+		}
+	}
+
+	&.active &__current {
+		&::after {
+			@include icon("chev-collapse", #{rem(20)});
+		}
+	}
+
+	&__dropdown {
+		z-index: 10;
+		display: none;
+		width: 100%;
+		padding-bottom: rem(20);
+
+		.block-filter-top & {
+			@include media-breakpoint-up(md) {
+				position: absolute;
+				top: calc(100% + rem(8));
+				left: 0;
+				padding: rem(20) 0;
+				background: paint(white);
+				box-shadow: effect(sort);
+			}
+		}
+
+		.block-filter-side & {
+			@include media-breakpoint-down(sm) {
+				position: static;
+				box-shadow: none;
+			}
+		}
+	}
+
+	&.active &__dropdown {
+		display: block;
+	}
+
+	&__checkbox-wrapper {
+		@include subtitle-1(false);
+
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		width: 100%;
+		padding: rem(8 10);
+		line-height: 1;
+		text-align: left;
+		border: none;
+		background: none;
+
+		input[type="checkbox"] {
+			+ label {
+				padding: 0;
+
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+@import "base-includes";
+
+.block-icon-side-heading {
+	&__container {
+		@include media-breakpoint-up(md) {
+			@include grid();
+		}
+	}
+
+	.block-content {
+		@include media-breakpoint-up(md) {
+			grid-column: 1 / span 5;
+		}
+
+		@include media-breakpoint-up(xl) {
+			grid-column: 1 / span 4;
+		}
+	}
+
+	.block-icon-contents {
+		margin-top: 0;
+		padding: 0;
+
+		@include media-breakpoint-up(md) {
+			grid-column: 6 / span 7;
+		}
+
+		@include media-breakpoint-down(sm) {
+			margin-top: rem(48);
+		}
+	}
+}

@@ -1,0 +1,17 @@
+@import "base-includes";
+
+.block-hero-profile-image {
+	position: relative;
+	z-index: 1;
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: responsive-values(220, 390);
+	}
+
+	&__content {
+		width: 100%;
+	}
+}

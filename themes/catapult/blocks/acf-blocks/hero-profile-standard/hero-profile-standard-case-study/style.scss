@@ -1,0 +1,45 @@
+@import "base-includes";
+
+.block-hero-profile-standard-case-study {
+	&__container {
+		@include media-breakpoint-up(md) {
+			@include grid;
+
+			align-items: center;
+		}
+	}
+
+	&__image-wrapper {
+		width: 100%;
+
+		@include media-breakpoint-up(md) {
+			grid-column: 7 / span 6;
+		}
+	}
+
+	&__row {
+		align-items: center;
+	}
+
+	&__title {
+		margin-top: responsive-values(24, 32);
+		margin-bottom: responsive-values(24, 32);
+	}
+
+	&__meta-bottom {
+		@include subtitle-2(false);
+	}
+
+	&__content {
+		margin-bottom: rem(48);
+
+		@include media-breakpoint-up(md) {
+			grid-column: 1 / span 6;
+			margin-bottom: 0;
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-column-end: span 5;
+		}
+	}
+}

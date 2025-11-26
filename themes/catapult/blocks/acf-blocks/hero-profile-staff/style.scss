@@ -1,0 +1,141 @@
+@import "base-includes";
+
+.block-hero-profile-staff {
+	&__container {
+		display: grid;
+
+		@include media-breakpoint-down(sm) {
+			grid-template-columns: minmax(0, rem(335)) minmax(0, 1fr);
+		}
+
+		@include media-breakpoint-up(md) {
+			@include grid;
+
+			grid-template-rows: repeat(3, auto) 1fr auto;
+		}
+	}
+
+	.wp-block-post-title {
+		grid-column: 1 / span 2;
+		order: 2;
+
+		@include media-breakpoint-up(md) {
+			grid-row: 1 / span 1;
+			grid-column: 5 / span 8;
+		}
+	}
+
+	.block-content {
+		grid-column: 1 / span 2;
+		order: 4;
+		margin-top: rem(16);
+
+		@include media-breakpoint-up(md) {
+			grid-row: 4 / span 1;
+			grid-column: 1 / span 4;
+			margin-top: 0;
+		}
+
+		@include media-breakpoint-up(xl) {
+			grid-column: 1 / span 3;
+		}
+
+		p {
+			@include subtitle-1();
+		}
+
+		~ .block-content {
+			order: 5;
+			margin-top: rem(32);
+
+			@include media-breakpoint-up(md) {
+				grid-row: 3 / span 2;
+				grid-column: 5 / span 8;
+				order: 3;
+				margin-top: rem(24);
+			}
+
+			p {
+				@include body-1();
+			}
+		}
+	}
+
+	&__image-wrapper {
+		grid-column: 1 / span 1;
+		order: 1;
+		margin-bottom: rem(32);
+		padding-bottom: 100%;
+
+		@include media-breakpoint-down(xs) {
+			height: rem(336);
+		}
+
+		@include media-breakpoint-up(md) {
+			grid-row: 1 / span 3;
+			grid-column: 1 / span 4;
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-column: 1 / span 3;
+		}
+	}
+
+	&__job-title {
+		@include body-1-italic(false);
+
+		grid-column: 1 / span 2;
+		order: 3;
+		margin-top: 0;
+
+		@include media-breakpoint-up(md) {
+			grid-row: 2 / span 1;
+			grid-column: 5 / span 8;
+		}
+	}
+
+	&__navigation {
+		grid-column: 1 / span 2;
+		order: 6;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: responsive-values(64, 96);
+
+		@include media-breakpoint-up(md) {
+			grid-row: 5 / span 1;
+			grid-column: 5 / span 8;
+		}
+
+		a {
+			@include link-1(false);
+
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			text-decoration: none !important;
+
+			&[rel="next"] {
+				margin-left: auto;
+			}
+		}
+
+		.icon {
+			width: rem(20);
+			height: rem(20);
+
+			&:first-child {
+				margin-right: rem(4);
+			}
+
+			&:last-child {
+				margin-left: rem(4);
+			}
+		}
+	}
+
+	.wp-block-buttons--social {
+		margin-bottom: rem(32);
+	}
+}

@@ -1,0 +1,24 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-footer__container {
+		max-width: 100% !important;
+		padding: 0 !important;
+	}
+
+	.block-footer-middle {
+		.block-logos {
+			margin: 0 !important;
+		}
+	}
+
+	.block-footer-column {
+		.wp-block-button {
+			&.is-style-text {
+				.wp-block-button__link {
+					white-space: nowrap !important;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,110 @@
+@import "base-includes";
+
+.block-hero-standard-slide {
+	padding: 0;
+
+	.wp-block-button--back {
+		margin: rem(26) rem(20) !important;
+	}
+
+	&.swiper-slide-active {
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			background-color: paint(black);
+			opacity: 0.5;
+		}
+	}
+
+	.background-image-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding-bottom: 39.65%;
+
+		> img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__container {
+		position: relative;
+		z-index: 3;
+		padding: 0;
+		padding-bottom: rem(96);
+
+		@include media-breakpoint-up(md) {
+			position: unset;
+			display: flex;
+			align-items: center;
+			padding-bottom: rem(0);
+		}
+
+		@include media-breakpoint-up(lg) {
+			column-gap: rem(72);
+		}
+
+		@include media-breakpoint-up(xxl) {
+			column-gap: rem(144);
+		}
+	}
+
+	&__row {
+		align-items: center;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 3;
+		max-width: rem(582);
+		margin: 0 0 rem(48);
+		padding-top: rem(64);
+		padding-bottom: rem(64);
+
+		@include media-breakpoint-up(md) {
+			width: 50%;
+			height: 100%;
+			margin: 0;
+			margin: 0 0 rem(48);
+			padding-top: rem(96);
+			padding-bottom: rem(96);
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-column-end: span 5;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			width: 100%;
+		}
+
+		.wp-block-heading {
+			margin-bottom: rem(16);
+
+			@include media-breakpoint-up(xxl) {
+				margin-bottom: rem(24);
+			}
+		}
+
+		.has-overline-font-size {
+			width: max-content;
+			margin-bottom: rem(8);
+			padding: rem(6) rem(8);
+			border: rem(1) solid paint(black);
+			border-radius: rem(4);
+		}
+	}
+
+}

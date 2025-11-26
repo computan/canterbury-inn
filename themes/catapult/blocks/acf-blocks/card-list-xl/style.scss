@@ -1,0 +1,25 @@
+@import "base-includes";
+
+.block-card-list-xl {
+	@include media-breakpoint-up(lg) {
+		margin-top: 0 !important;
+	}
+
+	.block-content-section {
+		margin: 0;
+
+		&__content {
+			> .wp-block-heading {
+				&:first-child {
+					margin-top: $block-spacing-first-text-child-offset;
+				}
+			}
+
+			> p {
+				&:first-child {
+					margin-top: $block-spacing-first-text-child-offset;
+				}
+			}
+		}
+	}
+}

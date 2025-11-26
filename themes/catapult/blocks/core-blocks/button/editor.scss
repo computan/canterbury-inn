@@ -1,0 +1,22 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.wp-block-button--hidden-label {
+		.wp-block-button__link {
+			flex-direction: column !important;
+			font-size: rem(10) !important;
+			line-height: 1.2 !important;
+
+			&::after {
+				margin-top: 0 !important;
+			}
+		}
+	}
+
+	.wp-block-buttons {
+		> .wp-block-button {
+			margin-right: rem(8) !important;
+			margin-left: rem(8) !important;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+@import "base-includes";
+
+.block-stat-simple {
+	.block-stats {
+		@include media-breakpoint-up(sm) {
+			margin-right: 0;
+			margin-left: 0;
+		}
+	}
+
+	.block-stat {
+		@include media-breakpoint-up(sm) {
+			flex: 1 1 25%;
+			max-width: 25%;
+			padding: 0 responsive-values(20, 32);
+		}
+
+		&:not(:last-child) {
+			&::after {
+				@include media-breakpoint-up(sm) {
+					position: absolute;
+					top: 0;
+					right: rem(-1);
+					content: "";
+					width: rem(1);
+					height: 100%;
+					background-color: currentcolor;
+				}
+			}
+		}
+	}
+}

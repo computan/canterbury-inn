@@ -1,0 +1,69 @@
+@import "base-includes";
+
+.block-related-posts {
+	&__top {
+		margin-bottom: responsive-values(48, 72);
+
+		@include media-breakpoint-up(sm) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.wp-block-buttons,
+		.wp-block-heading {
+			@include media-breakpoint-up(sm) {
+				margin-top: auto;
+				margin-bottom: auto;
+			}
+		}
+
+		.wp-block-buttons {
+			@include media-breakpoint-down(xs) {
+				margin-top: rem(-6);
+			}
+		}
+	}
+
+	&__post-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: rem(48);
+		column-gap: $grid-gap;
+
+		@include media-breakpoint-up(sm) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		@include media-breakpoint-up(md) {
+			grid-template-columns: repeat(var(--cards_per_row, 3), minmax(0, 1fr));
+		}
+	}
+
+	&__placeholder-card {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: rem(356);
+		color: paint(neutral-1);
+		font-size: rem(36);
+		font-family: "Merriweather Sans", sans-serif;
+		line-height: rem(48);
+		background-color: paint(neutral-9);
+
+		span {
+			&:first-child {
+				@include media-breakpoint-up(md) {
+					display: none;
+				}
+			}
+
+			&:last-child {
+				@include media-breakpoint-down(sm) {
+					display: none;
+				}
+			}
+		}
+	}
+}

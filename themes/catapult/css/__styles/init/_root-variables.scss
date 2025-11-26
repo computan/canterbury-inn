@@ -1,0 +1,58 @@
+/* stylelint-disable order/order */
+
+@use "sass:math";
+@use "sass:map";
+
+:root {
+	@each $color, $value in $paints {
+		#{"--" + $color}: $value;
+	}
+
+	@each $font-size, $font-styles in $fontStyles {
+		@each $attribute, $value in map.get($font-styles, "desktop") {
+			@if ("font-size" == $attribute or "line-height" == $attribute or "margin-bottom" == $attribute or "letter-spacing" == $attribute) {
+				$smallest-breakpoint: "md";
+				$largest-breakpoint: "xxl";
+				$mobile-value: map.get(map.get($font-styles, "mobile"), $attribute);
+
+				@if ($mobile-value > $value) {
+					$smallest-breakpoint: "lg";
+					$largest-breakpoint: "lg";
+				}
+
+				--#{$font-size}-#{$attribute}: #{responsive-values($mobile-value, $value, $smallest-breakpoint, $largest-breakpoint)};
+			} @else if ("font-family" == $attribute) {
+				$font-rendered: false;
+
+				@each $font-family-key, $font-data in $fonts {
+					@if (map.get($font-data, "figma-name") == $value and false == $font-rendered) {
+						--#{$font-size}-#{$attribute}: #{map.get($font-data, "css")};
+						$font-rendered: true;
+					}
+				}
+
+				@if (false == $font-rendered) {
+					--#{$font-size}-#{$attribute}: #{$value};
+				}
+			} @else {
+				--#{$font-size}-#{$attribute}: #{$value};
+			}
+		}
+	}
+
+	@each $breakpoint, $container-max-width in $container-max-widths {
+		@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+			--containerWidth: calc(var(--vw, 1vw) * 100 - #{responsive-values(40, 128)});
+			--containerMaxWidth: calc(#{$container-max-width} - #{responsive-values(40, 128)});
+
+			--gutterWidth: clamp(#{responsive-values(20, 64)}, 100%, calc((var(--vw, 1vw) * 100 - #{$container-max-width} + #{responsive-values(40, 128)}) / 2));
+			--negativeGutterWidth: calc(var(--gutterWidth) * -1);
+
+			// Responsive values come from total container padding (40px mobile/128px desktop) minus the column gap (16px mobile/32px desktop).
+			--columnWidth: calc((#{$container-max-width} - #{responsive-values(24, 96)}) / 12);
+			--columnMaxWidth: calc((100% - #{responsive-values(24, 96)}) / 12);
+		}
+	}
+}
+
+/* stylelint-enable order/order */

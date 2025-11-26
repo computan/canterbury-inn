@@ -1,0 +1,74 @@
+{
+    "key": "group_66016e7ebf1fd",
+    "title": "Block: Column",
+    "fields": [
+        {
+            "key": "field_660171e558e4f",
+            "label": "Custom Column WIdth",
+            "name": "custom_column_width",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_66016e7e9847d",
+            "label": "Column Width",
+            "name": "column_width",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "Optional. For this column, override the Columns block setting. Based on a 12-column grid.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_660171e558e4f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 2,
+            "max": 12,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/column"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1711370754
+}
