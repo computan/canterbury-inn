@@ -70,7 +70,9 @@
 
 	<rule ref="WordPress.Security.EscapeOutput">
 		<properties>
-			<property name="customAutoEscapedFunctions" type="array" value="catapult_array_to_link,"/>
+			<property name="customAutoEscapedFunctions" type="array">
+				<element value="catapult_array_to_link"/>
+			</property>	
 		</properties>
 	</rule>
 

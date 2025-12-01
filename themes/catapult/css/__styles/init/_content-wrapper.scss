@@ -79,12 +79,19 @@
 		float: right;
 	}
 
-	img.alignleft {
-		margin: rem(6 24 24 0);
-	}
+	img {
+		width: 100%;
+		margin: rem(6) auto rem(24) auto;
 
-	img.alignright {
-		margin: rem(6 0 24 24);
+		&.alignleft {
+			width: auto;
+			margin: rem(6 24 24 0);
+		}
+
+		&.alignright {
+			width: auto;
+			margin: rem(6 0 24 24);
+		}
 	}
 }
 

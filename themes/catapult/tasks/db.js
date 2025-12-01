@@ -11,7 +11,10 @@ gulp.task('import', (done) => {
 				path.resolve(__dirname, `../../../exports/export.xml`)
 			) ||
 			!fs.existsSync(
-				path.resolve(__dirname, `../../../exports/block-library-export.xml`)
+				path.resolve(
+					__dirname,
+					`../../../exports/block-library-export.xml`
+				)
 			)
 		) {
 			console.log('Export files not found');
@@ -22,8 +25,12 @@ gulp.task('import', (done) => {
 		wpcli(`import ../../exports/block-library-export.xml --authors=create`);
 		wpcli(`option delete catapult_installed`);
 		wpcli(`option add catapult_installed 1 --autoload=no`);
-		wpcli('search-replace "http://catapult.local" "$(wp option get siteurl)" --precise --skip-columns=guid');
-		wpcli('search-replace "https://catapult.local" "$(wp option get siteurl)" --precise --skip-columns=guid');
+		wpcli(
+			'search-replace "http://catapult.local" "$(wp option get siteurl)" --precise --skip-columns=guid'
+		);
+		wpcli(
+			'search-replace "https://catapult.local" "$(wp option get siteurl)" --precise --skip-columns=guid'
+		);
 
 		done();
 	} catch (err) {
@@ -31,7 +38,6 @@ gulp.task('import', (done) => {
 		done(err);
 	}
 });
-
 
 gulp.task('plugins', (done) => {
 	wpcli('plugin update --all');

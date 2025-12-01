@@ -48,12 +48,14 @@ function catapult_the_back_link( $post_id = null, $title = null, $permalink = nu
 		}
 	}
 
-	if ( is_tag() || is_category() || is_singular( 'post' ) ) {
+	if ( is_tag() || is_category() || is_singular( 'post' ) || is_singular( 'people' ) ) {
 		if ( empty( $title ) ) {
 			$title = __( 'Blog', 'catapult' );
 		}
 
-		$permalink = get_the_permalink( get_option( 'page_for_posts' ) );
+		if ( empty( $permalink ) ) {
+			$permalink = get_the_permalink( get_option( 'page_for_posts' ) );
+		}
 	} elseif ( is_tax() || is_singular() ) {
 		$this_post_type   = get_post_type();
 		$post_type_object = get_post_type_object( $this_post_type );

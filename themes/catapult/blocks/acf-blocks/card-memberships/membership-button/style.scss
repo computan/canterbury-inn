@@ -4,10 +4,10 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
 	row-gap: rem(24);
+	column-gap: rem(20);
 	justify-content: stretch;
 	align-items: center;
 	margin: responsive-values(32, 48) 0;
-	column-gap: rem(20);
 
 	@include media-breakpoint-up(xl) {
 		display: flex;

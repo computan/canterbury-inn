@@ -25,8 +25,12 @@ function catapult_get_block_related_posts( $enqueue_card_assets = true ) {
 	$manual         = get_field( 'manual' );
 
 	if ( ! empty( $post_selection ) ) {
+		$cards_per_row = get_field( 'cards_per_row' );
+		if ( empty( $cards_per_row ) ) {
+			$cards_per_row = 3;
+		}
 		$args = array(
-			'posts_per_page' => 3,
+			'posts_per_page' => intval( $cards_per_row ),
 			'post_status'    => array( 'publish' ),
 		);
 

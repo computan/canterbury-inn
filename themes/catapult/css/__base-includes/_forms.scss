@@ -7,7 +7,7 @@
 	width: 100%;
 	padding: rem(11 12);
 	color: paint(neutral-1);
-	border: rem(1) solid paint(neutral-8);
+	border: rem(1) solid paint(neutral-7);
 	border-radius: rem(4);
 	background-color: paint(white);
 	outline: none;
@@ -15,11 +15,16 @@
 
 	&:focus,
 	&.focus {
-		border: rem(1) solid paint(button-default);
+		border: rem(1) solid paint(secondary);
 	}
 
 	&.error {
 		border-color: paint(error);
+		background: url(../icons/essential/form-error.svg);
+		background-repeat: no-repeat;
+		background-position: 98% center;
+		background-size: contain;
+		background-size: rem(16);
 	}
 
 	&.autofill {

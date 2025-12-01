@@ -15,8 +15,8 @@
 */
 $fonts: (
 	base: (
-		css: "'Open Sans', sans-serif",
-		figma-name: "Open Sans",
+		css: "'Manrope', sans-serif",
+		figma-name: "Manrope",
 	)
 );
 
@@ -35,10 +35,24 @@ $additional-paints: (
 $background-colors: (
 	"transparent": transparent,
 	"white": paint(white),
+	"black": paint(black),
+	"neutral-1": paint(neutral-1),
+	"neutral-2": paint(neutral-2),
+	"neutral-3": paint(neutral-3),
+	"neutral-4": paint(neutral-4),
+	"neutral-5": paint(neutral-5),
+	"neutral-6": paint(neutral-6),
+	"neutral-7": paint(neutral-7),
+	"neutral-8": paint(neutral-8),
+	"neutral-9": paint(neutral-9),
 	"neutral-10": paint(neutral-10),
 	"neutral-11": paint(neutral-11),
-	"neutral-3": paint(neutral-3),
-	"dark": paint(neutral-2),
+	"neutral-12": paint(neutral-12),
+	"error": paint(error),
+	"warning": paint(warning),
+	"success": paint(success),
+	"information": paint(information),
+	"autofill": paint(autofill),
 );
 
 /* This variable controls the default text color on a light background. Used with paint(text) to generate a CSS variable that changes to use background font colors. */
@@ -46,26 +60,49 @@ $default-text-color: paint(neutral-1);
 
 /* If a background color uses a different font color than the default color, use these variables to specify the alternate colors */
 $background-font-colors: (
-	"white": paint(neutral-1),
-	"dark": paint(white),
+	"neutral-1": paint(white),
+	"neutral-2": paint(white),
 	"neutral-3": paint(white),
+	"neutral-4": paint(white),
+	"neutral-5": paint(white),
+	"neutral-6": paint(white),
+	"error": paint(white),
+	"success": paint(white),
+	"information": paint(white),
 );
 $background-font-hover-colors: (
 	"white": paint(button-hover),
-	"dark": paint(neutral-8),
 	"neutral-3": paint(neutral-8),
 );
 
 /* Backgrounds specified in this variable will use the alternative text colors: */
 $backgrounds-with-alt-text-color: (
-	"dark",
+	"button-default",
+	"black",
+	"neutral-1",
+	"neutral-2",
 	"neutral-3",
+	"neutral-4",
+	"neutral-5",
+	"neutral-6",
+	"error",
+	"success",
+	"information",
 );
 
 /* Backgrounds specified in this variable will use the alternative button colors: */
 $backgrounds-with-alt-button-color: (
-	"dark",
-	"neutral-3"
+	"button-default",
+	"black",
+	"neutral-1",
+	"neutral-2",
+	"neutral-3",
+	"neutral-4",
+	"neutral-5",
+	"neutral-6",
+	"error",
+	"success",
+	"information",
 );
 
 /****************

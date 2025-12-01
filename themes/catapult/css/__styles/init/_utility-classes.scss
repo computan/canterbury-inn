@@ -2,7 +2,7 @@
 
 @each $color, $value in $background-colors {
 	.bg-#{$color} {
-		background-color: #{$value};
+		background: #{$value};
 
 		@if (transparent != $value) {
 			--blockBackgroundColor: #{$value};

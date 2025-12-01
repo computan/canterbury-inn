@@ -10,6 +10,11 @@
 				"menu_title": "General",
 				"post_id": "general"
 			},
+			"search": {
+				"page_title": "Theme Options: Search",
+				"menu_title": "Search",
+				"post_id": "search"
+			},			
 			"icons": {
 				"page_title": "Theme Options: Icons",
 				"menu_title": "Icons",
@@ -27,8 +32,7 @@
 			}
 		}
 	},
-	"post_types": { /* Add register_post_type/register_taxonomy args to override the default theme values. Example code can be found below. */
-	},
+	"post_types": {},
 	"theme_block_locations": { /* If new locations are added and the catapult_render_theme_blocks() function is used, make sure to update the load_global_blocks() function in the catapult/includes/core/components/class-theme-core-acf-blocks.php file so that the blocks get loaded into the global $blocks variable (otherwise the CSS/JS won't load). Locations do not need to be added for post types previously registered in this file - those will be generated automatically. */
 		"404_page": "404 Page",
 		"alert_top": "Alert - Top",
@@ -43,7 +47,7 @@
 		"primary_navigation": "Primary Navigation"
 	},
 	"fonts": {
-		"open-sans": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+		"Manrope": "https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
 	},
 	"enqueue_styles": { /* Use global styles sparingly. See /docs/best-practices/global-vs-block-assets.md */
 		"theme-styles": {
@@ -190,6 +194,12 @@
 			"card-image-link-6",
 			640,
 			360,
+			true
+		],
+		[
+			"card-image-link-5",
+			383,
+			215,
 			true
 		],
 		[

@@ -18,9 +18,9 @@
 		display: flex;
 		flex-basis: 100%;
 		flex-wrap: nowrap;
+		column-gap: rem(16);
 		justify-content: space-between;
 		align-items: flex-start;
-		column-gap: rem(16);
 	}
 
 	&__selected-filters-wrapper {

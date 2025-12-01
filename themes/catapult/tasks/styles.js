@@ -39,7 +39,6 @@ gulp.task('styles', (done) => {
 				precision: 8,
 				silenceDeprecations: [
 					'legacy-js-api',
-					'mixed-decls',
 					'import',
 					'global-builtin',
 				],
