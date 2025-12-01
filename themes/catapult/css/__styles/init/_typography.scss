@@ -14,6 +14,7 @@
 	.acf-block.bg-white + &,
 	.acf-block.bg-transparent + & {
 		margin-top: $block-spacing-first-text-child-offset;
+		margin-bottom: 0;
 	}
 }
 
@@ -21,6 +22,14 @@
 	@include display;
 
 	color: inherit;
+}
+
+.has-t1-underline-font-size {
+	@include t1-underline;
+}
+
+.has-t2-underline-font-size {
+	@include t2-underline;
 }
 
 h1,
@@ -93,6 +102,14 @@ strong {
 	@include lead;
 }
 
+.has-lead-2-font-size {
+	@include lead-2;
+}
+
+.has-lead-3-font-size {
+	@include lead-3;
+}
+
 .has-quote-1-font-size {
 	@include quote-1;
 }
@@ -113,6 +130,10 @@ strong {
 	@include subtitle-2;
 }
 
+.has-subtitle-3-font-size {
+	@include subtitle-3;
+}
+
 .has-overline-font-size {
 	@include overline;
 
@@ -123,4 +144,12 @@ strong {
 
 .has-title-1-font-size {
 	@include title-1;
+}
+
+.has-title-2-font-size {
+	@include title-2;
+}
+
+.has-title-3-font-size {
+	@include title-3;
 }

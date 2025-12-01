@@ -186,7 +186,7 @@ function render_block( $block_content, $block ) {
 						$logo_id = 'site-logo-placeholder';
 					}
 
-					return wp_get_attachment_image( $logo_id, 'main-logo', '', array( 'class' => 'block-navigation__logo' ) );
+					return wp_get_attachment_image( $logo_id, 'large', '', array( 'class' => 'block-navigation__logo' ) );
 				},
 				$block_content
 			);

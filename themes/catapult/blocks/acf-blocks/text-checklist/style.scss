@@ -18,8 +18,8 @@
 		padding: 0;
 
 		@include media-breakpoint-up(sm) {
-			column-count: 2;
 			column-gap: $grid-gap;
+			column-count: 2;
 		}
 
 		@include media-breakpoint-up(lg) {

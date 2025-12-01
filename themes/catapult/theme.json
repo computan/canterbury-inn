@@ -59,14 +59,29 @@
 							"name": "T1"
 						},
 						{
+							"slug": "t1-alt-underline",
+							"size": "var(--t1-alt-underline-font-size)",
+							"name": "T1-Alt-Underline"
+						},
+						{
 							"slug": "t2",
 							"size": "var(--t2-font-size)",
 							"name": "T2"
 						},
 						{
+							"slug": "t2-underline",
+							"size": "var(--t2-underline-font-size)",
+							"name": "T2-Underline"
+						},
+						{
 							"slug": "t3",
 							"size": "var(--t3-font-size)",
 							"name": "T3"
+						},
+						{
+							"slug": "t3-underline",
+							"size": "var(--t3-underline-font-size)",
+							"name": "T3-Underline"
 						},
 						{
 							"slug": "t4",
@@ -92,6 +107,56 @@
 							"slug": "overline",
 							"size": "var(--overline-font-size)",
 							"name": "Overline"
+						},
+						{
+							"slug": "subtitle-1",
+							"size": "var(--subtitle-1-font-size)",
+							"name": "Subtitle-1"
+						},
+						{
+							"slug": "subtitle-1-underline",
+							"size": "var(--subtitle-1-underline-font-size)",
+							"name": "Subtitle-1-Underline"
+						},
+						{
+							"slug": "subtitle-2",
+							"size": "var(--subtitle-2-font-size)",
+							"name": "Subtitle-2"
+						},
+						{
+							"slug": "subtitle-2-underline",
+							"size": "var(--subtitle-2-underline-font-size)",
+							"name": "Subtitle-2-Underline"
+						},
+						{
+							"slug": "subtitle-3",
+							"size": "var(--subtitle-3-font-size)",
+							"name": "Subtitle-3"
+						},
+						{
+							"slug": "subtitle-3-underline",
+							"size": "var(--subtitle-3-underline-font-size)",
+							"name": "Subtitle-3-Underline"
+						},
+						{
+							"slug": "title-1",
+							"size": "var(--title-1-font-size)",
+							"name": "Title-1"
+						},
+						{
+							"slug": "title-2",
+							"size": "var(--title-2-font-size)",
+							"name": "Title-2"
+						},
+						{
+							"slug": "title-3",
+							"size": "var(--title-3-font-size)",
+							"name": "Title-3"
+						},
+						{
+							"slug": "stat",
+							"size": "var(--stat-font-size)",
+							"name": "Stat"
 						}
 					]
 				}
@@ -115,9 +180,29 @@
 							"name": "Lead"
 						},
 						{
+							"slug": "lead-2",
+							"size": "var(--lead-2-font-size)",
+							"name": "Lead-2"
+						},
+						{
+							"slug": "lead-3",
+							"size": "var(--lead-3-font-size)",
+							"name": "Lead-3"
+						},
+						{
 							"slug": "overline",
 							"size": "var(--overline-font-size)",
 							"name": "Overline"
+						},
+						{
+							"slug": "t2",
+							"size": "var(--t2-font-size)",
+							"name": "T2"
+						},
+						{
+							"slug": "t3",
+							"size": "var(--t3-font-size)",
+							"name": "T3"
 						},
 						{
 							"slug": "quote-1",
@@ -128,6 +213,56 @@
 							"slug": "quote-2",
 							"size": "var(--quote-2-font-size)",
 							"name": "Quote 2"
+						},
+						{
+							"slug": "subtitle-1",
+							"size": "var(--subtitle-1-font-size)",
+							"name": "Subtitle-1"
+						},
+						{
+							"slug": "subtitle-1-underline",
+							"size": "var(--subtitle-1-underline-font-size)",
+							"name": "Subtitle-1-Underline"
+						},
+						{
+							"slug": "subtitle-2",
+							"size": "var(--subtitle-2-font-size)",
+							"name": "Subtitle-2"
+						},
+						{
+							"slug": "subtitle-2-underline",
+							"size": "var(--subtitle-2-underline-font-size)",
+							"name": "Subtitle-2-Underline"
+						},
+						{
+							"slug": "subtitle-3",
+							"size": "var(--subtitle-3-font-size)",
+							"name": "Subtitle-3"
+						},
+						{
+							"slug": "subtitle-3-underline",
+							"size": "var(--subtitle-3-underline-font-size)",
+							"name": "Subtitle-3-Underline"
+						},
+						{
+							"slug": "stat",
+							"size": "var(--stat-font-size)",
+							"name": "Stat"
+						},
+						{
+							"slug": "title-1",
+							"size": "var(--title-1-font-size)",
+							"name": "Title-1"
+						},
+						{
+							"slug": "title-2",
+							"size": "var(--title-2-font-size)",
+							"name": "Title-2"
+						},
+						{
+							"slug": "title-3",
+							"size": "var(--title-3-font-size)",
+							"name": "Title-3"
 						}
 					]
 				}

@@ -131,8 +131,8 @@
 
 	.wp-block-buttons {
 		flex-wrap: nowrap;
-		margin: rem(16 0 0 0);
 		column-gap: rem(12);
+		margin: rem(16 0 0 0);
 
 		@include media-breakpoint-up(md) {
 			margin-top: 0;

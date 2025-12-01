@@ -100,10 +100,10 @@
 .search-result {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) responsive-values(96, 192);
+	column-gap: $grid-gap;
 	margin-bottom: responsive-values(32, 48);
 	padding-bottom: responsive-values(32, 48);
 	color: paint(neutral-1);
-	column-gap: $grid-gap;
 	border-bottom: rem(1) solid paint(neutral-9);
 
 	&:last-of-type {

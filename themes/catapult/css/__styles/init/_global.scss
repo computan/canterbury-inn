@@ -35,18 +35,38 @@ body {
 
 	min-width: rem(320);
 	margin: 0;
-	color: paint(text);
+	color: paint(neutral-1);
 	font-family: font(base);
 	background-color: paint(white);
 	-webkit-font-smoothing: antialiased;
 	font-feature-settings: "clig" off, "liga" off;
 }
 
+.scroll-lock-overlay {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: "";
+		z-index: 10;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+}
+
 .main-header {
 	position: sticky;
 	top: 0;
 	z-index: 19;
-	height: rem(64);
+	width: 100%;
+	background: paint(white);
+
+	&:has(.campaign-navigation) {
+		height: rem(64);
+	}
 
 	body.post-type-archive-library_block & {
 		position: relative;
@@ -62,6 +82,27 @@ body {
 			top: 46px;
 		}
 		/* stylelint-enable unit-disallowed-list */
+	}
+
+	> .block-content {
+		padding-block: rem(8);
+		color: paint(white);
+		text-align: right;
+		background-color: paint(primary);
+
+		p {
+			@include nav-3;
+
+			a {
+				color: paint(white);
+				text-decoration: none;
+
+				&:hover {
+					color: paint(white);
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 }
 
@@ -84,6 +125,10 @@ body {
 
 figure {
 	margin: 0;
+
+	img {
+		border-radius: rem(16);
+	}
 }
 
 /* Make all images responsive */
@@ -113,7 +158,7 @@ a {
 	}
 
 	&:not([class]) {
-		color: paint(button-default);
+		color: paint(information);
 		text-decoration: underline;
 		word-wrap: break-word;
 
@@ -128,18 +173,8 @@ a {
 
 		&:hover,
 		&:focus {
-			color: paint(button-hover);
+			color: paint(primary);
 			text-decoration: underline;
-		}
-
-		.bg-white & {
-			color: paint(button-default);
-
-			&:hover,
-			&:focus {
-				color: paint(button-hover);
-				text-decoration: underline;
-			}
 		}
 
 		img {
@@ -150,7 +185,7 @@ a {
 
 a:focus,
 a:hover {
-	color: paint(button-hover);
+	color: paint(primary);
 	text-decoration: none;
 }
 

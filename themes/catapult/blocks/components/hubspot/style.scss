@@ -28,8 +28,8 @@
 	fieldset {
 		display: grid;
 		grid-template-columns: 1fr;
-		max-width: none !important;
 		column-gap: $input-column-gap;
+		max-width: none !important;
 
 		&.form-columns-2 {
 			@include media-breakpoint-up(sm) {

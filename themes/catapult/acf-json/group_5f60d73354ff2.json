@@ -48,7 +48,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_62616f6a65d16",
@@ -82,7 +84,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_63bc50c3e4f57",
@@ -201,13 +205,18 @@
                 "class": "",
                 "id": ""
             },
+            "relevanssi_exclude": 0,
             "post_type": [
-                "post"
+                "post",
+                "people"
             ],
+            "post_status": "",
             "taxonomy": "",
             "return_format": "object",
             "multiple": 1,
             "allow_null": 1,
+            "allow_in_bindings": 1,
+            "bidirectional": 0,
             "ui": 1,
             "bidirectional_target": []
         }
@@ -232,5 +241,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709908558
+    "display_title": "",
+    "modified": 1762186693
 }

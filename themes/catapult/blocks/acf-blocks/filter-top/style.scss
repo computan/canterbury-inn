@@ -51,10 +51,10 @@
 		grid-column: span 12;
 		display: flex;
 		flex-wrap: nowrap;
+		column-gap: rem(16);
 		justify-content: space-between;
 		align-items: flex-start;
 		margin-bottom: rem(48);
-		column-gap: rem(16);
 
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(72);

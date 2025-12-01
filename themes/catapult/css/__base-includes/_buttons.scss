@@ -7,13 +7,16 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding: rem(10 30);
+	padding: rem(11 31);
 	text-align: center;
-	border-radius: rem(4);
+	border-radius: rem(8);
 	cursor: pointer;
 	-webkit-appearance: none;
 	appearance: none;
-	transition: color $transition-standard, background-color $transition-standard, border $transition-standard;
+	transition:
+		color $transition-standard,
+		background-color $transition-standard,
+		border $transition-standard;
 
 	&:disabled {
 		cursor: not-allowed;
@@ -23,8 +26,7 @@
 @mixin button-small() {
 	@include link-2(false);
 
-	padding: rem(7 17);
-	border-width: rem(1);
+	padding: rem(8 18);
 }
 
 @mixin button-small-tertiary() {
@@ -37,36 +39,37 @@
 }
 
 @mixin button-primary($light_styles_only: false) {
+	@include button();
+
+	padding: rem(12 32);
 	color: paint(white);
-	border: rem(2) solid paint(button-default);
+	border: none;
 	background-color: paint(button-default);
 
+	@include media-breakpoint-down(xs) {
+		width: 100%;
+	}
+
 	@if (true != $light_styles_only) {
-		@include button();
-
-		@include media-breakpoint-down(xs) {
-			width: 100%;
-		}
-
 		@include alt-button-selectors {
-			color: paint(button-default);
-			border-color: paint(white);
-			background-color: paint(white);
+			color: paint(neutral-1);
+			border-color: paint(button-default);
+			background-color: paint(button-default);
 
 			&.hover,
 			a:hover &,
 			a:focus &,
 			&:hover,
 			&:focus {
-				color: paint(button-hover);
+				color: paint(button-default);
 				border-color: paint(white);
 				background-color: paint(white);
 			}
 
 			&:disabled {
 				color: paint(neutral-5);
-				border-color: paint(neutral-3);
-				background-color: paint(neutral-3);
+				border-color: paint(neutral-7);
+				background-color: paint(neutral-7);
 			}
 		}
 	}
@@ -82,24 +85,24 @@
 	}
 
 	&:disabled {
-		color: paint(neutral-7);
-		border-color: paint(neutral-9);
-		background-color: paint(neutral-9);
+		color: paint(neutral-6);
+		border-color: paint(neutral-4);
+		background-color: paint(neutral-4);
 	}
 }
 
 @mixin button-secondary($light_styles_only: false) {
+	@include button();
+
 	color: paint(button-default);
-	border: rem(2) solid paint(button-default);
+	border: rem(1) solid paint(button-default);
 	background-color: transparent;
 
+	@include media-breakpoint-down(xs) {
+		width: 100%;
+	}
+
 	@if (true != $light_styles_only) {
-		@include button();
-
-		@include media-breakpoint-down(xs) {
-			width: 100%;
-		}
-
 		@include alt-button-selectors {
 			color: paint(white);
 			border-color: paint(white);
@@ -109,14 +112,14 @@
 			a:focus &,
 			&:hover,
 			&:focus {
-				color: paint(button-hover);
+				color: paint(button-default);
 				border-color: paint(white);
 				background-color: paint(white);
 			}
 
 			&:disabled {
-				color: paint(neutral-5);
-				border-color: paint(neutral-3);
+				color: paint(neutral-7);
+				border-color: paint(neutral-7);
 			}
 		}
 	}
@@ -132,17 +135,19 @@
 	}
 
 	&:disabled {
-		color: paint(neutral-7);
-		border-color: paint(neutral-9);
+		padding: rem(10 30);
+		color: paint(neutral-4);
+		border-color: paint(neutral-4);
+		border-width: rem(2);
 	}
 }
 
 @mixin button-tertiary($light_styles_only: false) {
+	@include button();
+
 	color: paint(button-default);
 
 	@if (true != $light_styles_only) {
-		@include button();
-
 		position: relative;
 		padding: 0;
 		border: none;
@@ -158,21 +163,33 @@
 			&:hover,
 			&:focus {
 				color: paint(neutral-8);
+
+				&::before {
+					background: paint(button-hover);
+				}
+
+				&::after {
+					background: paint(button-hover);
+				}
 			}
 
 			&:disabled {
 				color: paint(neutral-5);
+
+				&::before {
+					background: paint(neutral-3);
+				}
 			}
 		}
 
 		&::before {
 			position: absolute;
 			left: 0;
-			bottom: rem(-2);
+			bottom: rem(-1);
 			content: "";
 			width: 100%;
-			height: rem(2);
-			background-color: currentcolor;
+			height: rem(1);
+			background-color: paint(button-hover);
 		}
 	}
 
@@ -182,10 +199,18 @@
 	&:hover,
 	&:focus {
 		color: paint(button-hover);
+
+		&::before {
+			background: paint(neutral-5);
+		}
 	}
 
 	&:disabled {
-		color: paint(neutral-7);
+		color: paint(neutral-6);
+
+		&::before {
+			background: paint(neutral-6);
+		}
 	}
 }
 
@@ -249,7 +274,10 @@
 	cursor: pointer;
 	-webkit-appearance: none;
 	appearance: none;
-	transition: background-color $transition-standard, color $transition-standard, border-color $transition-standard;
+	transition:
+		background-color $transition-standard,
+		color $transition-standard,
+		border-color $transition-standard;
 
 	@include alt-button-selectors("&.c-btn--color-alt") {
 		color: paint(neutral-1);
@@ -327,19 +355,22 @@
 	width: rem(40);
 	height: rem(40);
 	padding: 0;
-	color: paint(neutral-1);
-	border: rem(1) solid paint(neutral-10);
+	color: paint(white);
+	border: rem(1) solid paint(button-default);
 	border-radius: 50%;
-	background-color: paint(neutral-10);
+	background-color: paint(button-default);
 	cursor: pointer;
 	-webkit-appearance: none;
 	appearance: none;
-	transition: background-color $transition-standard, color $transition-standard, border-color $transition-standard;
+	transition:
+		background-color $transition-standard,
+		color $transition-standard,
+		border-color $transition-standard;
 
 	@include alt-button-selectors("&.c-btn--color-alt") {
-		color: paint(white);
-		border-color: paint(neutral-3);
-		background-color: paint(neutral-3);
+		color: paint(neutral-1);
+		border-color: paint(white);
+		background-color: paint(white);
 
 		&.hover,
 		a:hover &,
@@ -347,8 +378,8 @@
 		&:hover,
 		&:focus {
 			color: paint(white);
-			border-color: paint(neutral-4);
-			background-color: paint(neutral-4);
+			border-color: paint(button-default);
+			background-color: paint(button-default);
 		}
 	}
 
@@ -363,9 +394,9 @@
 	a:focus &,
 	&:hover,
 	&:focus {
-		color: paint(neutral-1);
-		border-color: paint(neutral-9);
-		background-color: paint(neutral-9);
+		color: paint(white);
+		border-color: paint(button-hover);
+		background-color: paint(button-hover);
 	}
 }
 
@@ -376,11 +407,11 @@
 	align-items: center;
 	width: rem(48);
 	height: rem(48);
-	color: paint(text);
+	color: paint(neutral-1);
 	font-size: 0;
 	line-height: 0;
 	text-align: center;
-	border: rem(1) solid paint(neutral-8);
+	border: rem(1) solid paint(button-default);
 	border-radius: rem(1600);
 	background-color: transparent;
 	cursor: pointer;
@@ -389,14 +420,19 @@
 	transition: border-color $transition-standard;
 
 	@include alt-button-selectors {
-		border-color: paint(neutral-6);
+		color: paint(white);
+		border-color: paint(white);
 
 		&.hover,
 		a:hover &,
 		a:focus &,
 		&:hover,
 		&:focus {
-			border-color: paint(white);
+			border-color: paint(button-hover);
+
+			&::after {
+				color: paint(button-hover);
+			}
 		}
 	}
 
@@ -412,7 +448,11 @@
 	a:focus &,
 	&:hover,
 	&:focus {
-		border-color: paint(text);
+		border-color: paint(information);
+
+		&::after {
+			color: paint(information);
+		}
 	}
 }
 

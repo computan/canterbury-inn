@@ -38,8 +38,8 @@
 		@include media-breakpoint-up(lg) {
 			display: grid;
 			grid-template-columns: 1fr repeat(2, rem(48));
-			align-items: center;
 			column-gap: rem(8);
+			align-items: center;
 		}
 
 		> * {

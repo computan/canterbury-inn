@@ -2,24 +2,24 @@
 /**
  * Card-List-Xl
  *
- * Title:             	Card-List-Xl
- * Description:       	A stylized block with inner blocks.
+ * Title:               Card-List-Xl
+ * Description:         A stylized block with inner blocks.
  * Instructions:
- * Category:          	Base
- * Icon:              	align-wide
- * Keywords:          	card, list, XL
- * Post Types:        	all
- * Multiple:          	true
- * Active:            	true
+ * Category:            Base
+ * Icon:                align-wide
+ * Keywords:            card, list, XL
+ * Post Types:          all
+ * Multiple:            true
+ * Active:              true
  * CSS Deps:
  * JS Deps:
- * Global ACF Fields: 	scroll_id
- * Background Colors: 	transparent, white
- * Default BG Color: 	white
- * InnerBlocks:       	true
- * Mode:              	preview
- * Text Width Styles: 	true
- * Starts With Text:  	true
+ * Global ACF Fields:   scroll_id
+ * Background Colors:   transparent, white
+ * Default BG Color:    white
+ * InnerBlocks:         true
+ * Mode:                preview
+ * Text Width Styles:   true
+ * Starts With Text:    true
  *
  * @package Catapult
  * @since   1.0.0

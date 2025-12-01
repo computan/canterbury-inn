@@ -148,8 +148,8 @@
 				display: grid;
 				grid-template-rows: auto auto;
 				grid-template-columns: auto auto;
-				align-items: center;
 				column-gap: rem(24);
+				align-items: center;
 
 				@include media-breakpoint-down(sm) {
 					display: block;

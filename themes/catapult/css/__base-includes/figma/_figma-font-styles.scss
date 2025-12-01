@@ -434,6 +434,56 @@
 	}
 }
 
+@mixin lead-2($margins: true) {
+	font-weight: var(--lead-2-font-weight);
+	font-size: var(--lead-2-font-size);
+	font-family: var(--lead-2-font-family);
+	line-height: var(--lead-2-line-height);
+	font-variant-numeric: var(--lead-2-font-variant-numeric);
+
+	@if ($margins) {
+		margin-top: 0;
+		margin-bottom: var(--lead-2-margin-bottom);
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@if (mixin-exists(lead-2-custom)) {
+		@include lead-2-custom();
+	}
+}
+
+@mixin lead-3($margins: true) {
+	font-weight: var(--lead-3-font-weight);
+	font-size: var(--lead-3-font-size);
+	font-family: var(--lead-3-font-family);
+	line-height: var(--lead-3-line-height);
+	font-variant-numeric: var(--lead-3-font-variant-numeric);
+
+	@if ($margins) {
+		margin-top: 0;
+		margin-bottom: var(--lead-3-margin-bottom);
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@if (mixin-exists(lead-3-custom)) {
+		@include lead-3-custom();
+	}
+}
+
 @mixin quote-1($margins: true) {
 	font-weight: var(--quote-1-font-weight);
 	font-size: var(--quote-1-font-size);

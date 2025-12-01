@@ -18,11 +18,22 @@ select {
 }
 
 textarea {
-	min-height: rem(96);
+	max-width: rem(304);
+	min-height: rem(240);
+
+	&:focus,
+	&.focus {
+		border-color: paint(secondary);
+	}
 }
 
 select {
 	@include select;
+
+	&:focus,
+	&.focus {
+		border-color: paint(secondary);
+	}
 }
 
 label {
@@ -107,12 +118,14 @@ input[type="radio"] {
 .input-number {
 	position: relative;
 	display: inline-block;
-	width: auto;
+	width: 100%;
+	max-width: rem(110);
 
 	input[type="number"] {
-		width: auto;
-		padding-right: rem(37);
-		padding-left: rem(37);
+		width: 100%;
+		max-width: rem(110);
+		padding-right: rem(24.5);
+		padding-left: rem(24.5);
 		text-align: center;
 
 		&::-webkit-inner-spin-button,
