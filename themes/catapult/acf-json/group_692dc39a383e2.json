@@ -1,13 +1,13 @@
 {
-    "key": "group_692976f11615f",
-    "title": "Block: Content-side-image",
+    "key": "group_692dc39a383e2",
+    "title": "Block: Content Embed",
     "fields": [
         {
-            "key": "field_692976f217f2d",
-            "label": "Image Background Color",
-            "name": "image_background_color",
+            "key": "field_692dc39b7a829",
+            "label": "iFrame Source",
+            "name": "iframe_source",
             "aria-label": "",
-            "type": "select",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,21 +16,12 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "orange": "Orange",
-                "coffee": "Coffee",
-                "yellow": "Yellow"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
+            "default_value": "",
+            "maxlength": "",
             "allow_in_bindings": 0,
-            "ui": 0,
-            "ajax": 0,
             "placeholder": "",
-            "create_options": 0,
-            "save_options": 0
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -38,7 +29,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/content-side-image"
+                "value": "acf\/content-embed"
             }
         ]
     ],
@@ -52,5 +43,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1764333279
+    "modified": 1764606915
 }
