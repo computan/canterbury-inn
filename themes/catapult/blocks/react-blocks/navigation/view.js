@@ -13,6 +13,8 @@ const navigationBlocks = document.querySelectorAll('.block-navigation');
 const navigationHamburgers = document.querySelectorAll(
 	'.block-navigation__hamburger'
 );
+const mainHeader = document.querySelector('.main-header');
+const blockNav = document.querySelector('.main-header > nav.block-navigation');
 
 const toggleNavigationHamburger = (e) => {
 	const currentNavigationHamburger = e?.currentTarget ?? e;
@@ -135,6 +137,33 @@ const lockScroll = () => {
 	}
 };
 
+const setHeaderExtras = () => {
+	// ⭐ Only block-navigation gets scrolled class
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 0) {
+			if (blockNav) blockNav.classList.add('scrolled');
+		} else if (blockNav) blockNav.classList.remove('scrolled');
+	});
+
+	window.addEventListener('click', () => {
+		const blockNavActive =
+			blockNav.classList.contains('active') ||
+			blockNav.classList.contains('search-active');
+
+		if (blockNavActive) {
+			mainHeader.classList.add('menu-open');
+
+			lockScroll();
+			document.body.classList.add('scroll-lock-overlay');
+		} else {
+			mainHeader.classList.remove('menu-open');
+
+			clearAllBodyScrollLocks();
+			document.body.classList.remove('scroll-lock-overlay');
+		}
+	});
+};
+
 const clickOffMenu = (e) => {
 	if (0 === navigationHamburgers.length) {
 		return;
@@ -178,6 +207,7 @@ if (navigationHamburgers.length > 0) {
 }
 
 setFirstLevelButtonBlockOffsets();
+setHeaderExtras();
 
 if (navigationBlocks.length > 0) {
 	navigationBlocks.forEach((navigationBlock) => {
@@ -188,6 +218,7 @@ if (navigationBlocks.length > 0) {
 window.addEventListener('navigation-submenu-closed', submenuClosed);
 window.addEventListener('navigation-submenu-closed', setNavMenuActiveClass);
 window.addEventListener('navigation-submenu-opened', setNavMenuActiveClass);
+
 window.addEventListener(
 	'resize',
 	throttle(setFirstLevelButtonBlockOffsets, 100)
