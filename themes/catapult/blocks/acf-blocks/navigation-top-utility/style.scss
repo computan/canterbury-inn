@@ -1,0 +1,146 @@
+@import "base-includes";
+
+.block-navigation-top-utility {
+	display: flex;
+	height: rem(62);
+	background-color: paint(neutral-6);
+
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
+
+	.block-navigation__utility-nav {
+		display: flex;
+		justify-content: flex-end;
+
+		.utility-nav__link {
+			display: flex;
+			gap: rem(20);
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			margin-top: 0;
+			// width: calc(100vw - rem(488));
+
+			// margin-left: rv(70, 110);
+
+			padding: rem(4) 0;
+			border-bottom-left-radius: rem(100);
+			// background: paint(orange);
+
+			// @include media-breakpoint-up(xl) {
+			// 	margin-left: rv(90, 183);
+			// }
+			.wp-block-list {
+				display: flex;
+				flex-wrap: wrap;
+				gap: rem(10);
+				margin: 0;
+				padding-left: 0;
+
+				li {
+					@include nav-3(false);
+
+					position: relative;
+					margin-bottom: 0;
+					color: paint(white);
+
+					&::before {
+						display: none;
+					}
+
+					&:first-child {
+						&::after {
+							position: absolute;
+							top: rem(1);
+							right: rem(-13);
+							content: "";
+							display: block;
+							width: rem(1);
+							height: calc(100% - rem(2));
+							background-color: paint(white);
+						}
+					}
+
+					&:last-child {
+						margin-left: rem(10);
+					}
+				}
+			}
+
+			.bg-transparent {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				max-height: rem(32);
+				margin-top: 0;
+			}
+
+			.wp-block-buttons {
+				margin-left: auto;
+			}
+
+		}
+
+		.wp-block-buttons {
+			margin: 0;
+
+			.wp-block-button {
+				&:not(:last-child, .is-style-social) {
+					position: relative;
+
+					&::after {
+						position: absolute;
+						top: rem(1);
+						right: rem(-13);
+						content: "";
+						display: block;
+						width: rem(1);
+						height: calc(100% - rem(2));
+						background-color: paint(white);
+					}
+				}
+
+				&:not(.is-style-social) {
+					margin: 0;
+
+					.wp-block-button__link {
+						color: paint(white);
+					}
+
+					a {
+						@include nav-3;
+
+						color: paint(white);
+
+						&::before {
+							display: none;
+						}
+					}
+				}
+			}
+
+			.is-style-social {
+				margin: rem(-3) 0 0 !important;
+
+				.wp-block-button__link {
+					position: relative;
+					width: rem(18);
+					height: rem(18);
+					padding: rem(2);
+					border-radius: 100%;
+					background-color: paint(white);
+				}
+			}
+
+			&:not(.wp-block-buttons--social) {
+				column-gap: rem(25);
+			}
+
+			&.wp-block-buttons--social {
+				display: flex;
+				gap: rem(5);
+			}
+		}
+	}
+}

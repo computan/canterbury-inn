@@ -53,11 +53,12 @@ const setMenuOffset = () => {
 		const containerLeft = (window.innerWidth - navigationBlockWidth) / 2;
 		const containerRight = containerLeft + navigationBlockWidth;
 		let offset = 0;
+		const bufferWidth = navigationBlockWidth * 0.16;
 
 		if (navigationSubMenuLeft < containerLeft) {
 			offset = containerLeft - navigationSubMenuLeft;
 		} else if (navigationSubMenuRight > containerRight) {
-			offset = containerRight - navigationSubMenuRight;
+			offset = containerRight - navigationSubMenuRight - bufferWidth;
 		}
 
 		navigationSubMenu.style.setProperty(
