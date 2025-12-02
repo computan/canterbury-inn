@@ -5,1000 +5,971 @@ $fontStyles: (
 		name: "Display",
 		desktop: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
-			font-size: 56,
-			fontpostscriptname: "Manrope-SemiBold",
-			line-height: 64,
+			font-family: "Playfair Display",
+			font-size: 68,
+			fontpostscriptname: "Playfair-Display-SemiBold",
+			line-height: 76,
 			margin-bottom: 24,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 40,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 44,
 			margin-bottom: 16,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	t1: (
 		name: "T1",
 		desktop: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
-			font-size: 48,
-			fontpostscriptname: "Manrope-SemiBold",
-			line-height: 52,
+			font-family: "Playfair Display",
+			font-size: 52,
+			fontpostscriptname: "Playfair-Display-SemiBold",
+			line-height: 56,
 			margin-bottom: 24,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 36,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 44,
 			margin-bottom: 16,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	t1-underline: (
 		name: "T1-Underline",
 		desktop: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 48,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 52,
 			margin-bottom: 24,
 			font-weight: 600,
-			text-decoration: underline,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 36,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 44,
 			margin-bottom: 16,
 			font-weight: 600,
-			text-decoration: underline,
-		),
+			text-decoration: underline
+		)
 	),
 	t2: (
 		name: "T2",
 		desktop: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
-			font-size: 36,
-			fontpostscriptname: "Manrope-SemiBold",
-			line-height: 44,
+			font-family: "Playfair Display",
+			font-size: 40,
+			fontpostscriptname: "Playfair-Display-SemiBold",
+			line-height: 48,
 			margin-bottom: 24,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 28,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 36,
 			margin-bottom: 16,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	t2-underline: (
 		name: "T2 - Underline",
 		desktop: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
-			font-size: 36,
-			fontpostscriptname: "Manrope-SemiBold",
-			line-height: 44,
+			font-family: "Playfair Display",
+			font-size: 40,
+			fontpostscriptname: "Playfair-Display-SemiBold",
+			line-height: 48,
 			margin-bottom: 24,
 			font-weight: 600,
-			text-decoration: underline,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 28,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 36,
 			margin-bottom: 16,
 			font-weight: 600,
-			text-decoration: underline,
-		),
+			text-decoration: underline
+		)
 	),
 	t3: (
 		name: "T3",
 		desktop: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
-			font-size: 24,
-			fontpostscriptname: "Manrope-SemiBold",
-			line-height: 32,
+			font-family: "Playfair Display",
+			font-size: 28,
+			fontpostscriptname: "Playfair-Display-SemiBold",
+			line-height: 36,
 			margin-bottom: 16,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 20,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 28,
 			margin-bottom: 16,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	t3-underline: (
 		name: "T3-Underline",
 		desktop: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 24,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 32,
 			margin-bottom: 16,
 			font-weight: 600,
-			text-decoration: underline,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 20,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 28,
 			margin-bottom: 16,
 			font-weight: 600,
-			text-decoration: underline,
-		),
+			text-decoration: underline
+		)
 	),
 	t4: (
 		name: "T4",
 		desktop: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
-			font-size: 18,
-			fontpostscriptname: "Manrope-SemiBold",
-			line-height: 28,
+			font-family: "Playfair Display",
+			font-size: 22,
+			fontpostscriptname: "Playfair-Display-SemiBold",
+			line-height: 32,
 			margin-bottom: 8,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 16,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 24,
 			margin-bottom: 8,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	t5: (
 		name: "T5",
 		desktop: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 16,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 24,
 			margin-bottom: 8,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 20,
 			margin-bottom: 8,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	t6: (
 		name: "T6",
 		desktop: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 12,
-			fontpostscriptname: "Manrope-Bold",
+			fontpostscriptname: "Poppins-Bold",
 			line-height: 16,
 			margin-bottom: 8,
 			font-weight: 700,
 			letter-spacing: 0.8,
-			text-transform: uppercase,
+			text-transform: uppercase
 		),
 		mobile: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 12,
-			fontpostscriptname: "Manrope-Bold",
+			fontpostscriptname: "Poppins-Bold",
 			line-height: 16,
 			margin-bottom: 8,
 			font-weight: 700,
 			letter-spacing: 0.8,
-			text-transform: uppercase,
-		),
+			text-transform: uppercase
+		)
 	),
 	body-1: (
 		name: "Body-1",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 18,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 28,
 			margin-bottom: 24,
-			font-weight: 400,
+			font-weight: 400
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 16,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 24,
 			margin-bottom: 16,
-			font-weight: 400,
-		),
+			font-weight: 400
+		)
 	),
 	body-1-underline: (
 		name: "Body-1-Underline",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 18,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 28,
 			margin-bottom: 24,
 			font-weight: 400,
-			text-decoration: underline,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 16,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 24,
 			margin-bottom: 16,
 			font-weight: 400,
-			text-decoration: underline,
-		),
+			text-decoration: underline
+		)
 	),
 	body-1-italic: (
 		name: "Body-1-Italic",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Open Sans",
+			font-family: "Poppins",
 			font-size: 18,
-			fontpostscriptname: "OpenSans-Italic",
+			fontpostscriptname: "Poppins-Italic",
 			line-height: 28,
 			margin-bottom: 24,
 			font-weight: 400,
-			font-style: italic,
+			font-style: italic
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Open Sans",
+			font-family: "Poppins",
 			font-size: 16,
-			fontpostscriptname: "OpenSans-Italic",
+			fontpostscriptname: "Poppins-Italic",
 			line-height: 24,
 			margin-bottom: 16,
 			font-weight: 400,
-			font-style: italic,
-		),
+			font-style: italic
+		)
 	),
 	body-2: (
 		name: "Body-2",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 16,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 24,
 			margin-bottom: 24,
-			font-weight: 400,
+			font-weight: 400
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 16,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 24,
 			margin-bottom: 16,
-			font-weight: 400,
-		),
+			font-weight: 400
+		)
 	),
 	body-2-underline: (
 		name: "Body-2-Underline",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 16,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 24,
 			margin-bottom: 24,
 			font-weight: 400,
-			text-decoration: underline,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 16,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 24,
 			margin-bottom: 16,
 			font-weight: 400,
-			text-decoration: underline,
-		),
+			text-decoration: underline
+		)
 	),
 	body-2-italic: (
 		name: "Body-2-Italic",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Open Sans",
+			font-family: "Poppins",
 			font-size: 16,
-			fontpostscriptname: "OpenSans-Italic",
+			fontpostscriptname: "Poppins-Italic",
 			line-height: 24,
 			margin-bottom: 24,
 			font-weight: 400,
-			font-style: italic,
+			font-style: italic
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Open Sans",
+			font-family: "Poppins",
 			font-size: 16,
-			fontpostscriptname: "OpenSans-Italic",
+			fontpostscriptname: "Poppins-Italic",
 			line-height: 24,
 			margin-bottom: 16,
 			font-weight: 400,
-			font-style: italic,
-		),
+			font-style: italic
+		)
 	),
 	lead: (
 		name: "Lead",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 36,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 44,
 			margin-bottom: 48,
-			font-weight: 400,
+			font-weight: 400
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 28,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 36,
 			margin-bottom: 32,
-			font-weight: 400,
+			font-weight: 400
+		)
+	),
+	lead-2: (
+		name: "Lead-2",
+		desktop: (
+			font-variant-numeric: normal,
+			font-family: "Poppins",
+			font-size: 26,
+			fontpostscriptname: "Poppins-Regular",
+			line-height: 32,
+			margin-bottom: 48,
+			font-weight: 400
 		),
+		mobile: (
+			font-variant-numeric: normal,
+			font-family: "Poppins",
+			font-size: 20,
+			fontpostscriptname: "Poppins-Regular",
+			line-height: 28,
+			margin-bottom: 32,
+			font-weight: 400
+		)
 	),
 	quote-1: (
 		name: "Quote-1",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 36,
-			fontpostscriptname: "Manrope-Regular",
-			line-height: 44,
-			margin-bottom: 24,
-			font-weight: 400,
+			font-family: "Playfair Display",
+			font-size: 40,
+			fontpostscriptname: "Playfair-Display-SemiBold",
+			line-height: 56,
+			margin-bottom: 48,
+			font-style: italic,
+			font-weight: 400
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 24,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 32,
-			margin-bottom: 16,
-			font-weight: 400,
-		),
+			margin-bottom: 24,
+			font-style: italic,
+			font-weight: 400
+		)
 	),
 	quote-2: (
 		name: "Quote-2",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 22,
-			fontpostscriptname: "Manrope-Regular",
-			line-height: 32,
+			font-family: "Poppins",
+			font-size: 30,
+			fontpostscriptname: "Poppins-Regular",
+			line-height: 40,
 			margin-bottom: 24,
-			font-weight: 400,
+			font-style: italic,
+			font-weight: 400
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 18,
-			fontpostscriptname: "Manrope-Regular",
-			line-height: 24,
-			margin-bottom: 24,
-			font-weight: 400,
-		),
+			font-family: "Poppins",
+			font-size: 24,
+			fontpostscriptname: "Poppins-Regular",
+			line-height: 32,
+			margin-bottom: 48,
+			font-style: italic,
+			font-weight: 400
+		)
 	),
 	stat: (
 		name: "Stat",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 56,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 64,
 			margin-bottom: 8,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 40,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 48,
 			margin-bottom: 8,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	nav-1: (
 		name: "Nav-1",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 16,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 24,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 18,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 24,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	nav-2: (
 		name: "Nav-2",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 18,
-			fontpostscriptname: "Manrope-SemiBold",
-			line-height: 24,
-			font-weight: 600,
+			font-family: "Playfair Display",
+			font-size: 14,
+			fontpostscriptname: "Playfair-Display-SemiBold",
+			line-height: 20,
+			font-weight: 400
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 16,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 20,
-			font-weight: 600,
-		),
+			font-weight: 400
+		)
 	),
 	nav-3: (
 		name: "Nav-3",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 12,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 16,
-			font-weight: 600,
+			font-weight: 400
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 20,
-			font-weight: 600,
-		),
+			font-weight: 400
+		)
 	),
 	nav-4: (
 		name: "Nav-4",
 		desktop: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 48,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 52,
-			margin-bottom: 24,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 36,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 44,
-			margin-bottom: 16,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	nav-5: (
 		name: "Nav-5",
 		desktop: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 20,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 28,
-			margin-bottom: 16,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: lining-nums proportional-nums,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 20,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 28,
-			margin-bottom: 16,
-			font-weight: 600,
-		),
-	),
-	table-row: (
-		name: "Table-Row",
-		desktop: (
-			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 18,
-			fontpostscriptname: "Manrope-SemiBold",
-			line-height: 24,
-			margin-bottom: 8,
-			font-weight: 600,
-		),
-		mobile: (
-			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 14,
-			fontpostscriptname: "Manrope-SemiBold",
-			line-height: 16,
-			margin-bottom: 8,
-			font-weight: 600,
-		),
-	),
-	table-column: (
-		name: "Table-Column",
-		desktop: (
-			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 16,
-			fontpostscriptname: "Manrope-ExtraBold",
-			line-height: 18,
-			margin-bottom: 8,
-			font-weight: 800,
-			letter-spacing: 1.5,
-			text-transform: uppercase,
-		),
-		mobile: (
-			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 10,
-			fontpostscriptname: "Manrope-ExtraBold",
-			line-height: 12,
-			margin-bottom: 8,
-			font-weight: 800,
-			letter-spacing: 0.5,
-			text-transform: uppercase,
-		),
+			font-weight: 600
+		)
 	),
 	title-1: (
 		name: "Title-1",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 20,
-			fontpostscriptname: "Manrope-SemiBold",
+			font-family: "Playfair Display",
+			font-size: 18,
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 24,
 			margin-bottom: 8,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 20,
-			fontpostscriptname: "Manrope-SemiBold",
+			font-family: "Playfair Display",
+			font-size: 18,
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 24,
 			margin-bottom: 8,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	title-1-underline: (
 		name: "Title-1-Underline",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 20,
-			fontpostscriptname: "Manrope-SemiBold",
+			font-family: "Playfair Display",
+			font-size: 18,
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 24,
 			margin-bottom: 8,
 			font-weight: 600,
-			text-decoration: underline,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 20,
-			fontpostscriptname: "Manrope-SemiBold",
+			font-family: "Playfair Display",
+			font-size: 18,
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 24,
 			margin-bottom: 8,
 			font-weight: 600,
-			text-decoration: underline,
-		),
+			text-decoration: underline
+		)
 	),
 	title-2: (
 		name: "Title-2",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 18,
-			fontpostscriptname: "Manrope-SemiBold",
+			font-family: "Playfair Display",
+			font-size: 16,
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 24,
 			margin-bottom: 8,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 18,
-			fontpostscriptname: "Manrope-SemiBold",
+			font-family: "Playfair Display",
+			font-size: 16,
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 24,
 			margin-bottom: 8,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	title-2-underline: (
 		name: "Title-2-Underline",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 18,
-			fontpostscriptname: "Manrope-SemiBold",
+			font-family: "Playfair Display",
+			font-size: 16,
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 24,
 			margin-bottom: 8,
 			font-weight: 600,
-			text-decoration: underline,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 18,
-			fontpostscriptname: "Manrope-SemiBold",
+			font-family: "Playfair Display",
+			font-size: 16,
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 24,
 			margin-bottom: 8,
 			font-weight: 600,
-			text-decoration: underline,
-		),
+			text-decoration: underline
+		)
 	),
 	title-3: (
 		name: "Title-3",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 16,
 			margin-bottom: 8,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 16,
 			margin-bottom: 8,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	title-3-underline: (
 		name: "Title-3-Underline",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 16,
 			margin-bottom: 8,
 			font-weight: 600,
-			text-decoration: underline,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 16,
 			margin-bottom: 8,
 			font-weight: 600,
-			text-decoration: underline,
-		),
+			text-decoration: underline
+		)
 	),
 	subtitle-1: (
 		name: "Subtitle-1",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 16,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 24,
 			margin-bottom: 16,
-			font-weight: 400,
+			font-weight: 400
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 16,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 24,
 			margin-bottom: 16,
-			font-weight: 400,
-		),
+			font-weight: 400
+		)
 	),
 	subtitle-1-underline: (
 		name: "Subtitle-1-Underline",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 16,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 24,
 			margin-bottom: 16,
 			font-weight: 400,
-			text-decoration: underline,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Poppins",
 			font-size: 16,
-			fontpostscriptname: "Manrope-Regular",
+			fontpostscriptname: "Poppins-Regular",
 			line-height: 24,
 			margin-bottom: 16,
 			font-weight: 400,
-			text-decoration: underline,
-		),
+			text-decoration: underline
+		)
 	),
 	subtitle-2: (
 		name: "Subtitle-2",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
 			fontpostscriptname: "Manrope-Regular",
 			line-height: 20,
-			margin-bottom: 12,
-			font-weight: 400,
+			margin-bottom: 8,
+			font-weight: 400
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
 			fontpostscriptname: "Manrope-Regular",
 			line-height: 20,
-			margin-bottom: 12,
-			font-weight: 400,
-		),
+			margin-bottom: 8,
+			font-weight: 400
+		)
 	),
 	subtitle-2-underline: (
 		name: "Subtitle-2-Underline",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
 			fontpostscriptname: "Manrope-Regular",
 			line-height: 20,
 			margin-bottom: 8,
 			font-weight: 400,
-			text-decoration: underline,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
 			fontpostscriptname: "Manrope-Regular",
 			line-height: 20,
 			margin-bottom: 8,
 			font-weight: 400,
-			text-decoration: underline,
-		),
+			text-decoration: underline
+		)
 	),
 	subtitle-3: (
 		name: "Subtitle-3",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 12,
 			fontpostscriptname: "Manrope-SemiBold",
 			line-height: 16,
-			margin-bottom: 8,
-			font-weight: 600,
+			font-weight: 400
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 12,
 			fontpostscriptname: "Manrope-SemiBold",
 			line-height: 16,
-			margin-bottom: 8,
-			font-weight: 600,
-		),
+			font-weight: 400
+		)
 	),
 	subtitle-3-underline: (
 		name: "Subtitle-3-Underline",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 12,
 			fontpostscriptname: "Manrope-SemiBold",
 			line-height: 16,
-			margin-bottom: 16,
-			font-weight: 600,
-			text-decoration: underline,
+			font-weight: 400,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 12,
 			fontpostscriptname: "Manrope-SemiBold",
 			line-height: 16,
-			margin-bottom: 16,
-			font-weight: 600,
-			text-decoration: underline,
-		),
+			font-weight: 400,
+			text-decoration: underline
+		)
 	),
 	link-1: (
 		name: "Link-1",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 16,
-			fontpostscriptname: "Manrope-SemiBold",
-			line-height: 24,
+			fontpostscriptname: "Playfair-Display-SemiBold",
+			line-height: 20,
 			margin-bottom: 16,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 16,
-			fontpostscriptname: "Manrope-SemiBold",
-			line-height: 24,
+			fontpostscriptname: "Playfair-Display-SemiBold",
+			line-height: 20,
 			margin-bottom: 16,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	link-1-underline: (
 		name: "Link-1-Underline",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 16,
-			fontpostscriptname: "Manrope-SemiBold",
-			line-height: 24,
+			fontpostscriptname: "Playfair-Display-SemiBold",
+			line-height: 20,
 			margin-bottom: 16,
 			font-weight: 600,
-			text-decoration: underline,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 16,
-			fontpostscriptname: "Manrope-SemiBold",
-			line-height: 24,
+			fontpostscriptname: "Playfair-Display-SemiBold",
+			line-height: 20,
 			margin-bottom: 16,
 			font-weight: 600,
-			text-decoration: underline,
-		),
+			text-decoration: underline
+		)
 	),
 	link-2: (
 		name: "Link-2",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 20,
 			margin-bottom: 8,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 20,
 			margin-bottom: 8,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	link-2-underline: (
 		name: "Link-2-Underline",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 20,
 			margin-bottom: 8,
 			font-weight: 600,
-			text-decoration: underline,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 14,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 20,
 			margin-bottom: 8,
 			font-weight: 600,
-			text-decoration: underline,
-		),
+			text-decoration: underline
+		)
 	),
 	link-3: (
 		name: "Link-3",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 12,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 16,
-			font-weight: 600,
+			font-weight: 600
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 12,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 16,
-			font-weight: 600,
-		),
+			font-weight: 600
+		)
 	),
 	link-3-underline: (
 		name: "Link-3-Underline",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 12,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 16,
 			font-weight: 600,
-			text-decoration: underline,
+			text-decoration: underline
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
+			font-family: "Playfair Display",
 			font-size: 12,
-			fontpostscriptname: "Manrope-SemiBold",
+			fontpostscriptname: "Playfair-Display-SemiBold",
 			line-height: 16,
 			font-weight: 600,
-			text-decoration: underline,
-		),
+			text-decoration: underline
+		)
 	),
 	overline: (
 		name: "OVERLINE",
 		desktop: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 16,
-			fontpostscriptname: "Manrope-ExtraBold",
+			font-family: "Poppins",
+			font-size: 12,
+			fontpostscriptname: "Poppins-ExtraBold",
 			line-height: 16,
 			margin-bottom: 8,
-			font-weight: 800,
-			letter-spacing: 1.5,
-			text-transform: uppercase,
+			font-weight: 700,
+			letter-spacing: 0.8,
+			text-transform: uppercase
 		),
 		mobile: (
 			font-variant-numeric: normal,
-			font-family: "Manrope",
-			font-size: 16,
-			fontpostscriptname: "Manrope-ExtraBold",
+			font-family: "Poppins",
+			font-size: 12,
+			fontpostscriptname: "Poppins-ExtraBold",
 			line-height: 16,
 			margin-bottom: 8,
-			font-weight: 800,
-			letter-spacing: 1.5,
-			text-transform: uppercase,
-		),
-	),
+			font-weight: 700,
+			letter-spacing: 0.8,
+			text-transform: uppercase
+		)
+	)
 );

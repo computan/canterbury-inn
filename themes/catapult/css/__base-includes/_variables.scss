@@ -15,8 +15,8 @@
 */
 $fonts: (
 	base: (
-		css: "'Manrope', sans-serif",
-		figma-name: "Manrope",
+		css: "'Poppins', sans-serif",
+		figma-name: "Poppins",
 	)
 );
 
@@ -29,6 +29,7 @@ $fonts: (
 /* If additional colors need to be added to the _figma-color-variables.scss, they can be added to this variable: */
 $additional-paints: (
 	example: #fff,
+	secondary: #17313b,
 );
 
 /* This variable controls the background colors generated in the ACF background_color field and the background color classes - bg-white, bg-neutral-10, etc: */
@@ -36,6 +37,21 @@ $background-colors: (
 	"transparent": transparent,
 	"white": paint(white),
 	"black": paint(black),
+	"primary": paint(primary),
+	"button-default": paint(button-default),
+	"button-hover": paint(button-hover),
+	"green": paint(green),
+	"gold": paint(gold),
+	"lime-green": paint(lime-green),
+	"sun-tint": paint(sun-tint),
+	"secondary-teal-a": paint(secondary-teal-a),
+	"secondary-teal-b": paint(secondary-teal-b),
+	"secondary-teal-c": paint(secondary-teal-c),
+	"gradient-a": paint(gradient-a),
+	"gradient-b": paint(gradient-b),
+	"gradient-c": paint(gradient-c),
+	"gradient-d": paint(gradient-d),
+	"gradient-e": paint(gradient-e),
 	"neutral-1": paint(neutral-1),
 	"neutral-2": paint(neutral-2),
 	"neutral-3": paint(neutral-3),
