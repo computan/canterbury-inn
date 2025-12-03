@@ -59,14 +59,19 @@
 		@include alt-button-selectors {
 			color: paint(neutral-1);
 			border-color: paint(button-default);
-			background-color: paint(button-default);
+			background-color: paint(lime-green);
+
+			&::before,
+			&::after {
+				background-color: paint(white);
+			}
 
 			&.hover,
 			a:hover &,
 			a:focus &,
 			&:hover,
 			&:focus {
-				color: paint(button-default);
+				color: paint(neutral-1);
 				border-color: paint(white);
 				background-color: paint(white);
 			}
@@ -110,7 +115,7 @@
 	a:focus &,
 	&:hover,
 	&:focus {
-		color: paint(white);
+		color: paint(neutral-1);
 		border-color: paint(button-hover);
 		background-color: paint(button-hover);
 

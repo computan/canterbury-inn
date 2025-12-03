@@ -40,6 +40,7 @@ $background-colors: (
 	"primary": paint(primary),
 	"button-default": paint(button-default),
 	"button-hover": paint(button-hover),
+	"dark": paint(button-hover),
 	"green": paint(green),
 	"gold": paint(gold),
 	"lime-green": paint(lime-green),
@@ -76,6 +77,16 @@ $default-text-color: paint(neutral-1);
 
 /* If a background color uses a different font color than the default color, use these variables to specify the alternate colors */
 $background-font-colors: (
+	"button-hover": paint(white),
+	"button-default": paint(white),
+	"primary": paint(white),
+	"gold": paint(white),
+	"black": paint(white),
+	"dark": paint(white),
+	"secondary-teal-b": paint(white),
+	"secondary-teal-c": paint(white),
+	"gradient-a": paint(white),
+	"gradient-b": paint(white),
 	"neutral-1": paint(white),
 	"neutral-2": paint(white),
 	"neutral-3": paint(white),
@@ -85,6 +96,7 @@ $background-font-colors: (
 	"error": paint(white),
 	"success": paint(white),
 	"information": paint(white),
+
 );
 $background-font-hover-colors: (
 	"white": paint(button-hover),
@@ -93,8 +105,16 @@ $background-font-hover-colors: (
 
 /* Backgrounds specified in this variable will use the alternative text colors: */
 $backgrounds-with-alt-text-color: (
+	"button-hover",
 	"button-default",
+	"primary",
+	"gold",
 	"black",
+	"dark",
+	"secondary-teal-b",
+	"secondary-teal-c",
+	"gradient-a",
+	"gradient-b",
 	"neutral-1",
 	"neutral-2",
 	"neutral-3",
@@ -108,8 +128,16 @@ $backgrounds-with-alt-text-color: (
 
 /* Backgrounds specified in this variable will use the alternative button colors: */
 $backgrounds-with-alt-button-color: (
+	"button-hover",
 	"button-default",
+	"primary",
+	"gold",
 	"black",
+	"dark",
+	"secondary-teal-b",
+	"secondary-teal-c",
+	"gradient-a",
+	"gradient-b",
 	"neutral-1",
 	"neutral-2",
 	"neutral-3",
