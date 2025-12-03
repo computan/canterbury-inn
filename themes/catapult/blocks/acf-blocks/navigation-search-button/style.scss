@@ -5,6 +5,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-right: rem(16);
+	margin-left: auto;
 
 	&__button {
 		display: flex;
@@ -13,6 +15,7 @@
 		width: rem(56);
 		height: rem(64);
 		padding: 0;
+		color: paint(white);
 		border: none;
 		background-color: transparent;
 		cursor: pointer;

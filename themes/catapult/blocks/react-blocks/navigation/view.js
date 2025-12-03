@@ -138,11 +138,15 @@ const lockScroll = () => {
 };
 
 const setHeaderExtras = () => {
-	// ⭐ Only block-navigation gets scrolled class
+	// ⭐ Add sticky class on scroll for main-header
 	window.addEventListener('scroll', () => {
 		if (window.scrollY > 0) {
 			if (blockNav) blockNav.classList.add('scrolled');
-		} else if (blockNav) blockNav.classList.remove('scrolled');
+			if (mainHeader) mainHeader.classList.add('sticky');
+		} else {
+			if (blockNav) blockNav.classList.remove('scrolled');
+			if (mainHeader) mainHeader.classList.remove('sticky');
+		}
 	});
 
 	window.addEventListener('click', () => {
