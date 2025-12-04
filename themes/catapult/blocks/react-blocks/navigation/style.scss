@@ -7,7 +7,6 @@
 	width: 100%;
 	height: rem(100);
 	margin: 0;
-	background-color: paint(white);
 
 	&.active {
 		@include media-breakpoint-down(md) {
@@ -26,7 +25,7 @@
 		padding-top: rem(16);
 		padding-bottom: rem(16);
 		border-radius: rem(100);
-		background-color: paint(neutral-1);
+		background-color: rgba(0, 22, 26, 0.6);
 	}
 
 	&__logo-link {
