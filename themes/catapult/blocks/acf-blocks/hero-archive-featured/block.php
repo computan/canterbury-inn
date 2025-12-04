@@ -51,7 +51,7 @@ if ( ! empty( $featured_posts ) ) {
 		'order'          => 'DESC',
 	);
 
-	if ( is_post_type_archive() ) {
+	if ( is_post_type_archive() && ! catapult_is_block_library() ) {
 		$args['post_type'] = get_post_type();
 	}
 
