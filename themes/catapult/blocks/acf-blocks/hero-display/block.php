@@ -10,7 +10,7 @@
  * Keywords:          hero, display, image
  * Post Types:        all
  * Multiple:          false
- * Active:            false
+ * Active:            true
  * CSS Deps:
  * JS Deps:
  * Global ACF Fields: scroll_id, background_color, background_image, background_video

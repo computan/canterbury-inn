@@ -15,6 +15,7 @@ const navigationHamburgers = document.querySelectorAll(
 );
 const mainHeader = document.querySelector('.main-header');
 const blockNav = document.querySelector('.main-header > nav.block-navigation');
+const topUtility = document.querySelector('.block-navigation-top-utility');
 
 const toggleNavigationHamburger = (e) => {
 	const currentNavigationHamburger = e?.currentTarget ?? e;
@@ -138,14 +139,14 @@ const lockScroll = () => {
 };
 
 const setHeaderExtras = () => {
-	// ⭐ Add sticky class on scroll for main-header
+	// ⭐ Sticky classes on scroll (main-header sticky removed)
 	window.addEventListener('scroll', () => {
 		if (window.scrollY > 0) {
 			if (blockNav) blockNav.classList.add('scrolled');
-			if (mainHeader) mainHeader.classList.add('sticky');
+			if (topUtility) topUtility.classList.add('sticky');
 		} else {
 			if (blockNav) blockNav.classList.remove('scrolled');
-			if (mainHeader) mainHeader.classList.remove('sticky');
+			if (topUtility) topUtility.classList.remove('sticky');
 		}
 	});
 

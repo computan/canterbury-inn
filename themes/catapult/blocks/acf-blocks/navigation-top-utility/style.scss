@@ -3,7 +3,6 @@
 .block-navigation-top-utility {
 	display: flex;
 	height: rem(62);
-	background-color: paint(neutral-6);
 
 	@include media-breakpoint-down(md) {
 		display: none;
@@ -142,5 +141,9 @@
 				gap: rem(5);
 			}
 		}
+	}
+
+	&.sticky {
+		display: none;
 	}
 }
