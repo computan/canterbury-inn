@@ -61,11 +61,6 @@
 			border-color: paint(button-default);
 			background-color: paint(lime-green);
 
-			&::before,
-			&::after {
-				background-color: paint(white);
-			}
-
 			&.hover,
 			a:hover &,
 			a:focus &,
@@ -84,32 +79,6 @@
 		}
 	}
 
-	&::before {
-		position: absolute;
-		top: 0;
-		right: 0;
-		content: "";
-		z-index: -1;
-		width: 0%;
-		height: 100%;
-		background-color: paint(button-hover);
-		transform-origin: 50% 100%;
-		transition: all 0.4s;
-	}
-
-	&::after {
-		position: absolute;
-		top: 0;
-		left: 0;
-		content: "";
-		z-index: -1;
-		width: 0%;
-		height: 100%;
-		background-color: paint(button-hover);
-		transform-origin: 50% 100%;
-		transition: all 0.4s;
-	}
-
 	&.hover,
 	a:hover &,
 	a:focus &,
@@ -118,20 +87,6 @@
 		color: paint(neutral-1);
 		border-color: paint(button-hover);
 		background-color: paint(button-hover);
-
-		&::before {
-			left: 0;
-			right: auto;
-			width: 100%;
-			transition: all 0.9s;
-		}
-
-		&::after {
-			left: auto;
-			right: 0;
-			width: 100%;
-			transition: all 0.9s;
-		}
 	}
 
 	&:disabled {
@@ -178,32 +133,6 @@
 		}
 	}
 
-	&::before {
-		position: absolute;
-		top: 0;
-		right: 0;
-		content: "";
-		z-index: -1;
-		width: 0%;
-		height: 100%;
-		background-color: paint(button-hover);
-		transform-origin: 50% 100%;
-		transition: all 0.4s;
-	}
-
-	&::after {
-		position: absolute;
-		top: 0;
-		left: 0;
-		content: "";
-		z-index: -1;
-		width: 0%;
-		height: 100%;
-		background-color: paint(button-hover);
-		transform-origin: 50% 100%;
-		transition: all 0.4s;
-	}
-
 	&.hover,
 	a:hover &,
 	a:focus &,
@@ -212,20 +141,6 @@
 		color: paint(white);
 		border-color: paint(button-hover);
 		background-color: paint(button-hover);
-
-		&::before {
-			left: 0;
-			right: auto;
-			width: 100%;
-			transition: all 0.9s;
-		}
-
-		&::after {
-			left: auto;
-			right: 0;
-			width: 100%;
-			transition: all 0.9s;
-		}
 	}
 
 	&:disabled {
