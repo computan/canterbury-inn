@@ -38,7 +38,7 @@
 				padding-left: 0;
 
 				li {
-					@include nav-3(false);
+					// @include nav-3(false);
 
 					position: relative;
 					margin-bottom: 0;
@@ -63,6 +63,11 @@
 
 					&:last-child {
 						margin-left: rem(10);
+					}
+
+					a {
+						color: paint(white);
+						text-decoration: none;
 					}
 				}
 			}
@@ -105,6 +110,15 @@
 
 					.wp-block-button__link {
 						color: paint(white);
+
+						&::after {
+							background: paint(white);
+						}
+
+						&:hover::after {
+							color: paint(white);
+							// background: paint(white) !important;
+						}
 					}
 
 					a {
@@ -124,11 +138,16 @@
 
 				.wp-block-button__link {
 					position: relative;
-					width: rem(18);
-					height: rem(18);
+					width: rem(42);
+					height: rem(42);
 					padding: rem(2);
+					color: paint(white);
 					border-radius: 100%;
-					background-color: paint(white);
+					background-color: paint(green);
+
+					&:hover {
+						background-color: paint(gold);
+					}
 				}
 			}
 
