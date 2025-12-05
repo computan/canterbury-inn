@@ -15,9 +15,9 @@
 	line-height: 0;
 	text-align: center;
 	border: none;
-	border: rem(2) solid paint(neutral-1);
+	border: rem(2) solid paint(button-default);
 	border-radius: 50%;
-	background: paint(neutral-1);
+	background: paint(button-default);
 	box-shadow: none;
 	cursor: pointer;
 	-webkit-appearance: none;
@@ -26,20 +26,20 @@
 
 	@include alt-button-selectors("&.swiper-button--color-alt") {
 		color: paint(neutral-1);
-		border-color: paint(white);
-		background-color: paint(white);
+		border-color: paint(lime-green);
+		background-color: paint(lime-green);
 
 		&.hover,
 		&:hover,
 		&:focus {
-			border-color: paint(neutral-10);
-			background-color: paint(neutral-10);
+			border-color: paint(white);
+			background-color: paint(white);
 		}
 
 		&:disabled {
 			color: paint(neutral-5);
-			border-color: paint(neutral-3);
-			background-color: paint(neutral-3);
+			border-color: paint(neutral-7);
+			background-color: paint(neutral-7);
 		}
 	}
 
@@ -52,36 +52,40 @@
 	&.hover,
 	&:hover,
 	&:focus {
-		border-color: paint(neutral-3);
-		background-color: paint(neutral-3);
+		border-color: paint(button-hover);
+		background-color: paint(button-hover);
 	}
 
 	&:disabled {
-		color: paint(neutral-7);
-		border-color: paint(neutral-9);
-		background-color: paint(neutral-9);
+		color: paint(neutral-6);
+		border-color: paint(neutral-4);
+		background-color: paint(neutral-4);
 		pointer-events: none;
 	}
 
 	&.swiper-button--outline {
 		color: paint(neutral-1);
-		border-color: paint(neutral-8);
+		border-color: paint(button-default);
 		background-color: transparent;
 
 		@include alt-button-selectors("&.swiper-button--color-alt") {
 			color: paint(white);
-			border-color: paint(white);
+			border-color: paint(lime-green);
 
 			&.hover,
 			&:hover,
 			&:focus {
 				color: paint(white);
-				border-color: paint(neutral-6);
+				border-color: paint(white);
 			}
 
 			&:disabled {
-				color: paint(neutral-5);
-				border-color: paint(neutral-3);
+				color: paint(neutral-9);
+				border-color: paint(neutral-7);
+
+				&::after {
+					color: paint(neutral-7);
+				}
 			}
 		}
 
@@ -89,14 +93,18 @@
 		&:hover,
 		&:focus {
 			color: paint(neutral-1);
-			border-color: paint(neutral-1);
+			border-color: paint(button-hover);
 			background-color: transparent;
 		}
 
 		&:disabled {
 			color: paint(neutral-7);
-			border-color: paint(neutral-9);
+			border-color: paint(neutral-4);
 			background-color: transparent;
+
+			&::after {
+				color: paint(neutral-4);
+			}
 		}
 	}
 

@@ -191,10 +191,14 @@
 			}
 
 			&:disabled {
-				color: paint(neutral-5);
+				color: paint(neutral-7);
 
 				&::before {
-					background: paint(neutral-3);
+					background: paint(neutral-7);
+				}
+
+				&::after {
+					background: paint(neutral-7);
 				}
 			}
 		}
@@ -234,6 +238,10 @@
 		color: paint(neutral-6);
 
 		&::before {
+			background: paint(neutral-6);
+		}
+
+		&::after {
 			background: paint(neutral-6);
 		}
 	}
@@ -394,8 +402,8 @@
 
 	@include alt-button-selectors("&.c-btn--color-alt") {
 		color: paint(neutral-1);
-		border-color: paint(white);
-		background-color: paint(white);
+		border-color: paint(lime-green);
+		background-color: paint(lime-green);
 
 		&.hover,
 		a:hover &,
@@ -403,8 +411,12 @@
 		&:hover,
 		&:focus {
 			color: paint(white);
-			border-color: paint(button-default);
-			background-color: paint(button-default);
+			border-color: paint(white);
+			background-color: paint(white);
+
+			&::before {
+				background-color: paint(button-default);
+			}
 		}
 	}
 
@@ -453,10 +465,10 @@
 		a:focus &,
 		&:hover,
 		&:focus {
-			border-color: paint(button-hover);
+			border-color: paint(lime-green);
 
 			&::after {
-				color: paint(button-hover);
+				color: paint(lime-green);
 			}
 		}
 	}
@@ -473,10 +485,10 @@
 	a:focus &,
 	&:hover,
 	&:focus {
-		border-color: paint(information);
+		border-color: paint(button-hover);
 
 		&::after {
-			color: paint(information);
+			color: paint(button-hover);
 		}
 	}
 }
