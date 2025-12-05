@@ -7,6 +7,11 @@
 	width: 100%;
 	height: rem(100);
 	margin: 0;
+	padding: 0 rem(20) 0 rem(20);
+
+	@include media-breakpoint-up(lg) {
+		padding: 0;
+	}
 
 	&.active {
 		@include media-breakpoint-down(md) {
@@ -30,8 +35,13 @@
 
 	&__logo-link {
 		display: block;
-		height: rem(74);
-		max-width: rem(174);
+		height: rem(60);
+		max-width: rem(120);
+
+		@include media-breakpoint-up(lg) {
+			height: rem(74);
+			max-width: rem(174);
+		}
 
 		&:focus {
 			color: unset;
@@ -48,12 +58,15 @@
 		flex-grow: 1;
 		width: 100%;
 		padding-bottom: var(--totalButtonOffset, #{rem(20)});
-		// background-color: paint(neutral-4);
-
+		background-color: paint(neutral-4);
 		visibility: hidden;
 		opacity: 0;
 		overflow-y: auto;
 		transition: opacity $transition-standard, visibility 0s 0.2s;
+
+		@include media-breakpoint-up(lg) {
+			background-color: transparent;
+		}
 
 		body.admin-bar & {
 			/* stylelint-disable unit-disallowed-list */
@@ -169,7 +182,7 @@
 		display: block;
 		width: rem(24);
 		height: rem(24);
-		background: linear-gradient(to bottom, transparent calc(50% - rem(1)), paint(neutral-1) calc(50% - rem(1)), paint(neutral-1) calc(50% + rem(1)), transparent calc(50% + rem(1)));
+		background: linear-gradient(to bottom, transparent calc(50% - rem(1)), paint(gold) calc(50% - rem(1)), paint(gold) calc(50% + rem(1)), transparent calc(50% + rem(1)));
 
 		&::before,
 		&::after {
@@ -178,7 +191,7 @@
 			content: "";
 			width: 100%;
 			height: rem(2);
-			background-color: paint(neutral-1);
+			background-color: paint(gold);
 			transition: transform $transition-standard;
 		}
 
