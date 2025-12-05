@@ -166,6 +166,14 @@
 		@include alt-button-selectors {
 			color: paint(white);
 
+			&::before {
+				background: paint(white);
+			}
+
+			&::after {
+				background: paint(white);
+			}
+
 			&.hover,
 			a:hover &,
 			a:focus &,
@@ -174,11 +182,11 @@
 				color: paint(neutral-8);
 
 				&::before {
-					background: paint(button-hover);
+					background: paint(neutral-8);
 				}
 
 				&::after {
-					background: paint(button-hover);
+					background: paint(neutral-8);
 				}
 			}
 
@@ -198,7 +206,11 @@
 			content: "";
 			width: 100%;
 			height: rem(1);
-			background-color: paint(button-hover);
+			background-color: paint(button-default);
+		}
+
+		&::after {
+			background-color: paint(button-default);
 		}
 	}
 
@@ -210,7 +222,11 @@
 		color: paint(button-hover);
 
 		&::before {
-			background: paint(neutral-5);
+			background: paint(button-hover);
+		}
+
+		&::after {
+			background: paint(button-hover);
 		}
 	}
 
