@@ -99,8 +99,9 @@
 
 .search-result {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) responsive-values(96, 192);
-	column-gap: $grid-gap;
+	grid-template-columns: minmax(0, 1fr) responsive-values(72, 144);
+	column-gap: responsive-values(20, 64);
+	align-items: center;
 	margin-bottom: responsive-values(32, 48);
 	padding-bottom: responsive-values(32, 48);
 	color: paint(neutral-1);
@@ -128,7 +129,13 @@
 	&__excerpt {
 		@include subtitle-1( false );
 
+		@include line-clamp(3);
+
 		color: paint(neutral-1);
+
+		@include media-breakpoint-down(sm) {
+			@include line-clamp(2);
+		}
 
 		p {
 			@include subtitle-1( false );
@@ -138,5 +145,6 @@
 	&__image-wrapper {
 		width: 100%;
 		padding-bottom: 100%;
+		border-radius: responsive-values(16, 24);
 	}
 }
