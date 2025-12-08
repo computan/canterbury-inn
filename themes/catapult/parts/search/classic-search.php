@@ -52,7 +52,7 @@ if ( empty( $search_query ) ) {
 										'parts/search/result',
 										null,
 										array(
-											'img'       => wp_get_attachment_image( get_post_thumbnail_id(), 'full', '', array( 'alt' => get_the_title() ) ),
+											'img'       => wp_get_attachment_image( get_post_thumbnail_id(), 'thumbnail', '', array( 'alt' => get_the_title() ) ),
 											'title'     => get_the_title(),
 											'content'   => custom_search_excerpt( get_the_ID() ),
 											'url'       => get_permalink(),
