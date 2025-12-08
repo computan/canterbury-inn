@@ -1,26 +1,5 @@
 @import "base-includes";
 
 .block-text-lead {
-	.content-wrapper {
-		.wp-block-heading {
-			.wp-block-paragraph--highlight-text {
-				color: paint(neutral-1);
-				font-weight: 600;
-				word-wrap: break-word;
-				background-color: transparent;
-			}
-		}
-	}
 
-	&.bg-white,
-	&.bg-transparent,
-	&.bg-dark {
-		.content-wrapper {
-			.wp-block-heading {
-				.wp-block-paragraph--highlight-text {
-					color: paint(primary);
-				}
-			}
-		}
-	}
 }

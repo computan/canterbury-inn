@@ -14,8 +14,8 @@
  * CSS Deps:
  * JS Deps:
  * Global ACF Fields: scroll_id
- * Background Colors:
- * Default BG Color:
+ * Background Colors: white, green, gold, secondary-teal-a, gradient-a, gradient-d, neutral-1, neutral-11
+ * Default BG Color:  neutral-11
  * InnerBlocks:       true
  * Styles:
  * Text Width Styles: true
