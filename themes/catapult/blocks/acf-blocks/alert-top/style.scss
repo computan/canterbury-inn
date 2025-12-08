@@ -1,26 +1,53 @@
 @import "base-includes";
 
 .block-alert-top {
-	top: 0;
-	left: 0;
+	position: sticky;
+	top: var(--adminbar-height);
 	z-index: 15;
+	display: block;
 	width: 100%;
-	padding: 0;
 	padding: rem(7 0 9);
 	text-align: center;
 
-	p {
-		@include subtitle-3;
+	&__close {
+		position: absolute;
+		top: 50%;
+		right: var(--gutterWidth);
+		padding: 0;
+		border: none;
+		background: none;
+		transform: translateY(-50%);
+
+		.alert-cancel {
+			position: relative;
+
+			&--overlay {
+				position: absolute;
+				top: 50%;
+				z-index: -1;
+				width: 75%;
+				height: 70%;
+				transform: translate(-50%, -50%);
+			}
+
+			.icon {
+				width: rem(16);
+				height: rem(16);
+				color: paint(white);
+			}
+		}
 	}
 
-	body.admin-bar & {
-		/* stylelint-disable unit-disallowed-list */
+	p {
+		@include subtitle-3;
 
-		top: 32px;
+		a {
+			color: paint(white) !important;
 
-		@media screen and (max-width: 782px) {
-			top: 46px;
+			&:hover,
+			&:focus {
+				color: paint(neutral-11) !important;
+			}
 		}
-		/* stylelint-enable unit-disallowed-list */
 	}
 }

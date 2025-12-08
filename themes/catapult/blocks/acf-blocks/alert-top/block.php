@@ -14,7 +14,7 @@
  * CSS Deps:
  * JS Deps:
  * Global ACF Fields: background_color
- * Background Colors:
+ * Background Colors: transparent, white, neutral-3
  * Default BG Color:  neutral-3
  * InnerBlocks:       true
  * Styles:
@@ -51,5 +51,11 @@ $template = array(
 <?php if ( is_admin() || ! $schedule || ( $current_date > $start_date && $current_date < $end_date ) ) : ?>
 	<div class="block-alert-top acf-inline-block<?php echo esc_attr( $content_block->get_block_classes() ); ?>">
 		<InnerBlocks allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowed_blocks ) ); ?>" template="<?php echo esc_attr( wp_json_encode( $template ) ); ?>" class="container block-alert-top__container" templateLock="all" />
+		<button class="block-alert-top__close" type="button" aria-label="Close alert">
+			<span class="alert-cancel">
+				<i class="icon icon-cancel"></i>
+				<span class="alert-cancel--overlay"></span>
+			</span>
+		</button>
 	</div>
 <?php endif; ?>

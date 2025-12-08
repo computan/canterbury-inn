@@ -11,6 +11,9 @@
 	.block-navigation__utility-nav {
 		display: flex;
 		justify-content: flex-end;
+		max-width: rem(1890);
+		padding-right: rem(25);
+		padding-left: rem(25);
 
 		.utility-nav__link {
 			display: flex;
