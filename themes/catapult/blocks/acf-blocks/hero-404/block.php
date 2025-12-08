@@ -46,6 +46,7 @@ $template = array(
 			'level'     => 1,
 			'content'   => __( 'Oops, we can’t seem to find the page you are looking for', 'catapult' ),
 			'textAlign' => 'center',
+			'fontSize'  => 't2',
 		),
 	),
 	array(
@@ -68,6 +69,8 @@ $template = array(
 				'core/button',
 				array(
 					'className' => 'is-style-tertiary',
+					'text'      => __( 'Contact Us', 'catapult' ),
+					'url'       => home_url( '/contact-us' ),
 				),
 			),
 		),

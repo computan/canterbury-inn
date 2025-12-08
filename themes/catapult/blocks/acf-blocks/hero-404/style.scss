@@ -5,9 +5,18 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: 83vh;
 	min-height: rem(486);
+	padding-top: rem(95);
+	padding-bottom: rem(233);
 	text-align: center;
+	background-color: paint(white);
+
+	@include media-breakpoint-up(md) {
+		height: 100vh;
+		padding-top: rem(243);
+		padding-bottom: rem(339);
+	}
 
 	body.show-qa-overlays & {
 		height: auto;
@@ -17,5 +26,23 @@
 	.content-wrapper {
 		flex: 0 0 100%;
 		width: 100%;
+
+		.wp-block-heading {
+			margin-bottom: 0;
+		}
+
+		.wp-block-buttons {
+			margin-top: rem(20);
+
+			@include media-breakpoint-up(md) {
+				margin-top: rem(32);
+			}
+
+			.wp-block-button {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+		}
 	}
 }
