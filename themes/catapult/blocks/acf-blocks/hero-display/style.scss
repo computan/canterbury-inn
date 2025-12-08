@@ -26,6 +26,24 @@
 		pointer-events: none;
 	}
 
+	.parent-bg-div {
+		position: absolute;
+		bottom: rem(-31);
+
+		@include media-breakpoint-up(lg) {
+			bottom: 0;
+		}
+
+		svg {
+			width: 100%;
+			fill: paint(white);
+
+			@include media-breakpoint-up(lg) {
+				width: auto;
+			}
+		}
+	}
+
 	.acf-block__background {
 		&-image-wrapper {
 			display: block;
