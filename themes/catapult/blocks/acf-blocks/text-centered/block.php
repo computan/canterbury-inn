@@ -14,8 +14,8 @@
  * CSS Deps:
  * JS Deps:
  * Global ACF Fields: scroll_id
- * Background Colors:
- * Default BG Color:
+ * Background Colors: white, green, gold, secondary-teal-a, gradient-a, gradient-d, neutral-1, neutral-11
+ * Default BG Color:  neutral-11
  * InnerBlocks:       true
  * Styles:
  * Text Width Styles: true
@@ -38,12 +38,14 @@ $template = array(
 		array(
 			'level'       => 2,
 			'placeholder' => __( 'Add heading here.', 'catapult' ),
+			'fontSize'    => 't2',
 		),
 	),
 	array(
 		'core/paragraph',
 		array(
 			'placeholder' => __( 'Add text or additional blocks here.', 'catapult' ),
+			'fontSize'    => 'body',
 		),
 	),
 );
