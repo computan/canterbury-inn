@@ -10,7 +10,6 @@
 	padding-top: rem(95);
 	padding-bottom: rem(233);
 	text-align: center;
-	background-color: paint(white);
 
 	@include media-breakpoint-up(md) {
 		height: 100vh;
