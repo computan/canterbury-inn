@@ -48,7 +48,7 @@
 		align-items: center;
 		width: 100%;
 		padding: rem(20);
-		color: paint(white);
+		color: paint(neutral-1);
 		border: none;
 		background-color: transparent;
 		appearance: none;
@@ -63,6 +63,10 @@
 		&:hover,
 		&:focus {
 			color: paint(button-hover);
+		}
+
+		body:has(.block-hero-display) & {
+			color: paint(white) !important;
 		}
 	}
 }
