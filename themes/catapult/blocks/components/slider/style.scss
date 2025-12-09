@@ -34,6 +34,10 @@
 		&:focus {
 			border-color: paint(white);
 			background-color: paint(white);
+
+			&::after {
+				color: paint(neutral-1);
+			}
 		}
 
 		&:disabled {
@@ -45,7 +49,7 @@
 
 	&::after {
 		content: "";
-		color: inherit;
+		color: paint(neutral-1);
 		line-height: rem(48);
 	}
 
@@ -54,6 +58,10 @@
 	&:focus {
 		border-color: paint(button-hover);
 		background-color: paint(button-hover);
+
+		&::after {
+			color: paint(white);
+		}
 	}
 
 	&:disabled {
@@ -64,7 +72,7 @@
 	}
 
 	&.swiper-button--outline {
-		color: paint(neutral-1);
+		color: paint(button-default);
 		border-color: paint(button-default);
 		background-color: transparent;
 
@@ -72,11 +80,19 @@
 			color: paint(white);
 			border-color: paint(lime-green);
 
+			&::after {
+				color: paint(white);
+			}
+
 			&.hover,
 			&:hover,
 			&:focus {
 				color: paint(white);
 				border-color: paint(white);
+
+				&::after {
+					color: paint(white);
+				}
 			}
 
 			&:disabled {
@@ -89,12 +105,20 @@
 			}
 		}
 
+		&::after {
+			color: paint(button-default);
+		}
+
 		&.hover,
 		&:hover,
 		&:focus {
-			color: paint(neutral-1);
+			color: paint(button-hover);
 			border-color: paint(button-hover);
 			background-color: transparent;
+
+			&::after {
+				color: paint(button-hover);
+			}
 		}
 
 		&:disabled {

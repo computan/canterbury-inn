@@ -45,7 +45,7 @@
 	position: relative;
 	z-index: 2;
 	padding: rem(12 32);
-	color: paint(white);
+	color: paint(neutral-1);
 	border: none;
 	border-radius: rem(100);
 	background-color: paint(button-default);
@@ -84,7 +84,7 @@
 	a:focus &,
 	&:hover,
 	&:focus {
-		color: paint(neutral-1);
+		color: paint(white);
 		border-color: paint(button-hover);
 		background-color: paint(button-hover);
 	}
@@ -121,7 +121,7 @@
 			a:focus &,
 			&:hover,
 			&:focus {
-				color: paint(button-default);
+				color: paint(neutral-1);
 				border-color: paint(white);
 				background-color: paint(white);
 			}
@@ -415,7 +415,7 @@
 			background-color: paint(white);
 
 			&::before {
-				background-color: paint(button-default);
+				background-color: paint(neutral-1);
 			}
 		}
 	}
@@ -423,6 +423,7 @@
 	&::before {
 		@include icon("close", #{rem(20)});
 
+		background-color: paint(neutral-1);
 		pointer-events: none;
 	}
 
@@ -434,6 +435,10 @@
 		color: paint(white);
 		border-color: paint(button-hover);
 		background-color: paint(button-hover);
+
+		&::before {
+			background-color: paint(white);
+		}
 	}
 }
 
@@ -448,27 +453,28 @@
 	font-size: 0;
 	line-height: 0;
 	text-align: center;
-	border: rem(1) solid paint(button-default);
+	border: none;
 	border-radius: rem(1600);
 	background-color: transparent;
 	cursor: pointer;
 	-webkit-appearance: none;
 	appearance: none;
-	transition: border-color $transition-standard;
+	transition: background-color $transition-standard;
 
 	@include alt-button-selectors {
 		color: paint(white);
-		border-color: paint(white);
+
+		&::after {
+			background-color: paint(white);
+		}
 
 		&.hover,
 		a:hover &,
 		a:focus &,
 		&:hover,
 		&:focus {
-			border-color: paint(lime-green);
-
 			&::after {
-				color: paint(lime-green);
+				background-color: paint(lime-green);
 			}
 		}
 	}
@@ -477,6 +483,7 @@
 		width: rem(24);
 		height: rem(24);
 		margin: 0;
+		background-color: paint(button-hover);
 		transform: none;
 	}
 
@@ -485,10 +492,8 @@
 	a:focus &,
 	&:hover,
 	&:focus {
-		border-color: paint(button-hover);
-
 		&::after {
-			color: paint(button-hover);
+			background-color: paint(button-default);
 		}
 	}
 }
