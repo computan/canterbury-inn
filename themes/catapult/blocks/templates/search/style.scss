@@ -167,9 +167,6 @@
 
 			&__image {
 				justify-self: end;
-				// width: responsive-values(72, 144);
-				// height: responsive-values(72, 144);
-
 				border-radius: responsive-values(16, 24);
 				overflow: hidden;
 
@@ -255,6 +252,7 @@
 				align-items: center;
 				width: rem(40);
 				height: rem(40);
+				padding: rem(5) rem(5) rem(8);
 				color: paint(neutral-1);
 				border-radius: 50%;
 
