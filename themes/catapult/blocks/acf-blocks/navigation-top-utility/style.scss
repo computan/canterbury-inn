@@ -52,8 +52,6 @@
 				padding-left: 0;
 
 				li {
-					// @include nav-3(false);
-
 					position: relative;
 					margin-bottom: 0;
 					color: paint(white);
@@ -63,20 +61,29 @@
 					}
 
 					&:first-child {
-						&::after {
+						&::before {
+							@include icon("location", #{rem(16)});
+
 							position: absolute;
-							top: rem(1);
+							top: rem(6);
 							right: rem(-13);
 							content: "";
 							display: block;
-							width: rem(1);
-							height: calc(100% - rem(2));
-							background-color: paint(white);
 						}
 					}
 
 					&:last-child {
-						margin-left: rem(10);
+						margin-left: rem(30);
+
+						&::before {
+							@include icon("phone", #{rem(16)});
+
+							position: absolute;
+							top: rem(6);
+							right: rem(-13);
+							content: "";
+							display: block;
+						}
 					}
 
 					a {
