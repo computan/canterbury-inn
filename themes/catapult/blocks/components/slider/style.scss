@@ -137,12 +137,20 @@
 		border-color: transparent;
 		background-color: rgba(paint(neutral-1), 0.5);
 
+		&::after {
+			color: paint(white);
+		}
+
 		&.hover,
 		&:hover,
 		&:focus {
 			color: paint(white);
 			border-color: transparent;
 			background-color: paint(neutral-1);
+
+			&::after {
+				color: paint(white);
+			}
 		}
 
 		&:disabled {
