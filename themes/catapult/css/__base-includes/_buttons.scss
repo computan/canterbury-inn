@@ -59,7 +59,7 @@
 		@include alt-button-selectors {
 			color: paint(neutral-1);
 			border-color: paint(button-default);
-			background-color: paint(lime-green);
+			background-color: paint(white);
 
 			&.hover,
 			a:hover &,
@@ -68,7 +68,7 @@
 			&:focus {
 				color: paint(neutral-1);
 				border-color: paint(white);
-				background-color: paint(white);
+				background-color: paint(lime-green);
 			}
 
 			&:disabled {
