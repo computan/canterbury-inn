@@ -28,7 +28,7 @@ $content_block = new Content_Block_Gutenberg( $block, $context );
 
 $allowed_blocks = catapult_text_blocks();
 ?>
-<div class="block-navigation-top-utility">
+<div class="block-navigation-top-utility bg-dark">
 	<div class="block-navigation__utility-nav container">
 		<InnerBlocks allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowed_blocks ) ); ?>" class="utility-nav__link <?php echo esc_attr( $content_block->get_block_classes() ); ?>" />		
 	</div>

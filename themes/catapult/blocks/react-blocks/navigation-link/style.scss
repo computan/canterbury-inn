@@ -62,11 +62,16 @@
 
 		&:hover,
 		&:focus {
-			color: paint(button-hover);
+			color: paint(gold);
 		}
 
 		body:has(.block-hero-display) & {
 			color: paint(white) !important;
+
+			&:hover {
+				color: paint(gold) !important;
+			}
 		}
+
 	}
 }
