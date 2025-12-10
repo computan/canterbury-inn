@@ -87,7 +87,7 @@ body {
 		padding-block: rem(8);
 		color: paint(white);
 		text-align: right;
-		background-color: paint(primary);
+		background-color: paint(button-default);
 
 		p {
 			@include nav-3;
@@ -172,7 +172,7 @@ a {
 
 		&:hover,
 		&:focus {
-			color: paint(primary);
+			color: paint(button-default);
 			text-decoration: underline;
 		}
 
@@ -184,7 +184,7 @@ a {
 
 a:focus,
 a:hover {
-	color: paint(primary);
+	color: paint(button-default);
 	text-decoration: none;
 }
 
