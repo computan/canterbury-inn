@@ -25,9 +25,6 @@
 
 		&--mobile {
 			z-index: 9999;
-			order: 998;
-			justify-content: flex-end;
-			width: rem(40);
 			margin-left: auto;
 
 			@include media-breakpoint-up(lg) {
