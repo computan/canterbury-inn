@@ -31,7 +31,7 @@
 		bottom: rem(-31);
 
 		@include media-breakpoint-up(lg) {
-			bottom: 0;
+			bottom: rem(-1);
 		}
 
 		svg {
