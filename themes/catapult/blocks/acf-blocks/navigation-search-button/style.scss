@@ -81,6 +81,7 @@
 		z-index: 20;
 		width: 100%;
 		padding: responsive-values(32, 48) var(--gutterWidth);
+		border-radius: rem(18);
 		background-color: paint(white);
 		visibility: hidden;
 		opacity: 0;
