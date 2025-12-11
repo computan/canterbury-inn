@@ -58,7 +58,10 @@
 		body:has(.block-hero-display) & {
 			max-width: rem(1890);
 			background-color: rgba(255, 255, 255, 0.1);
-			backdrop-filter: blur(rem(6));
+
+			@include media-breakpoint-up(lg) {
+				backdrop-filter: blur(rem(6));
+			}
 		}
 
 		// &.scrolled {
@@ -93,7 +96,7 @@
 
 	&__menu {
 		position: fixed;
-		top: rem(64);
+		top: rem(100);
 		left: 0;
 		bottom: 0;
 		z-index: 18;
