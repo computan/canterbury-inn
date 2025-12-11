@@ -12,11 +12,13 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: rem(56);
-		height: rem(64);
+		width: rem(35);
+		height: rem(35);
 		padding: 0;
 		color: paint(gold);
 		border: none;
+		border: rem(1) solid paint(gold);
+		border-radius: 50%;
 		background-color: transparent;
 		cursor: pointer;
 		appearance: none;
@@ -41,6 +43,15 @@
 
 		&::before {
 			@include icon("search");
+
+			width: rem(20);
+			height: rem(20);
+		}
+
+		&:hover {
+			color: paint(white);
+			border-color: paint(button-hover);
+			background-color: paint(button-hover);
 		}
 
 		.block-navigation__menu & {
@@ -63,6 +74,10 @@
 				opacity: 1;
 				transition: opacity $transition-standard, visibility 0s;
 			}
+		}
+
+		body:has(.block-hero-display) & {
+			color: paint(white);
 		}
 	}
 
