@@ -47,6 +47,10 @@
 	.acf-block__background {
 		&-image-wrapper {
 			display: block;
+
+			img {
+				border-radius: 0;
+			}
 		}
 
 		&-video-wrapper {
@@ -56,6 +60,8 @@
 				pointer-events: none;
 			}
 		}
+
+
 	}
 
 	#page:has(.acf-block.bg-dark.is-style-large[class*="hero"]) &,
@@ -72,6 +78,10 @@
 
 	&__container {
 		position: relative;
+		max-width: rem(865);
+		padding-right: 0;
+		padding-left: 0;
+		text-align: center;
 
 		@include media-breakpoint-up(md) {
 			padding-top: rem(64);
