@@ -5,15 +5,10 @@
 
 .block-navigation {
 	width: 100%;
-	// height: rem(100);
-
 	margin: 0;
 	padding: 0 rem(20) 0 rem(20);
 	background-color: transparent;
 	transition: background-color 0.3s ease;
-	// @include media-breakpoint-up(lg) {
-	// 	padding: 0;
-	// }
 
 	/* HERO NOT PRESENT → default white */
 	body:not(:has(.block-hero-display)) & {
@@ -97,7 +92,7 @@
 		background-color: paint(green);
 		visibility: hidden;
 		opacity: 0;
-		transform: translateX(100%);      /* start hidden to the right */
+		transform: translateX(100%);
 		overflow-y: auto;
 		transition: transform 0.3s ease-out, opacity 0.2s linear, visibility 0s 0.2s;
 
@@ -108,21 +103,18 @@
 		}
 
 		body.admin-bar & {
-			/* stylelint-disable unit-disallowed-list */
-
 			top: calc(rem(64) + 32px);
 
 			@media screen and (max-width: 782px) {
 				top: calc(rem(64) + 46px);
 			}
-			/* stylelint-enable unit-disallowed-list */
 		}
 
 		.block-navigation__hamburger.active ~ & {
 			padding-top: rem(100);
 			visibility: visible;
 			opacity: 1;
-			transform: translateX(0);        /* slide in */
+			transform: translateX(0);
 			transition: transform 0.3s ease-out, opacity 0.2s linear, visibility 0s;
 		}
 
