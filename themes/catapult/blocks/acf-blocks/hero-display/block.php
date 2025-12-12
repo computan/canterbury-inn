@@ -77,7 +77,7 @@ $template = array(
 );
 ?>
 
-<section <?php echo wp_kses_post( $content_block->get_block_id_attr() ); ?> <?php echo wp_kses_post( $content_block->get_block_style_attr() ); ?> class="acf-block block-hero-display bg-dark<?php echo esc_attr( $content_block->get_block_classes() ); ?>">
+<section <?php echo wp_kses_post( $content_block->get_block_id_attr() ); ?> <?php echo wp_kses_post( $content_block->get_block_style_attr() ); ?> class="acf-block block-hero-display<?php echo esc_attr( $content_block->get_block_classes() ); ?>">
 	<?php echo wp_kses_post( $content_block->get_block_background_image_and_video() ); ?>
 
 	<div class="parent-bg-div">
