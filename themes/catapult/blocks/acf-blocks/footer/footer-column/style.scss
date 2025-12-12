@@ -57,6 +57,13 @@
 		}
 	}
 
+	&:nth-child(2) {
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(-45);
+		}
+
+	}
+
 	&:nth-child(3) {
 		.wp-block-buttons {
 			flex-direction: column;
@@ -118,7 +125,7 @@
 	}
 
 	.wp-block-button.is-style-navigation-link {
-		margin-bottom: rem(16);
+		margin-bottom: rem(8);
 
 		.wp-block-button__link {
 			position: relative;
@@ -129,6 +136,7 @@
 				left: 0;
 				bottom: rem(-1);
 				content: "";
+				display: none;
 				width: 100%;
 				height: rem(1);
 				background-color: currentcolor;
@@ -138,11 +146,7 @@
 
 			&:hover,
 			&:focus {
-				color: paint(white);
-
-				&::after {
-					opacity: 1;
-				}
+				color: paint(gold);
 			}
 		}
 	}
