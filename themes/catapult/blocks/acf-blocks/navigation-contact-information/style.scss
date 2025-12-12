@@ -1,0 +1,179 @@
+@import "base-includes";
+
+.block-navigation-contact-information {
+	display: flex;
+	height: rem(62);
+	background-color: paint(neutral-2);
+
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
+
+	&::after {
+		position: absolute;
+		top: 0;
+		content: "";
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0) 100%);
+	}
+
+	body:has(.block-hero-display) & {
+		background-color: transparent !important;
+	}
+
+	.block-navigation__utility-nav {
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+		max-width: rem(1296);
+		padding-right: rem(25);
+		padding-left: rem(25);
+
+		body:has(.block-hero-display) & {
+			max-width: rem(1890);
+		}
+
+		.utility-nav__link {
+			display: flex;
+			gap: rem(20);
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			margin-top: 0;
+			padding: rem(4) 0;
+
+			.wp-block-list {
+				display: flex;
+				flex-wrap: wrap;
+				gap: rem(10);
+				margin: 0;
+				padding-left: 0;
+
+				li {
+					position: relative;
+					margin-bottom: 0;
+					color: paint(white);
+					font-size: rem(14);
+
+					&::before {
+						display: none;
+					}
+
+					&:first-child {
+						&::before {
+							@include icon("location", #{rem(16)});
+
+							position: absolute;
+							top: rem(6);
+							right: rem(-13);
+							content: "";
+							display: block;
+						}
+					}
+
+					&:last-child {
+						margin-left: rem(30);
+
+						&::before {
+							@include icon("phone", #{rem(16)});
+
+							position: absolute;
+							top: rem(6);
+							right: rem(-13);
+							content: "";
+							display: block;
+						}
+					}
+
+					a {
+						color: paint(white);
+						text-decoration: none;
+					}
+				}
+			}
+
+			.bg-transparent {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				max-height: rem(32);
+				margin-top: 0;
+			}
+
+			.wp-block-buttons {
+				margin-left: auto;
+			}
+
+		}
+
+		.wp-block-buttons {
+			margin: 0;
+
+			.wp-block-button {
+				&:not(:last-child, .is-style-social) {
+					position: relative;
+
+					&::after {
+						position: absolute;
+						top: rem(1);
+						right: rem(-13);
+						content: "";
+						display: block;
+						width: rem(1);
+						height: calc(100% - rem(2));
+						background-color: paint(white);
+					}
+				}
+
+				&:not(.is-style-social) {
+					margin: 0;
+
+					.wp-block-button__link {
+						color: paint(white);
+
+						&::after {
+							background: paint(white);
+						}
+
+						&:hover::after {
+							color: paint(white);
+						}
+					}
+
+					a {
+						@include nav-3;
+
+						color: paint(white);
+
+						&::before {
+							display: none;
+						}
+					}
+				}
+			}
+
+			.is-style-social {
+				margin: rem(-3) 0 0 !important;
+
+				.wp-block-button__link {
+					color: paint(white);
+				}
+			}
+
+			&:not(.wp-block-buttons--social) {
+				column-gap: rem(25);
+			}
+
+			&.wp-block-buttons--social {
+				display: flex;
+				gap: rem(5);
+			}
+		}
+	}
+
+	&.sticky {
+		display: none;
+	}
+}
