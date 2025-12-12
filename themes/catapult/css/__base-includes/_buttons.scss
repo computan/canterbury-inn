@@ -447,8 +447,10 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: rem(48);
-	height: rem(48);
+	width: rem(20);
+	height: rem(20);
+	margin-left: rem(15);
+	padding: 0;
 	color: paint(neutral-1);
 	font-size: 0;
 	line-height: 0;

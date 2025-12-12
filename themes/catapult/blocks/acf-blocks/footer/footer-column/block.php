@@ -16,7 +16,7 @@
  * Global ACF Fields:
  * InnerBlocks:       true
  * Parent:            acf/footer-top
- * Image Size:        main-logo
+ * Image Size:        large
  * Button Styles:     Navigation Link, Primary, Secondary, Tertiary
  * CSS Custom Props:  column_width_mobile: 12, column_width_tablet: 6, column_width_desktop: 3, order_mobile, order_tablet
  *
