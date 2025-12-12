@@ -15,7 +15,7 @@
  * JS Deps:
  * Global ACF Fields: scroll_id, background_color, background_image, background_video
  * Background Colors:
- * Default BG Color:  
+ * Default BG Color:
  * InnerBlocks:       true
  * Styles:
  * Starts With Text:
@@ -49,7 +49,7 @@ $template = array(
 			'fontSize'    => 'display',
 		),
 	),
-		array(
+	array(
 		'core/paragraph',
 		array(
 			'placeholder' => __( 'Add pre-heading here.', 'catapult' ),
