@@ -5,8 +5,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-right: rem(16);
-	margin-left: auto;
+
+	@include media-breakpoint-up(lg) {
+		margin-right: rv(8, 16);
+		margin-left: auto;
+	}
 
 	&__button {
 		display: flex;
@@ -93,10 +96,11 @@
 		z-index: 20;
 		width: 100%;
 		padding: responsive-values(32, 48) var(--gutterWidth);
-		border-radius: rem(18);
-		background-color: paint(white);
+		padding-bottom: rem(50);
+		background-color: paint(green);
 		visibility: hidden;
 		opacity: 0;
+		clip-path: ellipse(calc(50 * 2%) 100% at top);
 		transition: opacity $transition-standard, visibility 0s 0.2s;
 
 		.block-navigation.is-style-variable-width-dropdown & {

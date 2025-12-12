@@ -67,6 +67,12 @@ body {
 		height: rem(64);
 	}
 
+	&.menu-open {
+		.block-navigation-top-utility {
+			background-color: paint(green) !important;
+		}
+	}
+
 	body.post-type-archive-library_block & {
 		position: relative;
 		top: 0 !important;

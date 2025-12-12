@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
  * Navigation-Search-Button
  *
@@ -17,10 +17,7 @@
  * Parent:            catapult/navigation
  * Mode:              preview
  *
- * @package Catapult
- * @since   3.0.0
- * @since   3.0.18
- * @since   3.1.1
+ * @package catapult
  * @since   3.1.2
  */
 
