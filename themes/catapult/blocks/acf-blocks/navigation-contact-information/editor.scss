@@ -1,0 +1,43 @@
+@import "base-includes";
+
+.editor-styles-wrapper {
+	.block-navigation-top-utility {
+		.utility-nav__link {
+			margin-left: 0;
+
+			.wp-block-buttons {
+				min-height: rem(24) !important;
+
+				.wp-block-button {
+					&.is-style-social {
+						.wp-element-button {
+							position: relative;
+							width: rem(30);
+							height: rem(30);
+							padding: rem(2);
+							border-radius: 100%;
+							background-color: paint(white);
+						}
+					}
+
+					&.is-style-tertiary {
+						.wp-element-button {
+							@include nav-3;
+
+							color: paint(white);
+
+							&:not(:last-child, .is-style-social) {
+								position: relative;
+
+								&::after {
+									top: rem(4);
+									right: rem(-18);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

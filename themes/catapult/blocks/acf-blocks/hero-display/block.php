@@ -15,7 +15,7 @@
  * JS Deps:
  * Global ACF Fields: scroll_id, background_color, background_image, background_video
  * Background Colors:
- * Default BG Color:  neutral-3
+ * Default BG Color:  
  * InnerBlocks:       true
  * Styles:
  * Starts With Text:
@@ -49,6 +49,13 @@ $template = array(
 			'fontSize'    => 'display',
 		),
 	),
+		array(
+		'core/paragraph',
+		array(
+			'placeholder' => __( 'Add pre-heading here.', 'catapult' ),
+			'fontSize'    => 'body',
+		),
+	),
 	array(
 		'core/buttons',
 		array(),
@@ -70,7 +77,7 @@ $template = array(
 );
 ?>
 
-<section <?php echo wp_kses_post( $content_block->get_block_id_attr() ); ?> <?php echo wp_kses_post( $content_block->get_block_style_attr() ); ?> class="acf-block block-hero-display<?php echo esc_attr( $content_block->get_block_classes() ); ?>">
+<section <?php echo wp_kses_post( $content_block->get_block_id_attr() ); ?> <?php echo wp_kses_post( $content_block->get_block_style_attr() ); ?> class="acf-block block-hero-display bg-dark<?php echo esc_attr( $content_block->get_block_classes() ); ?>">
 	<?php echo wp_kses_post( $content_block->get_block_background_image_and_video() ); ?>
 
 	<div class="parent-bg-div">

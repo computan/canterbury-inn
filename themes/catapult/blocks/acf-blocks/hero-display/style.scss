@@ -85,7 +85,7 @@
 			padding-top: rem(64);
 		}
 
-		p {
+		p:first-of-type {
 			max-width: max-content;
 			margin: 0 auto;
 			padding: rem(6) rem(22);
