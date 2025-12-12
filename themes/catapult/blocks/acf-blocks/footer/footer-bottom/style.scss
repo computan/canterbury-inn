@@ -18,7 +18,7 @@
 	}
 
 	a:not(.wp-block-button__link) {
-		color: paint(neutral-8) !important;
+		color: paint(white) !important;
 		text-decoration: none !important;
 
 		&:hover,
@@ -98,7 +98,9 @@
 
 		&:nth-child(2n + 1) {
 			p {
-				@include subtitle-3(false);
+				@include subtitle-1(false);
+
+				color: paint(white);
 			}
 		}
 
@@ -109,6 +111,7 @@
 
 			p {
 				@include subtitle-2(false);
+
 			}
 
 			.wp-block-buttons {
@@ -129,7 +132,21 @@
 			list-style: none;
 
 			.wp-block-list-item {
+				@include subtitle-1(false);
+
 				margin-bottom: 0;
+
+				&::before {
+					display: none;
+				}
+
+				a {
+					color: paint(white);
+
+					&:hover {
+						color: paint(gold) !important;
+					}
+				}
 			}
 		}
 
