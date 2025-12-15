@@ -13,19 +13,32 @@ const navigationBlocks = document.querySelectorAll('.block-navigation');
 const navigationHamburgers = document.querySelectorAll(
 	'.block-navigation__hamburger'
 );
+
 const mainHeader = document.querySelector('.main-header');
 const blockNav = document.querySelector('.main-header > nav.block-navigation');
 const topUtility = document.querySelector('.block-navigation-top-utility');
+
+// ✅ CONTACT INFO ELEMENT
+const contactInfo = document.querySelector(
+	'.block-navigation-contact-information'
+);
 
 const toggleNavigationHamburger = (e) => {
 	const currentNavigationHamburger = e?.currentTarget ?? e;
 	currentNavigationHamburger.classList.toggle('active');
 
-	if (currentNavigationHamburger.classList.contains('active')) {
+	const isActive = currentNavigationHamburger.classList.contains('active');
+
+	if (isActive) {
 		window.dispatchEvent(openEvent);
 		setFirstLevelButtonBlockOffsets();
 		setNavMenuActiveClass(currentNavigationHamburger, true);
 		currentNavigationHamburger.setAttribute('aria-expanded', true);
+
+		// ✅ ADD ACTIVE CLASS
+		if (contactInfo) {
+			contactInfo.classList.add('active');
+		}
 
 		if (window.innerWidth < 992) {
 			lockScroll();
@@ -37,6 +50,11 @@ const toggleNavigationHamburger = (e) => {
 
 		setNavMenuActiveClass(currentNavigationHamburger, false);
 		currentNavigationHamburger.setAttribute('aria-expanded', false);
+
+		// ✅ REMOVE ACTIVE CLASS
+		if (contactInfo) {
+			contactInfo.classList.remove('active');
+		}
 	}
 };
 
@@ -47,18 +65,14 @@ const submenuClosed = () => {
 };
 
 const setFirstLevelButtonBlockOffsets = () => {
-	if (0 === navigationBlocks.length) {
-		return;
-	}
+	if (0 === navigationBlocks.length) return;
 
 	navigationBlocks.forEach((navigationBlock) => {
 		const firstLevelButtonBlocks = navigationBlock.querySelectorAll(
 			'.block-navigation__menu > .wp-block-button'
 		);
 
-		if (0 === firstLevelButtonBlocks.length) {
-			return;
-		}
+		if (0 === firstLevelButtonBlocks.length) return;
 
 		let totalOffset = 0;
 
@@ -82,32 +96,21 @@ const setFirstLevelButtonBlockOffsets = () => {
 
 const setNavMenuActiveClass = (element, navActive = null) => {
 	const currentElement = element?.detail?.currentElement ?? element;
-
-	if (!currentElement) {
-		return;
-	}
+	if (!currentElement) return;
 
 	const currentNavigationBlock = currentElement.closest('.block-navigation');
+	if (!currentNavigationBlock) return;
 
-	if (!currentNavigationBlock) {
-		return;
-	}
-
-	if (null === navActive) {
-		if (
+	if (navActive === null) {
+		navActive =
 			currentElement.classList.contains('active') ||
 			currentElement.parentElement.classList.contains('active') ||
 			currentNavigationBlock.querySelector(
 				'.block-navigation__hamburger.active'
-			)
-		) {
-			navActive = true;
-		} else {
-			navActive = false;
-		}
+			);
 	}
 
-	if (true === navActive) {
+	if (navActive) {
 		currentNavigationBlock.classList.add('active');
 		document.addEventListener('keydown', clickOffMenu);
 		document.addEventListener('click', clickOffMenu);
@@ -125,44 +128,44 @@ const setNavMenuActiveClass = (element, navActive = null) => {
 };
 
 const lockScroll = () => {
-	if (scrollableElements.length) {
-		scrollableElements.forEach(function (scrollableElement) {
-			const storedRequestAnimationFrame = window.requestAnimationFrame;
-			window.requestAnimationFrame = () => 42;
+	if (!scrollableElements.length) return;
 
-			disableBodyScroll(scrollableElement, {
-				reserveScrollBarGap: true,
-			});
-			window.requestAnimationFrame = storedRequestAnimationFrame;
+	scrollableElements.forEach((scrollableElement) => {
+		const storedRAF = window.requestAnimationFrame;
+		window.requestAnimationFrame = () => 42;
+
+		disableBodyScroll(scrollableElement, {
+			reserveScrollBarGap: true,
 		});
-	}
+
+		window.requestAnimationFrame = storedRAF;
+	});
 };
 
 const setHeaderExtras = () => {
-	// ⭐ Sticky classes on scroll (main-header sticky removed)
+	// Scroll behavior
 	window.addEventListener('scroll', () => {
 		if (window.scrollY > 0) {
-			if (blockNav) blockNav.classList.add('scrolled');
-			if (topUtility) topUtility.classList.add('sticky');
+			blockNav?.classList.add('scrolled');
+			topUtility?.classList.add('sticky');
 		} else {
-			if (blockNav) blockNav.classList.remove('scrolled');
-			if (topUtility) topUtility.classList.remove('sticky');
+			blockNav?.classList.remove('scrolled');
+			topUtility?.classList.remove('sticky');
 		}
 	});
 
+	// Menu open / close overlay logic
 	window.addEventListener('click', () => {
 		const blockNavActive =
-			blockNav.classList.contains('active') ||
-			blockNav.classList.contains('search-active');
+			blockNav?.classList.contains('active') ||
+			blockNav?.classList.contains('search-active');
 
 		if (blockNavActive) {
-			mainHeader.classList.add('menu-open');
-
+			mainHeader?.classList.add('menu-open');
 			lockScroll();
 			document.body.classList.add('scroll-lock-overlay');
 		} else {
-			mainHeader.classList.remove('menu-open');
-
+			mainHeader?.classList.remove('menu-open');
 			clearAllBodyScrollLocks();
 			document.body.classList.remove('scroll-lock-overlay');
 		}
@@ -170,9 +173,7 @@ const setHeaderExtras = () => {
 };
 
 const clickOffMenu = (e) => {
-	if (0 === navigationHamburgers.length) {
-		return;
-	}
+	if (!navigationHamburgers.length) return;
 
 	let closestMenu;
 	let closestHamburger;
@@ -182,9 +183,7 @@ const clickOffMenu = (e) => {
 		closestHamburger = e.target.closest('.block-navigation__hamburger');
 	}
 
-	if (e.key && e.key !== 'Escape') {
-		return;
-	}
+	if (e.key && e.key !== 'Escape') return;
 
 	if (
 		closestMenu?.contains(e.target) ||
@@ -202,7 +201,8 @@ const clickOffMenu = (e) => {
 	window.dispatchEvent(closeEvent);
 };
 
-if (navigationHamburgers.length > 0) {
+// INIT
+if (navigationHamburgers.length) {
 	navigationHamburgers.forEach((navigationHamburger) => {
 		navigationHamburger.addEventListener(
 			'click',
@@ -214,7 +214,7 @@ if (navigationHamburgers.length > 0) {
 setFirstLevelButtonBlockOffsets();
 setHeaderExtras();
 
-if (navigationBlocks.length > 0) {
+if (navigationBlocks.length) {
 	navigationBlocks.forEach((navigationBlock) => {
 		navigationBlock.classList.add('block-navigation--initialized');
 	});

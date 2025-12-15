@@ -48,7 +48,7 @@
 		align-items: center;
 		width: 100%;
 		padding: rem(20);
-		color: paint(neutral-1);
+		color: paint(white);
 		border: none;
 		background-color: transparent;
 		appearance: none;
@@ -58,6 +58,10 @@
 			&::after {
 				@include icon("chev-right");
 			}
+		}
+
+		@include media-breakpoint-up(lg) {
+			color: paint(neutral-1);
 		}
 
 		&:hover,
