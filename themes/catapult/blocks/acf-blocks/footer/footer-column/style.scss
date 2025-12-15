@@ -91,10 +91,6 @@
 					.wp-block-button__link {
 						display: block;
 
-						&::before {
-							margin-right: rem(10);
-						}
-
 						&:hover {
 							color: paint(white);
 							cursor: inherit;
@@ -111,6 +107,11 @@
 					@include nav-1;
 
 					text-align: left;
+
+					&::before {
+						top: rem(2);
+						margin-right: rem(10);
+					}
 
 					&:hover {
 						color: paint(gold);
