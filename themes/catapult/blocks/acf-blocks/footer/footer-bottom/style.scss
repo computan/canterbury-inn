@@ -18,6 +18,8 @@
 	}
 
 	a:not(.wp-block-button__link) {
+		@include subtitle-2;
+
 		color: paint(white) !important;
 		text-decoration: none !important;
 
@@ -54,7 +56,10 @@
 				}
 
 				p {
+					@include subtitle-2;
+
 					flex: 0 0 auto;
+					margin-bottom: 0;
 				}
 
 				.block-icon {
