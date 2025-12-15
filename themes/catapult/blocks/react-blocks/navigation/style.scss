@@ -10,9 +10,21 @@
 	background-color: transparent;
 	transition: background-color 0.3s ease;
 
+	body:has(.block-hero-display) & {
+		background-color: paint(neutral-1);
+
+		@include media-breakpoint-up(lg) {
+			background-color: transparent;
+		}
+	}
+
 	/* HERO NOT PRESENT → default white */
 	body:not(:has(.block-hero-display)) & {
-		background-color: paint(white) !important;
+		background-color: paint(green) !important;
+
+		@include media-breakpoint-up(lg) {
+			background-color: paint(white) !important;
+		}
 
 		&.search-active {
 			background-color: #03252a !important; // your desired color
@@ -41,7 +53,11 @@
 
 	/* HERO NOT PRESENT + SCROLLED → white */
 	body:not(:has(.block-hero-display)) &.scrolled {
-		background-color: paint(white) !important;
+		background-color: paint(green) !important;
+
+		@include media-breakpoint-up(lg) {
+			background-color: paint(white) !important;
+		}
 	}
 
 	// body:not(:has(.block-hero-display)) {
@@ -88,9 +104,10 @@
 
 		body:has(.block-hero-display) & {
 			max-width: rem(1890);
-			background-color: rgba(255, 255, 255, 0.1);
+			// background-color: rgba(255, 255, 255, 0.1);
 
 			@include media-breakpoint-up(lg) {
+				background-color: rgba(255, 255, 255, 0.1);
 				backdrop-filter: blur(rem(6));
 			}
 		}
@@ -115,6 +132,15 @@
 		body:has(.block-hero-display) & {
 			img {
 				filter: brightness(0) invert(1);
+			}
+		}
+
+		img {
+			filter: brightness(0) invert(1);
+
+			@include media-breakpoint-up(lg) {
+				filter: none;
+
 			}
 		}
 	}
@@ -143,10 +169,10 @@
 		}
 
 		body.admin-bar & {
-			top: calc(rem(64) + 32px);
+			top: calc(rem(64) + rem(32));
 
-			@media screen and (max-width: 782px) {
-				top: calc(rem(64) + 46px);
+			@media screen and (max-width: rem(782)) {
+				top: calc(rem(64) + rem(46));
 			}
 		}
 
@@ -169,8 +195,8 @@
 
 			@include media-breakpoint-down(md) {
 				padding: rem(20);
-				background-color: paint(white);
-				box-shadow: rem(0 0 8 0) rgba(paint(neutral-1), 0.12);
+				background-color: paint(green);
+				// box-shadow: rem(0 0 8 0) rgba(paint(neutral-1), 0.12);
 			}
 
 			@include media-breakpoint-up(lg) {
@@ -227,15 +253,19 @@
 		justify-content: center;
 		justify-self: flex-end;
 		align-items: center;
-		width: rem(64);
-		height: rem(64);
+		width: rem(35);
+		height: rem(35);
 		margin: rem(-20 -20 -20 0);
+		margin-right: rem(5);
 		padding: 0;
-		border: none;
+		border: rem(1) solid paint(gold);
+		border-radius: 50%;
 		background-color: transparent;
 		appearance: none;
 
 		&.active {
+			background-color: paint(gold);
+
 			.block-navigation__hamburger-inner {
 				background: transparent;
 
@@ -255,7 +285,7 @@
 		display: block;
 		width: rem(24);
 		height: rem(24);
-		background: linear-gradient(to bottom, transparent calc(50% - rem(1)), paint(gold) calc(50% - rem(1)), paint(gold) calc(50% + rem(1)), transparent calc(50% + rem(1)));
+		background: linear-gradient(to bottom, transparent calc(50% - rem(1)), paint(white) calc(50% - rem(1)), paint(white) calc(50% + rem(1)), transparent calc(50% + rem(1)));
 
 		&::before,
 		&::after {
@@ -264,7 +294,7 @@
 			content: "";
 			width: 100%;
 			height: rem(2);
-			background-color: paint(gold);
+			background-color: paint(white);
 			transition: transform $transition-standard;
 		}
 
