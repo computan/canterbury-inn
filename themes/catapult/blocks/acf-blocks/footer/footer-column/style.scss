@@ -91,7 +91,7 @@
 				}
 
 				&__link {
-					@include nav-2;
+					@include nav-1;
 
 					text-align: left;
 
@@ -143,17 +143,15 @@
 		}
 
 		+ p {
-			@include subtitle-2;
-
 			margin: 0;
 		}
 	}
 
 	.wp-block-button.is-style-navigation-link {
-		margin-bottom: rem(8);
+		margin-bottom: rem(16);
 
 		.wp-block-button__link {
-			@include nav-2;
+			@include nav-1;
 
 			position: relative;
 			display: inline-flex;
