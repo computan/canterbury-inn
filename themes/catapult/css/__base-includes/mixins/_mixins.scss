@@ -280,3 +280,11 @@
 	-webkit-line-clamp: $lines;
 	-webkit-box-orient: vertical;
 }
+
+@mixin image-anime($end-left) {
+	@keyframes imageanime {
+		100% {
+			left: $end-left;
+		}
+	}
+}

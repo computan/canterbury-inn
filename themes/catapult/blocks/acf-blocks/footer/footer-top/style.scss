@@ -3,18 +3,14 @@
 .block-footer-top {
 	@include subtitle-2(false);
 
-	padding-bottom: responsive-values(2, 32);
+	padding-bottom: responsive-values(30, 60);
 
 	&__content {
 		display: flex;
 		flex-direction: column;
-		gap: rem(30);
-		margin-bottom: rem(30);
 
 		@include media-breakpoint-up(md) {
 			@include grid();
-
-			margin-bottom: rem(60);
 		}
 	}
 }
