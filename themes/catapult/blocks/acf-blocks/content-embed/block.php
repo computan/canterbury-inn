@@ -17,7 +17,7 @@
  * Background Colors: transparent, white
  * Default BG Color:  white
  * InnerBlocks:       true
- * Styles:            small, medium, full
+ * Styles:            Small, Medium, Full
  * Starts With Text:  true
  *
  * @package Catapult
