@@ -112,8 +112,6 @@
 	}
 
 	.wp-block-heading {
-		// @include overline(false);
-
 		margin-bottom: rem(16);
 		text-transform: uppercase;
 	}
@@ -145,6 +143,8 @@
 		}
 
 		+ p {
+			@include subtitle-2;
+
 			margin: 0;
 		}
 	}
