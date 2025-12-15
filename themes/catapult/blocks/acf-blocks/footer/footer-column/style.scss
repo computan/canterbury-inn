@@ -69,14 +69,39 @@
 			flex-direction: column;
 			gap: rem(16);
 			align-items: flex-start;
+			margin-top: 0;
 			margin-bottom: rem(30);
 			padding-left: rem(7);
 
 			.wp-block-button {
 				margin: 0 !important;
 
+				&.address {
+					.wp-block-button__link {
+						&:hover {
+							color: paint(white);
+							cursor: inherit;
+
+							&::before {
+								background: paint(white);
+							}
+						}
+					}
+
+				}
+
 				&__link {
+					@include nav-2;
+
 					text-align: left;
+
+					&:hover {
+						color: paint(gold);
+
+						&::before {
+							background: paint(gold);
+						}
+					}
 				}
 			}
 		}
@@ -87,10 +112,10 @@
 	}
 
 	.wp-block-heading {
-		@include overline(false);
+		// @include overline(false);
 
 		margin-bottom: rem(16);
-		color: paint(neutral-8);
+		text-transform: uppercase;
 	}
 
 	.block-form-disclaimer {
@@ -128,6 +153,8 @@
 		margin-bottom: rem(8);
 
 		.wp-block-button__link {
+			@include nav-2;
+
 			position: relative;
 			display: inline-flex;
 
