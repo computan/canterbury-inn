@@ -52,7 +52,7 @@ $template = array(
 	array(
 		'core/paragraph',
 		array(
-			'placeholder' => __( 'Add pre-heading here.', 'catapult' ),
+			'placeholder' => __( 'Add paragraph here.', 'catapult' ),
 			'fontSize'    => 'body',
 		),
 	),
