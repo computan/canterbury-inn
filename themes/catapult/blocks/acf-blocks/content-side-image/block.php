@@ -72,7 +72,8 @@ $template = array(
 	array(
 		'core/paragraph',
 		array(
-			'fontSize' => 'body',
+			'placeholder' => __( 'Add text or additional blocks here.', 'catapult' ),
+			'fontSize'    => 'body',
 		),
 	),
 	array(
