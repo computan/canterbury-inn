@@ -11,6 +11,8 @@
 		}
 
 		> p {
+			margin-bottom: 0 !important;
+
 			&:first-child {
 				margin-top: $block-spacing-first-text-child-offset;
 			}
