@@ -54,19 +54,37 @@ $allowed_blocks = catapult_text_blocks();
 
 $template = array(
 	array(
+		'core/paragraph',
+		array(
+			'placeholder' => 'Add pre-heading here.',
+			'fontSize'    => 'overline',
+			'align'       => 'left',
+		),
+	),
+	array(
 		'core/heading',
 		array(
 			'level'       => 2,
 			'placeholder' => __( 'Add heading here.', 'catapult' ),
+			'fontSize'    => 't2',
 		),
 	),
 	array(
 		'core/paragraph',
+		array(
+			'fontSize' => 'body',
+		),
 	),
 	array(
 		'core/buttons',
 		array(),
 		array(
+			array(
+				'core/button',
+				array(
+					'className' => 'is-style-tertiary',
+				),
+			),
 			array(
 				'core/button',
 				array(
