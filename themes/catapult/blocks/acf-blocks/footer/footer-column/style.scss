@@ -45,6 +45,18 @@
 			flex-direction: column;
 			gap: rem(30);
 			width: 100%;
+
+			.wp-block-buttons {
+				.wp-block-button {
+					&__link {
+						&:hover {
+							&::after {
+								background-color: paint(gold);
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
