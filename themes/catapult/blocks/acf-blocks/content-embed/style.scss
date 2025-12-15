@@ -2,15 +2,38 @@
 
 .block-content-embed {
 	position: relative;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+
+	&.is-style-small {
+		iframe {
+			@include media-breakpoint-up(md) {
+				grid-column: 4 / span 6;
+			}
+		}
+
+	}
+
+	&.is-style-medium {
+		iframe {
+			@include media-breakpoint-up(md) {
+				grid-column: 3 / span 8;
+			}
+		}
+	}
+
+	&.is-style-full {
+		iframe {
+			@include media-breakpoint-up(md) {
+				grid-column: 1 / -1;
+			}
+		}
+	}
 
 	iframe {
+		grid-column: 1 / -1;
 		width: 100%;
 		height: 100%;
-		min-height: rem(1250);
-		margin-top: rem(48);
-
-		@include media-breakpoint-up(md) {
-			margin-top: rem(64);
-		}
+		min-height: rem(520);
 	}
 }
