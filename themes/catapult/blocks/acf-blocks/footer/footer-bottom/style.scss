@@ -18,7 +18,7 @@
 	}
 
 	a:not(.wp-block-button__link) {
-		@include subtitle-2;
+		@include nav-2;
 
 		color: paint(white) !important;
 		text-decoration: none !important;
