@@ -14,11 +14,11 @@
  * CSS Deps:
  * JS Deps:
  * Global ACF Fields: scroll_id, image, video, background_color
- * Background Colors: transparent, neutral-11
- * Default BG Color:
+ * Background Colors: white, neutral-11
+ * Default BG Color:  white
  * InnerBlocks:       true
  * Starts With Text:
- * Styles:            Default, Frame
+ * Styles:
  *
  * @package Catapult
  * @since   1.0.0
