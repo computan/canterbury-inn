@@ -3,7 +3,7 @@
 .block-navigation-contact-information {
 	display: flex;
 	height: rem(62);
-	background-color: paint(neutral-2);
+	background-color: paint(neutral-1) !important;
 
 	@include media-breakpoint-down(md) {
 		position: relative;
