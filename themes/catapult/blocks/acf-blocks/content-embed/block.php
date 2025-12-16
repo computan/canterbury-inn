@@ -18,7 +18,6 @@
  * Default BG Color:  white
  * InnerBlocks:       true
  * Styles:            Small, Medium, Full
- * Starts With Text:  true
  *
  * @package Catapult
  * @since   2.0.0
