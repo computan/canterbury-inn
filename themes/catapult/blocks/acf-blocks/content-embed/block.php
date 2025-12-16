@@ -34,10 +34,9 @@ $iframe_source = get_field( 'iframe_source', $block_id );
 
 $allowed_blocks = catapult_text_blocks();
 ?>
-
-<section <?php echo wp_kses_post( $content_block->get_block_id_attr() ); ?><?php echo wp_kses_post( $content_block->get_block_style_attr() ); ?>class="acf-block block-content-embed<?php echo esc_attr( $content_block->get_block_classes() ); ?>">
 	<?php if ( ! empty( $iframe_source ) ) : ?>
+<section <?php echo wp_kses_post( $content_block->get_block_id_attr() ); ?><?php echo wp_kses_post( $content_block->get_block_style_attr() ); ?>class="acf-block block-content-embed<?php echo esc_attr( $content_block->get_block_classes() ); ?>">
 		<?php // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript ?>
 		<iframe src="<?php echo esc_attr( $iframe_source ); ?>" scrolling="yes" style="border:0"></iframe>
-	<?php endif; ?>
 </section>
+<?php endif; ?>
