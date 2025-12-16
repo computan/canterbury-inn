@@ -6,8 +6,8 @@
 	background-color: paint(neutral-2);
 
 	@include media-breakpoint-down(md) {
-		position: fixed;
-		top: rem(350);
+		position: relative;
+		top: rem(340);
 		left: 0;
 		z-index: 200;
 		width: 100%;

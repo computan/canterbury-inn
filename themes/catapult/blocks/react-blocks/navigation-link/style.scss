@@ -39,6 +39,10 @@
 		}
 	}
 
+	@include media-breakpoint-down(sm) {
+		border-bottom: rem(1) solid paint(white);
+	}
+
 	&__button {
 		@include nav-1(false);
 
