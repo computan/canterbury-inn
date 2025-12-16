@@ -127,10 +127,6 @@
 		}
 	}
 
-	p {
-		@include subtitle-1(true);
-	}
-
 	.wp-block-heading {
 		margin-bottom: rem(16);
 		text-transform: uppercase;
