@@ -1,4 +1,4 @@
- <?php
+<?php
 /**
  * Navigation-Search-Button
  *
@@ -42,7 +42,9 @@ $content_block = new Content_Block_Gutenberg( $block, $context );
 
 			<button class="block-navigation-search-button__submit" type="submit" aria-label="<?php esc_html_e( 'Search this website', 'catapult' ); ?>"></button>
 
-			<button type="button" class="block-navigation-search-button__clear" onclick="var input = this.previousElementSibling.previousElementSibling; input.value = ''; input.focus();"><span class="sr-only"><?php esc_html_e( 'Clear search', 'catapult' ); ?></span></button>
+			<button type="button" class="block-navigation-search-button__clear" onclick="var input = this.previousElementSibling.previousElementSibling; input.value = ''; input.focus();">
+				<span class="sr-only"><?php esc_html_e( 'Clear search', 'catapult' ); ?></span>
+			</button>
 		</form>
 	</div>
 </div>

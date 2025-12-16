@@ -71,7 +71,7 @@
 	/* Default nav transparent if hero exists */
 	&.active {
 		@include media-breakpoint-down(md) {
-			position: fixed;
+			position: static;
 			top: 0;
 			z-index: 20;
 		}
@@ -155,7 +155,7 @@
 		flex-grow: 1;
 		width: 100%;
 		padding-bottom: var(--totalButtonOffset, #{rem(20)});
-		background-color: paint(green);
+		background-color: paint(neutral-1);
 		visibility: hidden;
 		opacity: 0;
 		transform: translateX(100%);
