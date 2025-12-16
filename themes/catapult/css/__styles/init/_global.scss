@@ -58,7 +58,7 @@ body {
 }
 
 .main-header {
-	position: fixed;
+	position: sticky;
 	top: 0;
 	z-index: 19;
 	width: 100%;
@@ -79,6 +79,7 @@ body {
 	}
 
 	body.admin-bar & {
+		position: st;
 		/* stylelint-disable unit-disallowed-list */
 
 		top: 32px;
