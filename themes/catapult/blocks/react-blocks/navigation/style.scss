@@ -6,9 +6,12 @@
 .block-navigation {
 	width: 100%;
 	margin: 0;
-	padding: 0 rem(20) 0 rem(20);
 	background-color: transparent;
 	transition: background-color 0.3s ease;
+
+	@include media-breakpoint-up(lg) {
+		padding: 0 rem(20) 0 rem(20);
+	}
 
 	body:has(.block-hero-display) & {
 		background-color: paint(neutral-1);
