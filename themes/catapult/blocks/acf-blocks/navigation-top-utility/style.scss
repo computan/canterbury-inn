@@ -2,7 +2,9 @@
 
 .block-navigation-top-utility {
 	display: flex;
-	height: rem(62);
+	height: rem(40);
+	padding-top: rem(8);
+	padding-bottom: rem(8);
 	background-color: paint(neutral-2);
 
 	@include media-breakpoint-down(md) {

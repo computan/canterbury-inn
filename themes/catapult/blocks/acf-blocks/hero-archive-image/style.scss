@@ -5,12 +5,44 @@
 	z-index: 1;
 	padding: 0;
 
+	&::after {
+		position: absolute;
+		top: 0;
+		content: "";
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		background-color: paint(black);
+		opacity: 0.65;
+	}
+
 	&__container {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		min-height: responsive-values(284, 528);
 		padding-top: rem(144);
 		padding-bottom: responsive-values(96, 116);
+		text-align: center;
+	}
+
+	.parent-bg-div {
+		position: absolute;
+		bottom: rem(-60);
+		width: 100%;
+
+		@include media-breakpoint-up(lg) {
+			bottom: rem(-1);
+		}
+
+		// svg {
+		// 	width: 100%;
+		// 	fill: paint(white);
+
+		// 	// @include media-breakpoint-up(lg) {
+		// 	// 	width: auto;
+		// 	// }
+		// }
 	}
 }
