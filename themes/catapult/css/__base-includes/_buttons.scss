@@ -19,9 +19,14 @@
 		border $transition-standard,
 		transform-origin $transition-standard;
 
+	&::after {
+		margin-top: rem(3);
+	}
+
 	&:disabled {
 		cursor: not-allowed;
 	}
+
 }
 
 @mixin button-small() {

@@ -15,7 +15,7 @@
  * JS Deps:
  * Global ACF Fields: scroll_id
  * Background Colors:
- * Default BG Color:  
+ * Default BG Color:
  * InnerBlocks:       true
  * Text Width Styles: true
  * Starts With Text:
