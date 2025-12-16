@@ -25,7 +25,7 @@ $content_block = new Content_Block_Gutenberg( $block, $context );
 
 $image         = get_field( 'image' );
 $cards_per_row = $content_block->get_parent_field( 'cards_per_row', 'acf/cards' );
-$image_size    = 'card-image-link-4';
+$image_size    = 'col-6-square';
 
 if ( empty( $cards_per_row ) ) {
 	$cards_per_row = '3';
@@ -45,12 +45,30 @@ $template = array(
 		array(
 			'level'       => 3,
 			'placeholder' => __( 'Add heading here.', 'catapult' ),
+			'fontSize'    => 't3',
 		),
 	),
 	array(
 		'core/paragraph',
 		array(
 			'placeholder' => __( 'Add text or additional blocks here.', 'catapult' ),
+			'fontSize'    => 'body',
+		),
+	),
+	array(
+		'core/paragraph',
+		array(
+			'placeholder' => __( 'Add text or additional blocks here.', 'catapult' ),
+			'fontSize'    => 'title-1',
+			'className'   => 'price',
+		),
+	),
+	array(
+		'core/paragraph',
+		array(
+			'placeholder' => __( 'Add text or additional blocks here.', 'catapult' ),
+			'fontSize'    => 'title-1',
+			'className'   => 'price',
 		),
 	),
 	array(

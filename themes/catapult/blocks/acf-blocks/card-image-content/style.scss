@@ -6,6 +6,15 @@
 	}
 
 	.block-cards__grid {
-		row-gap: rem(48);
+		grid-template-columns: 1fr;
+		gap: rem(24);
+
+		@include media-breakpoint-up(md) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media-breakpoint-up(lg) {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 }
