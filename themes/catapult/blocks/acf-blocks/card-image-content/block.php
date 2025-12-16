@@ -10,12 +10,12 @@
  * Keywords:          cards, card, content, image
  * Post Types:        all
  * Multiple:          true
- * Active:            false
+ * Active:            true
  * CSS Deps:
  * JS Deps:
  * Global ACF Fields: scroll_id
- * Background Colors:
- * Default BG Color:
+ * Background Colors: white, secondary-teal-a, gradient-a, neutral-11
+ * Default BG Color:  white
  * InnerBlocks:       true
  * Styles:
  * Starts With Text:  true
@@ -30,13 +30,6 @@ $content_block = new Content_Block_Gutenberg( $block, $context );
 $allowed_blocks = catapult_text_blocks( array( 'acf/cards' ) );
 
 $template = array(
-	array(
-		'core/heading',
-		array(
-			'level'       => 2,
-			'placeholder' => __( 'Add heading here.', 'catapult' ),
-		),
-	),
 	array(
 		'acf/cards',
 		array(),
