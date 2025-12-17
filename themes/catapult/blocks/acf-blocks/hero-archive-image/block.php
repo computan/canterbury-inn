@@ -13,7 +13,7 @@
  * Active:            true
  * CSS Deps:
  * JS Deps:
- * Global ACF Fields: scroll_id, background_image, background_video
+ * Global ACF Fields: scroll_id, background_image
  * Background Colors:
  * Default BG Color:  dark
  * InnerBlocks:       true
