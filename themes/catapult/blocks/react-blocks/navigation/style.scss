@@ -133,15 +133,22 @@
 
 		body:not(:has(.block-hero-display)) & {
 			&::after {
+				position: absolute;
+				left: rem(-9);
 				content: "";
 				display: block;
-				width: rem(120);
+				width: rem(130);
 				height: rem(24);
 				margin-top: 0;
 				background-image: url("../../../images/block-library/logo-shape-white.png");
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: contain;
+
+				@include media-breakpoint-up(lg) {
+					left: 0;
+					width: rem(140);
+				}
 			}
 		}
 
