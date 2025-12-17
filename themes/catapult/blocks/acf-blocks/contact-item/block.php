@@ -34,17 +34,52 @@ if ( ! empty( $context ) && ( ! empty( $context['hero-contact'] ) || ! empty( $c
 
 $template = array(
 	array(
-		'core/heading',
+		'core/columns',
+		array(),
 		array(
-			'level'       => $heading_level,
-			'placeholder' => __( 'Add heading here.', 'catapult' ),
-			'fontSize'    => 'overline',
-		),
-	),
-	array(
-		'core/paragraph',
-		array(
-			'placeholder' => __( 'Add text or additional blocks here.', 'catapult' ),
+			array(
+				'core/column',
+				array(
+					'width' => '20%',
+				),
+				array(
+					array(
+						'core/buttons',
+						array(),
+						array(
+							array(
+								'core/button',
+								array(
+									'className'  => 'is-style-social',
+									'buttonIcon' => 'icon-instagram',
+								),
+							),
+						),
+					),
+				),
+			),
+			array(
+				'core/column',
+				array(
+					'width' => '80%',
+				),
+				array(
+					array(
+						'core/heading',
+						array(
+							'level'       => 3,
+							'placeholder' => __( 'Add heading here.', 'catapult' ),
+							'fontSize'    => 'overline',
+						),
+					),
+					array(
+						'core/paragraph',
+						array(
+							'placeholder' => __( 'Add text or additional blocks here.', 'catapult' ),
+						),
+					),
+				),
+			),
 		),
 	),
 );

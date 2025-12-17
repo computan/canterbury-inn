@@ -54,17 +54,7 @@ $template = array(
 		),
 		array(
 			array(
-				'core/heading',
-				array(
-					'level'       => 1,
-					'placeholder' => __( 'Add heading here.', 'catapult' ),
-				),
-			),
-			array(
-				'core/paragraph',
-				array(
-					'placeholder' => __( 'Add text or additional blocks here.', 'catapult' ),
-				),
+				'acf/contact-item',
 			),
 			array(
 				'acf/contact-item',
@@ -73,29 +63,51 @@ $template = array(
 				'acf/contact-item',
 			),
 			array(
-				'core/heading',
+				'core/group',
 				array(
-					'level'    => 2,
-					'content'  => __( 'Connect', 'catapult' ),
-					'fontSize' => 'overline',
+					'className' => 'social-buttons-wrapper',
 				),
-			),
-			array(
-				'core/buttons',
-				array(),
 				array(
 					array(
-						'core/button',
+						'core/heading',
 						array(
-							'className'  => 'is-style-social',
-							'buttonIcon' => 'icon-facebook',
+							'level'    => 2,
+							'content'  => __( 'Connect', 'catapult' ),
+							'fontSize' => 'overline',
 						),
 					),
 					array(
-						'core/button',
+						'core/buttons',
+						array(),
 						array(
-							'className'  => 'is-style-social',
-							'buttonIcon' => 'icon-x',
+							array(
+								'core/button',
+								array(
+									'className'  => 'is-style-social',
+									'buttonIcon' => 'icon-instagram',
+								),
+							),
+							array(
+								'core/button',
+								array(
+									'className'  => 'is-style-social',
+									'buttonIcon' => 'icon-facebook',
+								),
+							),
+							array(
+								'core/button',
+								array(
+									'className'  => 'is-style-social',
+									'buttonIcon' => 'icon-x',
+								),
+							),
+							array(
+								'core/button',
+								array(
+									'className'  => 'is-style-social',
+									'buttonIcon' => 'icon-pinterest',
+								),
+							),
 						),
 					),
 				),
