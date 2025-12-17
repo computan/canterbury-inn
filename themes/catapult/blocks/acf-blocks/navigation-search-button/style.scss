@@ -19,9 +19,9 @@
 		height: rem(35);
 		margin-right: rem(12);
 		padding: 0;
-		color: paint(gold);
+		color: paint(green);
 		border: none;
-		border: rem(1) solid paint(gold);
+		border: rem(1) solid paint(green);
 		border-radius: 50%;
 		background-color: transparent;
 		cursor: pointer;
@@ -55,6 +55,10 @@
 			background-color: paint(button-hover);
 		}
 
+		// body:has(.block-hero-display) & {
+		// 	color: paint(gold);
+		// 	border: rem(1) solid paint(gold);
+		// }
 		.block-navigation__menu & {
 			@include media-breakpoint-down(md) {
 				display: none;
@@ -78,7 +82,15 @@
 		}
 
 		body:has(.block-hero-display) & {
-			color: paint(white);
+			// color: paint(white);
+
+			color: paint(gold);
+			border: rem(1) solid paint(gold);
+
+			&:hover {
+				color: paint(white);
+				background-color: paint(gold);
+			}
 		}
 	}
 
@@ -98,7 +110,7 @@
 		width: 100%;
 		padding: responsive-values(32, 48) var(--gutterWidth);
 		padding-bottom: rem(50);
-		background-color: paint(green);
+		background-color: paint(white);
 		visibility: hidden;
 		opacity: 0;
 		clip-path: ellipse(calc(50 * 2%) 100% at top);
@@ -106,6 +118,10 @@
 
 		@include media-breakpoint-up(lg) {
 			top: 100%;
+		}
+
+		body:has(.block-hero-display) & {
+			background-color: paint(green);
 		}
 
 		.block-navigation.is-style-variable-width-dropdown & {

@@ -19,25 +19,26 @@
 
 	/* HERO NOT PRESENT → default white */
 	body:not(:has(.block-hero-display)) & {
-		background-color: paint(green) !important;
+		background-color: paint(white) !important;
 
-		@include media-breakpoint-up(lg) {
-			background-color: paint(white) !important;
+		&.active {
+			background-color: paint(neutral-1) !important;
 		}
-
+		// @include media-breakpoint-up(lg) {
+		// 	background-color: paint(white) !important;
+		// }
 		&.search-active {
-			background-color: #03252a !important; // your desired color
-
+			// background-color: #03252a !important; // your desired color
 			.block-navigation {
 				&__container {
-					img {
-						filter: brightness(0) invert(1);
-					}
+					// img {
+					// 	filter: brightness(0) invert(1);
+					// }
 
 					// Target menu buttons correctly
 					.block-navigation__menu {
 						.block-navigation-link__button {
-							color: paint(white);
+							color: paint(green);
 						}
 					}
 				}
@@ -45,14 +46,12 @@
 		}
 	}
 
-	/* HERO PRESENT + SCROLLED → neutral */
 	body:has(.block-hero-display) &.scrolled {
 		background-color: paint(neutral-1) !important;
 	}
 
-	/* HERO NOT PRESENT + SCROLLED → white */
 	body:not(:has(.block-hero-display)) &.scrolled {
-		background-color: paint(green) !important;
+		background-color: paint(white) !important;
 
 		@include media-breakpoint-up(lg) {
 			background-color: paint(white) !important;
@@ -74,6 +73,25 @@
 			top: 0;
 			z-index: 20;
 		}
+
+		.block-navigation__container {
+			.block-navigation-search-button {
+				&__button {
+					display: none;
+				}
+			}
+		}
+
+		.block-navigation__logo-link {
+			&::after {
+				content: none;
+				display: none;
+			}
+
+			img {
+				filter: brightness(0) invert(1);
+			}
+		}
 	}
 
 	&.search-active {
@@ -84,7 +102,11 @@
 		.block-navigation {
 			&__container {
 				border-radius: 0;
-				background-color: paint(green) !important;
+				background-color: paint(white) !important;
+
+				body:has(.block-hero-display) & {
+					background-color: paint(green) !important;
+				}
 			}
 		}
 	}
@@ -113,6 +135,7 @@
 	}
 
 	&__logo-link {
+		position: relative;
 		z-index: 99;
 		display: block;
 		height: rem(60);
@@ -128,20 +151,34 @@
 			color: unset;
 		}
 
+		body:not(:has(.block-hero-display)) & {
+			&::after {
+				content: "";
+				display: block;
+				width: rem(120);
+				height: rem(24);
+				margin-top: 0;
+				background-image: url("../../../images/block-library/logo-shape-white.png");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: contain;
+			}
+		}
+
 		body:has(.block-hero-display) & {
 			img {
 				filter: brightness(0) invert(1);
 			}
 		}
 
-		img {
-			filter: brightness(0) invert(1);
+		// img {
+		// 	filter: brightness(0) invert(1);
 
-			@include media-breakpoint-up(lg) {
-				filter: none;
+		// 	@include media-breakpoint-up(lg) {
+		// 		filter: none;
 
-			}
-		}
+		// 	}
+		// }
 	}
 
 	&__menu {
@@ -257,13 +294,21 @@
 		margin: rem(-20 -20 -20 0);
 		margin-right: rem(5);
 		padding: 0;
-		border: rem(1) solid paint(gold);
+		border: rem(1) solid paint(green);
 		border-radius: 50%;
 		background-color: transparent;
 		appearance: none;
 
+		&:hover {
+			background-color: paint(white);
+
+			body:has(.block-hero-display) & {
+				background-color: paint(gold);
+			}
+		}
+
 		&.active {
-			background-color: paint(gold);
+			background-color: paint(white);
 
 			.block-navigation__hamburger-inner {
 				background: transparent;
@@ -276,6 +321,14 @@
 					transform: translateY(rem(-6)) rotate(-45deg);
 				}
 			}
+
+			body:has(.block-hero-display) & {
+				border: rem(1) solid paint(gold);
+			}
+		}
+
+		body:has(.block-hero-display) & {
+			border: rem(1) solid paint(gold);
 		}
 	}
 
@@ -284,7 +337,7 @@
 		display: block;
 		width: rem(24);
 		height: rem(24);
-		background: linear-gradient(to bottom, transparent calc(50% - rem(1)), paint(white) calc(50% - rem(1)), paint(white) calc(50% + rem(1)), transparent calc(50% + rem(1)));
+		background: linear-gradient(to bottom, transparent calc(50% - rem(1)), paint(green) calc(50% - rem(1)), paint(green) calc(50% + rem(1)), transparent calc(50% + rem(1)));
 
 		&::before,
 		&::after {
@@ -293,16 +346,35 @@
 			content: "";
 			width: 100%;
 			height: rem(2);
-			background-color: paint(white);
+			background-color: paint(green);
 			transition: transform $transition-standard;
+
+			body:has(.block-hero-display) & {
+				background-color: paint(white);
+			}
 		}
 
 		&::before {
 			top: calc(50% - rem(7));
+
+			// &:hover::before {
+			// 	background-color: paint(white);
+			// }
 		}
 
 		&::after {
 			bottom: calc(50% - rem(7));
+
+			// &:hover::after {
+			// 	background-color: paint(white);
+			// }
+		}
+
+		// &:hover {
+		// 	background: linear-gradient(to bottom, transparent calc(50% - rem(1)), paint(white) calc(50% - rem(1)), paint(white) calc(50% + rem(1)), transparent calc(50% + rem(1)));
+		// }
+		body:has(.block-hero-display) & {
+			background: linear-gradient(to bottom, transparent calc(50% - rem(1)), paint(white) calc(50% - rem(1)), paint(white) calc(50% + rem(1)), transparent calc(50% + rem(1)));
 		}
 	}
 
