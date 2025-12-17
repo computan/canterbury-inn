@@ -4,6 +4,7 @@
 	position: relative;
 	z-index: 1;
 	padding: 0;
+	overflow: hidden;
 
 	&::after {
 		position: absolute;
@@ -29,20 +30,11 @@
 
 	.parent-bg-div {
 		position: absolute;
-		bottom: rem(-60);
+		bottom: 0;
 		width: 100%;
 
 		@include media-breakpoint-up(lg) {
 			bottom: rem(-1);
 		}
-
-		// svg {
-		// 	width: 100%;
-		// 	fill: paint(white);
-
-		// 	// @include media-breakpoint-up(lg) {
-		// 	// 	width: auto;
-		// 	// }
-		// }
 	}
 }
