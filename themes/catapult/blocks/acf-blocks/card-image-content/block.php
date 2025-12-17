@@ -31,6 +31,22 @@ $allowed_blocks = catapult_text_blocks( array( 'acf/cards' ) );
 
 $template = array(
 	array(
+		'core/heading',
+		array(
+			'level'       => 5,
+			'placeholder' => __( 'Add heading here.', 'catapult' ),
+			'fontSize'    => 'overline',
+		),
+	),
+	array(
+		'core/heading',
+		array(
+			'level'       => 2,
+			'placeholder' => __( 'Add heading here.', 'catapult' ),
+			'fontSize'    => 't2',
+		),
+	),
+	array(
 		'acf/cards',
 		array(),
 		array(

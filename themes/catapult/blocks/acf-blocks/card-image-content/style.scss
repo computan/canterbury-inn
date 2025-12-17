@@ -5,6 +5,14 @@
 		max-width: 100%;
 	}
 
+	&__container {
+		text-align: center;
+
+		h2 {
+			margin: 0;
+		}
+	}
+
 	.block-cards__grid {
 		grid-template-columns: 1fr;
 		gap: rem(24);
