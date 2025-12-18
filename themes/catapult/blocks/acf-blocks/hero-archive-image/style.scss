@@ -33,7 +33,7 @@
 		left: 0;
 		bottom: 0;
 		width: 100%;
-		line-height: 0; // inline SVG gap remove
+		line-height: 0;
 		pointer-events: none;
 
 		@include media-breakpoint-up(lg) {
@@ -42,9 +42,9 @@
 
 		svg {
 			display: block;
-			width: 100%;             // 🔑 section ke barabar
+			width: 100%;
 			height: auto;
-			max-width: 100%;         // 🔑 overflow fix
+			max-width: 100%;
 			fill: paint(white);
 		}
 	}
