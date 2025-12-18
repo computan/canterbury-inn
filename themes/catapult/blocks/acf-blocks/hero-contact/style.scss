@@ -4,7 +4,7 @@
 	padding-top: responsive-values(144, 192);
 
 	&__container {
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			@include grid();
 
 			row-gap: responsive-values(20, 32);
@@ -13,13 +13,46 @@
 
 	.block-content {
 		width: 100%;
+		margin-top: 0;
+		margin-bottom: rem(20);
 
-		@include media-breakpoint-up(md) {
-			grid-area: 1 / 1 / 2 / 7;
-		}
+		// @include media-breakpoint-up(md) {
+		// 	grid-area: 1 / 1 / 2 / 7;
+		// }
 
 		@include media-breakpoint-up(lg) {
 			grid-area: 1 / 1 / 2 / 6;
+		}
+
+		.block-contact-item {
+			.wp-block-columns {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				margin-bottom: rem(20);
+				padding: rem(20);
+				border-radius: rem(15);
+				// background: paint(secondary-teal-a);
+
+				background: paint(gold);
+
+				.wp-block-buttons {
+					.wp-block-button {
+						display: flex;
+						align-items: center !important;
+						height: rem(52);
+						min-width: rem(52);
+						border-radius: 100%;
+						background-color: paint(green);
+
+						&__link {
+							&::after {
+								background-color: paint(white);
+							}
+						}
+					}
+				}
+			}
 		}
 
 		.wp-block-buttons {
@@ -35,10 +68,111 @@
 		width: 100%;
 		margin-top: rem(72);
 		margin-bottom: auto;
+		color: paint(white);
+		border-radius: rem(20);
 
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			grid-area: 1 / 7 / 2 / 13;
 			margin-top: 0;
+		}
+
+		form {
+			&.wpcf7-form {
+				margin-inline: 0;
+				margin-top: 0;
+			}
+
+			.contact-form-box {
+				width: 100%;
+				padding: rem(40) rem(20);
+				color: paint(white);
+				border-radius: rem(20);
+				background: paint(green);
+
+				@include media-breakpoint-up(lg) {
+					padding: rem(40);
+				}
+
+				.form-grid {
+					margin-top: rem(30);
+
+					.form-row {
+						display: flex;
+						flex-direction: column;
+						gap: rem(20);
+						margin-bottom: rem(20);
+
+						@include media-breakpoint-up(md) {
+							flex-direction: row;
+						}
+
+						.form-field {
+							span {
+								margin: 0 !important;
+								padding: 0 !important;
+
+								input,
+								textarea {
+									margin-bottom: 0;
+									padding: rem(12);
+									color: paint(white);
+									border: none;
+									border-radius: rem(8);
+									background-color: paint(light-green);
+
+									&::placeholder {
+										color: paint(white);
+									}
+								}
+							}
+						}
+					}
+
+					.form-field {
+						span {
+							display: block;
+							margin: 0 !important;
+							padding: 0 !important;
+
+							input,
+							textarea {
+								margin-bottom: 0;
+								padding: rem(12);
+								color: paint(white);
+								border: none;
+								border-radius: rem(8);
+								background-color: paint(light-green);
+
+								&::placeholder {
+									color: paint(white);
+								}
+							}
+
+							textarea {
+								width: 100% !important;
+								max-width: 100%;
+							}
+						}
+					}
+				}
+
+				.form-actions {
+					.wpcf7-submit {
+						@include button-primary;
+
+						margin-top: rem(24);
+
+						@include media-breakpoint-up(md) {
+							width: auto !important;
+						}
+
+						// &:hover,
+						// &:focus {
+						// 	background-color: paint(lime-green);
+						// }
+					}
+				}
+			}
 		}
 	}
 
