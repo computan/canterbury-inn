@@ -40,7 +40,7 @@ $template = array(
 			array(
 				'core/column',
 				array(
-					'width' => '20%',
+					'width' => '10%',
 				),
 				array(
 					array(
@@ -61,7 +61,7 @@ $template = array(
 			array(
 				'core/column',
 				array(
-					'width' => '80%',
+					'width' => '90%',
 				),
 				array(
 					array(

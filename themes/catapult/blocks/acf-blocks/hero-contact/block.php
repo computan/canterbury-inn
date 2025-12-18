@@ -66,7 +66,7 @@ $template = array(
 				'core/heading',
 				array(
 					'level'    => 2,
-					'content'  => __( 'Connect', 'catapult' ),
+					'content'  => __( 'Follow Us Today :', 'catapult' ),
 					'fontSize' => 'overline',
 				),
 			),
