@@ -63,51 +63,43 @@ $template = array(
 				'acf/contact-item',
 			),
 			array(
-				'core/group',
+				'core/heading',
 				array(
-					'className' => 'social-buttons-wrapper',
+					'level'    => 2,
+					'content'  => __( 'Connect', 'catapult' ),
+					'fontSize' => 'overline',
 				),
+			),
+			array(
+				'core/buttons',
+				array(),
 				array(
 					array(
-						'core/heading',
+						'core/button',
 						array(
-							'level'    => 2,
-							'content'  => __( 'Connect', 'catapult' ),
-							'fontSize' => 'overline',
+							'className'  => 'is-style-social',
+							'buttonIcon' => 'icon-instagram',
 						),
 					),
 					array(
-						'core/buttons',
-						array(),
+						'core/button',
 						array(
-							array(
-								'core/button',
-								array(
-									'className'  => 'is-style-social',
-									'buttonIcon' => 'icon-instagram',
-								),
-							),
-							array(
-								'core/button',
-								array(
-									'className'  => 'is-style-social',
-									'buttonIcon' => 'icon-facebook',
-								),
-							),
-							array(
-								'core/button',
-								array(
-									'className'  => 'is-style-social',
-									'buttonIcon' => 'icon-x',
-								),
-							),
-							array(
-								'core/button',
-								array(
-									'className'  => 'is-style-social',
-									'buttonIcon' => 'icon-pinterest',
-								),
-							),
+							'className'  => 'is-style-social',
+							'buttonIcon' => 'icon-facebook',
+						),
+					),
+					array(
+						'core/button',
+						array(
+							'className'  => 'is-style-social',
+							'buttonIcon' => 'icon-x',
+						),
+					),
+					array(
+						'core/button',
+						array(
+							'className'  => 'is-style-social',
+							'buttonIcon' => 'icon-pinterest',
 						),
 					),
 				),
@@ -132,9 +124,16 @@ $template = array(
 		),
 	),
 );
-
 ?>
 
-<section <?php echo wp_kses_post( $content_block->get_block_id_attr() ); ?><?php echo wp_kses_post( $content_block->get_block_style_attr() ); ?>class="acf-block block-hero-contact<?php echo esc_attr( $content_block->get_block_classes() ); ?>">
-	<InnerBlocks allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowed_blocks ) ); ?>" template="<?php echo esc_attr( wp_json_encode( $template ) ); ?>" class="container block-hero-contact__container" />
+<section
+	<?php echo wp_kses_post( $content_block->get_block_id_attr() ); ?>
+	<?php echo wp_kses_post( $content_block->get_block_style_attr() ); ?>
+	class="acf-block block-hero-contact<?php echo esc_attr( $content_block->get_block_classes() ); ?>"
+>
+	<InnerBlocks
+		allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowed_blocks ) ); ?>"
+		template="<?php echo esc_attr( wp_json_encode( $template ) ); ?>"
+		class="container block-hero-contact__container"
+	/>
 </section>
