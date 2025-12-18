@@ -30,11 +30,22 @@
 
 	.parent-bg-div {
 		position: absolute;
+		left: 0;
 		bottom: 0;
 		width: 100%;
+		line-height: 0; // inline SVG gap remove
+		pointer-events: none;
 
 		@include media-breakpoint-up(lg) {
 			bottom: rem(-1);
+		}
+
+		svg {
+			display: block;
+			width: 100%;             // 🔑 section ke barabar
+			height: auto;
+			max-width: 100%;         // 🔑 overflow fix
+			fill: paint(white);
 		}
 	}
 }

@@ -58,16 +58,22 @@ body {
 }
 
 .main-header {
-	position: fixed;
+	position: sticky;
 	top: 0;
 	z-index: 19;
 	width: 100%;
+
+	@include media-breakpoint-down(md) {
+		height: rem(87);
+	}
 	// background: paint(white);
 	&:has(.campaign-navigation) {
 		height: rem(64);
 	}
 
 	&.menu-open {
+		position: fixed;
+
 		.block-navigation-top-utility {
 			background-color: paint(green) !important;
 		}
@@ -79,7 +85,7 @@ body {
 	}
 
 	body.admin-bar & {
-		position: fixed;
+		position: sticky;
 		/* stylelint-disable unit-disallowed-list */
 
 		top: 32px;
@@ -88,6 +94,9 @@ body {
 			top: 46px;
 		}
 		/* stylelint-enable unit-disallowed-list */
+		&.menu-open {
+			position: fixed;
+		}
 	}
 
 	> .block-content {
