@@ -41,6 +41,7 @@ $background-colors: (
 	"button-hover": paint(button-hover),
 	"dark": paint(button-hover),
 	"green": paint(green),
+	"light-green": paint(light-green),
 	"gold": paint(gold),
 	"lime-green": paint(lime-green),
 	"sun-tint": paint(sun-tint),
@@ -79,6 +80,7 @@ $background-font-colors: (
 	"button-hover": paint(white),
 	"black": paint(white),
 	"green": paint(white),
+	"light-green": paint(white),
 	"dark": paint(white),
 	"secondary-teal-b": paint(white),
 	"secondary-teal-c": paint(white),
@@ -104,6 +106,7 @@ $background-font-hover-colors: (
 $backgrounds-with-alt-text-color: (
 	"button-hover",
 	"green",
+	"light-green",
 	"black",
 	"dark",
 	"secondary-teal-b",
@@ -126,6 +129,7 @@ $backgrounds-with-alt-text-color: (
 $backgrounds-with-alt-button-color: (
 	"button-hover",
 	"green",
+	"light-green",
 	"gold",
 	"black",
 	"dark",
