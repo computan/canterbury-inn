@@ -13,9 +13,9 @@
  * Active:            true
  * CSS Deps:
  * JS Deps:
- * Global ACF Fields: scroll_id
- * Background Colors:
- * Default BG Color:
+ * Global ACF Fields: scroll_id, background_image
+ * Background Colors: white, green, gold, secondary-teal-a, gradient-a, gradient-d, neutral-1, neutral-11
+ * Default BG Color:  secondary-teal-a
  * InnerBlocks:       true
  * Starts With Text:  true
  *
@@ -30,17 +30,15 @@ $content_block = new Content_Block_Gutenberg( $block, $context );
 
 $allowed_blocks = catapult_text_blocks( 'acf/accordion', 'acf/form' );
 
-
 $template = array(
 	array(
 		'core/columns',
 		array(),
 		array(
-			// Column 1
 			array(
 				'core/column',
 				array(
-					'width' => '50%',
+					'width' => '52.5%',
 				),
 				array(
 					array(
@@ -64,12 +62,11 @@ $template = array(
 					),
 				),
 			),
-
-			// Column 2
 			array(
 				'core/column',
 				array(
-					'width' => '50%',
+					'width' => '43.5%',
+					'className'   => 'booking-form',
 				),
 				array(
 					array(
@@ -95,95 +92,9 @@ $template = array(
 	),
 );
 
-
-
-// $template = array(
-// 	array(
-// 		'core/heading',
-// 		array(
-// 			'level'       => 2,
-// 			'placeholder' => __( 'Add heading here.', 'catapult' ),
-// 			'textAlign'   => 'center',
-// 		),
-// 	),
-// 	array(
-// 		'acf/accordion',
-// 	),
-// 		array(
-// 		'acf/form',
-// 		array(
-// 			'lock' => array(
-// 				'move'   => true,
-// 				'remove' => true,
-// 			),
-// 		),
-// 		array(
-// 			array(
-// 				'contact-form-7/contact-form-selector',
-// 				array(
-// 					'label' => 'Select a Contact Form',
-// 				),
-// 			),
-// 		),
-// 	),
-// );
-// $template = array(
-// 	array(
-// 		'acf/content-section',
-// 		array(
-// 			'lock' => array(
-// 				'move'   => true,
-// 				'remove' => true,
-// 			),
-// 		),
-// 		array(
-// 			array(
-// 				'core/heading',
-// 				array(
-// 					'level'    => 2,
-// 					'content'  => __( 'Connect', 'catapult' ),
-// 					'fontSize' => 'overline',
-// 				),
-// 			),
-// 			array(
-// 				'core/heading',
-// 				array(
-// 					'level'       => 1,
-// 					'placeholder' => __( 'Add heading here.', 'catapult' ),
-// 				),
-// 			),
-// 		),
-// 	),
-// 	array(
-// 		'acf/accordion',
-// 		array(
-// 			'lock' => array(
-// 				'move'   => true,
-// 				'remove' => true,
-// 			),
-// 		),
-// 	),
-// 	array(
-// 		'acf/form',
-// 		array(
-// 			'lock' => array(
-// 				'move'   => true,
-// 				'remove' => true,
-// 			),
-// 		),
-// 		array(
-// 			array(
-// 				'contact-form-7/contact-form-selector',
-// 				array(
-// 					'label' => 'Select a Contact Form',
-// 				),
-// 			),
-// 		),
-// 	),
-// );
-
 ?>
 
 <section <?php echo wp_kses_post( $content_block->get_block_id_attr() ); ?><?php echo wp_kses_post( $content_block->get_block_style_attr() ); ?>class="acf-block block-accordion-side-form<?php echo esc_attr( $content_block->get_block_classes() ); ?>">
+	<?php echo wp_kses_post( $content_block->get_block_background_image_and_video() ); ?>
 	<InnerBlocks allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowed_blocks ) ); ?>" template="<?php echo esc_attr( wp_json_encode( $template ) ); ?>" class="container block-accordion-side-form__container" />
 </section>

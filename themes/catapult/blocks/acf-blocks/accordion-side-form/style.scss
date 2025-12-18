@@ -1,31 +1,54 @@
 @import "base-includes";
 
 .block-accordion-side-form {
+	@include media-breakpoint-up(xl) {
+		background-image: url(../../images/block-library/faq-bg.jpg);
+		background-repeat: no-repeat;
+		background-position: top right;
+		background-size: 30% 100%;
+	}
+
 	&__container {
-		@include media-breakpoint-up(md) {
-			@include grid();
-		}
-	}
+		.wp-block-columns {
+			display: flex;
+			flex-direction: column;
+			row-gap: rem(24);
 
-	.block-content {
-		@include media-breakpoint-up(md) {
-			grid-column: 1 / 6;
-		}
+			@include media-breakpoint-up(xl) {
+				flex-direction: row;
+				justify-content: space-between;
+			}
 
-		@include media-breakpoint-up(xl) {
-			grid-column: 1 / 5;
-		}
-	}
+			.booking-form {
+				padding: rem(40);
+				color: paint(white);
+				border-radius: rem(20);
+				background: paint(green);
 
-	.block-accordion {
-		padding: 0;
+				.wp-block-contact-form-7-contact-form-selector {
+					display: block !important;
+				}
 
-		@include media-breakpoint-up(md) {
-			grid-column: 6 / 13;
-		}
+				form {
+					display: block;
+					margin: 0;
 
-		@include media-breakpoint-down(sm) {
-			margin-top: rem(48);
+					.wpcf7-form-control-wrap {
+						display: block;
+						padding: 0;
+					}
+
+					.thank-you {
+						display: none;
+					}
+
+					&.sent {
+						.thank-you {
+							display: block;
+						}
+					}
+				}
+			}
 		}
 	}
 }
