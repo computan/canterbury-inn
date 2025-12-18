@@ -14,8 +14,8 @@
  * CSS Deps:
  * JS Deps:
  * Global ACF Fields: scroll_id
- * Background Colors:
- * Default BG Color:  neutral-10
+ * Background Colors: white, gradient-a, gradient-d, neutral-1, neutral-11
+ * Default BG Color:  gradient-a
  * InnerBlocks:       true
  * Text Width Styles: true
  * Starts With Text:  true
@@ -38,6 +38,7 @@ $template = array(
 			'level'       => 2,
 			'placeholder' => __( 'Add heading here.', 'catapult' ),
 			'textAlign'   => 'center',
+			'fontSize'    => 't2',
 		),
 	),
 	array(
@@ -45,6 +46,7 @@ $template = array(
 		array(
 			'placeholder' => __( 'Add text or additional blocks here.', 'catapult' ),
 			'align'       => 'center',
+			'fontSize'    => 'body-1',
 		),
 	),
 	array(
@@ -52,6 +54,22 @@ $template = array(
 		array(
 			'layout' => array(
 				'justifyContent' => 'center',
+			),
+		),
+		array(
+			array(
+				'core/button',
+				array(
+					'className'   => 'is-style-primary',
+					'placeholder' => 'Primary CTA',
+				),
+			),
+			array(
+				'core/button',
+				array(
+					'className'   => 'is-style-secondary',
+					'placeholder' => 'Secondary CTA',
+				),
 			),
 		),
 	),
