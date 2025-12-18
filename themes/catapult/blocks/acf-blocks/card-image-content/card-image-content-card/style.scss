@@ -22,8 +22,6 @@
 	}
 
 	.wp-block-heading {
-		@include t3();
-
 		position: relative;
 		padding-bottom: rem(8);
 		color: paint(green);
@@ -44,14 +42,6 @@
 
 		&:last-of-type {
 			margin-bottom: rem(16);
-		}
-
-		&.price {
-			margin-bottom: 0;
-
-			&:last-of-type {
-				margin-bottom: rem(16);
-			}
 		}
 
 		&.has-body-font-size {

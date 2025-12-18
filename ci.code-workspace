@@ -77,6 +77,10 @@
 		"phpsab.executablePathCBF": "./vendor/bin/phpcbf",
 		"phpsab.autoRulesetSearch": true,
 		"phpsab.fixerEnable": true,
+		"phpsab.executablePathCS": "ddev",
+		"phpsab.executablePathCBF": "ddev",
+		"phpsab.argsCS": ["exec", "vendor/bin/phpcs"],
+		"phpsab.argsCBF": ["exec", "vendor/bin/phpcbf"]
 		"files.eol": "\n",
 		"liveServer.settings.multiRootWorkspaceName": "wp-content (Git Root Directory)"
 	}
