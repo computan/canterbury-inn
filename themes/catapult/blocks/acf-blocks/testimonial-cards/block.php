@@ -10,7 +10,7 @@
  * Keywords:          testimonial, slider, quote, cards
  * Post Types:        all
  * Multiple:          true
- * Active:            false
+ * Active:            true
  * CSS Deps:          slider
  * JS Deps:
  * Global ACF Fields: scroll_id
