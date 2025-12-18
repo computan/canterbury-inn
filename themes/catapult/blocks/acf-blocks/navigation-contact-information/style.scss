@@ -8,8 +8,8 @@
 	transition: transform 0.3s ease-out, opacity 0.2s linear, visibility 0s 0.2s;
 
 	@include media-breakpoint-down(md) {
-		position: relative;
-		top: rem(340);
+		position: fixed;
+		top: 50%;
 		left: 0;
 		z-index: 200;
 		width: 100%;
@@ -17,6 +17,10 @@
 		visibility: hidden;
 		opacity: 0;
 		transition: opacity 0.2s linear, visibility 0s 0.2s;
+
+		body.admin-bar & {
+			top: 60%;
+		}
 	}
 
 	@include media-breakpoint-up(lg) {
