@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-6114672a-2412-4d83-8e41-3932ee8c3d4d" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="100" height="50" viewBox="0 0 100 50">
+  <defs>
+    <style>
+      .uuid-cb9c6a44-4403-4b02-a20f-26859d874429 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path class="uuid-cb9c6a44-4403-4b02-a20f-26859d874429" d="M0,50h1.02c-.34,0-.68-.02-1.02-.03v.03Z"/>
+  <path class="uuid-cb9c6a44-4403-4b02-a20f-26859d874429" d="M50,1.02c0,27.05-21.93,48.98-48.98,48.98h97.96c-27.05,0-48.98-21.93-48.98-48.98Z"/>
+  <path class="uuid-cb9c6a44-4403-4b02-a20f-26859d874429" d="M98.98,50h1.02v-.03c-.34,0-.68.03-1.02.03Z"/>
+</svg>

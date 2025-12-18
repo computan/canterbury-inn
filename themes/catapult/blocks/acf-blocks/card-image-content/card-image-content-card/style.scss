@@ -102,12 +102,16 @@
 			width: rem(100);
 			height: rem(50);
 			margin: 0 auto;
-			background: url(../../images/block-library/services-card-bg.png) no-repeat;
+			background: url(../../images/block-library/services-card-bg.svg) no-repeat;
 			background-position: left center;
 			background-size: cover;
 
+			@include media-breakpoint-up(xxl) {
+				bottom: rem(-1);
+			}
+
 			.bg-secondary-teal-a & {
-				background-image: url(../../images/block-library/white-services-card-bg.png);
+				background-image: url(../../images/block-library/white-services-card-bg.svg);
 			}
 		}
 
