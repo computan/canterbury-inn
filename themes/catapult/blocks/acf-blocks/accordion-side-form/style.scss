@@ -1,14 +1,28 @@
 @import "base-includes";
 
 .block-accordion-side-form {
-	@include media-breakpoint-up(xl) {
-		background-image: url(../../images/block-library/faq-bg.jpg);
-		background-repeat: no-repeat;
-		background-position: top right;
-		background-size: 30% 100%;
+	position: relative;
+
+	.acf-block__background-image-wrapper {
+		display: none;
+
+		@include media-breakpoint-up(xl) {
+			left: auto;
+			right: 0;
+			z-index: inherit;
+			display: block;
+			width: 30%;
+		}
+
+		.acf-block__background-image {
+			z-index: inherit;
+			border-radius: 0;
+		}
 	}
 
 	&__container {
+		position: relative;
+
 		.wp-block-columns {
 			display: flex;
 			flex-direction: column;
@@ -20,11 +34,6 @@
 			}
 
 			.booking-form {
-				padding: rem(40);
-				color: paint(white);
-				border-radius: rem(20);
-				background: paint(green);
-
 				.wp-block-contact-form-7-contact-form-selector {
 					display: block !important;
 				}
@@ -32,19 +41,161 @@
 				form {
 					display: block;
 					margin: 0;
+					padding: rem(40);
+					color: paint(white);
+					border-radius: rem(20);
+					background: paint(green);
+
+					.bg-green & {
+						color: paint(neutral-1);
+						background: paint(secondary-teal-a);
+					}
+
+					.row {
+						row-gap: rem(10);
+					}
 
 					.wpcf7-form-control-wrap {
 						display: block;
 						padding: 0;
+
+						input,
+						select {
+							color: paint(white);
+							border: none;
+							background-color: paint(light-green);
+
+							.bg-green & {
+								background-color: paint(neutral-1);
+							}
+						}
+
+						select {
+							background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10L12 15L17 10H7Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+						}
 					}
 
-					.thank-you {
+					.form-head {
+						margin-bottom: responsive-values(16, 24);
+					}
+
+					.success-message {
 						display: none;
 					}
 
 					&.sent {
-						.thank-you {
-							display: block;
+						background: transparent;
+
+						.success-message {
+							display: block !important;
+							padding: rem(30);
+							color: paint(white);
+							border-radius: rem(20);
+							background: paint(green);
+
+							p {
+								@include body-1;
+							}
+
+							.bg-green & {
+								color: paint(neutral-1);
+								background-color: paint(secondary-teal-a);
+							}
+						}
+
+						.col-12 {
+							display: none;
+						}
+					}
+
+					.wpcf7-response-output {
+						display: none;
+					}
+
+					.submit {
+						@include button-primary;
+
+						width: auto !important;
+						margin-top: rem(16);
+						margin-bottom: 0;
+
+						&:hover,
+						&:focus {
+							color: paint(green);
+							background-color: paint(white);
+						}
+
+						.bg-green & {
+							color: paint(white);
+							background-color: paint(neutral-1);
+						}
+					}
+
+					.wpcf7-not-valid-tip {
+						display: block;
+						margin-top: rem(6);
+						padding: rem(4) rem(6);
+						border-radius: rem(4);
+						background-color: paint(white);
+					}
+				}
+			}
+
+			.block-accordion {
+				padding: 0;
+
+				.block-accordion-item {
+					margin-bottom: rem(16);
+					border: none;
+					border-radius: rem(10);
+					background-color: paint(secondary-teal-a);
+					overflow: hidden;
+
+					.bg-secondary-teal-a &,
+					.bg-neutral-11 & {
+						background-color: paint(white);
+					}
+
+					.wp-block-button {
+						&__link {
+							padding: rem(20) rem(60) rem(20) rem(22);
+							border: none;
+							border-radius: 0;
+
+							.bg-green &,
+							.bg-gradient-a &,
+							.bg-gradient-d &,
+							.bg-neutral-1 & {
+								color: paint(green);
+							}
+						}
+					}
+
+					.block-content {
+						margin: 0;
+						padding: rem(20) rem(22);
+						border-top: rem(1) solid paint(neutral-9);
+					}
+
+					&.active {
+						color: paint(white);
+						background-color: paint(green);
+
+						.wp-block-button__link {
+							color: paint(white);
+
+							.bg-green &,
+							.bg-gradient-a &,
+							.bg-neutral-1 & {
+								color: paint(green);
+							}
+						}
+
+						.bg-green &,
+						.bg-gradient-a &,
+						.bg-neutral-1 & {
+							color: paint(green);
+							background-color: paint(secondary-teal-a);
 						}
 					}
 				}
