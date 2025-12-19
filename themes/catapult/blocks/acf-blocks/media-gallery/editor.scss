@@ -14,5 +14,13 @@
 			display: none !important;
 		}
 
+		&__grid {
+			.wp-block-image {
+				figcaption {
+					position: relative !important;
+					z-index: 999;
+				}
+			}
+		}
 	}
 }

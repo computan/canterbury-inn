@@ -23,7 +23,9 @@
 		align-items: center;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(paint(neutral-1), 0.8);
+		// background-color: rgba(paint(green), 0.8);
+
+		background-color: paint(green);
 		opacity: 0;
 		pointer-events: none;
 		transition: opacity 0.4s ease-in-out;
