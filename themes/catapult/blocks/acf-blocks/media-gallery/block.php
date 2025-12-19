@@ -14,13 +14,13 @@
  * CSS Deps:          lightbox
  * JS Deps:           lightbox
  * Global ACF Fields: scroll_id
- * Background Colors: White, Neutral-11
- * Default BG Color: White
+ * Background Colors: transparent, white
+ * Default BG Color:  transparent
  * InnerBlocks:       true
  * Image Size:        card-image-link-4
  * Starts With Text:
  *
- * @package Catapult
+ * @package Propel
  * @since   1.0.0
  * @since   3.0.0
  * @since   3.0.16
