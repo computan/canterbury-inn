@@ -13,18 +13,16 @@
 
 	.block-content {
 		width: 100%;
-		margin-top: 0;
-		margin-bottom: rem(20);
-
-		// @include media-breakpoint-up(md) {
-		// 	grid-area: 1 / 1 / 2 / 7;
-		// }
+		margin: 0 0 rem(20);
 
 		@include media-breakpoint-up(lg) {
-			grid-area: 1 / 1 / 2 / 6;
+			grid-area: 1 / 1 / 2 / 5;
+			max-width: rem(416);
 		}
 
 		.block-contact-item {
+			margin-bottom: rem(20);
+
 			.wp-block-columns {
 				display: flex;
 				align-items: center;
@@ -32,9 +30,39 @@
 				margin-bottom: rem(20);
 				padding: rem(20);
 				border-radius: rem(15);
-				// background: paint(secondary-teal-a);
+				background: paint(secondary-teal-a);
 
-				background: paint(gold);
+				&:hover {
+					.wp-block-column {
+						p {
+							a {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+
+				.wp-block-column {
+					&:first-child {
+						position: absolute;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: rem(52);
+						height: rem(52);
+					}
+
+					&:nth-child(2) {
+						margin-left: rem(72);
+
+						a {
+							color: paint(neutral-1);
+							text-decoration: none;
+						}
+
+					}
+
+				}
 
 				.wp-block-buttons {
 					.wp-block-button {
@@ -66,13 +94,14 @@
 
 	.block-form {
 		width: 100%;
-		margin-top: rem(72);
+		max-width: rem(741);
+		margin-top: rem(40);
 		margin-bottom: auto;
 		color: paint(white);
 		border-radius: rem(20);
 
 		@include media-breakpoint-up(lg) {
-			grid-area: 1 / 7 / 2 / 13;
+			grid-area: 1 / 6 / 2 / 13;
 			margin-top: 0;
 		}
 
@@ -166,10 +195,11 @@
 							width: auto !important;
 						}
 
-						// &:hover,
-						// &:focus {
-						// 	background-color: paint(lime-green);
-						// }
+						&:hover,
+						&:focus {
+							color: paint(neutral-1);
+							background-color: paint(white);
+						}
 					}
 				}
 			}
