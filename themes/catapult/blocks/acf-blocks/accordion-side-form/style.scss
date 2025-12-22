@@ -2,11 +2,13 @@
 
 .block-accordion-side-form {
 	position: relative;
+	overflow: hidden;
 
 	.acf-block__background-image-wrapper {
 		display: none;
 
 		@include media-breakpoint-up(xl) {
+			position: fixed;
 			left: auto;
 			right: 0;
 			z-index: inherit;
@@ -84,14 +86,9 @@
 					}
 
 					&.sent {
-						background: transparent;
-
 						.success-message {
 							display: block !important;
-							padding: rem(30);
 							color: paint(white);
-							border-radius: rem(20);
-							background: paint(green);
 
 							p {
 								@include body-1;
