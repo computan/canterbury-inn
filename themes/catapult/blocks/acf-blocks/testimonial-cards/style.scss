@@ -79,6 +79,7 @@
 	}
 
 	.block-testimonial__content-col {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -86,6 +87,19 @@
 		padding: responsive-values(24, 32) rem(32) responsive-values(28, 40);
 		color: paint(neutral-1);
 		background-color: paint(neutral-11);
+
+		&::before {
+			position: absolute;
+			top: responsive-values(24, 32);
+			right: rem(32);
+			content: "";
+			width: rem(40);
+			height: rem(32);
+			background-image: url("data:image/svg+xml,%3Csvg width='40' height='32' viewBox='0 0 40 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 17.92V32h12.8V17.92H6.4C6.4 12.1173 11.1173 7.4 16.92 7.4V0C6.86933 0 0 6.86933 0 17.92zM20.48 17.92V32h12.8V17.92h-6.4c0-5.8027 4.7173-10.52 10.52-10.52V0c-10.0507 0-16.92 6.86933-16.92 17.92z' fill='%23064E3B'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-size: contain;
+			opacity: 0.2;
+		}
 	}
 
 	.block-testimonial__content {
