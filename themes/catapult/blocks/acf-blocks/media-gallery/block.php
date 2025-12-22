@@ -14,8 +14,8 @@
  * CSS Deps:          lightbox
  * JS Deps:           lightbox
  * Global ACF Fields: scroll_id
- * Background Colors: transparent, white
- * Default BG Color:  transparent
+ * Background Colors: white, neutral-11
+ * Default BG Color:  white
  * InnerBlocks:       true
  * Image Size:        card-image-link-4
  * Starts With Text:
