@@ -103,10 +103,21 @@
 						.col-12 {
 							display: none;
 						}
+
+						.wpcf7-response-output {
+							display: none;
+						}
 					}
 
-					.wpcf7-response-output {
-						display: none;
+					&.invalid {
+						.wpcf7-response-output {
+							display: block;
+							margin-top: rem(6);
+							padding: rem(4) rem(6);
+							color: paint(error);
+							border-radius: rem(4);
+							background-color: paint(white);
+						}
 					}
 
 					.submit {
