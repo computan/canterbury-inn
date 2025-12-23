@@ -15,7 +15,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /home/canterbury-inn-user/webapps/canterbury-inn/wp-content
+            cd /home/canterbury-inn-new-user/webapps/new-canterbury-inn/wp-content
             git stash
             git stash drop
             git pull
