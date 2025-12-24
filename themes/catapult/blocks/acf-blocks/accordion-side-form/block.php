@@ -29,8 +29,10 @@
 $content_block = new Content_Block_Gutenberg( $block, $context );
 
 $allowed_blocks = catapult_text_blocks( 'acf/accordion', 'acf/form' );
-
-$template = array(
+$image_id       = get_field( 'background_image' );
+$image_url      = $image_id ? wp_get_attachment_image_url( $image_id, 'full' ) : '';
+$style          = $image_url ? ' style="background-image: url(' . esc_url( $image_url ) . ');"' : '';
+$template       = array(
 	array(
 		'core/columns',
 		array(),
@@ -65,8 +67,8 @@ $template = array(
 			array(
 				'core/column',
 				array(
-					'width' => '43.5%',
-					'className'   => 'booking-form',
+					'width'     => '43.5%',
+					'className' => 'booking-form',
 				),
 				array(
 					array(
@@ -95,6 +97,8 @@ $template = array(
 ?>
 
 <section <?php echo wp_kses_post( $content_block->get_block_id_attr() ); ?><?php echo wp_kses_post( $content_block->get_block_style_attr() ); ?>class="acf-block block-accordion-side-form<?php echo esc_attr( $content_block->get_block_classes() ); ?>">
-	<?php echo wp_kses_post( $content_block->get_block_background_image_and_video() ); ?>
+	<?php if ( $style ) : ?>
+		<div <?php echo wp_kses_post( $style ); ?> class="bg-side"></div>
+	<?php endif; ?>
 	<InnerBlocks allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowed_blocks ) ); ?>" template="<?php echo esc_attr( wp_json_encode( $template ) ); ?>" class="container block-accordion-side-form__container" />
 </section>
