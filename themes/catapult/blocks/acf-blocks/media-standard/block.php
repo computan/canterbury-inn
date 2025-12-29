@@ -14,8 +14,8 @@
  * CSS Deps:
  * JS Deps:
  * Global ACF Fields: scroll_id
- * Background Colors: White, Neutral-11
- * Default BG Color: White
+ * Background Colors: white, neutral-11
+ * Default BG Color:  white
  * InnerBlocks:       true
  * Styles:            Spacing Regular, Spacing Small
  * Starts With Text:
