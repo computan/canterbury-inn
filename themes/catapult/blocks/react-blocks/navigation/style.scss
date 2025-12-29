@@ -150,6 +150,8 @@
 					margin-top: 0;
 				}
 			}
+
+
 		}
 
 		body:has(.block-hero-display) & {
@@ -346,10 +348,16 @@
 	}
 
 	&.scrolled {
-		.block-navigation {
-			&__container {
-				background-color: unset;
-				backdrop-filter: unset;
+		.block-navigation__container {
+			background-color: unset;
+			backdrop-filter: unset;
+		}
+
+		.block-navigation__logo-link {
+			body:not(:has(.block-hero-display)) & {
+				&::after {
+					margin-top: 0;
+				}
 			}
 		}
 	}
