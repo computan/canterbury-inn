@@ -1,7 +1,14 @@
 @import "base-includes";
 
 .editor-styles-wrapper {
-	.block-navigation-top-utility {
+	.block-navigation-contact-information {
+		@include media-breakpoint-up(lg) {
+			display: block;
+			height: 100%;
+			color: paint(black);
+			transform: none;
+		}
+
 		.utility-nav__link {
 			margin-left: 0;
 
