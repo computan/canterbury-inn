@@ -42,10 +42,14 @@
 				form {
 					display: block;
 					margin: 0;
-					padding: rem(40);
+					padding: rem(20);
 					color: paint(white);
 					border-radius: rem(20);
 					background: paint(green);
+
+					@include media-breakpoint-up(md) {
+						padding: rem(40);
+					}
 
 					.bg-green & {
 						color: paint(neutral-1);
@@ -71,8 +75,25 @@
 							}
 						}
 
+						input[type="date"] {
+							&::-webkit-calendar-picker-indicator {
+								opacity: 0.1;
+							}
+						}
+
 						select {
 							background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10L12 15L17 10H7Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+						}
+
+						.wpcf7-date {
+							&::after {
+								display: none;
+							}
+
+							&::before {
+								left: auto;
+								right: rem(12);
+							}
 						}
 					}
 
@@ -185,7 +206,6 @@
 
 						.bg-green &,
 						.bg-gradient-a &,
-						.bg-gradient-d &,
 						.bg-neutral-1 & {
 							color: paint(green);
 						}
