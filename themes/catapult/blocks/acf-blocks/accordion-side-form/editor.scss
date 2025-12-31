@@ -4,4 +4,35 @@
 	.bg-side {
 		display: none;
 	}
+
+	.block-accordion-side-form__container {
+		.wp-block-columns {
+			.block-accordion {
+				.block-accordion-item {
+					.block-content {
+						padding-right: rem(40);
+						padding-left: rem(40);
+
+						.bg-gradient-d & {
+							color: paint(green);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.bg-gradient-d {
+		.block-accordion-side-form__container {
+			.wp-block-columns {
+				.block-accordion {
+					.block-accordion-item {
+						.block-content {
+							color: paint(green);
+						}
+					}
+				}
+			}
+		}
+	}
 }
