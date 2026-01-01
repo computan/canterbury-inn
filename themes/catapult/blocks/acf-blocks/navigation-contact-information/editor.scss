@@ -45,6 +45,16 @@
 					}
 				}
 			}
+
+			.wp-block-list {
+				li {
+					color: paint(black) !important;
+
+					a {
+						color: paint(black) !important;
+					}
+				}
+			}
 		}
 	}
 }
