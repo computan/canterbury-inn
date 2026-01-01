@@ -1,7 +1,9 @@
 @import "base-includes";
 
 .block-hero-contact {
-	padding-top: responsive-values(144, 192);
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(128);
+	}
 
 	&__container {
 		@include media-breakpoint-up(lg) {
@@ -156,8 +158,8 @@
 										display: block;
 										margin-top: rem(6) !important;
 										padding: rem(4) rem(6) !important;
-										border-radius: rem(4);
-										background-color: paint(white);
+										// border-radius: rem(4);
+										// background-color: paint(white);
 									}
 								}
 							}
@@ -218,7 +220,7 @@
 					.wpcf7-response-output {
 						margin-top: rem(6);
 						padding: rem(3) rem(6);
-						color: paint(white);
+						color: paint(error);
 					}
 				}
 
