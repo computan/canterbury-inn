@@ -28,6 +28,7 @@
 	}
 
 	&.active {
+		top: 55%;
 		visibility: visible;
 		opacity: 1;
 		transform: translateX(0);
