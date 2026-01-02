@@ -103,16 +103,17 @@
 
 					.success-message {
 						display: none;
+						text-align: center;
+
+						p {
+							@include body-1;
+						}
 					}
 
 					&.sent {
 						.success-message {
 							display: block !important;
 							color: paint(white);
-
-							p {
-								@include body-1;
-							}
 
 							.bg-green & {
 								color: paint(neutral-1);
